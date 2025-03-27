@@ -21,7 +21,7 @@
 
 #### Scrum Master:
 
-* [Gabriel Cunha](coloque o link do github).
+* [Gabriel Cunha](https://github.com/GabrielRCunha).
 
 #### Links Úteis:
 
