@@ -13,10 +13,10 @@
 
 #### Desenvolvedores:
 
-* [Theo](coloque o link do github)
-* [Ryan](coloque o link do github)
-* [Guilherme](coloque o link do github)
-* [Rafael](coloque o link do github)
+* [Theo](https://github.com/theocfaria)
+* [Ryan](https://github.com/RyanPAlvim)
+* [Guilherme](https://github.com/Guiba1)
+* [Rafael](https://github.com/rafael-4maral)
 
 
 #### Scrum Master:
@@ -25,7 +25,8 @@
 
 #### Links Úteis:
 
-* [Trello]()
+* [Trello](https://trello.com/invite/b/67dda728287d7c135fccb976/ATTIddfecfd6e1d3aac716d90cdf5efc701e6EDDC59D/cine-stroll)
+* [Figma](https://www.figma.com/design/8LoNfj3DoiMU9fCHxmSlU0/Untitled?node-id=5-3&t=hLQc0QA0GgbwkxVD-1)
 
 
 
