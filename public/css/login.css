@@ -18,14 +18,16 @@ body {
 }
 
 #caixa-login {
-    width: 576px;
-    height: 447px;
+    width: 35%;
+    height: 45%;
     background: linear-gradient(to top, #333333, #6a0dad 200%);
     border-radius: 16px;
     margin: auto;
     margin-top: 20px;
-    padding-left: 50px;
     padding-top: 50px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 
 #texto-login {
@@ -49,10 +51,13 @@ body {
 }
 
 .formulario {
-    display: flexbox;
+    display: flex;
+    flex-direction: column;
     padding: 0;
-    margin: auto;
-
+    margin: 0;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
 }
 
 #titulo-email {
@@ -70,13 +75,13 @@ body {
 
 #input-email {
     height: 51px;
-    width: 504px;
+    width: 80%;
     border-radius: 16px;
 }
 
 #input-senha {
     height: 51px;
-    width: 504px;
+    width: 80%;
     border-radius: 16px;
 }
 
@@ -92,6 +97,8 @@ body {
     font-weight: 600;
     text-align: left;
     border: 0;
+    justify-self: flex-start;
+    margin-left: 10%;
 }
 
 #botao-entrar:hover {
@@ -106,4 +113,13 @@ body {
 .barra-formulario {
     font-size: 20px;
     padding-left: 12px;
+}
+
+.formulario p {
+    align-self: flex-start;
+    margin-left: 10%;
+}
+
+.botao {
+    width: 100%;
 }
