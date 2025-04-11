@@ -84,13 +84,19 @@ body {
     width: 175px;
     height: 74px;
     color: black;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.85);
     border-radius: 16px;
     margin-top: 64px;
     font-family: 'Montserrat', sans-serif;
     font-size: 24px;
     font-weight: 600;
     text-align: left;
+    border: 0;
+}
+
+#botao-entrar:hover {
+    background-color: rgba(255, 255, 255, 1);
+    color: black;
 }
 
 #texto-botao {
