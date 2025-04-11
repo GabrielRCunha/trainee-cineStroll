@@ -96,3 +96,8 @@ body {
 #texto-botao {
     padding-left: 16px;
 }
+
+.barra {
+    font-size: 20px;
+    padding-left: 12px;
+}
