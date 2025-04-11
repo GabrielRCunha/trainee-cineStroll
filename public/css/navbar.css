@@ -8,7 +8,7 @@ body {
 }
 
 .navbar {
-    height: 80px;
+    height: 64px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -16,8 +16,10 @@ body {
 }
 
 #logo-navbar {
+    display: flex;
     width: 80px;
     height: 80px;
+    align-items: center;
 }
 
 div #logo-navbar {
@@ -25,17 +27,21 @@ div #logo-navbar {
 }
 
 #logo-navbar img {
-    height: 72px;
-    width: 72px;
-    margin-left: 12px;
-    margin-top: 4px;
-    margin-bottom: 4px;
+    height: 24px;
+    width: 220px;
+    margin-left: 20px;
 }
 
 .botoes-navbar {
-    width: 44px;
-    height: 40px;
+    width: 32px;
+    height: 32px;
     margin: 16px;
+}
+
+.botoes-navbar:hover {
+    width: 30px;
+    height: 30px;
+    margin: 17px;
 }
 
 #box-botoes {
