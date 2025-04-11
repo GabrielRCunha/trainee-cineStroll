@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+}
+
+body {
+    height: 100vh;
+    background: linear-gradient(180deg, #333333 0%, #6a0dad 200%);
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+#logo img {
+    width: 72px;
+    height: 72px;
+    margin-left: 24px;
+    margin-top: 8px;
+}
+
+#caixa-login {
+    width: 576px;
+    height: 447px;
+    background: linear-gradient(to top, #333333, #6a0dad 200%);
+    border-radius: 16px;
+    margin: auto;
+    margin-top: 20px;
+    padding-left: 50px;
+    padding-top: 50px;
+}
+
+#texto-login {
+    width: 640px;
+    height: fit-content;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 56px;
+}
+
+#texto-login h1 {
+    font-size: 40px;
+    margin-top: 64px;
+    margin-bottom: 0px;
+}
+
+#texto-login h2 {
+    font-size: 24px;
+    margin-top: 33px;
+    margin-bottom: 0px;
+}
+
+.formulario {
+    display: flexbox;
+    padding: 0;
+    margin: auto;
+
+}
+
+#titulo-email {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+#titulo-senha {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    margin-top: 32px;
+}
+
+#input-email {
+    height: 51px;
+    width: 504px;
+    border-radius: 16px;
+}
+
+#input-senha {
+    height: 51px;
+    width: 504px;
+    border-radius: 16px;
+}
+
+#botao-entrar {
+    width: 175px;
+    height: 74px;
+    color: black;
+    background-color: white;
+    border-radius: 16px;
+    margin-top: 64px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    text-align: left;
+}
+
+#texto-botao {
+    padding-left: 16px;
+}
