@@ -1,0 +1,132 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1, p {
+    color: white;
+}
+
+#footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #333333;
+    padding-top: 48px;
+    padding-bottom: 48px;
+    gap: 64px;
+}
+
+#missão-visão-valores {
+    display: flex;
+    align-items: top;
+    gap: 28px;
+
+}
+
+#missão-visão-valores h1 {
+    font-size: 20px;
+}
+
+#visão {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    width: 232px;
+    height: 210px;
+}
+
+#missão {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    width: 252px;
+    height: 210px;
+}
+
+#valores {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    width: 112px;
+    height: 210px;
+}
+
+.linha {
+    background-color: white;
+    width: 1px;
+    height: 224px;
+}
+
+#redes-sociais {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    gap: 12px;
+    padding: 12px;
+}
+
+#instagram {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+#instagram img {
+    width: 24px;
+}
+
+#youtube {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+#youtube img{
+    width: 24px;
+}
+
+#logos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+#logo-cine-stroll {
+    display: flex;
+    width: fit-content;
+    height: 60px;
+    align-items: center;
+}
+
+#logo-cine-stroll p {
+    font-size: 64px;
+    font-weight: bold;
+    width: fit-content;
+    margin: 0 auto;
+    text-align: center;
+
+    background: linear-gradient(to right, #FFD700, #8B0000);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#créditos-code {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 12px;
+}
+
+#créditos-code p {
+    font-weight: bold;
+}
+
+#créditos-code img {
+    width: 380px;
+}
