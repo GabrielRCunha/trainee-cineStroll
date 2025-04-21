@@ -107,7 +107,7 @@ body {
     font-family: 'Montserrat', sans-serif;
     font-size: 24px;
     font-weight: 600;
-    text-align: left;
+    text-align: center;
     border: 0;
     justify-self: flex-start;
     margin-left: 9%;
@@ -118,9 +118,6 @@ body {
     color: black;
 }
 
-#texto-botao {
-    padding-left: 16px;
-}
 
 #botao-entrar a {
     text-decoration: none;
