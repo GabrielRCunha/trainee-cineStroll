@@ -1,0 +1,97 @@
+body{
+    padding: 0;
+    margin: 0;
+    font-family:'Montserrat', sans-serif;
+}
+
+.postIndividual{
+    background: linear-gradient(to bottom, #29212F, #36213D, #52235B, #5F2469, #872D98, #B239D0); ;
+    padding: 0;
+    margin: 0;
+}
+
+.informações{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 436px;
+    padding-top: 30px;
+}
+
+.dados{
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.usuário{
+    display: flex;
+    flex-direction: column;
+    gap: 2vw;
+}
+
+.perfil{
+    display: flex;
+    width: fit-content;
+    height: fit-content;
+    background-color: rgba(0, 0, 0, 0.25);
+    border-radius: 16px;
+    align-items: center;
+    gap: 1.6vw;
+    padding: 1vw;
+}
+
+.perfil img{
+    width: 5vw;
+    border-radius: 12px;
+}
+
+.perfil h1{
+    font-size: 1.6vw;
+}
+
+.filme{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 1vw;
+    width: 12vw;
+    height: fit-content;
+    background-color: rgba(0, 0, 0, 0.25);
+    height: fit-content;
+    border-radius: 16px;
+}
+
+.filme img{
+    width: 88%;
+    border-radius: 8px;
+    justify-content: center;
+}
+
+.filme h1{
+    
+    font-size: 1vw;
+    text-align: center;
+}
+
+.avaliação{
+
+    background: rgba(0, 0, 0, 0.25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    border-radius: 16px;
+}
+
+.avaliação h1{
+    font-size: 1.6vw;
+}
+
+.estrelas > *{
+    color: yellow;
+    font-size: 1.2vw;
+}
