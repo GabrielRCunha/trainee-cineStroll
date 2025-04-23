@@ -8,7 +8,7 @@ body {
 }
 
 .navbar {
-    height: 64px;
+    height: 72px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -17,25 +17,25 @@ body {
 
 #logo-navbar {
     display: flex;
-    width: 80px;
-    height: 80px;
+    width: fit-content;
+    height: fit-content;
     align-items: center;
 }
 
 div #logo-navbar {
-    height: 100%;
+    height: fit-content;
 }
 
 #logo-navbar img {
-    height: 24px;
-    width: 220px;
-    margin-left: 20px;
+    height: 60px;
+    width: 60px;
+    padding-left: 20px;
 }
 
 .botoes-navbar {
-    width: 32px;
-    height: 32px;
-    margin: 16px;
+    width: 34px;
+    height: 34px;
+    margin: 15px;
 }
 
 .botoes-navbar:hover {
