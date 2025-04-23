@@ -1,3 +1,8 @@
+html, body, .postIndividual{
+    width: 100%;
+    height: 100%;
+}
+
 body{
     padding: 0;
     margin: 0;
@@ -5,7 +10,7 @@ body{
 }
 
 .postIndividual{
-    background: linear-gradient(to bottom, #29212F, #36213D, #52235B, #5F2469, #872D98, #B239D0); ;
+    background: linear-gradient(to bottom, #29212F, #36213D, #52235B, #5F2469, #872D98, #B239D0);
     padding: 0;
     margin: 0;
 }
@@ -98,3 +103,50 @@ body{
     text-align: center;
 }
 
+.comentário{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    padding-left: 20%;
+    padding-right: 20%;
+    margin: 0px;
+    gap: 1.6rem;
+}
+
+.comentário > *{
+    margin: 0px;
+}
+
+.comentário p{
+    font-size: 1.6rem;
+    text-align: justify;
+}
+
+#data{
+    font-size: 1.2rem;
+    font-style: italic;
+}
+
+#avaliar{
+    display: flex;
+    padding-left: 20%;
+    padding-right: 20%;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+#avaliar i{
+    font-size: 2.4rem;
+}
+
+#up{
+    color: #A9C3D9;
+}
+
+#down{
+    color: #8B0000;
+}
+
+.count{
+    font-size: 1.6rem;
+}
