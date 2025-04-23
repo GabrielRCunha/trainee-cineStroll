@@ -52,6 +52,27 @@ body{
     font-size: 1.6vw;
 }
 
+.avaliação{
+
+    background: rgba(0, 0, 0, 0.25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 12px;
+    padding-right: 12px;
+    gap: 16px;
+    border-radius: 16px;
+}
+
+.avaliação h1{
+    font-size: 1.6vw;
+}
+
+.estrelas > *{
+    color: yellow;
+    font-size: 1.2vw;
+}
+
 .filme{
     display: flex;
     flex-direction: column;
@@ -77,21 +98,3 @@ body{
     text-align: center;
 }
 
-.avaliação{
-
-    background: rgba(0, 0, 0, 0.25);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 16px;
-    border-radius: 16px;
-}
-
-.avaliação h1{
-    font-size: 1.6vw;
-}
-
-.estrelas > *{
-    color: yellow;
-    font-size: 1.2vw;
-}
