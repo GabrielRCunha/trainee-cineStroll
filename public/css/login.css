@@ -42,7 +42,7 @@ body {
 }
 
 #texto-login {
-    width: 640px;
+    width: fit-content;
     height: fit-content;
     margin: auto;
     text-align: center;
@@ -71,30 +71,24 @@ body {
     align-items: center;
 }
 
-#titulo-email {
+#titulo-email,
+#titulo-senha {
     font-size: 24px;
     font-weight: 600;
     margin-bottom: 8px;
 }
 
 #titulo-senha {
-    font-size: 24px;
-    font-weight: 600;
-    margin-bottom: 8px;
     margin-top: 32px;
 }
 
-#input-email {
-    height: 51px;
-    width: 80%;
-    border-radius: 16px;
-}
-
+#input-email,
 #input-senha {
     height: 51px;
     width: 80%;
     border-radius: 16px;
 }
+
 
 #botao-entrar {
     width: 20vh;
@@ -145,6 +139,7 @@ body {
     width: 100%;
     display: flex;
 }
+
 #mostrar-senha {
     align-self: flex-end;
     margin-right: 11%;
@@ -152,4 +147,141 @@ body {
     color: black;
     cursor: pointer;
     font-size: 30px;
+}
+
+@media (max-width: 1200px) {
+    #caixa-login {
+        width: 40%;
+    }
+
+    #logo {
+        width: 64px;
+        height: 64px;
+    }
+}
+
+@media (max-width: 992px) {
+    #caixa-login {
+        width: 50%;
+    }
+
+    #texto-login h1 {
+        font-size: 36px;
+    }
+
+    #texto-login h2 {
+        font-size: 22px;
+    }
+
+    #logo {
+        width: 64px;
+        height: 64px;
+    }
+}
+
+@media (max-width: 768px) {
+    #caixa-login {
+        width: 65%;
+        padding-top: 40px;
+    }
+
+    #texto-login h1 {
+        font-size: 32px;
+        margin-top: 48px;
+    }
+
+    #texto-login h2 {
+        font-size: 20px;
+        margin-top: 28px;
+    }
+
+    #titulo-email,
+    #titulo-senha {
+        font-size: 22px;
+    }
+
+    #botao-entrar {
+        font-size: 22px;
+        height: 68px;
+    }
+
+    #logo {
+        width: 64px;
+        height: 64px;
+    }
+}
+
+@media (max-width: 576px) {
+    #caixa-login {
+        width: 85%;
+        padding-top: 30px;
+    }
+
+    #texto-login h1 {
+        font-size: 28px;
+        margin-top: 40px;
+    }
+
+    #texto-login h2 {
+        font-size: 18px;
+        margin-top: 24px;
+    }
+
+    #titulo-email,
+    #titulo-senha {
+        font-size: 20px;
+    }
+
+    #input-email,
+    #input-senha {
+        height: 45px;
+        font-size: 18px;
+    }
+
+    #botao-entrar {
+        font-size: 20px;
+        height: 62px;
+        width: 18vh;
+    }
+
+    #mostrar-senha {
+        font-size: 26px;
+        transform: translateY(-40px);
+    }
+
+    #logo {
+        width: 64px;
+        height: 64px;
+    }
+}
+
+@media (max-width: 400px) {
+    #logo img {
+        width: 60px;
+        height: 60px;
+        margin-left: 16px;
+    }
+
+    #texto-login h1 {
+        font-size: 24px;
+    }
+
+    #texto-login h2 {
+        font-size: 16px;
+    }
+
+    #titulo-email,
+    #titulo-senha {
+        font-size: 18px;
+    }
+
+    #botao-entrar {
+        font-size: 18px;
+        height: 56px;
+    }
+
+    #logo {
+        width: 64px;
+        height: 64px;
+    }
 }
