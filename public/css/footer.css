@@ -11,28 +11,29 @@ h1, p {
     color: white;
 }
 
-#footer {
+.footer {
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: #333333;
-    padding-top: 48px;
-    padding-bottom: 48px;
-    gap: 64px;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    gap: 6%;
 }
 
-#missão-visão-valores {
+.missão-visão-valores {
     display: flex;
+    width: fit-content;
     align-items: top;
-    gap: 28px;
+    gap: 4%;
 
 }
 
-#missão-visão-valores h1 {
+.missão-visão-valores h1 {
     font-size: 20px;
 }
 
-#visão {
+.visão {
     display: flex;
     flex-direction: column;
     gap: 24px;
@@ -40,7 +41,7 @@ h1, p {
     height: 210px;
 }
 
-#missão {
+.missão {
     display: flex;
     flex-direction: column;
     gap: 24px;
@@ -48,7 +49,7 @@ h1, p {
     height: 210px;
 }
 
-#valores {
+.valores {
     display: flex;
     flex-direction: column;
     gap: 24px;
@@ -62,7 +63,7 @@ h1, p {
     height: 224px;
 }
 
-#redes-sociais {
+.redes-sociais {
     display: flex;
     flex-direction: column;
     align-items: left;
@@ -70,42 +71,43 @@ h1, p {
     padding: 12px;
 }
 
-#instagram {
+.instagram {
     display: flex;
     align-items: center;
     gap: 8px;
 }
 
-#instagram img {
+.instagram img {
     width: 24px;
 }
 
-#youtube {
+.youtube {
     display: flex;
     align-items: center;
     gap: 8px;
 }
 
-#youtube img{
+.youtube img{
     width: 24px;
 }
 
-#logos {
+.logos {
     display: flex;
+    height: 216px;
     flex-direction: column;
     align-items: center;
-    gap: 40px;
+    gap: 10%;
 }
 
-#logo-cine-stroll {
+.logo-cine-stroll {
     display: flex;
     width: fit-content;
-    height: 60px;
+    height: 28%;
     align-items: center;
 }
 
-#logo-cine-stroll p {
-    font-size: 64px;
+.logo-cine-stroll p {
+    font-size: 4em;
     font-weight: bold;
     width: fit-content;
     margin: 0 auto;
@@ -116,17 +118,23 @@ h1, p {
     -webkit-text-fill-color: transparent;
 }
 
-#créditos-code {
+.créditos-code {
     display: flex;
     flex-direction: column;
-    gap: 4px;
-    padding: 12px;
+    gap: 0.2em;
+    padding: 0.4em;
 }
 
-#créditos-code p {
+.créditos-code p {
     font-weight: bold;
 }
 
-#créditos-code img {
-    width: 380px;
+.créditos-code img {
+    width: 90%;
+}
+
+@media (max-width: 800px){
+    .footer{
+        flex-direction: column-reverse;
+    }
 }
