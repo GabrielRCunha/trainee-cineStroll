@@ -8,10 +8,6 @@ body{
 }
 
 
-html, body {
-    height: 100%;
-}
-
 .imagemFundo{
     z-index: -1;
     position: absolute;
@@ -73,6 +69,30 @@ html, body {
     -webkit-text-fill-color: transparent;
 }
 
+.carrossel{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.botaoEsquerdo{
+    background-color: aliceblue;
+    opacity: 80%;
+    width: 40px;
+    height: 70px;
+    border-radius: 20px;
+    margin-right:100px;
+    margin-top: 150px;
+
+}
+
+.botaoEsquerdo h2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .cards{
     display: flex;
     width: 80%;
@@ -87,6 +107,47 @@ html, body {
     background-color: aliceblue;
     opacity: 80%;  
     bottom: 100px;
+}
 
+.botaoDireito{
+    background-color: aliceblue;
+    display: flex;
+    opacity: 80%;
+    width: 40px;
+    height: 70px;
+    border-radius: 20px;
+    margin-left:100px;
+    margin-top: 140px;
+}
+
+.botaoDireito {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.descricao{
+    display: flex;
+    width: 80%;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-left: 5%;
+}
+
+.descricao h2{
+    display: flex;
+    justify-content: center;
+    color: aliceblue;
+    font-size: 48px;
+    margin: 0;
+    margin-top: 60px;
+}
+
+.descricao p{
+    text-align: left;
+    color: aliceblue;
+    font-size: 32px;
+    font-weight: bold;
+    margin-top:20px ;
 }
 
