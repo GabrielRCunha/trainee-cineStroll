@@ -77,6 +77,9 @@ body{
 }
 
 .botaoEsquerdo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: aliceblue;
     opacity: 80%;
     width: 40px;
@@ -84,14 +87,9 @@ body{
     border-radius: 20px;
     margin-right:100px;
     margin-top: 150px;
-
+    cursor: pointer;
 }
 
-.botaoEsquerdo h2{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
 .cards{
     display: flex;
@@ -101,6 +99,8 @@ body{
 }
 
 .card{
+    display: flex;
+    flex-direction: column;
     width: 350px;
     height: 285px;
     border-radius: 20px;
@@ -118,6 +118,7 @@ body{
     border-radius: 20px;
     margin-left:100px;
     margin-top: 140px;
+    cursor:pointer;
 }
 
 .botaoDireito {
@@ -150,4 +151,59 @@ body{
     font-weight: bold;
     margin-top:20px ;
 }
+
+.textoImagem{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.textoCard{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    margin-left: 10px;
+}
+
+.imagemCard{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    margin-top: 10px;
+
+}
+.imagemCard img{
+    width: 88px;
+    border-radius: 10px;
+    margin-bottom: 5px;
+}
+
+.estrelas{
+    color: #FF6A00;
+}
+
+.botaoCard{
+    width: 100%;
+    margin-top: 35px;
+}
+
+.botaoCard button{
+    background-color: #FFD700;
+    border-radius: 20px;
+    border:0px;
+    width: 106px;
+    height: 44px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.textoBotao{
+    font-size: 20px;
+    margin: 0;
+}
+
+
+
 
