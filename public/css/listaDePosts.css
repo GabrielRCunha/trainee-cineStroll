@@ -42,9 +42,6 @@ html, body {
 .pesquisa span{
     color: black;
     transform: translateY(-45px) translateX(+10px)
-
-    
-
 }
 
 .lupa{
@@ -65,6 +62,7 @@ html, body {
 }
 
 .container {
+
   display: flex;
   flex-direction: column;
   justify-content: center; 
@@ -209,5 +207,45 @@ html, body {
     font-weight: bold;
     cursor: default;
   }
+
+  @media (min-width: 769px) and (max-width: 1656px) and (orientation: portrait) {
+    .container {
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+      gap: 3rem;
+    }
+  
+    .movie-card {
+      padding: 2rem;      
+      gap: 2rem;           
+      max-width: 1100px;   
+    }
+  
+    .movie-card img {
+      width: 220px;       
+    }
+  
+    .movie-info .titulo {
+      font-size: 1.6rem;  
+    }
+  
+    .movie-info .ano {
+      font-size: 1.2rem;  
+    }
+  
+    .movie-info p {
+      font-size: 1.1rem;  
+    }
+  
+    .info-extra {
+      gap: 40%;           
+    }
+  }
+
+
+  
+  
+
+  
 
 
