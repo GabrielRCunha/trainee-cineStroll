@@ -11,7 +11,7 @@ body{
     z-index: -1;
     position: absolute;
     width: 100%;
-    opacity: 0.5;
+    opacity: 0.3;
     height: 880px;
 }
 
@@ -33,9 +33,7 @@ body{
     width: 80%;
 }
 
-.apresentacao .textoApresent{
-    width: 25%; 
-}
+
 
 .textoLogo img{
     width: 281px;
@@ -51,12 +49,13 @@ body{
 .textoApresent{
     font-size: 36px;
     margin-top: 70px;
+    width: 60%;
 }
+
 
 .textoApresent p{
     color: azure;
     font-weight: bold;
-    font-weight: 700; 
 }
 
 .textoLogo h2{
@@ -302,5 +301,172 @@ body{
         }
         .cards{
             width: 60%;
+        }
+
+        .descricao{
+            margin-top: 40px;
+        }
+
+        .textoApresent{
+            font-size: 24px;
+        }
+    }
+
+
+    @media only screen and (max-width:800px){
+        .textoLogo h2{
+            font-size: 30px;
+        }
+
+        .textoLogo img{
+            height: 300px;
+        }
+
+        .descricao{
+            margin-top: 0;
+        }
+
+        .descricao p{
+            font-size: 24px;
+        }
+
+        .imagemFundo{
+            height: 720px;
+        }
+
+    }
+
+    @media only screen and (max-width:800px){
+        .textoLogo h2{
+            font-size: 26px;
+        }
+
+        .textoLogo img{
+            height: 260px;
+            width: 220px;
+        }
+
+        .textoApresent{
+            font-size: 20px;
+        }
+
+        .descricao{
+            margin-top: 20px;
+        }
+
+        .imagemFundo{
+            height: 680px;
+        }
+    }
+
+    @media only screen and (max-width:550px){
+        .apresentacao{
+            flex-direction: column-reverse;
+            justify-content: center;
+        }
+
+        .apresentacao p{
+            margin-top: 0;;
+        }
+        .textoApresent{
+            height: fit-content;
+            margin-top: 0;
+        }
+        .card{
+            height: 240px;
+            width: fit-content;
+        }
+
+        .botaoCard{
+            margin-top: 0;
+        }
+
+        .imagemFundo{
+            height: 780px;
+        }
+
+        .botaoCard{
+            display: none;
+        }
+    }
+
+    @media only screen and (max-width:550px){
+        .textoCard h2{
+            margin-bottom: 0
+        }
+
+        .imagemFundo {
+            height: 850px;
+        }
+    }
+
+    
+    @media only screen and (max-width:480px){
+        .card i{
+            font-size: 12px ;
+        }
+
+
+        .textoCard{
+            width: 50%;
+        }
+    }
+
+    @media only screen and (max-width:435px){
+        .textoCard p{
+            margin-top: 0;
+        }
+
+        .descricao h2{
+            font-size: 40px;
+            margin-top: 0;
+        }
+    }
+
+    @media only screen and (max-width:400px){
+
+        .textoApresent{
+            font-size: 18px;
+        }
+
+        .textoCard p{
+            font-size: 13px;
+        }
+
+        .textoCard h2{
+            font-size: 20px;
+        }
+
+        .imagemFundo {
+           height: 900px;
+        }
+
+        .imagemCard img{
+            width: 80px;
+            height: ;
+        }
+
+        .card{
+            height: 210px;
+        }
+
+
+    }
+
+    @media only screen and (max-width:1029px){
+        .textoLogo h2{
+            font-size: 35px;
+        }
+    }
+
+    @media only screen and (max-width:750px){
+        .textoLogo h2{
+            font-size: 30px;
+        }
+    }
+
+    @media only screen and (max-width:450px){
+        .imagemFundo{
+            height: 890px;
         }
     }
