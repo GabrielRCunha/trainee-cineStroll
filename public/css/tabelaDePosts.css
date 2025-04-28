@@ -114,20 +114,24 @@ tr td:first-child{
 }
 
 button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border-radius: 50%;
     border: 0px;
     width: 40px;
     height: 40px;
     cursor: pointer;
     border: 1px solid white;
+    transition: all 0.3s;
 }
 
 button i{
-    font-size: 24px;
+    font-size: 25px;
 }
 
 .ver{
-    background-color: aquamarine;
+    background-color: #a9c3d9;
 }
 
 .editar{
@@ -136,6 +140,11 @@ button i{
 
 .apagar{
     background-color: red;
+}
+
+button:hover{
+    scale: 1.1;
+    opacity: 1.1;
 }
 
 .paginacao {
