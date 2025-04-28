@@ -1,0 +1,43 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+html, body{
+    font-family: "Inter", sans-serif;
+    background-image: linear-gradient(to bottom, #29212F, #36213D, #52235B, #5F2469, #872D98, #B239D0);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+
+
+}
+
+.container{
+
+    display: flex;
+    
+    flex-direction: row;
+    align-items: center;
+
+    border: 2px solid black;
+    box-shadow: 0, 0, 10%;
+    max-width: 20%;
+    padding: 20%;
+    background:linear-gradient(#B239D0, #29212F);
+    margin: 10%;
+
+
+}
+
+.Logo{
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    height: 200px;
+
+}
