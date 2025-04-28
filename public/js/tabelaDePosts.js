@@ -1,17 +1,29 @@
-let ativa = document.querySelector('.ativa')
 const pagina = document.querySelectorAll('.pagina')
-pagina.forEach(pag => {
+const voltar = document.querySelector('.voltar')
+const passar = document.querySelector('.passar')
+
+let indexPagAtiva = 0;
+
+function trocarPaginaAtiva(index){
+    pagina.forEach(pag => pag.classList.remove('ativa'));
+    pagina[index].classList.add('ativa');
+    indexPagAtiva = index;
+}
+
+pagina.forEach((pag, index) => {
     pag.addEventListener('click', function(event){
-        pagina.forEach(p => p.classList.remove('ativa'));
-        this.classList.add('ativa')
-        ativa = this
+        trocarPaginaAtiva(index);
     })
 })
-const seta = document.querySelectorAll('.seta')
-seta.forEach(s => {
-    s.addEventListener('click', function(event){
-        if(s.classList.contains('voltar')){
 
-        }
-    })
+voltar.addEventListener('click', function(event){
+    if( indexPagAtiva > 0 ){
+        trocarPaginaAtiva(indexPagAtiva - 1)
+    }
+})
+
+passar.addEventListener('click', function(event){
+    if( indexPagAtiva < pagina.length - 1 ){
+        trocarPaginaAtiva(indexPagAtiva + 1)
+    }
 })
