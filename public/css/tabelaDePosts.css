@@ -69,6 +69,7 @@ body {
     border-collapse: collapse;
     background: linear-gradient(to right, #333333 0%, #6a0dad 200%);
     color: white;
+    border-radius: 16px;
 
 }
 
@@ -90,5 +91,31 @@ body {
 .tabela th {
     font-size: 20px;
 }
+.paginacao {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    gap: 10px;
+    
+  }
+  
+  .paginacao li a {
+    padding: 10px 15px;
+    background-color: #52235B;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    border: 2px solid black;
+    font-size: 14px;
+    padding: 6px 12px;
+  }
+  .paginacao li a:hover {
+    background-color: #872D98;
+  }
 
-.tabela td {}
+  .paginacao li a.ativa {
+    background-color: #190e1d;
+    font-weight: bold;
+    cursor: default;
+  }
