@@ -91,15 +91,61 @@ body {
 .tabela th {
     font-size: 20px;
 }
+
+.tabela td {
+    text-align: center;
+}
+
+tr td:first-child{
+    width: 12%;
+}
+
+.acoes{
+    width: 25%;
+}
+
+.divacoes{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80px;
+    width: 100%;
+    gap: 16px;
+}
+
+button{
+    border-radius: 50%;
+    border: 0px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    border: 1px solid white;
+}
+
+button i{
+    font-size: 24px;
+}
+
+.ver{
+    background-color: aquamarine;
+}
+
+.editar{
+    background-color: yellow;
+}
+
+.apagar{
+    background-color: red;
+}
+
 .paginacao {
     display: flex;
     list-style: none;
     padding: 0;
     gap: 10px;
-    
-  }
-  
-  .paginacao li a {
+}
+
+.paginacao li a {
     padding: 10px 15px;
     background-color: #52235B;
     color: white;
@@ -109,13 +155,13 @@ body {
     border: 2px solid black;
     font-size: 14px;
     padding: 6px 12px;
-  }
-  .paginacao li a:hover {
-    background-color: #872D98;
-  }
+}
 
-  .paginacao li a.ativa {
+.paginacao li a:hover {
+    background-color: #872D98;
+}
+
+.paginacao li a.ativa {
     background-color: #190e1d;
-    font-weight: bold;
     cursor: default;
-  }
+}
