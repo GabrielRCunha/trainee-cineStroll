@@ -1,58 +1,94 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
 }
 
 body {
     display: flex;
+    gap: 48px;
     flex-direction: column;
+    height: 100vh;
+    align-items: center;
+    background-color: grey;
+}
+
+.barra-superior {
+    width: 64%;
+    height: 120px;
+    background: linear-gradient(to right, #333333 0%, #6a0dad 200%);
+    display: flex;
+    margin-top: 80px;
+    align-items: center;
+    border-radius: 16px;
+    justify-content: space-between;
+}
+
+.logo-barra-superior {
+    width: 88px;
+    height: 88px;
+    margin-left: 1%;
+}
+
+.botao-criar {
+    display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 100vh;
-    background: linear-gradient(180deg, #333333 0%, #6a0dad 200%);
-    background-attachment: fixed;
+    gap: 6px;
+    width: 96px;
+    height: 40px;
+    border-radius: 8px;
+    margin-right: 2%;
+    background-color: #ddd;
+    font-size: 16px;
+    font-weight: 600;
+    border: 1px solid #333333;
+}
+
+.botao-criar i {
+    font-size: 24px;
+}
+
+.botao-criar:hover {
+    background-color: white;
+    cursor: pointer;
+}
+
+.titulo {
     color: white;
-    font-family: 'Montserrat', sans-serif;
+    margin-right: 24%;
 }
 
-.tabela-principal {
-    background: linear-gradient(to top, #333333 0%, #6a0dad 200%);
-    border: 1px solid black;
+.div-tabela {
+    width: 64%;
+    height: fit-content;
+}
+
+.tabela {
+    width: 100%;
     border-collapse: collapse;
-    width: 80%;
+    background: linear-gradient(to right, #333333 0%, #6a0dad 200%);
+    color: white;
 
 }
 
-.tabela-principal th,
-td {
-    border: 1px solid black;
-    height: 64px;
+.tabela tr {
+    height: 80px;
+    border: 1px solid white;
+    border-left: 0;
+    border-right: 0;
 }
 
-.tabela-principal th,
-td>*:not(:nth-last-child(-n+3)) {
-    width: 15%;
+.tabela tr:first-child {
+    border-top: 0;
 }
 
-.tabela-principal .botao {
-    width: 5%;
-    overflow-x: hidden;
+.tabela tr:last-child {
+    border-bottom: 0;
 }
 
-.div-paginacao {
-    display: flex;
-    gap: 7px;
+.tabela th {
+    font-size: 20px;
 }
 
-.paginacao {
-    border: 1px solid black;
-    width: 16px;
-    height: 16px;
-    background-color: #6a0dad;
-}
-
-.paginacao a {
-    text-decoration: none;
-    color: rgba(255, 255, 255, .7)
-}
+.tabela td {}
