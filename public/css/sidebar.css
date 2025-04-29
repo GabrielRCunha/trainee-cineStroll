@@ -1,4 +1,67 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
+
+body{
+    display: flex;
+    background-color: aliceblue;
+    font-family: "Montserrat", sans-serif;
+}
+
+main{
+    padding: 3rem;
+}
+
+.perfilSidebar img{
+    height: 3.5rem;
+    width: 3.5rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.sidebar{
+    background-color: #333333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+    align-items: center;
+    padding: 1.5rem;
+    border-radius: 0 8px 8px 0;
+    color:;
+}
+
+.topSidebar{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.perfilSidebar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.7rem;
+    min-height: 3.5rem;
+}
+
+.toggleSidebar{
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+.toggleSidebar:hover{
+    scale: 1.05;
+}
+
+.contentSidebar ul{
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+    margin: 0;
+    padding: 0;
+}
+
+.itemSidebar
