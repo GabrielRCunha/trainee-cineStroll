@@ -102,3 +102,34 @@ main{
     font-family: "Montserrat", sans-serif;
     font-weight: 600;
 }
+
+.closedSidebar .sidebar{
+    width: 0;
+}
+.closedSidebar .itemDescription{
+    width: 10px;
+    overflow: hidden;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.closedSidebar .perfilSidebar img{
+    display: none;
+}
+
+.closedSidebar .perfilSidebar{
+    justify-content: center;
+}
+
+.closedSidebar .itemSidebar a{
+    display: flex;
+    justify-content: center;
+}
+
+.closedSidebar #buttonLogout .itemDescription{
+    display: none;
+}
+
+.closedSidebar .toggleSidebar{
+    transform: rotate(180deg);
+}
