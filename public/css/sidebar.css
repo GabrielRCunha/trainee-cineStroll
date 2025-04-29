@@ -103,8 +103,14 @@ main{
     font-weight: 600;
 }
 
-.closedSidebar .sidebar{
-    width: 0;
+.closedSidebar{
+    width: 64px;
+
+}
+.closedSidebar ul{
+    width: 64px;
+    margin-left: 50%;
+    
 }
 .closedSidebar .itemDescription{
     width: 10px;
