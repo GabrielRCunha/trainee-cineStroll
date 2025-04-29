@@ -1,12 +1,62 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../../public/css/sidebar.css">
-    <title>Document</title>
+    <script src="https://kit.fontawesome.com/ee0f4b07be.js" crossorigin="anonymous"></script>
+    <title>Sidebar</title>
 </head>
 <body>
-    
+    <aside class="sidebar" id="sidebar">
+        <div class="topSidebar">
+            <div class="perfilSidebar">
+                <img src="../../../public/assets/logo com fundo.png" alt="">
+                <i class="fa-solid fa-circle-chevron-left"></i>
+            </div>
+            <nav class="contentSidebar">
+                <ul>
+                    <li class="itemSidebar">
+                        <a href="#">
+                           <i class="fa-solid fa-house">
+                            <span class="itemDescription">Página inicial</span> 
+                           </i>
+                        </a>
+                    </li>
+                    <li class="itemSidebar">
+                        <a href="#">
+                           <i class="fa-solid fa-chartcolumn">
+                            <span class="itemDescription">Dashboard</span> 
+                           </i>
+                        </a>
+                    </li>
+                    <li class="itemSidebar">
+                        <a href="#">
+                           <i class="fa-solid fa-pen--to--square">
+                            <span class="itemDescription">Publicações</span> 
+                           </i>
+                        </a>
+                    </li>
+                    <li class="itemSidebar">
+                        <a href="#">
+                           <i class="fa-solid fa-user-pen">
+                            <span class="itemDescription">Usuários</span> 
+                           </i>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="logoutSidebar">
+            <button type="button" id="buttonLogout">
+                <i class="fa-solid fa-right--from--bracket" id="iconLogout"></i>
+            </button>
+        </div>
+    </aside>
+    <main>
+        Dashboard
+    </main>
 </body>
+    <script src="../../../public/js/sidebar.js"></script>
 </html>
