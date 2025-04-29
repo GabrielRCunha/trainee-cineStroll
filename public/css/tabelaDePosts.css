@@ -14,7 +14,8 @@ body {
 }
 
 .barra-superior {
-    width: 64%;
+    width: 90%;
+    max-width: 1200px;
     height: 120px;
     background: linear-gradient(to right, #333333 0%, #6a0dad 200%);
     display: flex;
@@ -28,6 +29,10 @@ body {
     width: 88px;
     height: 88px;
     margin-left: 1%;
+}
+
+.inativo {
+    display: none;
 }
 
 .botao-criar {
@@ -56,7 +61,8 @@ body {
 
 .titulo {
     color: white;
-    margin-right: 24%;
+    margin-left: 10%;
+    margin-right: 20%;
 }
 
 .div-tabela {
@@ -96,15 +102,15 @@ body {
     text-align: center;
 }
 
-tr td:first-child{
+tr td:first-child {
     width: 12%;
 }
 
-.acoes{
+.acoes {
     width: 25%;
 }
 
-.divacoes{
+.divacoes {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -113,7 +119,7 @@ tr td:first-child{
     gap: 16px;
 }
 
-button{
+button {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -126,11 +132,11 @@ button{
     transition: all 0.3s;
 }
 
-button i{
+button i {
     font-size: 25px;
 }
 
-.ver{
+.ver {
     background-color: #a9c3d9;
 }
 
@@ -138,23 +144,23 @@ button i{
     background-color: #c2d8ec;
 }
 
-.editar{
+.editar {
     background-color: yellow;
 }
 
-.editar:hover{
+.editar:hover {
     background-color: rgb(255, 255, 198);
 }
 
-.apagar{
+.apagar {
     background-color: red;
 }
 
-.apagar:hover{
+.apagar:hover {
     background-color: rgb(248, 144, 144);
 }
 
-button:hover{
+button:hover {
     scale: 1.1;
     opacity: 1.1;
 }
@@ -185,4 +191,41 @@ button:hover{
 .paginacao li a.ativa {
     background-color: #190e1d;
     cursor: default;
+}
+
+@media(max-width: 1440px) {
+    .barra-superior {
+        width: 72%;
+    }
+
+    .div-tabela {
+        width: 76%;
+    }
+}
+
+@media(max-width: 840px) {
+    .acoes button {
+        width: 32px;
+        height: 32px;
+    }
+
+    .acoes button i {
+        font-size: 20px;
+    }
+
+    .botao-criar {
+        margin-right: 10%;
+    }
+}
+
+@media(max-width: 768px) {
+    .barra-superior .titulo {
+        font-size: 32px;
+        margin-left: 12%;
+        margin-right: 0
+    }
+
+    .botao-criar {
+        margin-right: 16%;
+    }
 }
