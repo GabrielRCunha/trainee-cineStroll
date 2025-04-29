@@ -14,7 +14,7 @@ body {
 }
 
 .barra-superior {
-    width: 90%;
+    width: 60%;
     max-width: 1200px;
     height: 120px;
     background: linear-gradient(to right, #333333 0%, #6a0dad 200%);
@@ -59,7 +59,11 @@ body {
     cursor: pointer;
 }
 
-.titulo {
+.div-titulo{
+    width: 600px;
+}
+
+.nome {
     color: white;
     margin-left: 10%;
     margin-right: 20%;
@@ -102,8 +106,20 @@ body {
     text-align: center;
 }
 
-tr td:first-child {
-    width: 12%;
+.id {
+    width: 15%;
+}
+
+.titulo{
+    width: 20%;
+}
+
+.autor{
+    width: 20%;
+}
+
+.data{
+    width: 20%;
 }
 
 .acoes {
@@ -167,6 +183,7 @@ button:hover {
 
 .paginacao {
     display: flex;
+    align-items: center;
     list-style: none;
     padding: 0;
     gap: 10px;
@@ -193,6 +210,10 @@ button:hover {
     cursor: default;
 }
 
+.passar{
+    white-space: nowrap;
+}
+
 @media(max-width: 1440px) {
     .barra-superior {
         width: 72%;
@@ -216,9 +237,22 @@ button:hover {
     .botao-criar {
         margin-right: 10%;
     }
+
+    .id{
+        padding-left: 15px;
+    }
+
+    .acoes{
+        padding-right: 15px;
+    }
 }
 
 @media(max-width: 768px) {
+
+    .barra-superior{
+        width: 80%;
+        margin-top: 60px;
+    }
     .barra-superior .titulo {
         font-size: 32px;
         margin-left: 12%;
@@ -226,6 +260,28 @@ button:hover {
     }
 
     .botao-criar {
-        margin-right: 16%;
+        margin-right: 8%;
     }
+
+    td{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .div-tabela{
+        width: 85%;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    .paginacao{
+        flex-wrap: wrap;
+        width: 80%;
+        justify-content: center;
+    }
+
+    .paginacao li{
+        margin-bottom: 15px;
+    }
+
 }
