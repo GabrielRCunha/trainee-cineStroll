@@ -9,14 +9,12 @@ html, body {
     display: flex;
     align-content: center;
     flex-direction: column;
-    
 }
 
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-   
 }
 
 .linhaInicial, .posts, .lupa {
@@ -58,11 +56,9 @@ html, body {
     padding: 5px 10px;
     gap: 2%;
     padding-left: 35px;
-    
 }
 
 .container {
-
   display: flex;
   flex-direction: column;
   justify-content: center; 
@@ -108,7 +104,6 @@ html, body {
   font-size: 0.9rem;
   color: #ccc;
   float: right;
-  
 }
 
 .movie-info p {
@@ -133,6 +128,7 @@ html, body {
   color: gold;
 }
 
+
 .paginacao {
     display: flex;
     list-style: none;
@@ -141,9 +137,9 @@ html, body {
     margin: auto;
     margin-bottom: 2%;
     
-  }
+}
   
-  .paginacao li a {
+.paginacao li a {
     padding: 10px 15px;
     background-color: #52235B;
     color: white;
@@ -153,7 +149,17 @@ html, body {
     border: 2px solid black;
     font-size: 14px;
     padding: 6px 12px;
-  }
+}
+
+.paginacao li a:hover {
+    background-color: #872D98;
+}
+
+.paginacao li a.ativo {
+    background-color: #190e1d;
+    font-weight: bold;
+    cursor: default;
+}
 
 
   @media (max-width: 768px) {
@@ -161,6 +167,19 @@ html, body {
       flex-direction: column;
       text-align: center;
       align-items: center;
+    }
+
+    .movie-info > div:first-child {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 5px;
+    }
+  
+    .movie-info .ano {
+      float: none;
+      font-size: 0.9rem;
+      color: #ccc;
     }
 
     .info-extra {
@@ -174,13 +193,10 @@ html, body {
     }
 
     .linhaInicial {
-
       font-size: 0.8rem;
     }
-
   }
 
-  
   @media (max-width: 480px) {
 
     .movie-info p, .info-extra, .movie-info .ano {
@@ -188,31 +204,20 @@ html, body {
     }
 
     .linhaInicial {
-
       font-size: 0.6rem;
     }
+
     .paginacao li a {
       font-size: 10px;
       padding: 3px 6px;
     }
 }
 
-
-  .paginacao li a:hover {
-    background-color: #872D98;
-  }
-
-  .paginacao li a.ativo {
-    background-color: #190e1d;
-    font-weight: bold;
-    cursor: default;
-  }
-
   @media (min-width: 769px) and (max-width: 1656px) and (orientation: portrait) {
     .container {
       margin-top: 2rem;
       margin-bottom: 2rem;
-      gap: 3rem;
+      gap: 1.8rem;
     }
   
     .movie-card {
@@ -240,6 +245,70 @@ html, body {
     .info-extra {
       gap: 40%;           
     }
+  }
+
+  @media (min-width: 1600px) {
+
+    .movie-card {
+      display: flex;
+      align-items: center;
+    }
+    .container {
+      max-width: 1800px;
+    }
+  
+    .movie-card {
+      max-width: 1600px;
+      padding: 2rem; /* Aumenta o espaçamento interno também */
+    }
+  
+    .movie-card img {
+      width: 300px;
+    }
+    .movie-card .titulo{
+      font-size: 1.8rem;
+    }
+  
+    .movie-info {
+      font-size: 1.6rem;
+    }
+  
+    .movie-card p {
+      font-size: 1.8rem; 
+    }
+  
+    .movie-card .rating {
+      font-size: 1.8rem; 
+    }
+  
+    .movie-card button {
+      font-size: 1.6rem; 
+      padding: 0.8rem 1.5rem; 
+    }
+
+    .linhaInicial {
+      font-size: 1.5rem;
+    }
+
+    .paginacao li a {
+      font-size: 27px;
+    }
+
+    .lupa{
+    width: 180%;
+    max-width: 700px;
+    margin: 20px auto;
+    margin-top: 45px;
+    border-radius: 20px;
+    padding: 12px 40px;
+    gap: 2%;
+    padding-left: 15px;
+    }
+
+    .pesquisa span{
+      transform: translateY(-50px) translateX(+10px);
+    }
+    
   }
 
 
