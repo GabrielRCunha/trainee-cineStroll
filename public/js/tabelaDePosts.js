@@ -21,10 +21,36 @@ function atualizaLogo() {
 }
 
 function mudaTexto() {
-    for(i = 1; i <= 5; i++) {
-        let destino = document.querySelector(`.titulo:nth-child(${i})`)
+
+    let destinos = document.querySelectorAll('.titulo.fontes')
+    
+    for(i = 0; i < destinos.length; i++) {
+
+        let destino = destinos[i];
+        let elementos = document.querySelectorAll(`.tabela tr:nth-of-type(${i + 2}) .fontes`);
+        let conteudo = '';
+
+        elementos.forEach(el => {
+            conteudo += el.textContent + " ";
+        })
+        
+        destino.innerHTML = conteudo.trim();
+        
     }
 }
+
+const mediaQuery = window.matchMedia('(max-width: 425px)');
+
+
+function verificarTamanho(e) {
+    if (e.matches) {
+        mudaTexto();
+    }
+}
+
+verificarTamanho(mediaQuery);
+
+mediaQuery.addEventListener('change', verificarTamanho);
 
 pagina.forEach((pag, index) => {
     pag.addEventListener('click', function (event) {
