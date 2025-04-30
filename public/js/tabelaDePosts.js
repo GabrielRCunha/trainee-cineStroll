@@ -20,6 +20,12 @@ function atualizaLogo() {
     }
 }
 
+function mudaTexto() {
+    for(i = 1; i <= 5; i++) {
+        let destino = document.querySelector(`.titulo:nth-child(${i})`)
+    }
+}
+
 pagina.forEach((pag, index) => {
     pag.addEventListener('click', function (event) {
         trocarPaginaAtiva(index);
