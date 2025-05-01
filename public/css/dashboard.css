@@ -7,7 +7,7 @@
 
 html, body{
     font-family: "Inter", sans-serif;
-    background-image: linear-gradient(to bottom, #808080);
+    background-image: linear-gradient(to bottom, #808080, #afaeae);
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
@@ -24,11 +24,10 @@ html, body{
     width: 700px;
     max-width: 1000px;
     padding: 40px 20px;
-    background: linear-gradient(to right, #AAC3D9, #ACBBD0, #B6A5B8, #ad959d, #BF8F9F, #C28998, #C77F8D, #CA7683, #CF6E79, #D36570);
+    background: linear-gradient(to right, #8db4d4, #AAC3D9, #ACBBD0, #B6A5B8, #ad959d, #BF8F9F, #C28998,  #CA7683, #CF6E79, #D36570);
     border: 1px solid white;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
     margin: 10%;
-    
   }
   
   .mensagem-boas-vindas {
@@ -46,18 +45,16 @@ html, body{
     align-items: center;
     width: 100%;
   }
-  
   .Logo {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    gap: 10%;
+    align-items: center;
+    margin-left: 100px
   }
   
   .Logo img {
     width: 150px;
     height: auto;
-    margin-left: 100px;
   }
   
   .Botoes {
@@ -88,8 +85,19 @@ html, body{
     font-size: 1.2rem;
   }
 
-  
-  
+
+  #logoCine{
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    background: linear-gradient(90deg, #FFD700 0%, #8B0000 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    margin-top: 2px;
+  }
   
   #botao-posts {
     background-color: #ffdd1dc5;
@@ -117,3 +125,113 @@ html, body{
   #botao-logout:hover {
     background-color: #cc0000;
   }
+
+
+  @media (max-width: 480px) {
+    .container {
+    flex-direction: column;
+    width: 95%;
+    height: auto;
+    padding: 20px;
+    margin: 20px;
+    text-align: center;
+  }
+  .conteudo-principal{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .mensagem-boas-vindas {
+    font-size: 1rem;
+    margin-bottom: 15px;
+  }
+
+  .Logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    margin-bottom: 10px;
+    margin-left: 0;
+  }
+
+  .Logo img {
+    width: 100px;
+    margin-left: 0;
+  }
+
+  .Botoes {
+    align-items: center;
+  }
+
+  .Botoes button {
+    width: 100%;
+    font-size: 0.8rem;
+    padding: 10px;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    width: 90%;
+    height: auto;
+    padding: 30px;
+    margin: 30px auto;
+    text-align: center;
+  }
+
+  .conteudo-principal{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;;
+  }
+
+  .mensagem-boas-vindas {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+  .Logo{
+    margin-left: 0;
+  }
+
+  .Logo img {
+    margin-left: 0;
+    width: 130px;
+  }
+
+  .Botoes button {
+    font-size: 0.9rem;
+    padding: 12px;
+  }
+}
+
+
+@media (min-width: 1600px) {
+  .container {
+    width: 1100px;
+    height: 500px;
+    padding: 40px;
+    margin: 40px auto;
+  }
+
+  .conteudo-principal {
+    flex: 1;
+    justify-content: center;
+  }
+
+  .mensagem-boas-vindas {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+
+  .Logo img {
+    width: 200px;
+  }
+
+  .Botoes button {
+    font-size: 1.2rem;
+    padding: 15px 30px;
+  }
+}
+    
