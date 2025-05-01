@@ -6,7 +6,7 @@
 }
 
 html, body{
-    font-family: "Inter", sans-serif;
+    font-family: "Montserrat", sans-serif;
     background-image: linear-gradient(to bottom, #808080, #afaeae);
     background-repeat: no-repeat;
     background-size: cover;
@@ -66,6 +66,7 @@ html, body{
   .Botoes button {
     display: flex;
     align-items: center;
+    font-family: "Montserrat";
     gap: 8px;
     padding: 10px 20px;
     font-size: 0.9rem;
@@ -88,7 +89,7 @@ html, body{
 
   #logoCine{
     font-size: 18px;
-    font-style: normal;
+    font-family: "Montserrat";
     font-weight: 700;
     line-height: normal;
     background: linear-gradient(90deg, #FFD700 0%, #8B0000 100%);
