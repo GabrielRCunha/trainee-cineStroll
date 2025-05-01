@@ -1,0 +1,335 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+}
+
+body {
+    display: flex;
+    gap: 48px;
+    flex-direction: column;
+    height: 100vh;
+    align-items: center;
+    background-color: grey;
+}
+
+.barra-superior {
+    width: 60%;
+    max-width: 1200px;
+    height: 120px;
+    background: linear-gradient(to right, #333333 0%, #6a0dad 200%);
+    display: flex;
+    margin-top: 80px;
+    align-items: center;
+    border-radius: 16px;
+    justify-content: space-between;
+}
+
+.logo-barra-superior {
+    width: 88px;
+    height: 88px;
+    margin-left: 1%;
+}
+
+.inativo {
+    display: none;
+}
+
+.botao-criar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    width: 96px;
+    height: 40px;
+    border-radius: 8px;
+    margin-right: 2%;
+    background-color: #ddd;
+    font-size: 16px;
+    font-weight: 600;
+    border: 1px solid #333333;
+}
+
+.botao-criar i {
+    font-size: 24px;
+}
+
+.botao-criar:hover {
+    background-color: white;
+    cursor: pointer;
+}
+
+.div-titulo{
+    width: 600px;
+}
+
+.nome {
+    color: white;
+    margin-left: 10%;
+    margin-right: 20%;
+}
+
+.div-tabela {
+    width: 64%;
+    height: fit-content;
+}
+
+.tabela {
+    width: 100%;
+    border-collapse: collapse;
+    background: linear-gradient(to right, #333333 0%, #6a0dad 200%);
+    color: white;
+    border-radius: 16px;
+
+}
+
+.tabela tr {
+    height: 80px;
+    border: 1px solid white;
+    border-left: 0;
+    border-right: 0;
+}
+
+.tabela tr:first-child {
+    border-top: 0;
+}
+
+.tabela tr:last-child {
+    border-bottom: 0;
+}
+
+.tabela th {
+    font-size: 20px;
+}
+
+.tabela td {
+    text-align: center;
+    
+}
+
+.tabela td p {
+    margin: 16px 0px;
+}
+
+.tabela .info {
+    display: none;
+}
+
+.id {
+    width: 15%;
+}
+
+.titulo{
+    width: 20%;
+}
+
+.autor{
+    width: 20%;
+}
+
+.data{
+    width: 20%;
+}
+
+.acoes {
+    width: 25%;
+}
+
+.divacoes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80px;
+    width: 100%;
+    gap: 16px;
+}
+
+button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 0px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    border: 1px solid white;
+    transition: all 0.3s;
+}
+
+button i {
+    font-size: 25px;
+}
+
+.ver {
+    background-color: #a9c3d9;
+}
+
+.ver:hover {
+    background-color: #c2d8ec;
+}
+
+.editar {
+    background-color: yellow;
+}
+
+.editar:hover {
+    background-color: rgb(255, 255, 198);
+}
+
+.apagar {
+    background-color: red;
+}
+
+.apagar:hover {
+    background-color: rgb(248, 144, 144);
+}
+
+button:hover {
+    scale: 1.1;
+    opacity: 1.1;
+}
+
+.paginacao {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    gap: 10px;
+}
+
+.paginacao li a {
+    padding: 10px 15px;
+    background-color: #52235B;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    border: 2px solid black;
+    font-size: 14px;
+    padding: 6px 12px;
+}
+
+.paginacao li a:hover {
+    background-color: #872D98;
+}
+
+.paginacao li a.ativa {
+    background-color: #190e1d;
+    cursor: default;
+}
+
+.passar{
+    white-space: nowrap;
+}
+
+@media(max-width: 1440px) {
+    .barra-superior {
+        width: 72%;
+    }
+
+    .div-tabela {
+        width: 76%;
+    }
+}
+
+@media(max-width: 840px) {
+    .acoes button {
+        width: 32px;
+        height: 32px;
+    }
+
+    .acoes button i {
+        font-size: 20px;
+    }
+
+    .botao-criar {
+        margin-right: 10%;
+    }
+
+    .id{
+        padding-left: 15px;
+    }
+
+    .acoes{
+        padding-right: 15px;
+    }
+}
+
+@media(max-width: 768px) {
+
+    .barra-superior{
+        width: 80%;
+        margin-top: 60px;
+    }
+    .barra-superior .titulo {
+        font-size: 32px;
+        margin-left: 12%;
+        margin-right: 0
+    }
+
+    .botao-criar {
+        margin-right: 8%;
+    }
+
+    td{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .div-tabela{
+        width: 85%;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    .paginacao{
+        flex-wrap: wrap;
+        width: 80%;
+        justify-content: center;
+    }
+
+    .paginacao li{
+        margin-bottom: 15px;
+    }
+
+}
+@media(max-width: 425px) {
+    body {
+        height: fit-content;
+    }
+    .logo-barra-superior {
+        display: none;
+    }
+    .nome {
+        font-size: 24px;
+    }
+    .botao-criar {
+        padding: 8px;
+    }
+    .div-tabela .tabela{
+        height: fit-content;
+    }
+    .div-tabela tr:not(.tabela tr:first-child) {
+        height: fit-content;
+        width: 100%;
+    }
+    .autor {
+        display: none;
+    }
+    .data {
+        display: none;
+    }
+    td {
+        padding: 0;
+    }
+    .divacoes {
+        flex-direction: column;
+        height: fit-content;
+        padding: 12px 0px;
+    }
+    .divacoes button {
+        height: 36px;
+        width: 36px;
+    }
+}
