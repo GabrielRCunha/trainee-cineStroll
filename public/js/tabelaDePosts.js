@@ -2,7 +2,8 @@ const pagina = document.querySelectorAll('.pagina')
 const voltar = document.querySelector('.voltar')
 const passar = document.querySelector('.passar')
 const logo = document.querySelector('.logo-barra-superior')
-
+let titulo_info = document.querySelector('#titulo-main')
+const mediaQuery = window.matchMedia('(max-width: 426px)');
 let indexPagAtiva = 0;
 
 function trocarPaginaAtiva(index) {
@@ -21,7 +22,6 @@ function atualizaLogo() {
 }
 
 function mudaTexto() {
-
     let destinos = document.querySelectorAll('.titulo.fontes')
     
     for(i = 0; i < destinos.length; i++) {
@@ -31,24 +31,29 @@ function mudaTexto() {
         let conteudo = '';
 
         elementos.forEach(el => {
-            conteudo += el.textContent + " ";
+            conteudo += `<p>${el.textContent}</p>`;
+            const count = conteudo.split("\n").length - 1;
         })
-        
-        destino.innerHTML = conteudo.trim();
-        
+        destino.innerHTML = '';
+        destino.innerHTML = conteudo;
     }
 }
-
-const mediaQuery = window.matchMedia('(max-width: 425px)');
 
 
 function verificarTamanho(e) {
     if (e.matches) {
         mudaTexto();
+        titulo_info.innerHTML = "Informações"
+    }
+    else {
+        titulo_info.innerHTML = "Título"
     }
 }
 
+window.addEventListener('resize', verificarTamanho)
+
 verificarTamanho(mediaQuery);
+
 
 mediaQuery.addEventListener('change', verificarTamanho);
 

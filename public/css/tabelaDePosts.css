@@ -104,6 +104,15 @@ body {
 
 .tabela td {
     text-align: center;
+    
+}
+
+.tabela td p {
+    margin: 16px 0px;
+}
+
+.tabela .info {
+    display: none;
 }
 
 .id {
@@ -288,6 +297,9 @@ button:hover {
 @media(max-width: 425px) {
     body {
         height: fit-content;
+    }
+    .logo-barra-superior {
+        display: none;
     }
     .nome {
         font-size: 24px;
