@@ -16,8 +16,8 @@
         <div class="div-titulo">
             <h1 class="nome">Tabela de Publicações</h1>
         </div>
-        <button class="botao-criar">
-            Criar <i class="bi bi-plus"></i>
+        <button class="botao-criar" onclick="abrirModais('criar-post')"">
+            Criar <i class=" bi bi-plus"></i>
         </button>
     </div>
     <div class="div-tabela">
@@ -110,7 +110,37 @@
         <li><a href="#" class="pagina">10</a></li>
         <li><a href="#" class="passar">&raquo;</a></li>
     </ul>
+
+    <!-- MODAL -->
+    <div class="overlay" id="overlay"></div>
+
+    <div class="modal-container" id="criar-post">
+        <div class="modal-conteudo">
+            <h2>Criar Novo Post</h2>
+            <div class="modal-input-grupo">
+                <label for="post-image">Imagem:</label>
+                <input type="file" id="post-image">
+            </div>
+            <div class="modal-input-grupo">
+                <label for="post-titulo">Título:</label>
+                <input type="text" id="post-titulo" placeholder="Digite o título">
+            </div>
+            <div class="modal-input-grupo">
+                <label for="post-autor">Autor:</label>
+                <input type="text" id="post-autor" placeholder="Digite o autor">
+            </div>
+            <div class="modal-input-grupo">
+                <label for="post-conteudo">Conteúdo:</label>
+                <textarea id="post-conteudo" placeholder="Digite o conteúdo"></textarea>
+            </div>
+            <div class="modal-botoes">
+                <button class="criar">Criar</button>
+                <button class="cancelar" onclick="fecharModais('criar-post')">Cancelar</button>
+            </div>
+        </div>
+    </div>
     <script src="../../../public/js/tabelaDePosts.js"></script>
+    <script src="../../../public/js/modais.js"></script>
 </body>
 
 </html>
