@@ -14,7 +14,7 @@ body {
 }
 
 .barra-superior {
-    width: 60%;
+    width: 64%;
     max-width: 1200px;
     height: 120px;
     background: linear-gradient(to right, #333333 0%, #6a0dad 200%);
@@ -196,6 +196,7 @@ button:hover {
     list-style: none;
     padding: 0;
     gap: 10px;
+    margin-bottom: 30px;
 }
 
 .paginacao li a {
@@ -225,7 +226,7 @@ button:hover {
 
 @media(max-width: 1440px) {
     .barra-superior {
-        width: 72%;
+        width: 76%;
     }
 
     .div-tabela {
@@ -259,9 +260,10 @@ button:hover {
 @media(max-width: 768px) {
 
     .barra-superior{
-        width: 80%;
+        width: 85%;
         margin-top: 60px;
     }
+
     .barra-superior .titulo {
         font-size: 32px;
         margin-left: 12%;
@@ -283,6 +285,10 @@ button:hover {
         white-space: nowrap;
     }
 
+    .id{
+        padding-left: 15px;
+    }
+
     .paginacao{
         flex-wrap: wrap;
         width: 80%;
@@ -293,6 +299,12 @@ button:hover {
         margin-bottom: 15px;
     }
 
+}
+
+@media(max-width: 620px){
+    .autor{
+        display: none;
+    }
 }
 @media(max-width: 425px) {
     body {
@@ -313,6 +325,16 @@ button:hover {
     .div-tabela tr:not(.tabela tr:first-child) {
         height: fit-content;
         width: 100%;
+    }
+
+    .id{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .acoes{
+        width: fit-content;
+        padding-left: 10px;
+        padding-right: 10px;
     }
     .autor {
         display: none;
