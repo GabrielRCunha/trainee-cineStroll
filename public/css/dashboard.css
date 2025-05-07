@@ -7,7 +7,7 @@
 
 html, body{
     font-family: "Montserrat", sans-serif;
-    background-image: linear-gradient(to bottom, #808080, #afaeae);
+    background-image: url(../assets/fundoDashboard.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
@@ -24,7 +24,7 @@ html, body{
     width: 700px;
     max-width: 1000px;
     padding: 40px 20px;
-    background: linear-gradient(to right, #8db4d4, #AAC3D9, #ACBBD0, #B6A5B8, #ad959d, #BF8F9F, #C28998,  #CA7683, #CF6E79, #D36570);
+    background: linear-gradient(to right, #333333, #353138, #382F3F, #3C2C47, #3F2B4E, #422954, #45265C, #4A2366 ,#4C226B, #4E206F);
     border: 1px solid white;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
     margin: 10%;
