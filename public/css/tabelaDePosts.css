@@ -6,6 +6,7 @@
 
 body {
     display: flex;
+    background-image: url('../assets/Background3dCopia.png');
     gap: 48px;
     flex-direction: column;
     height: 100vh;
@@ -59,7 +60,7 @@ body {
     cursor: pointer;
 }
 
-.div-titulo{
+.div-titulo {
     width: 600px;
 }
 
@@ -104,7 +105,7 @@ body {
 
 .tabela td {
     text-align: center;
-    
+
 }
 
 .tabela td p {
@@ -119,15 +120,15 @@ body {
     width: 15%;
 }
 
-.titulo{
+.titulo {
     width: 20%;
 }
 
-.autor{
+.autor {
     width: 20%;
 }
 
-.data{
+.data {
     width: 20%;
 }
 
@@ -219,7 +220,7 @@ button:hover {
     cursor: default;
 }
 
-.passar{
+.passar {
     white-space: nowrap;
 }
 
@@ -349,21 +350,22 @@ button:hover {
         margin-right: 10%;
     }
 
-    .id{
+    .id {
         padding-left: 15px;
     }
 
-    .acoes{
+    .acoes {
         padding-right: 15px;
     }
 }
 
 @media(max-width: 768px) {
 
-    .barra-superior{
+    .barra-superior {
         width: 80%;
         margin-top: 60px;
     }
+
     .barra-superior .titulo {
         font-size: 32px;
         margin-left: 12%;
@@ -374,62 +376,73 @@ button:hover {
         margin-right: 8%;
     }
 
-    td{
+    td {
         padding-left: 10px;
         padding-right: 10px;
     }
 
-    .div-tabela{
+    .div-tabela {
         width: 85%;
         overflow-x: auto;
         white-space: nowrap;
     }
 
-    .paginacao{
+    .paginacao {
         flex-wrap: wrap;
         width: 80%;
         justify-content: center;
     }
 
-    .paginacao li{
+    .paginacao li {
         margin-bottom: 15px;
     }
 
 }
+
 @media(max-width: 425px) {
     body {
         height: fit-content;
     }
+
     .logo-barra-superior {
         display: none;
     }
+
     .nome {
         font-size: 24px;
     }
+
     .botao-criar {
         padding: 8px;
     }
-    .div-tabela .tabela{
+
+    .div-tabela .tabela {
         height: fit-content;
     }
+
     .div-tabela tr:not(.tabela tr:first-child) {
         height: fit-content;
         width: 100%;
     }
+
     .autor {
         display: none;
     }
+
     .data {
         display: none;
     }
+
     td {
         padding: 0;
     }
+
     .divacoes {
         flex-direction: column;
         height: fit-content;
         padding: 12px 0px;
     }
+
     .divacoes button {
         height: 36px;
         width: 36px;
