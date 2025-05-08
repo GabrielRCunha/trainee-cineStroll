@@ -95,7 +95,6 @@ main{
     border-radius: 10px;
     padding: 0.8rem;
     background-color:#b9a533;
-    font-family: "Montserrat", sans-serif;
     font-weight: 600;
 }
 
@@ -104,10 +103,9 @@ main{
 
 }
 .closedSidebar ul{
-    width: 64px;
-    margin-left: 50%;
-    
+    width: 64px;    
 }
+
 .closedSidebar .itemDescription{
     width: 10px;
     overflow: hidden;
@@ -135,3 +133,4 @@ main{
 .closedSidebar .toggleSidebar{
     transform: rotate(180deg);
 }
+
