@@ -1,0 +1,42 @@
+p{
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    font-size: 20px;
+}
+
+.modalExcluir {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    text-align: center;
+    color: white;
+}
+
+.imagemExcluir {
+    width: 100px;
+    height: auto;
+}
+
+.botoes-excluir {
+    display: flex;
+    gap: 20px;
+}
+
+.botaoExcluirConfirmar {
+    background-color: rgb(5, 187, 5);;
+    color: white;
+    font-weight: bold;
+    border-radius: 0;
+    padding: 10px 60px;
+    border: none;
+}
+
+.botaoFecharModalExcluir {
+    background-color: #b80505;
+    color: white;
+    font-weight: bold;
+    padding: 10px 60px;
+    border: none;
+    border-radius: 0;
+}
