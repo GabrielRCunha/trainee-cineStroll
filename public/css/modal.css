@@ -2,13 +2,14 @@ p{
     font-family: 'Montserrat', sans-serif;
     color: white;
     font-size: 20px;
+    font-weight: bold;
 }
 
 .modal{
     position: absolute;
     z-index: 3;
     height: fit-content;
-    width: 25%;
+    width: 20%;
     display: none;
     flex-direction: column;
     align-items: center;
@@ -17,10 +18,21 @@ p{
     left: 50%;
     transform: translate(-50%, -50%);
     background: linear-gradient(to right, #6a0dad, #ff7d00);
+}
+
+#visualizar{
+    width: 30%;
     border-radius: 16px;
     padding: 30px 30px 30px 30px;
     gap: 40px;
+}
 
+.modalTopo{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    flex-direction: row;
+    gap: 70px;
 }
 
 .modalInputs{
@@ -34,11 +46,31 @@ p{
     display: flex;
     width: 100%;
     flex-direction: column;
-    gap: 5px;
+    gap: 8px;
+}
+
+#fotoPerfil {
+    display: flex;
+    flex-shrink: 0;
+    flex-grow: 0;
+    flex-basis: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px; 
+    height: 200px; 
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+#fotoPerfil img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
 }
 
 .modalInputs input{
-    height: 30px;
+    height: 35px;
     font-size: 18px;
     font-weight: bold;
     border-radius: 16px;
@@ -48,12 +80,15 @@ p{
 }
 
 .botaoFecharModalContainer{
+    display: flex;
     width: 100%;
+    justify-content: center;
     
 }
 
 .botaoFecharModal{
-    width: 100px;
+    width: 150px;
+    height: 50px;
     border-radius: 16px;
     background-color: #b80505;
     color: white;
@@ -62,7 +97,7 @@ p{
 }
 
 #iconeSenha{
-    transform: translate(-15px,-33px);
+    transform: translate(-15px,-37px);
     font-weight: bold;
     height: 25px;
     font-size: 22px;
@@ -73,7 +108,7 @@ p{
 
 #iconeSenha:hover{
     font-size: 25px;
-    transform: translate(-12px,-35px)
+    transform: translate(-14px,-39px)
 }
 
 .fundoModal{

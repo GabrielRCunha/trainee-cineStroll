@@ -10,6 +10,15 @@ function fecharModal(idModal){
     tela.style.display = 'none';
 }
 
+function fecharModalAberto(classModais){
+    const modais = document.querySelectorAll(classModais);
+    modais.forEach(element => {
+        if(element.style.display === 'flex'){
+            fecharModal(element.id)
+        }
+    });
+}
+
 function mostrarSenha(idIcone, idInput){
     const icone = document.getElementById(idIcone);
     const input = document.getElementById(idInput);
