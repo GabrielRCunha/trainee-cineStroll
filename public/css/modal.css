@@ -16,7 +16,7 @@ p{
     top:50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background: linear-gradient(to right, #6a0dad, #580000);
+    background: linear-gradient(to right, #6a0dad, #ff7d00);
     border-radius: 16px;
     padding: 30px 30px 30px 30px;
     gap: 40px;
@@ -55,7 +55,7 @@ p{
 .botaoFecharModal{
     width: 100px;
     border-radius: 16px;
-    background-color: #8b0000;
+    background-color: #b80505;
     color: white;
     font-size: 20px;
     font-weight: bold;
