@@ -306,6 +306,9 @@ button:hover {
     .autor{
         display: none;
     }
+    tr td p{
+        font-size: 16px;
+    }
 }
 @media(max-width: 425px) {
     body {
