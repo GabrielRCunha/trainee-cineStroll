@@ -8,6 +8,7 @@ body{
     display: flex;
     background-color: aliceblue;
     font-family: "Montserrat", sans-serif;
+    background-image: url(/public/assets/fundo\ hero\ section.jpg);
 }
 
 main{
@@ -19,6 +20,7 @@ main{
     width: 3.5rem;
     border-radius: 50%;
     object-fit: cover;
+    margin-right: 18px;
 }
 
 .sidebar{
