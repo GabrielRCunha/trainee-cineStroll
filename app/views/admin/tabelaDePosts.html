@@ -37,7 +37,7 @@
                 <td class="data fontes">20/04/2025</td>
                 <td class="acoes">
                     <div class="divacoes">
-                        <button class="ver"><i class="bi bi-eye"></i></button>
+                        <button class="ver"><i class="bi bi-eye" onclick="abrirModais('visualizar-post')"></i></button>
                         <button class="editar"><i class="bi bi-pencil-square"></i></button>
                         <button class="apagar"><i class="bi bi-trash3"></i></button>
                     </div>
@@ -50,7 +50,7 @@
                 <td class="data fontes">10/04/2025</td>
                 <td class="acoes">
                     <div class="divacoes">
-                        <button class="ver"><i class="bi bi-eye"></i></button>
+                        <button class="ver"><i class="bi bi-eye" onclick="abrirModais('visualizar-post')"></i></button>
                         <button class="editar"><i class="bi bi-pencil-square"></i></button>
                         <button class="apagar"><i class="bi bi-trash3"></i></button>
                     </div>
@@ -63,7 +63,7 @@
                 <td class="data fontes">30/04/1999</td>
                 <td class="acoes">
                     <div class="divacoes">
-                        <button class="ver"><i class="bi bi-eye"></i></button>
+                        <button class="ver"><i class="bi bi-eye" onclick="abrirModais('visualizar-post')"></i></button>
                         <button class="editar"><i class="bi bi-pencil-square"></i></button>
                         <button class="apagar"><i class="bi bi-trash3"></i></button>
                     </div>
@@ -76,7 +76,7 @@
                 <td class="data fontes">06/08/1945</td>
                 <td class="acoes">
                     <div class="divacoes">
-                        <button class="ver"><i class="bi bi-eye"></i></button>
+                        <button class="ver"><i class="bi bi-eye" onclick="abrirModais('visualizar-post')"></i></button>
                         <button class="editar"><i class="bi bi-pencil-square"></i></button>
                         <button class="apagar"><i class="bi bi-trash3"></i></button>
                     </div>
@@ -89,7 +89,7 @@
                 <td class="data fontes">14/12/2017</td>
                 <td class="acoes">
                     <div class="divacoes">
-                        <button class="ver"><i class="bi bi-eye"></i></button>
+                        <button class="ver"><i class="bi bi-eye" onclick="abrirModais('visualizar-post')"></i></button>
                         <button class="editar"><i class="bi bi-pencil-square"></i></button>
                         <button class="apagar"><i class="bi bi-trash3"></i></button>
                     </div>
@@ -136,6 +136,42 @@
             <div class="modal-botoes">
                 <button class="criar">Criar</button>
                 <button class="cancelar" onclick="fecharModais('criar-post')">Cancelar</button>
+            </div>
+        </div>
+    </div>
+    <div class="modal-container" id="visualizar-post">
+        <div class="modal-conteudo">
+            <h2>Visualizar Post</h2>
+
+            <div class="modal-input-grupo">
+                <label>Imagem:</label>
+                <div class="post-image-container">
+                    <img id="visualizar-post-imagem" src="" alt="Imagem do post">
+                </div>
+            </div>
+
+            <div class="modal-input-grupo">
+                <label>Título:</label>
+                <div class="post-content" id="visualizar-post-titulo"></div>
+            </div>
+
+            <div class="modal-input-grupo">
+                <label>Autor:</label>
+                <div class="post-content" id="visualizar-post-autor"></div>
+            </div>
+
+            <div class="modal-input-grupo">
+                <label>Data de Publicação:</label>
+                <div class="post-content" id="visualizar-post-data"></div>
+            </div>
+
+            <div class="modal-input-grupo">
+                <label>Conteúdo:</label>
+                <div class="post-content" id="visualizar-post-conteudo"></div>
+            </div>
+
+            <div class="modal-botoes">
+                <button class="cancelar" onclick="fecharModais('visualizar-post')">Fechar</button>
             </div>
         </div>
     </div>
