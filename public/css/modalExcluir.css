@@ -4,9 +4,11 @@ p{
     font-size: 20px;
 }
 
+/* Modal Excluir */
+
 #excluir{
-    gap: 30px;
-    border-radius: 16px;
+    gap: 10px;
+    border-radius: 0px;
     padding: 30px 30px 30px 30px;
     text-align: center;
     color: white;
@@ -39,3 +41,91 @@ p{
     border: none;
     border-radius: 0;
 }
+
+/* Modal Excluir Fim */
+
+
+/* Modal Editar */
+
+#editar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;     
+    justify-content: center;
+    text-align: center;
+    gap: 20px;
+    padding: 30px;
+    border-radius: 16px;
+    color: white;
+}
+
+.modalInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#editar .modalInputs {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 250px;
+}
+
+#editar .modalInputs input {
+    padding: 6px 10px;
+    font-size: 14px;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+}
+
+#editar .modalSenha {
+    position: relative;
+}
+
+#editar .modalSenha i {
+    position: absolute;
+    right: 10px;
+    top: 48px;
+    cursor: pointer;
+    color: black;
+}
+
+
+#editar .modalFoto {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;
+    width: 100%;
+    gap: 8px;
+   
+}
+
+#editar .modalFoto img {
+    width: 80px; 
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto; 
+    display: block; 
+}
+
+.botaoEditarImagem {
+    padding: 10px 60px;
+    background-color:rgb(5, 187, 5);
+    color: white;
+    font-weight: bold;
+    border-radius: 0;
+    border: none;
+    cursor: pointer;
+}
+
+
+.botaoEditarImagem:hover {
+    background-color: #520a9d;
+}
+
+/* Modal Editar Fim */
+

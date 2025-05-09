@@ -43,7 +43,7 @@
                 <td class="acoes">
                     <div class="divacoes">
                         <button class="ver" onclick="abrirModal('visualizar')"><i class="bi bi-eye"></i></button>
-                        <button class="editar"><i class="bi bi-pencil-square"></i></button>
+                        <button class="editar" onclick="abrirModal('editar')"><i class="bi bi-pencil-square"></i></button>
                         <button class="apagar" onclick="abrirModal('excluir')"><i class="bi bi-trash3"></i></button>
                     </div>
                 </td>
@@ -55,7 +55,7 @@
                 <td class="acoes">
                     <div class="divacoes">
                         <button class="ver" onclick="abrirModal('visualizar')"><i class="bi bi-eye"></i></button>
-                        <button class="editar"><i class="bi bi-pencil-square"></i></button>
+                        <button class="editar" onclick="abrirModal('editar')"><i class="bi bi-pencil-square"></i></button>
                         <button class="apagar" onclick="abrirModal('excluir')"><i class="bi bi-trash3"></i></button>
                     </div>
                 </td>
@@ -67,7 +67,7 @@
                 <td class="acoes">
                     <div class="divacoes">
                         <button class="ver" onclick="abrirModal('visualizar')"><i class="bi bi-eye"></i></button>
-                        <button class="editar"><i class="bi bi-pencil-square"></i></button>
+                        <button class="editar" onclick="abrirModal('editar')"><i class="bi bi-pencil-square"></i></button>
                         <button class="apagar" onclick="abrirModal('excluir')"><i class="bi bi-trash3"></i></button>
                     </div>
                 </td>
@@ -79,7 +79,7 @@
                 <td class="acoes">
                     <div class="divacoes">
                         <button class="ver" onclick="abrirModal('visualizar')"><i class="bi bi-eye"></i></button>
-                        <button class="editar"><i class="bi bi-pencil-square"></i></button>
+                        <button class="editar" onclick="abrirModal('editar')"><i class="bi bi-pencil-square"></i></button>
                         <button class="apagar" onclick="abrirModal('excluir')"><i class="bi bi-trash3"></i></button>
                     </div>
                 </td>
@@ -91,7 +91,7 @@
                 <td class="acoes">
                     <div class="divacoes">
                         <button class="ver" onclick="abrirModal('visualizar')"><i class="bi bi-eye"></i></button>
-                        <button class="editar"><i class="bi bi-pencil-square"></i></button>
+                        <button class="editar" onclick="abrirModal('editar')"><i class="bi bi-pencil-square"></i></button>
                         <button class="apagar" onclick="abrirModal('excluir')"><i class="bi bi-trash3"></i></button>
                     </div>
                 </td>
@@ -134,8 +134,10 @@
 <!--Modais Ryan Fim-->
 
 <!--Modais Rafael-->
-    
-<div class="modal" id="excluir">
+
+
+    <div class="modal" id="excluir">
+        <form id="formExcluir"></form>
         
             <h3>Deseja excluir este usuário?</h3>
             <img src="../../../public/assets/icone_excluir.png" alt="Imagem_exclusão" class="imagemExcluir">
@@ -144,13 +146,39 @@
                 <button class="botaoFecharModalExcluir" onclick="fecharModal('excluir')">Cancelar</button>
                 <button class="botaoExcluirConfirmar">Excluir</button>
             </div>
-        
+        </form>
     </div>
 
-   
 
+    <div class="modal" id="editar">
+        <div class="modalInfo">
 
-    
+            <div class="modalInputs">
+                <div class="modalNome">
+                    <p>Nome:</p>
+                    <input type="text" id="editarNome" placeholder="Digite o nome">
+                </div>
+                <div class="modalEmail">
+                    <p>Email:</p>
+                    <input type="email" id="editarEmail" placeholder="Digite o email">
+                </div>
+                <div class="modalSenha">
+                    <p>Senha:</p>
+                    <input type="password" id="editarSenha" placeholder="Digite a senha">
+                    <i class="bi bi-eye" id="iconeEditarSenha" onclick="mostrarSenha('iconeEditarSenha', 'editarSenha')"></i>
+                </div>
+                <div class="modalFoto" id="fotoPerfil">
+                    <img src="../../../public/assets/frederiksen.jpg">
+                    <button class="botaoEditarImagem">Editar imagem</button>
+                </div>
+            </div>
+            <div class="botoes-excluir">
+                <button class="botaoFecharModalExcluir" onclick="fecharModal('editar')">Cancelar</button>
+                <button class="botaoExcluirConfirmar">Salvar</button>
+            </div>
+        </div>
+    </div>
+
 
 <!--Modais Rafael Fim-->
 
