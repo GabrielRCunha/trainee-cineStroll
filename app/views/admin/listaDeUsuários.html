@@ -106,30 +106,30 @@
     <form id="formCriar">
         <div class="modalTopo">
             <div class="modalInputs">
-                <div class="modalId">
-                    <p>ID:</p>
-                    <input type="text" value="0000" readonly>
-                </div>
                 <div class="modalNome">
                     <p>Nome:</p>
-                    <input type="text" value="NomeTeste" readonly>
+                    <input type="text" placeholder="Digite o nome aqui">
                 </div>
                 <div class="modalEmail">
                     <p>Email:</p>
-                    <input type="email" value="emailteste@email.com" readonly>
+                    <input type="email" placeholder="Digite o email aqui">
                 </div>
                 <div class="modalSenha">
                     <p>Senha:</p>
-                    <input type="password" id="inputSenha" value="Senha de teste" readonly>
+                    <input type="password" id="inputSenha" placeholder="Digite a senha">
                     <i class="bi bi-eye" id="iconeSenha" onclick="mostrarSenha('iconeSenha', 'inputSenha')"></i>
                 </div>
             </div>
-            <div class="modalFoto" id="fotoPerfil">
-                <img src="../../../public/assets/frederiksen.jpg">
+            <div class="modalFoto" id="fotoPerfilC">
+                <img src="" id="imgPerfil">
+                <input type="file" accept="image/jpeg, image/png, image/jpg" id="imgInput">
+                <div class="imgBtn" onclick="document.getElementById('imgInput').click()">
+                    <p>Adicione imagem</p>
+                </div>
             </div>
         </div>
         <div class="botaoFecharModalContainer">
-            <button class="botaoFecharModal" onclick="fecharModal('visualizar')">Fechar</button>
+            <button class="botaoFecharModal" onclick="fecharModal('criar')">Fechar</button>
         </div>
     </form>
 </div>
@@ -159,7 +159,7 @@
                     <i class="bi bi-eye" id="iconeSenha" onclick="mostrarSenha('iconeSenha', 'inputSenha')"></i>
                 </div>
             </div>
-            <div class="modalFoto" id="fotoPerfil">
+            <div class="modalFoto" id="fotoPerfilV">
                 <img src="../../../public/assets/frederiksen.jpg">
             </div>
         </div>
