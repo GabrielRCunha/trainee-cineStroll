@@ -14,10 +14,17 @@ p{
     color: white;
 }
 
-.imagemExcluir {
-    width: 100px;
-    height: auto;
-}
+.lixo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  .lixo i {
+    font-size: 80px; 
+    color: #ffffff;  
+  }
 
 .botoes-excluir {
     display: flex;
@@ -128,4 +135,89 @@ p{
 }
 
 /* Modal Editar Fim */
+
+@media (max-width: 1200px) {
+    .modal {
+      width: 35%;
+      padding: 25px;
+      margin-left: 5%;
+      margin-right: 5%;
+    }
+  
+    .modalInputs input,
+    .modalInputs p {
+      font-size: 15px;
+    }
+  
+    .modalFoto img {
+      width: 90px;
+      height: 90px;
+    }
+  
+  }
+  
+  @media (max-width: 768px) {
+    .modal {
+      width: 45%;
+      padding: 20px;
+    }
+  
+    .modalInputs input,
+    .modalInputs p {
+      font-size: 14px;
+    }
+  
+    .modalFoto img {
+      width: 80px;
+      height: 80px;
+    }
+  
+  }
+  
+  @media (max-width: 480px) {
+    .modal {
+      width: 65%;
+      height: auto;
+      padding: 15px;
+    }
+  
+    .modalInputs {
+      gap: 10px;
+    }
+  
+    .modalInputs input,
+    .modalInputs p {
+      font-size: 13px;
+    }
+  
+    .modalFoto {
+      align-items: center;
+      text-align: center;
+    }
+  
+    .modalFoto img {
+      width: 70px;
+      height: 70px;
+    }
+  
+    .botoes-excluir {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 20px;
+    }
+  
+    .botaoFecharModalExcluir,
+    .botaoExcluirConfirmar,
+    .botaoEditarImagem {
+      font-size: 14px;
+      padding: 10px 18px;
+      border-radius: 0;
+      min-width: 120px;
+      max-width: 100%;
+      text-align: center;
+      white-space: nowrap;
+    }
+  }
 
