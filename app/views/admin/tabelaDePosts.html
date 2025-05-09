@@ -119,16 +119,15 @@
         <div class="modal-conteudo">
             <h2>Criar Novo Post</h2>
             <div class="modal-input-grupo">
-                <label for="post-image">Imagem:</label>
-                <input type="file" id="post-image">
+                <label for="post-imagem">Imagem:</label>
+                <input type="file" id="post-imagem" accept="image/*" onchange="previewImagemSelecionada(event)">
+                <div class="imagem-preview-container" id="imagem-preview" style="display: none;">
+                    <img id="preview-imagem-selecionada" src="#" alt="Pré-visualização da imagem selecionada">
+                </div>
             </div>
             <div class="modal-input-grupo">
                 <label for="post-titulo">Título:</label>
                 <input type="text" id="post-titulo" placeholder="Digite o título">
-            </div>
-            <div class="modal-input-grupo">
-                <label for="post-autor">Autor:</label>
-                <input type="text" id="post-autor" placeholder="Digite o autor">
             </div>
             <div class="modal-input-grupo">
                 <label for="post-conteudo">Conteúdo:</label>

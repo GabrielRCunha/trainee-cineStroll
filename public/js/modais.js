@@ -37,3 +37,23 @@ document.addEventListener('keydown', function (e) {
         document.body.style.overflow = '';
     }
 });
+
+function previewImagemSelecionada(event) {
+    const input = event.target;
+    const previewContainer = document.getElementById('imagem-preview');
+    const previewImagem = document.getElementById('preview-imagem-selecionada');
+
+    if (input.files && input.files[0]) {
+        const reader = new FileReader();
+
+        reader.onload = function (e) {
+            previewImagem.src = e.target.result;
+            previewContainer.style.display = 'block';
+        }
+
+        reader.readAsDataURL(input.files[0]);
+    } else {
+        previewImagem.src = '#';
+        previewContainer.style.display = 'none';
+    }
+}
