@@ -82,24 +82,27 @@ p{
 }
 
 
-.botaoFecharModalContainer{
+.botaoModalContainer{
     display: flex;
     width: 100%;
     justify-content: center;
     
 }
 
-.botaoFecharModal{
+.botaoModal{
     width: 150px;
     height: 50px;
     border-radius: 16px;
-    background-color: #b80505;
     color: white;
     font-size: 20px;
     font-weight: bold;
 }
 
-#iconeSenha{
+#botaoFechar{
+    background-color: #b80505;
+}
+
+#iconeSenhaV{
     transform: translate(-15px,-45px);
     font-weight: bold;
     height: 25px;
@@ -109,7 +112,7 @@ p{
     transition: all 0.3s;
 }
 
-#iconeSenha:hover{
+#iconeSenhaV:hover{
     font-size: 25px;
     transform: translate(-14px,-47px)
 }
@@ -177,6 +180,18 @@ p{
     gap: 40px;
 }
 
+.modalDireita{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+#fotoPerfilC{
+    background-color: #ce374b;
+}
+
 #formCriar {
     display: contents;
 }
@@ -187,4 +202,66 @@ p{
 
 #imgPefil{
     display: none;
+}
+
+.imgBtn{
+    cursor: pointer;
+}
+
+.imgBtn p{
+    font-size: 30px;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+}
+
+.botaoModalContainer{
+    gap: 30px;
+}
+
+#botaoCriar{
+    background-color: green;
+}
+
+#botaoDesfazerFoto{
+    position: absolute;
+    transform: translate(-60px, -60px);
+    font-size: 22px;
+    display: none;
+}
+
+#botaoDesfazerFoto:hover{
+    transform: translate(-55px, -55px);
+}
+
+#iconeSenhaC{
+    transform: translate(-15px,-45px);
+    font-weight: bold;
+    height: 25px;
+    font-size: 22px;
+    align-self: flex-end;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+#iconeSenhaC:hover{
+    font-size: 25px;
+    transform: translate(-14px,-47px)
+}
+
+#modalInputsC{
+    gap: 30px;
+}
+
+.aviso{
+    font-size: 16px;
+    color: yellow;
+    display: none;
+    position: absolute;
+    transform: translatey(85px);
+}
+
+#avisoImg{
+    transform: translateY(110px);
+    text-align: center;
 }

@@ -105,31 +105,41 @@
 <div class="modal" id="criar">
     <form id="formCriar">
         <div class="modalTopo">
-            <div class="modalInputs">
+            <div class="modalInputs" id="modalInputsC">
                 <div class="modalNome">
                     <p>Nome:</p>
-                    <input type="text" placeholder="Digite o nome aqui">
+                    <input id="nomeInput" type="text" placeholder="Digite o nome">
+                    <p class="aviso" id="avisoNome">Nome é obrigatório</p>
                 </div>
                 <div class="modalEmail">
                     <p>Email:</p>
-                    <input type="email" placeholder="Digite o email aqui">
+                    <input id="emailInput" type="email" placeholder="Digite o email">
+                    <p class="aviso" id="avisoEmail">Email é obrigatório</p>
                 </div>
                 <div class="modalSenha">
                     <p>Senha:</p>
-                    <input type="password" id="inputSenha" placeholder="Digite a senha">
-                    <i class="bi bi-eye" id="iconeSenha" onclick="mostrarSenha('iconeSenha', 'inputSenha')"></i>
+                    <input type="password" id="inputSenhaC" placeholder="Digite a senha">
+                    <i class="bi bi-eye" id="iconeSenhaC" onclick="mostrarSenha('iconeSenhaC', 'inputSenhaC')"></i>
+                    <p class="aviso" id="avisoSenha">Senha é obrigatória</p>   
                 </div>
             </div>
-            <div class="modalFoto" id="fotoPerfilC">
-                <img src="" id="imgPerfil">
-                <input type="file" accept="image/jpeg, image/png, image/jpg" id="imgInput">
-                <div class="imgBtn" onclick="document.getElementById('imgInput').click()">
-                    <p>Adicione imagem</p>
+            <div class="modalDireita">
+                <div class="modalFoto" id="fotoPerfilC">
+                    <img src="" id="imgPerfil" style="display: none;">
+                    <input type="file" accept="image/jpeg, image/png, image/jpg" id="imgInput">
+                    <div class="imgBtn" onclick="document.getElementById('imgInput').click()">
+                        <p>Adicionar imagem</p>
+                        <p>+</p>
+                    </div>
                 </div>
+                <p class="aviso" id="avisoImg">Imagem é obrigatória</p>
+                <button class="bi bi-arrow-counterclockwise" id="botaoDesfazerFoto" onclick="desfazerFoto()">
+                </button>
             </div>
         </div>
-        <div class="botaoFecharModalContainer">
-            <button class="botaoFecharModal" onclick="fecharModal('criar')">Fechar</button>
+        <div class="botaoModalContainer">
+            <button class="botaoModal" id="botaoFechar" onclick="fecharModal('criar')">Fechar</button>
+            <button class="botaoModal" id="botaoCriar" onclick="checarCampos('formCriar', 'avisoNome', 'avisoEmail', 'avisoSenha', 'avisoImg', 'nomeInput', 'emailInput', 'inputSenhaC', 'imgInput', '.aviso', 'criar', event)">Criar</button>
         </div>
     </form>
 </div>
@@ -155,16 +165,16 @@
                 </div>
                 <div class="modalSenha">
                     <p>Senha:</p>
-                    <input type="password" id="inputSenha" value="Senha de teste" readonly>
-                    <i class="bi bi-eye" id="iconeSenha" onclick="mostrarSenha('iconeSenha', 'inputSenha')"></i>
+                    <input type="password" id="inputSenhaV" value="Senha de teste" readonly>
+                    <i class="bi bi-eye" id="iconeSenhaV" onclick="mostrarSenha('iconeSenhaV', 'inputSenhaV')"></i>
                 </div>
             </div>
             <div class="modalFoto" id="fotoPerfilV">
                 <img src="../../../public/assets/frederiksen.jpg">
             </div>
         </div>
-        <div class="botaoFecharModalContainer">
-            <button class="botaoFecharModal" onclick="fecharModal('visualizar')">Fechar</button>
+        <div class="botaoModalContainer">
+            <button class="botaoModal" id="botaoFechar" onclick="fecharModal('visualizar')">Fechar</button>
         </div>
     </div>
 

@@ -32,3 +32,79 @@ function mostrarSenha(idIcone, idInput){
         icone.classList.replace('bi-eye-slash', 'bi-eye');
     }
 }
+
+const imagem = document.getElementById('imgPerfil');
+const imgInput = document.getElementById('imgInput');
+const imgBotao = document.querySelector('.imgBtn');
+const imgBotaoDesfazer = document.getElementById('botaoDesfazerFoto')
+
+imgInput.onchange = function(){
+    imagem.src = URL.createObjectURL(imgInput.files[0]);
+    imagem.style.display = 'block';
+    imgBotao.style.display = 'none';
+    imgBotaoDesfazer.style.display = 'block'
+}
+
+function desfazerFoto(){
+    imgInput.value = '';
+    imagem.src = '';
+    imagem.style.display = 'none';
+    imgBotao.style.display = 'block';
+    imgBotaoDesfazer.style.display = 'none';
+}
+
+function checarCampos(idForm, idAvisoNome, idAvisoEmail, idAvisoSenha, idAvisoImg,
+                     idNomeInput, idEmailInput, idSenhaInput, idImgInput, classAvisos, idModal, event){
+    event.preventDefault();
+
+    const nome = document.getElementById(idNomeInput).value;
+    const email = document.getElementById(idEmailInput).value;
+    const senha = document.getElementById(idSenhaInput).value;
+    const img = document.getElementById(idImgInput).files[0];
+    const avisos = document.querySelectorAll(classAvisos);
+
+    let valid = true;
+
+    if (!nome) {
+        const erroNome = document.getElementById(idAvisoNome);
+        erroNome.style.display = 'block';
+        valid = false;
+    }
+
+    if (!email) {
+        const erroEmail = document.getElementById(idAvisoEmail);
+        erroEmail.style.display = 'block';
+        valid = false;
+    }
+
+    if (!senha) {
+        const erroSenha = document.getElementById(idAvisoSenha);
+        erroSenha.style.display = 'block';
+        valid = false;
+    }
+
+    if(!img){
+        const erroImg = document.getElementById(idAvisoImg);
+        erroImg.style.display = 'block';
+        valid = false;
+    }
+
+    if (!valid){
+        setTimeout(() => {
+        avisos.forEach(aviso => {
+            aviso.style.display = 'none';
+        })
+    }, 2500);
+    
+    return;
+
+    }
+
+    const formulario = document.getElementById(idForm);
+    formulario.submit();
+    formulario.reset();
+    desfazerFoto();
+
+    fecharModal(idModal);
+
+}
