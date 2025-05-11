@@ -269,7 +269,7 @@ button:hover {
     gap: 8px;
 }
 
-.modal-input-groupo label {
+.modal-input-grupo label {
     font-weight: 600;
 }
 
@@ -368,6 +368,21 @@ button:hover {
 #visualizar-post-imagem {
     max-width: 100%;
     max-height: 300px;
+}
+.botao-post-imagem {
+    display: flex;
+    padding: 0;
+    height: 56px;
+    width: 160px;
+    background-color: #391944;
+    align-items: center;
+    justify-content: center;
+    border-radius: 16px;
+    cursor: pointer;
+    border: 1px solid white;
+}
+#post-imagem {
+    display: none;
 }
 
 @media(max-width: 1440px) {
