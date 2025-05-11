@@ -15,8 +15,7 @@ body {
 }
 
 .barra-superior {
-    width: 60%;
-    max-width: 1200px;
+    width: 64%;
     height: 120px;
     background: linear-gradient(to right, #333333 0%, #6a0dad 200%);
     display: flex;
@@ -373,7 +372,7 @@ button:hover {
 
 @media(max-width: 1440px) {
     .barra-superior {
-        width: 72%;
+        width: 76%;
     }
 
     .div-tabela {
@@ -407,7 +406,7 @@ button:hover {
 @media(max-width: 768px) {
 
     .barra-superior {
-        width: 80%;
+        width: 85%;
         margin-top: 60px;
     }
 
