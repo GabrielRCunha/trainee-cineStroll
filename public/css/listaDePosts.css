@@ -255,6 +255,8 @@ html, body {
     }
     .container {
       max-width: 1800px;
+      margin-left: auto;
+      margin-right: auto;
     }
   
     .movie-card {
@@ -294,22 +296,19 @@ html, body {
       font-size: 27px;
     }
 
-    .lupa{
-    width: 180%;
-    max-width: 700px;
-    margin: 20px auto;
-    margin-top: 45px;
-    border-radius: 20px;
-    padding: 12px 40px;
-    gap: 2%;
-    padding-left: 15px;
-    }
+     .lupa {
+    width: 100%;
+    padding: 12px 15px 12px 50px; 
+    font-size: 1rem;
+  }
 
+   
     .pesquisa span{
-      transform: translateY(-50px) translateX(+10px);
+      transform: translateY(-53px) translateX(+10px);
     }
     
   }
+
 
 
   
