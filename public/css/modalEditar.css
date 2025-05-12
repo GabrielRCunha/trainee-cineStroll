@@ -1,0 +1,57 @@
+.fundoEditar{
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    opacity: 0.6;
+    position: absolute;
+    z-index: 2;
+}
+
+.modalEditar{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    z-index: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.containerEditar{
+    width: 500px;
+    background: linear-gradient(to right, #333333 0%, #6a0dad 200%);
+    border-radius: 16px;
+}
+
+.formModalEditar{
+    width: 100%;
+}
+
+.imagemEditar{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.imagemEditar img{
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+    margin-bottom: 20px;
+}
+
+.tituloEditar{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding-left: 10%;
+}
+
+.tituloEditar input{
+    width: 80%;
+    border-radius: 5px;
+    border: 0;
+}
+
