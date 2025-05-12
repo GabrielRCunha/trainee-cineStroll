@@ -1,0 +1,287 @@
+* {
+    margin: 0;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    min-height: 100vh;
+}
+
+body {
+    background: linear-gradient(180deg, #333333 0%, #6a0dad 200%);
+    background-attachment: fixed;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#logo {
+    width: fit-content;
+}
+
+#logo img {
+    width: 72px;
+    height: 72px;
+    margin-left: 24px;
+    margin-top: 8px;
+}
+
+#caixa-login {
+    width: 32%;
+    height: fit-content;
+    background: linear-gradient(to top, #333333, #6a0dad 200%);
+    border-radius: 16px;
+    margin: auto;
+    margin-top: 20px;
+    padding-top: 50px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#texto-login {
+    width: fit-content;
+    height: fit-content;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 56px;
+}
+
+#texto-login h1 {
+    font-size: 40px;
+    margin-top: 64px;
+    margin-bottom: 0px;
+}
+
+#texto-login h2 {
+    font-size: 24px;
+    margin-top: 33px;
+    margin-bottom: 0px;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+#titulo-email,
+#titulo-senha {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+#titulo-senha {
+    margin-top: 32px;
+}
+
+#input-email,
+#input-senha {
+    height: 51px;
+    width: 80%;
+    border-radius: 16px;
+}
+
+
+#botao-entrar {
+    width: 20vh;
+    height: 74px;
+    color: black;
+    background-color: rgba(255, 255, 255, 0.85);
+    border-radius: 16px;
+    margin-top: 5%;
+    margin-bottom: 10%;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    text-align: center;
+    border: 0;
+    justify-self: flex-start;
+    margin-left: 9%;
+}
+
+#botao-entrar:hover {
+    background-color: rgba(255, 255, 255, 1);
+    color: black;
+}
+
+
+#botao-entrar a {
+    text-decoration: none;
+    color: black;
+    width: 100%;
+    height: 100%;
+}
+
+.barra-formulario {
+    font-size: 20px;
+    padding-left: 12px;
+}
+
+.formulario p {
+    align-self: flex-start;
+    margin-left: 10%;
+}
+
+.botao {
+    width: 100%;
+    margin-top: 0;
+}
+
+#div-barra-senha {
+    width: 100%;
+    display: flex;
+}
+
+#mostrar-senha {
+    align-self: flex-end;
+    margin-right: 11%;
+    transform: translateY(-45px);
+    color: black;
+    cursor: pointer;
+    font-size: 30px;
+}
+
+@media (max-width: 1200px) {
+    #caixa-login {
+        width: 40%;
+    }
+
+    #logo {
+        width: 64px;
+        height: 64px;
+    }
+}
+
+@media (max-width: 992px) {
+    #caixa-login {
+        width: 50%;
+    }
+
+    #texto-login h1 {
+        font-size: 36px;
+    }
+
+    #texto-login h2 {
+        font-size: 22px;
+    }
+
+    #logo {
+        width: 64px;
+        height: 64px;
+    }
+}
+
+@media (max-width: 768px) {
+    #caixa-login {
+        width: 65%;
+        padding-top: 40px;
+    }
+
+    #texto-login h1 {
+        font-size: 32px;
+        margin-top: 48px;
+    }
+
+    #texto-login h2 {
+        font-size: 20px;
+        margin-top: 28px;
+    }
+
+    #titulo-email,
+    #titulo-senha {
+        font-size: 22px;
+    }
+
+    #botao-entrar {
+        font-size: 22px;
+        height: 68px;
+    }
+
+    #logo {
+        width: 64px;
+        height: 64px;
+    }
+}
+
+@media (max-width: 576px) {
+    #caixa-login {
+        width: 85%;
+        padding-top: 30px;
+    }
+
+    #texto-login h1 {
+        font-size: 28px;
+        margin-top: 40px;
+    }
+
+    #texto-login h2 {
+        font-size: 18px;
+        margin-top: 24px;
+    }
+
+    #titulo-email,
+    #titulo-senha {
+        font-size: 20px;
+    }
+
+    #input-email,
+    #input-senha {
+        height: 45px;
+        font-size: 18px;
+    }
+
+    #botao-entrar {
+        font-size: 20px;
+        height: 62px;
+        width: 18vh;
+    }
+
+    #mostrar-senha {
+        font-size: 26px;
+        transform: translateY(-40px);
+    }
+
+    #logo {
+        width: 64px;
+        height: 64px;
+    }
+}
+
+@media (max-width: 400px) {
+    #logo img {
+        width: 60px;
+        height: 60px;
+        margin-left: 16px;
+    }
+
+    #texto-login h1 {
+        font-size: 24px;
+    }
+
+    #texto-login h2 {
+        font-size: 16px;
+    }
+
+    #titulo-email,
+    #titulo-senha {
+        font-size: 18px;
+    }
+
+    #botao-entrar {
+        font-size: 18px;
+        height: 56px;
+    }
+
+    #logo {
+        width: 64px;
+        height: 64px;
+    }
+}
