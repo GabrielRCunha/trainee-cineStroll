@@ -32,21 +32,19 @@ p{
 }
 
 .botaoExcluirConfirmar {
-    background-color: rgb(5, 187, 5);;
+     background-color: green;
     color: white;
     font-weight: bold;
-    border-radius: 0;
+    border-radius: 14px;
     padding: 10px 60px;
-    border: none;
 }
 
 .botaoFecharModalExcluir {
     background-color: #b80505;
     color: white;
     font-weight: bold;
+    border-radius: 14px;
     padding: 10px 60px;
-    border: none;
-    border-radius: 0;
 }
 
 /* Modal Excluir Fim */
@@ -75,7 +73,7 @@ p{
 #editar .modalInputs {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 40px;
     width: 250px;
 }
 
@@ -94,7 +92,7 @@ p{
 #editar .modalSenha i {
     position: absolute;
     right: 10px;
-    top: 48px;
+    top: 55px;
     cursor: pointer;
     color: black;
 }
@@ -121,11 +119,10 @@ p{
 
 .botaoEditarImagem {
     padding: 10px 60px;
-    background-color:rgb(5, 187, 5);
+    background-color: green;
     color: white;
     font-weight: bold;
-    border-radius: 0;
-    border: none;
+    border-radius: 14px;
     cursor: pointer;
 }
 
@@ -133,6 +130,11 @@ p{
 .botaoEditarImagem:hover {
     background-color: #520a9d;
 }
+
+#editar .aviso {
+    margin-top: 13px;
+}
+
 
 /* Modal Editar Fim */
 

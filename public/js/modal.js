@@ -52,6 +52,19 @@ function desfazerFoto(){
     imgBotao.style.display = 'block';
     imgBotaoDesfazer.style.display = 'none';
 }
+ function mostrarImagemSelecionada(event, idImagem) {
+    const input = event.target;
+    const img = document.getElementById(idImagem);
+
+    if (input.files && input.files[0]) {
+        const reader = new FileReader();
+        reader.onload = function (e) {
+            img.src = e.target.result;
+            img.style.display = 'block';
+        };
+        reader.readAsDataURL(input.files[0]);
+    }
+}
 
 function checarCampos(idForm, idAvisoNome, idAvisoEmail, idAvisoSenha, idAvisoImg,
                      idNomeInput, idEmailInput, idSenhaInput, idImgInput, classAvisos, idModal, event){
