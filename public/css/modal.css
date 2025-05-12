@@ -1,0 +1,267 @@
+p{
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.modal{
+    position: absolute;
+    z-index: 3;
+    height: fit-content;
+    width: 20%;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(to right, #6a0dad, #ff7d00);
+}
+
+/* Modal Visualizar */
+
+#visualizar{
+    width: 30%;
+    border-radius: 16px;
+    padding: 30px 30px 30px 30px;
+    gap: 40px;
+}
+
+.modalTopo{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    flex-direction: row;
+    gap: 70px;
+}
+
+.modalInputs{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    width: 100%;
+}
+
+.modalInputs div{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.modalInputs input{
+    height: 50px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 8px;
+    padding-left: 2%;
+    width: 97%;
+    border: 0px;
+}
+
+.modalFoto{
+    display: flex;
+    flex-shrink: 0;
+    flex-grow: 0;
+    flex-basis: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 180px; 
+    height: 180px; 
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.modalFoto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+
+.botaoModalContainer{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    
+}
+
+.botaoModal{
+    width: 150px;
+    height: 50px;
+    border-radius: 16px;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#botaoFechar{
+    background-color: #b80505;
+}
+
+#iconeSenhaV{
+    transform: translate(-15px,-45px);
+    font-weight: bold;
+    height: 25px;
+    font-size: 22px;
+    align-self: flex-end;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+#iconeSenhaV:hover{
+    font-size: 25px;
+    transform: translate(-14px,-47px)
+}
+
+.fundoModal{
+    position: fixed;
+    z-index: 2;
+    display: none;
+    background-color: black;
+    opacity: 0.6;
+    width: 100%;
+    height: 100vh;
+}
+
+@media(max-width: 1630px){
+
+    #visualizar{
+        width: 450px;
+        gap: 10px;
+    }
+
+    #criar{
+        width: 450px;
+        gap: 10px;
+    }
+
+    .modalTopo{
+        flex-direction: column-reverse;
+        gap: 30px;
+    }
+}
+
+@media(max-width: 700px){
+    .modalTopo{
+        gap: 20px;
+    }
+
+    #fotoPerfilV{
+        width: 130px;
+        height: 130px;
+        flex-basis: 130px;
+    }
+
+    .modalInputs{
+        gap: 10px;
+    }
+
+    .modalInputs div{
+        gap: 5px;
+    }
+}
+
+@media(max-width: 530px){
+    #visualizar{
+        width: 70%;
+    }
+}
+
+/* Modal Criar */
+
+#criar{
+    width: 30%;
+    border-radius: 16px;
+    padding: 30px 30px 30px 30px;
+    gap: 40px;
+}
+
+.modalDireita{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+#fotoPerfilC{
+    background-color: #ce374b;
+}
+
+#formCriar {
+    display: contents;
+}
+
+#imgInput{
+    display: none;
+}
+
+#imgPefil{
+    display: none;
+}
+
+.imgBtn{
+    cursor: pointer;
+}
+
+.imgBtn p{
+    font-size: 30px;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+}
+
+.botaoModalContainer{
+    gap: 30px;
+}
+
+#botaoCriar{
+    background-color: green;
+}
+
+#botaoDesfazerFoto{
+    position: absolute;
+    transform: translate(-60px, -60px);
+    font-size: 22px;
+    display: none;
+}
+
+#botaoDesfazerFoto:hover{
+    transform: translate(-55px, -55px);
+}
+
+#iconeSenhaC{
+    transform: translate(-15px,-45px);
+    font-weight: bold;
+    height: 25px;
+    font-size: 22px;
+    align-self: flex-end;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+#iconeSenhaC:hover{
+    font-size: 25px;
+    transform: translate(-14px,-47px)
+}
+
+#modalInputsC{
+    gap: 30px;
+}
+
+.aviso{
+    font-size: 16px;
+    color: yellow;
+    display: none;
+    position: absolute;
+    transform: translatey(85px);
+}
+
+#avisoImg{
+    transform: translateY(110px);
+    text-align: center;
+}

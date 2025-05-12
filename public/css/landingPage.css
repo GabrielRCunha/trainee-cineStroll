@@ -1,0 +1,476 @@
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(#000000, #6a0dad);
+}
+
+
+.imagemFundo{
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    opacity: 0.3;
+    height: 880px;
+}
+
+.heroSection{
+    background-image: url(/public/assets/fundo\ hero\ section.jpg);
+    
+}
+
+.conteudo{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    z-index: 0;
+    flex-direction: column;
+    align-items: center;
+}
+
+.apresentacao{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+}
+
+
+
+.textoLogo img{
+    width: 281px;
+    height: 374.67px;
+}
+
+.textoLogo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.textoApresent{
+    font-size: 36px;
+    margin-top: 70px;
+    width: 60%;
+}
+
+
+.textoApresent p{
+    color: azure;
+    font-weight: bold;
+}
+
+.textoLogo h2{
+    font-size: 48px;
+    transform: translateY(60px);
+    background: linear-gradient(90deg, #f7d700, #8b0000);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.carrossel{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.botaoEsquerdo{
+    width: 10%;
+    height: 285px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.botaoEsquerdo button{
+    border-radius: 20px;
+    border: 0;
+    width: 70px;
+    height: 70px;
+    cursor: pointer;
+    opacity: 0.85;
+}
+
+.cards{
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    height: 285px;
+    border-radius: 20px;
+    background-color: aliceblue;
+    opacity: 80%;  
+    bottom: 100px;
+}
+
+
+.botaoDireito {
+    width: 10%;
+    height: 285px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.85;
+}
+
+.botaoDireito button{
+    border-radius: 20px;
+    border: 0;
+    width: 70px;
+    height: 70px;
+    cursor: pointer;
+}
+
+.descricao{
+    display: flex;
+    width: 80%;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-left: 5%;
+    z-index: -1;
+}
+
+.descricao h2{
+    display: flex;
+    justify-content: center;
+    color: aliceblue;
+    font-size: 48px;
+    margin: 0;
+    margin-top: 60px;
+}
+
+.descricao p{
+    text-align: left;
+    color: aliceblue;
+    font-size: 32px;
+    font-weight: bold;
+    margin-top:20px;
+    margin-bottom: 50px;
+}
+
+.textoImagem{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.textoCard{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    margin-left: 10px;
+}
+
+.imagemCard{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    margin-top: 10px;
+
+}
+.imagemCard img{
+    width: 88px;
+    border-radius: 10px;
+    margin-bottom: 5px;
+}
+
+.estrelas{
+    color: #FF6A00;
+}
+
+.botaoCard{
+    width: 100%;
+    margin-top: 35px;
+}
+
+.botaoCard button{
+    background-color: #FFD700;
+    border-radius: 20px;
+    border:0px;
+    width: 106px;
+    height: 44px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.textoBotao{
+    font-size: 20px;
+    margin: 0;
+}
+
+
+@media only screen and (max-width:1892px){
+    .textoApresent{
+        font-size: 32px;
+    }
+}
+
+@media only screen and (max-width:1650px){
+    .textoApresent{
+        font-size: 28px;
+    }
+
+    .cards{
+        margin-top: 20px;
+    }
+}
+    @media only screen and (max-width:1450px){
+        .cards{
+            width: 90%;
+            justify-content: center;
+        }
+
+
+        .card{
+            margin-right: 20px;
+            margin-left: 20px;
+        }
+
+        .botaoDireito{
+            width: 5%;
+            margin-right: 20px;
+        }
+
+        .botaoEsquerdo{
+            width: 5%;
+            margin-left: 20px;
+        }
+        
+    }
+
+    @media only screen and (max-width:1310px){
+        .card{
+            margin-right: 15px;
+            margin-left: 15px;
+        }
+    }
+
+    @media only screen and (max-width:1250px){
+        .tres{
+            display: none;
+        }
+
+        .cards{
+            width: 90%;
+            gap: 100px;
+        }
+        .botaoDireito{
+            width: 10%;
+        }
+        .botaoEsquerdo{
+            width: 10%;
+        }
+    }
+
+    @media only screen and (max-width:1150px){
+        .textoApresent{
+            font-size: 24px;
+        }
+
+    }
+
+    @media only screen and (max-width:1050px){
+        .textoLogo img{
+            width: 250px;
+            height: 340px;
+        }
+        .cards{
+            width: 90%;
+            gap: 50px;
+        }
+    }
+
+    @media only screen and (max-width:960px){
+        .cards{
+            width: 90%;
+            gap: 20px;
+        }
+    }
+
+    @media only screen and (max-width:935px){
+        .dois{
+            display: none;
+        }
+        .cards{
+            width: 60%;
+        }
+
+        .descricao{
+            margin-top: 40px;
+        }
+
+        .textoApresent{
+            font-size: 24px;
+        }
+    }
+
+
+    @media only screen and (max-width:800px){
+        .textoLogo h2{
+            font-size: 30px;
+        }
+
+        .textoLogo img{
+            height: 300px;
+        }
+
+        .descricao{
+            margin-top: 0;
+        }
+
+        .descricao p{
+            font-size: 24px;
+        }
+
+        .imagemFundo{
+            height: 720px;
+        }
+
+    }
+
+    @media only screen and (max-width:800px){
+        .textoLogo h2{
+            font-size: 26px;
+        }
+
+        .textoLogo img{
+            height: 260px;
+            width: 220px;
+        }
+
+        .textoApresent{
+            font-size: 20px;
+        }
+
+        .descricao{
+            margin-top: 20px;
+        }
+
+        .imagemFundo{
+            height: 680px;
+        }
+    }
+
+    @media only screen and (max-width:550px){
+        .apresentacao{
+            flex-direction: column-reverse;
+            justify-content: center;
+        }
+
+        .apresentacao p{
+            margin-top: 0;;
+        }
+        .textoApresent{
+            height: fit-content;
+            margin-top: 0;
+        }
+        .card{
+            height: 240px;
+            width: fit-content;
+        }
+
+        .botaoCard{
+            margin-top: 0;
+        }
+
+        .imagemFundo{
+            height: 780px;
+        }
+
+        .botaoCard{
+            display: none;
+        }
+    }
+
+    @media only screen and (max-width:550px){
+        .textoCard h2{
+            margin-bottom: 0
+        }
+
+        .imagemFundo {
+            height: 850px;
+        }
+    }
+
+    
+    @media only screen and (max-width:480px){
+        .card i{
+            font-size: 12px ;
+        }
+
+
+        .textoCard{
+            width: 50%;
+        }
+    }
+
+    @media only screen and (max-width:435px){
+        .textoCard p{
+            margin-top: 0;
+        }
+
+        .descricao h2{
+            font-size: 40px;
+            margin-top: 0;
+        }
+    }
+
+    @media only screen and (max-width:400px){
+
+        .textoApresent{
+            font-size: 18px;
+        }
+
+        .textoCard p{
+            font-size: 13px;
+        }
+
+        .textoCard h2{
+            font-size: 20px;
+        }
+
+        .imagemFundo {
+           height: 900px;
+        }
+
+        .imagemCard img{
+            width: 80px;
+            height: ;
+        }
+
+        .card{
+            height: 210px;
+        }
+
+
+    }
+
+    @media only screen and (max-width:1029px){
+        .textoLogo h2{
+            font-size: 35px;
+        }
+    }
+
+    @media only screen and (max-width:750px){
+        .textoLogo h2{
+            font-size: 30px;
+        }
+    }
+
+    @media only screen and (max-width:450px){
+        .imagemFundo{
+            height: 890px;
+        }
+    }
