@@ -38,7 +38,7 @@
                 <td class="acoes">
                     <div class="divacoes">
                         <button class="ver"><i class="bi bi-eye" onclick="abrirModais('visualizar-post')"></i></button>
-                        <button class="editar"><i class="bi bi-pencil-square"></i></button>
+                        <button class="editar" onclick="modalEditar()"><i class="bi bi-pencil-square"></i></button>
                         <button class="apagar"><i class="bi bi-trash3"></i></button>
                     </div>
                 </td>
@@ -176,8 +176,8 @@
             </div>
         </div>
     </div>
-
-    <!-- <div class="fundoEditar"></div>
+    <div class="tudo" id="modalEdit">
+    <div class="fundoEditar"></div>
     <div class="modalEditar">
         <div class="containerEditar">
             <form class="formModalEditar">
@@ -191,8 +191,15 @@
                     <input type="text" value="Toy Story">
                 </div>
             </form>
+            <div class="fundoBotaoModalEdit">
+            <div class="fecharModalEdit" id="fecha">
+                <p class="fechar">Fechar</p>
+            </div>
         </div>
-    </div> -->
+        </div>
+        </div>
+    </div>
+    </div>
 
     <script src="../../../public/js/tabelaDePosts.js"></script>
     <script src="../../../public/js/modais.js"></script>
