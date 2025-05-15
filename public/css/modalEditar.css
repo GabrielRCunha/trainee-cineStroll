@@ -1,76 +1,93 @@
-.fundoEditar{
-    width: 100vw;
-    height: 100vh;
-    background-color: black;
-    opacity: 0.6;
-    position: absolute;
-    z-index: 2;
+.tudo {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  display: none;
+  top: 0;
+  left: 0;
+  z-index: 10;
 }
 
-.modalEditar{
-    width: 100vw;
-    height: 100vh;
-    position: absolute;
-    z-index: 3;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.fundoEditar {
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.6;
+  position: absolute;
+  z-index: 1;
 }
 
-.containerEditar{
-    width: 500px;
-    background: linear-gradient(to right, #333333 0%, #6a0dad 200%);
-    border-radius: 16px;
+.modalEditar {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.formModalEditar{
-    width: 100%;
+.containerEditar {
+  width: 500px;
+  background: linear-gradient(to right, #333333 0%, #6a0dad 200%);
+  border-radius: 16px;
+  padding: 20px;
+  color: white;
 }
 
-.imagemEditar{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.formModalEditar {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 
-.imagemEditar img{
-    width: 100px;
-    height: 100px;
-    border-radius: 100px;
-    margin-bottom: 20px;
+.imagemEditar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.tituloEditar{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    padding-left: 10%;
+.imagemEditar img {
+  width: 100px;
+  height: 100px;
+  border-radius: 100px;
+  margin-bottom: 10px;
 }
 
-.tituloEditar input{
-    width: 80%;
-    border-radius: 5px;
-    border: 0;
+.tituloEditar {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 }
 
-.tudo{
-    position: fixed;
-    width: 100vw;
-    height: 100vh;
-    display: none;
+.tituloEditar input,
+.tituloEditar textarea {
+  border-radius: 8px;
+  border: none;
+  padding: 8px;
+  width: 90%;
 }
 
-.fecharModalEdit{
-    display: flex;
-    justify-content: end;
-    color: aliceblue;
+.botoesModal {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
 }
 
-.fechar{
-    background-color: red;
-    border-radius: 10px;
+.botoesModal button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
 }
 
+.botoesModal button:first-child {
+  background-color: gray;
+  color: white;
+}
 
+.botoesModal button:last-child {
+  background-color: #6a0dad;
+  color: white;
+}

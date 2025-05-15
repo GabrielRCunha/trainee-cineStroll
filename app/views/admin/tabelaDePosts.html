@@ -176,29 +176,59 @@
             </div>
         </div>
     </div>
-    <div class="tudo" id="modalEdit">
-    <div class="fundoEditar"></div>
-    <div class="modalEditar">
-        <div class="containerEditar">
-            <form class="formModalEditar">
-                <div class="imagemEditar">
-                    <img id="imgEditar" src="/public/assets/Logo_sem_fundo.png" alt="">
-                    <input id="inputImgEditar" type="file">
-                </div>
+  <div class="tudo" id="modalEdit">
+  <div class="fundoEditar" onclick="fecharModalEditar()"></div>
+  <div class="modalEditar">
+    <div class="containerEditar">
+      <form class="formModalEditar" onsubmit="salvarEdicao(event)">
+        <div class="imagemEditar">
+          <img id="imgEditar" src="/public/assets/Logo_sem_fundo.png" alt="Imagem atual">
+          <input id="inputImgEditar" type="file" required>
+        </div>
 
-                <div class="tituloEditar">
-                    <p>Título:</p>
-                    <input type="text" value="Toy Story">
-                </div>
-            </form>
-            <div class="fundoBotaoModalEdit">
-            <div class="fecharModalEdit" id="fecha">
-                <p class="fechar">Fechar</p>
-            </div>
+        <div class="tituloEditar">
+          <label>Título:</label>
+          <input type="text" id="tituloEditar" required>
         </div>
+
+        <div class="tituloEditar">
+          <label>Descrição:</label>
+          <textarea id="descricaoEditar" rows="3" required></textarea>
         </div>
+
+        <div class="tituloEditar">
+          <label>Autor:</label>
+          <input type="text" id="autorEditar" required>
         </div>
+
+        <div class="tituloEditar">
+          <label>Data de Criação:</label>
+          <input type="text" id="dataEditar" disabled>
+        </div>
+
+        <div class="botoesModal">
+          <button type="button" onclick="fecharModalEditar()">Cancelar</button>
+          <button type="submit">Salvar</button>
+        </div>
+      </form>
     </div>
+  </div>
+</div>
+
+<div class="tudo" id="modalExcluir">
+  <div class="fundoEditar" onclick="fecharModalExcluir()"></div>
+  <div class="modalEditar">
+    <div class="containerEditar">
+      <div class="tituloEditar" style="padding: 30px;">
+        <p style="color: white;">Tem certeza que deseja excluir este post?</p>
+      </div>
+      <div class="botoesModal">
+        <button type="button" onclick="fecharModalExcluir()">Cancelar</button>
+        <button type="button" onclick="confirmarExclusao()">Excluir</button>
+      </div>
+    </div>
+  </div>
+</div>
     </div>
 
     <script src="../../../public/js/tabelaDePosts.js"></script>
