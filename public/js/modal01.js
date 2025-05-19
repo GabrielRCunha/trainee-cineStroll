@@ -45,7 +45,9 @@ imgInput.onchange = function(){
     imgBotaoDesfazer.style.display = 'block'
 }
 
-function desfazerFoto(){
+function desfazerFoto(event){
+
+    event.preventDefault();
     imgInput.value = '';
     imagem.src = '';
     imagem.style.display = 'none';
