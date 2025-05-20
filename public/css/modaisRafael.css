@@ -111,7 +111,7 @@ p{
 #editar .modalFoto img {
     width: 80px; 
     height: 80px;
-    border-radius: 50%;
+    border-radius: 20%;
     object-fit: cover;
     margin: 0 auto; 
     display: block; 
@@ -137,6 +137,78 @@ p{
 
 
 /* Modal Editar Fim */
+
+ @media (min-width: 1200px) {
+
+.modal {
+    width: 600px;
+  }
+
+  #editar {
+    height: 500px;
+  }
+
+.modalInfo{
+
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+
+  }
+
+  #editar .botoes-excluir{
+     margin-top: 12%;
+    margin-left: 16%;
+
+  }
+
+  #editar .modalFoto{
+    margin-top: 30%;
+    gap: 20px;
+    transform: translate(60px, 0px);
+  }
+
+  .botaoExcluirConfirmar {
+     background-color: green;
+    color: white;
+    font-weight: bold;
+    border-radius: 14px;
+    padding: 30px 80px;
+    font-size: 20px;
+}
+
+.botaoFecharModalExcluir {
+    background-color: #b80505;
+    color: white;
+    font-weight: bold;
+    border-radius: 14px;
+    padding: 30px 80px;
+    font-size: 20px;
+}
+
+.botaoEditarImagem {
+    padding: 25px 80px;
+    background-color: green;
+    color: white;
+    font-weight: bold;
+    border-radius: 14px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+#editar .modalFoto img {
+
+width: 100px; 
+    height: 100px;
+    border-radius: 20%;
+    object-fit: cover;
+    margin: 0 auto; 
+    display: block; 
+
+  }
+
+}
+
 
 @media (max-width: 1200px) {
     .modal {
@@ -220,4 +292,46 @@ p{
       white-space: nowrap;
     }
   }
+
+  @media (min-width: 350px) and (max-width:479px) {
+    .modal {
+      width: 65%;
+      height: auto;
+      padding: 15px;
+    }
+  
+    .modalInputs {
+      gap: 10px;
+    }
+  
+    .modalInputs input,
+    .modalInputs p {
+      font-size: 13px;
+    }
+  
+    .modalFoto {
+      align-items: center;
+      text-align: center;
+    }
+  
+    .modalFoto img {
+      width: 70px;
+      height: 70px;
+    }
+  
+    .botoes-excluir {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 20px;
+    }
+  
+    .botaoFecharModalExcluir, .botaoEditarImagem, .botaoExcluirConfirmar{
+      border-radius: 14px;
+
+    }
+    
+}
+    
 
