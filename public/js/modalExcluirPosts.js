@@ -1,34 +1,25 @@
-document.addEventListener('DOMContentLoaded', () => {
-  const modalExcluir = document.getElementById('modalExcluir');
-  const fecharExcluir = document.getElementById('fecharExcluir');
-  const confirmarExclusao = document.getElementById('confirmarExclusao');
-
-  window.abrirModalExcluir = function (postId) {
-    modalExcluir.style.display = 'block';
-    confirmarExclusao.dataset.id = postId;
-  };
-
-  fecharExcluir.onclick = () => {
-    modalExcluir.style.display = 'none';
-  };
-
-  confirmarExclusao.onclick = () => {
-    const id = confirmarExclusao.dataset.id;
-
-    // Simulação de exclusão:
-    const sucesso = true;
-
-    if (sucesso) {
-      alert(`Post ID ${id} excluído com sucesso.`);
-      modalExcluir.style.display = 'none';
-    } else {
-      alert('Erro ao excluir o post.');
-    }
-  };
-
-  function modalExcluirP() {
-  abrirModalExcluir(); 
+// Controle do Modal de Exclusão
+function modalExcluirP(postId) {
+  document.getElementById("modalExcluir").style.display = "block";
+  document.getElementById("excluir").dataset.id = postId;
 }
 
+function fecharModalExcluir() {
+  document.getElementById("modalExcluir").style.display = "none";
+}
 
+function confirmarExclusao() {
+  const id = document.getElementById("excluir").dataset.id;
+
+  // Simulação de exclusão
+  alert(`Publicação ID ${id} excluída com sucesso.`);
+  fecharModalExcluir();
+}
+
+// Associando botões da tabela de posts ao modal
+document.querySelectorAll(".apagar").forEach(botao => {
+  botao.addEventListener("click", event => {
+    const postId = event.target.closest("tr").querySelector(".id").textContent;
+    modalExcluirP(postId);
+  });
 });
