@@ -365,24 +365,30 @@ button:hover {
     display: block;
     margin-bottom: 5px;
 }
+
 #visualizar-post-imagem {
     max-width: 100%;
     max-height: 200px;
 }
+
 #visualizar-post-data {
     width: 100px;
 }
+
 #visualizar-post-autor {
     width: 160px;
     display: block;
 }
+
 #visualizar-post-nota {
     width: 80px;
 }
+
 .div_autor_nota {
     display: flex;
     gap: 50px;
 }
+
 .botao-post-imagem {
     display: flex;
     padding: 0;
@@ -395,8 +401,17 @@ button:hover {
     cursor: pointer;
     border: 1px solid white;
 }
+
 #post-imagem {
     display: none;
+}
+
+#visualizar-post-conteudo {
+    overflow: visible;
+    height: 120px;
+    font-size: 16px;
+    padding: 4px;
+
 }
 
 @media(max-width: 1440px) {
@@ -520,16 +535,20 @@ button:hover {
         height: 36px;
         width: 36px;
     }
+
     .modal-container {
         max-width: 320px;
     }
+
     .div_autor_nota {
         justify-content: space-around;
         gap: 16px;
     }
+
     #visualizar-post-autor {
         width: 100px;
     }
+
     #visualizar-post-nota {
         width: 40px;
     }
