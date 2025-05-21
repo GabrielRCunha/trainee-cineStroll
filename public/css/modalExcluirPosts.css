@@ -53,9 +53,28 @@
 #modalExcluir .botoesModal button:first-child {
   background-color: gray;
   color: white;
+  width: 80px;
 }
 
 #modalExcluir .botoesModal button:last-child {
   background-color: red;
   color: white;
+  width: 80px;
+}
+
+.lixo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+.lixo i{
+    font-size: 80px; 
+    color: #ffffff; 
+
+}
+
+.tituloEditar p{
+  font-size: 20px;
+  font-weight: bold;
 }
