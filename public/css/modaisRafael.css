@@ -173,7 +173,7 @@ p{
     color: white;
     font-weight: bold;
     border-radius: 14px;
-    padding: 30px 80px;
+    padding: 25px 60px;
     font-size: 20px;
 }
 
@@ -182,12 +182,12 @@ p{
     color: white;
     font-weight: bold;
     border-radius: 14px;
-    padding: 30px 80px;
+    padding: 25px 60px;
     font-size: 20px;
 }
 
 .botaoEditarImagem {
-    padding: 25px 80px;
+    padding: 25px 60px;
     background-color: green;
     color: white;
     font-weight: bold;
@@ -206,6 +206,8 @@ width: 100px;
     display: block; 
 
   }
+
+
 
 }
 
