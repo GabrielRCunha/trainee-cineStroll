@@ -52,7 +52,7 @@
                 <td class="acoes">
                     <div class="divacoes">
                         <button class="ver"><i class="bi bi-eye" onclick="abrirModais('visualizar-post')"></i></button>
-                        <button class="editar"><i class="bi bi-pencil-square"></i></button>
+                        <button class="editar" onclick="modalEditar()"><i class="bi bi-pencil-square"></i></button>
                         <button class="apagar"><i class="bi bi-trash3"></i></button>
                     </div>
                 </td>
@@ -65,7 +65,7 @@
                 <td class="acoes">
                     <div class="divacoes">
                         <button class="ver"><i class="bi bi-eye" onclick="abrirModais('visualizar-post')"></i></button>
-                        <button class="editar"><i class="bi bi-pencil-square"></i></button>
+                        <button class="editar" onclick="modalEditar()"><i class="bi bi-pencil-square"></i></button>
                         <button class="apagar"><i class="bi bi-trash3"></i></button>
                     </div>
                 </td>
@@ -78,7 +78,7 @@
                 <td class="acoes">
                     <div class="divacoes">
                         <button class="ver"><i class="bi bi-eye" onclick="abrirModais('visualizar-post')"></i></button>
-                        <button class="editar"><i class="bi bi-pencil-square"></i></button>
+                        <button class="editar" onclick="modalEditar()"><i class="bi bi-pencil-square"></i></button>
                         <button class="apagar"><i class="bi bi-trash3"></i></button>
                     </div>
                 </td>
@@ -91,7 +91,7 @@
                 <td class="acoes">
                     <div class="divacoes">
                         <button class="ver"><i class="bi bi-eye" onclick="abrirModais('visualizar-post')"></i></button>
-                        <button class="editar"><i class="bi bi-pencil-square"></i></button>
+                        <button class="editar" onclick="modalEditar()"><i class="bi bi-pencil-square"></i></button>
                         <button class="apagar"><i class="bi bi-trash3"></i></button>
                     </div>
                 </td>
@@ -177,6 +177,7 @@
             </div>
         </div>
     </div>
+
   <div class="tudo" id="modalEdit">
   <div class="fundoEditar" onclick="fecharModalEditar()"></div>
   <div class="modalEditar">
@@ -204,7 +205,7 @@
 
         <div class="tituloEditar">
           <label>Data de Criação:</label>
-          <input type="text" id="dataEditar" disabled>
+          <input value="12/12/2012" type="date" id="dataEditar" required>
         </div>
 
         <div class="botoesModal">

@@ -33,10 +33,15 @@ document.addEventListener('DOMContentLoaded', () => {
     modalEdit.style.display = 'none';
   };
 
-  salvarBtn.onclick = () => {
-  
+  salvarBtn.onclick = () => {  
     const sucesso = true;
 
-
   };
+
+  function fecharModalEditar() {
+    document.getElementById("modalEdit").style.display = "none";
+    document.getElementById("modalEditar").style.display = "none";
+  }
 });
+
+
