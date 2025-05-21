@@ -16,7 +16,7 @@ function confirmarExclusao() {
   fecharModalExcluir();
 }
 
-// Associando botões da tabela de posts ao modal
+
 document.querySelectorAll(".apagar").forEach(botao => {
   botao.addEventListener("click", event => {
     const postId = event.target.closest("tr").querySelector(".id").textContent;
