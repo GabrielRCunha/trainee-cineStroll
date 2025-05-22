@@ -83,13 +83,13 @@
 }
 
 #modalEdit .botoesModal button:first-child {
-  background-color: gray;
+  background-color: red;
   color: white;
   width: 80px;
 }
 
 #modalEdit .botoesModal button:last-child {
-  background-color: #6a0dad;
+  background-color: green;
   color: white;
   width: 80px;
 }
