@@ -17,7 +17,7 @@ p{
     top:50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background: linear-gradient(to right, #6a0dad, #ff7d00);
+    background: linear-gradient(to right,#333333,#6a0dad);
 }
 
 /* Modal Visualizar */
@@ -146,7 +146,11 @@ p{
 }
 
 #fotoPerfilC{
-    background-color: #ce374b;
+    background-color: #a9c3d9;
+}
+
+#fotoPerfilC p{
+    color: #333333;
 }
 
 #formCriar {
