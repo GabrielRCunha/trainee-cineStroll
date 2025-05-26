@@ -195,7 +195,7 @@
     
             <div class="botoes-excluir">
                 <button class="botaoFecharModalExcluir" onclick="fecharModal('excluir')">Cancelar</button>
-                <button class="botaoExcluirConfirmar">Excluir</button>
+                <button class="botaoExcluirConfirmar" onclick="fecharModal('excluir')">Excluir</button>
             </div>
         </form>
     </div>
