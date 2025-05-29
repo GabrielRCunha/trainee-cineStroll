@@ -27,7 +27,7 @@ body {
 
 .logo-barra-superior {
     width: 88px;
-    height: 88px;
+    height: 104px;
     margin-left: 1%;
 }
 
@@ -380,8 +380,9 @@ button:hover {
     width: 80px;
 }
 .div_autor_nota {
+    margin-right: 10%;
+    justify-content: space-between;
     display: flex;
-    gap: 50px;
 }
 .botao-post-imagem {
     display: flex;
