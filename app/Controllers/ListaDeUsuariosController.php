@@ -28,4 +28,33 @@ class ListaDeUsuariosController
 
         header('Location: /listaDeUsuarios');
     }
+
+    public function edit()
+    {
+         $parameters = [
+            'nome' => $_POST['nome'],
+            'email' => $_POST['email'],
+            'senha' => $_POST['senha'],
+            'imagem' => $_POST['imagem'],
+        ];
+
+        $id = $_POST['id'];
+
+        App::get('database') -> update ('usuarios', $id, $parameters);
+
+        header('Location: /listaDeUsuarios');
+
+    }
+
+    public function delete()
+    {
+         $id = $_POST['id'];
+
+         App::get('database') -> delete ('usuarios', $id);
+
+         header('Location: /listaDeUsuarios');
+
+    }
+
+
 }
