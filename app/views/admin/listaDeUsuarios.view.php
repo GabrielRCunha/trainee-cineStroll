@@ -59,63 +59,23 @@
 <?php foreach($usuarios as $usuario): ?>
     <!--Modal Visualizar-->
     <?php require('\modaisUsuarios\modal_visualizar.php'); ?>
+    <!--Modal Editar-->
+    <?php require('\modaisUsuarios\modal_editar.php'); ?>
+    <!--Modal Excluir-->
+    <?php require('\modaisUsuarios\modal_excluir.php'); ?>
+
 <?php endforeach ?>
 
 
 <!--Modais Rafael-->
 
+<!--Modal Excluir Inicio-->
 
-    <div class="modal" id="excluir">
-        <form id="formExcluir"></form>
-        
-            <h3>Deseja excluir este usuário?</h3>
-            <div class="lixo"> 
-                <i class="bi bi-trash"></i>
-            </div>            
-    
-            <div class="botoes-excluir">
-                <button class="botaoFecharModalExcluir" onclick="fecharModal('excluir')">Cancelar</button>
-                <button class="botaoExcluirConfirmar" onclick="fecharModal('excluir')">Excluir</button>
-            </div>
-        </form>
-    </div>
+<!--Modal Excluir Fim-->
 
-    <div class="modal" id="editar">
-    <form id="formEditar">
-        <div class="modalInfo">
-            <div class="modalInputs">
-                <div class="modalNome">
-                    <p>Nome:</p>
-                    <input type="text" id="editarNome" value="nomeTeste" placeholder="">
-                    <p class="aviso" id="avisoNomeEditar">Nome é obrigatório</p>
-                </div>
-                <div class="modalEmail">
-                    <p>Email:</p>
-                    <input type="email" id="editarEmail" value="emailteste@gmail.com" placeholder="">
-                    <p class="aviso" id="avisoEmailEditar">Email é obrigatório</p>
-                </div>
-                <div class="modalSenha">
-                    <p>Senha:</p>
-                    <input type="password" id="editarSenha" value="00000000" placeholder="">
-                    <i class="bi bi-eye" id="iconeEditarSenha" onclick="mostrarSenha('iconeEditarSenha', 'editarSenha')"></i>
-                    <p class="aviso" id="avisoSenhaEditar">Senha é obrigatória</p> 
-                </div>
-            </div>
+<!--Modal Editar Inicio-->
 
-            <div class="modalFoto" id="fotoPerfilEditar">
-                <img src="../../../public/assets/frederiksen.jpg" id="imgPerfilEditar">
-                <input type="file" accept="image/jpeg, image/png, image/jpg" id="imgInputEditar" style="display: none;" onchange="mostrarImagemSelecionada(event, 'imgPerfilEditar')">
-                <button class="botaoEditarImagem" type="button" onclick="document.getElementById('imgInputEditar').click()">Editar imagem</button>
-                <p class="aviso" id="avisoImgEditar"> </p>
-            </div>
-        </div>
-
-        <div class="botoes-excluir">
-            <button class="botaoFecharModalExcluir" type="button" onclick="fecharModal('editar')">Cancelar</button>
-            <button class="botaoExcluirConfirmar" onclick="checarCampos('formEditar', 'avisoNomeEditar', 'avisoEmailEditar', 'avisoSenhaEditar', 'avisoImgEditar','editarNome', 'editarEmail', 'editarSenha', 'imgInputEditar','.aviso', 'editar', event)">Salvar</button>
-        </div>
-    </form>
-</div>
+<!--Modal Editar Fim-->
 
 <!--Modais Rafael Fim-->
 
