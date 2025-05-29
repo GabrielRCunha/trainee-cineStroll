@@ -36,151 +36,31 @@
                 <th class="autor">Email</th>
                 <th class="acoes">Ações</th>
             </tr>
+            <?php foreach($usuarios as $usuario): ?>
             <tr>
-                <td class="id">5</td>
-                <td class="titulo fontes">Carlos21</td>
-                <td class="autor fontes">carlos21@gmail.com</td>
+                <td class="id"><?=$usuario->id?></td>
+                <td class="titulo fontes"><?=$usuario->nome?></td>
+                <td class="autor fontes"><?=$usuario->email?></td>
                 <td class="acoes">
                     <div class="divacoes">
-                        <button class="ver" onclick="abrirModal('visualizar')"><i class="bi bi-eye"></i></button>
-                        <button class="editar" onclick="abrirModal('editar')"><i class="bi bi-pencil-square"></i></button>
-                        <button class="apagar" onclick="abrirModal('excluir')"><i class="bi bi-trash3"></i></button>
+                        <button class="ver" onclick="abrirModal('visualizar<?=$usuario->id?>')"><i class="bi bi-eye"></i></button>
+                        <button class="editar" onclick="abrirModal('editar<?=$usuario->id?>')"><i class="bi bi-pencil-square"></i></button>
+                        <button class="apagar" onclick="abrirModal('excluir<?=$usuario->id?>')"><i class="bi bi-trash3"></i></button>
                     </div>
                 </td>
             </tr>
-            <tr>
-                <td class="id">4</td>
-                <td class="titulo fontes">Big_Knight</td>
-                <td class="autor fontes">antunes@gmail.com</td>
-                <td class="acoes">
-                    <div class="divacoes">
-                        <button class="ver" onclick="abrirModal('visualizar')"><i class="bi bi-eye"></i></button>
-                        <button class="editar" onclick="abrirModal('editar')"><i class="bi bi-pencil-square"></i></button>
-                        <button class="apagar" onclick="abrirModal('excluir')"><i class="bi bi-trash3"></i></button>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td class="id">3</td>
-                <td class="titulo fontes">Awpmaster</td>
-                <td class="autor fontes">gli_2@gmail.com</td>
-                <td class="acoes">
-                    <div class="divacoes">
-                        <button class="ver" onclick="abrirModal('visualizar')"><i class="bi bi-eye"></i></button>
-                        <button class="editar" onclick="abrirModal('editar')"><i class="bi bi-pencil-square"></i></button>
-                        <button class="apagar" onclick="abrirModal('excluir')"><i class="bi bi-trash3"></i></button>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td class="id">2</td>
-                <td class="titulo fontes">ObiWan4156</td>
-                <td class="autor fontes">andbr@gmail.com</td>
-                <td class="acoes">
-                    <div class="divacoes">
-                        <button class="ver" onclick="abrirModal('visualizar')"><i class="bi bi-eye"></i></button>
-                        <button class="editar" onclick="abrirModal('editar')"><i class="bi bi-pencil-square"></i></button>
-                        <button class="apagar" onclick="abrirModal('excluir')"><i class="bi bi-trash3"></i></button>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td class="id">1</td>
-                <td class="titulo fontes">Diguinho</td>
-                <td class="autor fontes">2dig2@gmail.com</td>
-                <td class="acoes">
-                    <div class="divacoes">
-                        <button class="ver" onclick="abrirModal('visualizar')"><i class="bi bi-eye"></i></button>
-                        <button class="editar" onclick="abrirModal('editar')"><i class="bi bi-pencil-square"></i></button>
-                        <button class="apagar" onclick="abrirModal('excluir')"><i class="bi bi-trash3"></i></button>
-                    </div>
-                </td>
-            </tr>
+            <?php endforeach ?>
         </table>
     </div>
 
-<!--Modais Ryan-->
-
 <!--Modal Criar-->
-<div class="modal" id="criar">
-    <form id="formCriar">
-        <div class="modalTopo">
-            <div class="modalInputs" id="modalInputsC">
-                <div class="modalNome">
-                    <p>Nome:</p>
-                    <input id="nomeInput" type="text" placeholder="Digite o nome">
-                    <p class="aviso" id="avisoNome">Nome é obrigatório</p>
-                </div>
-                <div class="modalEmail">
-                    <p>Email:</p>
-                    <input id="emailInput" type="email" placeholder="Digite o email">
-                    <p class="aviso" id="avisoEmail">Email é obrigatório</p>
-                </div>
-                <div class="modalSenha">
-                    <p>Senha:</p>
-                    <input type="password" id="inputSenhaC" placeholder="Digite a senha">
-                    <i class="bi bi-eye" id="iconeSenhaC" onclick="mostrarSenha('iconeSenhaC', 'inputSenhaC')"></i>
-                    <p class="aviso" id="avisoSenha">Senha é obrigatória</p>   
-                </div>
-            </div>
-            <div class="modalDireita">
-                <div class="modalFoto" id="fotoPerfilC">
-                    <img src="" id="imgPerfil" style="display: none;">
-                    <input type="file" accept="image/jpeg, image/png, image/jpg" id="imgInput">
-                    <div class="imgBtn" onclick="document.getElementById('imgInput').click()">
-                        <p>Adicionar imagem</p>
-                        <p>+</p>
-                    </div>
-                </div>
-                <p class="aviso" id="avisoImg">Imagem é obrigatória</p>
-                <button class="bi bi-arrow-counterclockwise" id="botaoDesfazerFoto" onclick="desfazerFoto(event)">
-                </button>
-            </div>
-        </div>
-        <div class="botaoModalContainer">
-            <button class="botaoModal" id="botaoFechar" onclick="fecharModal('criar')">Fechar</button>
-            <button class="botaoModal" id="botaoCriar" onclick="checarCampos('formCriar', 'avisoNome', 'avisoEmail', 'avisoSenha', 'avisoImg', 'nomeInput', 'emailInput', 'inputSenhaC', 'imgInput', '.aviso', 'criar', event)">Criar</button>
-        </div>
-    </form>
-</div>
+<?php require('\modaisUsuarios\modal_criar.php'); ?>
 
-<!--Modal Criar Fim-->
+<?php foreach($usuarios as $usuario): ?>
+    <!--Modal Visualizar-->
+    <?php require('\modaisUsuarios\modal_visualizar.php'); ?>
+<?php endforeach ?>
 
-<!--Modal Visualizar-->
-
-    <div class="modal" id="visualizar">
-        <div class="modalTopo">
-            <div class="modalInputs">
-                <div class="modalId">
-                    <p>ID:</p>
-                    <input type="text" value="0000" readonly>
-                </div>
-                <div class="modalNome">
-                    <p>Nome:</p>
-                    <input type="text" value="NomeTeste" readonly>
-                </div>
-                <div class="modalEmail">
-                    <p>Email:</p>
-                    <input type="email" value="emailteste@email.com" readonly>
-                </div>
-                <div class="modalSenha">
-                    <p>Senha:</p>
-                    <input type="password" id="inputSenhaV" value="Senha de teste" readonly>
-                    <i class="bi bi-eye" id="iconeSenhaV" onclick="mostrarSenha('iconeSenhaV', 'inputSenhaV')"></i>
-                </div>
-            </div>
-            <div class="modalFoto" id="fotoPerfilV">
-                <img src="../../../public/assets/frederiksen.jpg">
-            </div>
-        </div>
-        <div class="botaoModalContainer">
-            <button class="botaoModal" id="botaoFechar" onclick="fecharModal('visualizar')">Fechar</button>
-        </div>
-    </div>
-
-<!--Modal Visualizar Fim-->
-
-<!--Modais Ryan Fim-->
 
 <!--Modais Rafael-->
 
