@@ -54,15 +54,15 @@
     </div>
 
 <!--Modal Criar-->
-<?php require('\modaisUsuarios\modal_criar.php'); ?>
+<?php require('./app/views/admin/modaisUsuarios/modal_criar.php'); ?>
 
 <?php foreach($usuarios as $usuario): ?>
     <!--Modal Visualizar-->
-    <?php require('\modaisUsuarios\modal_visualizar.php'); ?>
+    <?php require('./app/views/admin/modaisUsuarios/modal_visualizar.php'); ?>
     <!--Modal Editar-->
-    <?php require('\modaisUsuarios\modal_editar.php'); ?>
+    <?php require('./app/views/admin/modaisUsuarios/modal_editar.php'); ?>
     <!--Modal Excluir-->
-    <?php require('\modaisUsuarios\modal_excluir.php'); ?>
+    <?php require('./app/views/admin/modaisUsuarios/modal_excluir.php'); ?>
 
 <?php endforeach ?>
 
