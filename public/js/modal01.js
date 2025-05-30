@@ -5,10 +5,13 @@ function abrirModal(idModal){
     tela.style.display = 'block';
 }
 
-function fecharModal(idModal, event){
+function fecharModal(idModal, event, inputNome, inputEmail, inputSenha){
     event.preventDefault();
     document.getElementById(idModal).style.display = 'none';
     tela.style.display = 'none';
+    document.getElementById(inputEmail).value = '';
+    document.getElementById(inputNome).value = '';
+    document.getElementById(inputSenha).value = '';
 }
 
 function fecharModalAberto(classModais, event){

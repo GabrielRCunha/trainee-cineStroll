@@ -35,7 +35,7 @@
             </div>
         </div>
         <div class="botaoModalContainer">
-            <button class="botaoModal" id="botaoFechar" onclick="fecharModal('criar', event)">Fechar</button>
+            <button class="botaoModal" id="botaoFechar" onclick="fecharModal('criar', event,'nomeInput', 'emailInput', 'inputSenhaC')">Fechar</button>
             <button class="botaoModal" id="botaoCriar" onclick="checarCampos('formCriar', 'avisoNome', 'avisoEmail', 'avisoSenha', 'avisoImg', 'nomeInput', 'emailInput', 'inputSenhaC', 'imgInput', '.aviso', 'criar', event)">Criar</button>
         </div>
     </form>

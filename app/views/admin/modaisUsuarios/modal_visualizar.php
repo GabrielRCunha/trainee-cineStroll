@@ -1,4 +1,4 @@
-<div class="modal" id="visualizar<?=$usuario->id?>">
+<div class="modal visual" id="visualizar<?=$usuario->id?>">
     <div class="modalTopo">
         <div class="modalInputs">
             <div class="modalId">
