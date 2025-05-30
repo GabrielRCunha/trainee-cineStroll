@@ -29,7 +29,7 @@
         </div>
 
         <div class="botoes-excluir">
-            <button class="botaoFecharModalExcluir" type="button" onclick="fecharModal('editar')">Cancelar</button>
+            <button class="botaoFecharModalExcluir" type="button" onclick="fecharModal('editar<?=$usuario->id?>', event )">Cancelar</button>
             <button class="botaoExcluirConfirmar" onclick="checarCampos('formEditar', 'avisoNomeEditar', 'avisoEmailEditar', 'avisoSenhaEditar', 'avisoImgEditar','editarNome', 'editarEmail', 'editarSenha', 'imgInputEditar','.aviso', 'editar', event)">Salvar</button>
         </div>
     </form>
