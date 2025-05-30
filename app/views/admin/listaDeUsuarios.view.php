@@ -15,7 +15,7 @@
 
 <body>
 
-    <div class="fundoModal" onclick="fecharModalAberto('.modal')">
+    <div class="fundoModal" onclick="fecharModalAberto('.modal', event)">
 
     </div>
 

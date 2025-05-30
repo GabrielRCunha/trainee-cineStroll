@@ -1,4 +1,4 @@
- <div class="modal" id="excluir <?=$usuario->id?>">
+ <div class="modal" id="excluir<?=$usuario->id?>">
         <form id="formExcluir"></form>
         
             <h3>Deseja excluir este usuário?</h3>
@@ -7,8 +7,8 @@
             </div>            
     
             <div class="botoes-excluir">
-                <button class="botaoFecharModalExcluir" onclick="fecharModal('excluir')">Cancelar</button>
-                <button class="botaoExcluirConfirmar" onclick="fecharModal('excluir')">Excluir</button>
+                <button class="botaoFecharModalExcluir" onclick="fecharModal('excluir<?=$usuario->id?>')">Cancelar</button>
+                <button class="botaoExcluirConfirmar" onclick="fecharModal('excluir<?=$usuario->id?>')">Excluir</button>
                 
             </div>
         </form>

@@ -1,4 +1,4 @@
-<div class="modal" id="visualizar <?=$usuario->id?>">
+<div class="modal" id="visualizar<?=$usuario->id?>">
     <div class="modalTopo">
         <div class="modalInputs">
             <div class="modalId">
@@ -24,6 +24,6 @@
         </div>
     </div>
     <div class="botaoModalContainer">
-        <button class="botaoModal" id="botaoFechar" onclick="fecharModal('visualizar')">Fechar</button>
+        <button class="botaoModal" id="botaoFechar" onclick="fecharModal('visualizar<?=$usuario->id?>')">Fechar</button>
     </div>
 </div>

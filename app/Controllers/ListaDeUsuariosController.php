@@ -21,7 +21,6 @@ class ListaDeUsuariosController
             'nome' => $_POST['nome'],
             'email' => $_POST['email'],
             'senha' => $_POST['senha'],
-            'imagem' => $_POST['imagem'],
         ];
 
         App::get('database') -> insert('usuarios', $parameters);
@@ -35,7 +34,6 @@ class ListaDeUsuariosController
             'nome' => $_POST['nome'],
             'email' => $_POST['email'],
             'senha' => $_POST['senha'],
-            'imagem' => $_POST['imagem'],
         ];
 
         $id = $_POST['id'];
@@ -55,6 +53,5 @@ class ListaDeUsuariosController
          header('Location: /listaDeUsuarios');
 
     }
-
 
 }

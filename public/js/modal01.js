@@ -5,16 +5,17 @@ function abrirModal(idModal){
     tela.style.display = 'block';
 }
 
-function fecharModal(idModal){
+function fecharModal(idModal, event){
+    event.preventDefault();
     document.getElementById(idModal).style.display = 'none';
     tela.style.display = 'none';
 }
 
-function fecharModalAberto(classModais){
+function fecharModalAberto(classModais, event){
     const modais = document.querySelectorAll(classModais);
     modais.forEach(element => {
         if(element.style.display === 'flex'){
-            fecharModal(element.id)
+            fecharModal(element.id, event)
         }
     });
 }

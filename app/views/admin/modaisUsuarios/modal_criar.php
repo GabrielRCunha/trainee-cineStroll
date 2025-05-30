@@ -5,17 +5,17 @@
             <div class="modalInputs" id="modalInputsC">
                 <div class="modalNome">
                     <p>Nome:</p>
-                    <input id="nomeInput" type="text" placeholder="Digite o nome">
+                    <input id="nomeInput" type="text" placeholder="Digite o nome" name="nome">
                     <p class="aviso" id="avisoNome">Nome é obrigatório</p>
                 </div>
                 <div class="modalEmail">
                     <p>Email:</p>
-                    <input id="emailInput" type="email" placeholder="Digite o email">
+                    <input id="emailInput" type="email" placeholder="Digite o email" name="email">
                     <p class="aviso" id="avisoEmail">Email é obrigatório</p>
                 </div>
                 <div class="modalSenha">
                     <p>Senha:</p>
-                    <input type="password" id="inputSenhaC" placeholder="Digite a senha">
+                    <input type="password" id="inputSenhaC" placeholder="Digite a senha" name="senha">
                     <i class="bi bi-eye" id="iconeSenhaC" onclick="mostrarSenha('iconeSenhaC', 'inputSenhaC')"></i>
                     <p class="aviso" id="avisoSenha">Senha é obrigatória</p>   
                 </div>
@@ -35,7 +35,7 @@
             </div>
         </div>
         <div class="botaoModalContainer">
-            <button class="botaoModal" id="botaoFechar" onclick="fecharModal('criar')">Fechar</button>
+            <button class="botaoModal" id="botaoFechar" onclick="fecharModal('criar', event)">Fechar</button>
             <button class="botaoModal" id="botaoCriar" onclick="checarCampos('formCriar', 'avisoNome', 'avisoEmail', 'avisoSenha', 'avisoImg', 'nomeInput', 'emailInput', 'inputSenhaC', 'imgInput', '.aviso', 'criar', event)">Criar</button>
         </div>
     </form>
