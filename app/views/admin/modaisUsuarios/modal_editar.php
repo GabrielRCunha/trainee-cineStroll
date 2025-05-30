@@ -1,4 +1,4 @@
-<div class="modal" id="editar<?=$usuario->id?>">
+<div class="modal edit" id="editar<?=$usuario->id?>">
     <form id="formEditar">
         <div class="modalInfo">
             <div class="modalInputs">

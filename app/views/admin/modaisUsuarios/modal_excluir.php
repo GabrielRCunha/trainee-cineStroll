@@ -1,4 +1,4 @@
- <div class="modal" id="excluir<?=$usuario->id?>">
+ <div class="modal exc" id="excluir<?=$usuario->id?>">
         <form id="formExcluir"></form>
         
             <h3>Deseja excluir este usuário?</h3>
