@@ -24,6 +24,6 @@
         </div>
     </div>
     <div class="botaoModalContainer">
-        <button class="botaoModal" id="botaoFechar" onclick="fecharModal('visualizar<?=$usuario->id?>')">Fechar</button>
+        <button class="botaoModal" id="botaoFechar" onclick="fecharModal('visualizar<?=$usuario->id?>', event)">Fechar</button>
     </div>
 </div>
