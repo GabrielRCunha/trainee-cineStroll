@@ -21,7 +21,7 @@ p{
     margin-top: 10px;
   }
   
-  .lixo i {
+.lixo i {
     font-size: 80px; 
     color: #ffffff;  
   }
@@ -31,21 +31,22 @@ p{
     gap: 20px;
 }
 
-.botaoExcluirConfirmar {
+.botaoExcluirConfirmar, .botaoEditarConfirmar {
      background-color: green;
     color: white;
     font-weight: bold;
     border-radius: 14px;
     padding: 10px 60px;
-}
+} 
 
-.botaoFecharModalExcluir {
+.botaoFecharModalExcluir, .botaoFecharModalEditar {
     background-color: #b80505;
     color: white;
     font-weight: bold;
     border-radius: 14px;
     padding: 10px 60px;
 }
+
 
 /* Modal Excluir Fim */
 
@@ -131,35 +132,32 @@ p{
     background-color: #520a9d;
 }
 
-#editar .aviso {
+.edit .aviso {
     margin-top: 13px;
 }
 
-
 /* Modal Editar Fim */
+
 
  @media (min-width: 1200px) {
 
-.modal {
+ .modal {
     width: 600px;
   }
 
-  .edit {
+ .edit {
     height: 500px;
   }
 
-.modalInfo{
-
+ .modalInfo{
     display: flex;
     flex-direction: row;
     gap: 15px;
-
   }
 
-  .edit .botoes-excluir{
+ .edit .botoes-excluir{
      margin-top: 12%;
     margin-left: 16%;
-
   }
 
   .edit .modalFoto{
@@ -168,7 +166,7 @@ p{
     transform: translate(60px, 0px);
   }
 
-  .botaoExcluirConfirmar {
+  .botaoExcluirConfirmar, .botaoEditarConfirmar {
      background-color: green;
     color: white;
     font-weight: bold;
@@ -177,7 +175,7 @@ p{
     font-size: 20px;
 }
 
-.botaoFecharModalExcluir {
+  .botaoFecharModalExcluir .botaoFecharModalEditar {
     background-color: #b80505;
     color: white;
     font-weight: bold;
@@ -186,7 +184,7 @@ p{
     font-size: 20px;
 }
 
-.botaoEditarImagem {
+  .botaoEditarImagem {
     padding: 25px 60px;
     background-color: green;
     color: white;
@@ -196,18 +194,15 @@ p{
     font-size: 20px;
 }
 
-.edit .modalFoto img {
+  .edit .modalFoto img {
 
-width: 100px; 
+    width: 100px; 
     height: 100px;
     border-radius: 20%;
     object-fit: cover;
     margin: 0 auto; 
     display: block; 
-
   }
-
-
 
 }
 
@@ -247,6 +242,7 @@ width: 100px;
     }
   
   }
+
   
   @media (max-width: 480px) {
     .modal {
@@ -284,6 +280,8 @@ width: 100px;
   
     .botaoFecharModalExcluir,
     .botaoExcluirConfirmar,
+    .botaoFecharModalEditar,
+    .botaoEditarConfirmar,
     .botaoEditarImagem {
       font-size: 14px;
       padding: 10px 18px;
@@ -294,6 +292,7 @@ width: 100px;
       white-space: nowrap;
     }
   }
+
 
   @media (min-width: 300px) and (max-width:479px) {
     .modal {
@@ -329,7 +328,7 @@ width: 100px;
       margin-top: 20px;
     }
   
-    .botaoFecharModalExcluir, .botaoEditarImagem, .botaoExcluirConfirmar{
+    .botaoFecharModalExcluir, .botaoEditarImagem, .botaoFecharModalEditar, .botaoExcluirConfirmar, .botaoEditarConfirmar{
       border-radius: 14px;
 
     }

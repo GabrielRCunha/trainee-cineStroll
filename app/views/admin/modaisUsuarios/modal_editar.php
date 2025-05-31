@@ -1,5 +1,5 @@
 <div class="modal edit" id="editar<?=$usuario->id?>">
-    <form id="formEditar">
+    <form id="formEditar" method="POST" action="/listaDeUsuarios/edit">
         <div class="modalInfo">
             <div class="modalInputs">
                 <div class="modalNome">
@@ -28,9 +28,11 @@
             </div>
         </div>
 
+        <input type="hidden" name="id" value="<?=$usuario->id?>">
+
         <div class="botoes-excluir">
-            <button class="botaoFecharModalExcluir" type="button" onclick="fecharModal('editar<?=$usuario->id?>', event )">Cancelar</button>
-            <button class="botaoExcluirConfirmar" onclick="checarCampos('formEditar', 'avisoNomeEditar', 'avisoEmailEditar', 'avisoSenhaEditar', 'avisoImgEditar','editarNome', 'editarEmail', 'editarSenha', 'imgInputEditar','.aviso', 'editar', event)">Salvar</button>
+            <button class="botaoFecharModalEditar" type="button" onclick="fecharModal('editar<?=$usuario->id?>', event )">Cancelar</button>
+            <button class="botaoEditarConfirmar" type="button" onclick="checarCampos('formEditar','avisoNomeEditar', 'avisoEmailEditar', 'avisoSenhaEditar', 'avisoImgEditar','editarNome', 'editarEmail', 'editarSenha', 'imgInputEditar','.aviso', 'editar<?=$usuario->id?>', event)">Salvar</button>
         </div>
     </form>
 </div>
