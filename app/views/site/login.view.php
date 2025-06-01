@@ -23,6 +23,7 @@
     </div>
 
     <div id="caixa-login">
+     <form action="/login" method="POST">
         <div class="formulario">
             <p id="titulo-email">Endereço de email</p>
             <input type="email" id="input-email" class="barra-formulario">
@@ -43,6 +44,7 @@
                 </a>
             </button>
         </div>
+     </form>
     </div>
 
 </body>
