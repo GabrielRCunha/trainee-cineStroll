@@ -2,11 +2,11 @@
 
 namespace App\Controllers;
 use App\Controllers\ExampleController;
+use App\Controllers\loginController;
 use App\Core\Router;
 
 $router->get('', 'ExampleController@index');
 
-$router->get('login', 'Controller@exibirLogin');
-$router->get('dashboard', 'Controller@exibirDashboard');
-
-$router->post('login', 'Controller@efetuaLogin');
+$router->get('login', 'loginController@exibirLogin');
+$router->get('dashboard', 'loginController@exibirDashboard');
+$router->post('login', 'loginController@efetuaLogin');

@@ -29,15 +29,15 @@ class QueryBuilder
         }
     }
 
-    public function verificaLogin($email, $senha): mixed
+    public function verificaLogin($email, $senha)
     {
-        $sql = sprintf(format: 'SELECT * FROM usuarios WHERE email = :email AND password = :password');
+        $sql = sprintf(format: 'SELECT * FROM usuarios WHERE email = :email AND senha = :senha');
 
          try {
             $stmt = $this->pdo->prepare($sql);
             $stmt->execute([
                 'email'=> $email,
-                'password' => $senha
+                'senha' => $senha
             ]);
 
             $usuarios = $stmt->fetch(PDO::FETCH_OBJ);

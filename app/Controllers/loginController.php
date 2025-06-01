@@ -5,11 +5,11 @@ namespace App\Controllers;
 use App\Core\App;
 use Exception;
 
-class Controller
+class loginController
 {
     public function exibirLogin()
     {
-        return view('admin/login');
+        return view('site/login');
     }
 
     public function exibirDashboard()
@@ -28,6 +28,7 @@ class Controller
             session_start();
             $_SESSION['id'] = $usuarios->id;
             header(header: 'Location: /dashboard');
+            exit;
         }
 
     }

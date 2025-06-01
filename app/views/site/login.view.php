@@ -26,12 +26,12 @@
      <form action="/login" method="POST">
         <div class="formulario">
             <p id="titulo-email">Endereço de email</p>
-            <input type="email" id="input-email" class="barra-formulario">
+            <input type="email" name="email" id="input-email" class="barra-formulario">
         </div>
         <div class="formulario">
             <p id="titulo-senha">Senha</p>
             <div id="div-barra-senha" class="formulario">
-                <input type="password" id="input-senha" class="barra-formulario">
+                <input type="password" name="senha" id="input-senha" class="barra-formulario">
                 <i class="bi bi-eye" id="mostrar-senha" onclick="mostrarSenha('mostrar-senha', 'input-senha')"></i>
             </div>
         </div>
