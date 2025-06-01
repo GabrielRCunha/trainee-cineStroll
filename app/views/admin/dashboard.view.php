@@ -29,7 +29,15 @@
         <div class="Botoes">
             <button id="botao-posts" ><span class="material-symbols-outlined">edit</span> Tabela de Posts</button>
             <button id="botao-usuarios"><span class="material-symbols-outlined">person</span> Tabela de Usuários</button>
-            <button id="botao-logout"><span class="material-symbols-outlined">logout</span> Logout</button>
+            
+            <div class="logout">
+                <form action = "/logout" method="POST">
+                    <button id="botao-logout"><span class="material-symbols-outlined">logout</span> Logout</button>
+                </form>
+            </div>
+
+                
+
         </div>
     </div>
 

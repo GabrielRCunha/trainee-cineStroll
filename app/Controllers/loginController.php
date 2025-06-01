@@ -31,6 +31,22 @@ class loginController
             exit;
         }
 
+        else{
+            session_start();
+            $_SESSION['mensagem-erro'] = "Usuário e/ou senha incorretos";
+            header(header:'Location:/login');
+
+        }
+
+    }
+
+    public function logout()
+    {
+        session_start();
+        session_unset();
+        session_destroy();
+        header(header: 'Location: /login');
+
     }
 
 

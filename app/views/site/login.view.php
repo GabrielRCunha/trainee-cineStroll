@@ -24,6 +24,17 @@
 
     <div id="caixa-login">
      <form action="/login" method="POST">
+        <div class="mensagem-erro">
+            <p>
+                <?php
+                    session_start();
+                    if(isset($_SESSION['mensagem-erro']))
+                        echo $_SESSION['mensagem-erro'];
+                    unset($_SESSION['mensagem-erro']);
+                ?>
+            </p>
+        </div>
+
         <div class="formulario">
             <p id="titulo-email">Endereço de email</p>
             <input type="email" name="email" id="input-email" class="barra-formulario">
