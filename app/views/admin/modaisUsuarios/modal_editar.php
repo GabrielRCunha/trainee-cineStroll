@@ -4,17 +4,17 @@
             <div class="modalInputs">
                 <div class="modalNome">
                     <p>Nome:</p>
-                    <input type="text" id="editarNome" value="<?=$usuario->nome?>" placeholder="">
+                    <input type="text" id="editarNome" value="<?=$usuario->nome?>" placeholder="" name="nome">
                     <p class="aviso" id="avisoNomeEditar">Nome é obrigatório</p>
                 </div>
                 <div class="modalEmail">
                     <p>Email:</p>
-                    <input type="email" id="editarEmail" value="<?=$usuario->email?>" placeholder="">
+                    <input type="email" id="editarEmail" value="<?=$usuario->email?>" placeholder="" name="email">
                     <p class="aviso" id="avisoEmailEditar">Email é obrigatório</p>
                 </div>
                 <div class="modalSenha">
                     <p>Senha:</p>
-                    <input type="password" id="editarSenha" value="<?=$usuario->senha?>" placeholder="">
+                    <input type="password" id="editarSenha" value="<?=$usuario->senha?>" placeholder="" name="senha">
                     <i class="bi bi-eye" id="iconeEditarSenha" onclick="mostrarSenha('iconeEditarSenha', 'editarSenha')"></i>
                     <p class="aviso" id="avisoSenhaEditar">Senha é obrigatória</p> 
                 </div>
@@ -32,7 +32,7 @@
 
         <div class="botoes-excluir">
             <button class="botaoFecharModalEditar" type="button" onclick="fecharModal('editar<?=$usuario->id?>', event )">Cancelar</button>
-            <button class="botaoEditarConfirmar" type="button" onclick="checarCampos('formEditar','avisoNomeEditar', 'avisoEmailEditar', 'avisoSenhaEditar', 'avisoImgEditar','editarNome', 'editarEmail', 'editarSenha', 'imgInputEditar','.aviso', 'editar<?=$usuario->id?>', event)">Salvar</button>
+            <button class="botaoEditarConfirmar" type="submit">Salvar</button>
         </div>
     </form>
 </div>

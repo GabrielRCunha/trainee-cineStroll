@@ -38,7 +38,7 @@ class ListaDeUsuariosController
 
         $id = $_POST['id'];
 
-        App::get('database') -> update ('usuarios', $id, $parameters);
+        App::get('database') -> update('usuarios', $id, $parameters);
 
         header('Location: /listaDeUsuarios');
 
