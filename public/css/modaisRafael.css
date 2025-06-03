@@ -75,12 +75,14 @@ p{
     display: flex;
     flex-direction: column;
     gap: 40px;
-    width: 250px;
+    width: 100%;
+    max-width: 100%;
 }
 
 .edit .modalInputs input {
     padding: 6px 10px;
     font-size: 14px;
+    box-sizing: border-box;
     border-radius: 6px;
     border: none;
     outline: none;
@@ -127,9 +129,8 @@ p{
     cursor: pointer;
 }
 
-
 .botaoEditarImagem:hover {
-    background-color: #520a9d;
+    background-color: green;
 }
 
 .edit .aviso {
@@ -139,6 +140,8 @@ p{
 /* Modal Editar Fim */
 
 
+/* Midia Min-1200 */
+
  @media (min-width: 1200px) {
 
  .modal {
@@ -147,12 +150,26 @@ p{
 
  .edit {
     height: 500px;
+    text-align: left;
   }
 
  .modalInfo{
     display: flex;
     flex-direction: row;
     gap: 15px;
+  }
+
+   .edit .modalInputs {
+    align-items: flex-start;
+    margin-left: 2px; /* ou 30px, ajuste conforme necessário */
+    }
+
+  .edit .modalInputs input {
+    width: 300px;         /* mais largura */
+    font-size: 18px;      
+    height: 35px;         /* mais alto */
+    padding: 10px 14px;
+    box-sizing: border-box;
   }
 
  .edit .botoes-excluir{
@@ -175,7 +192,7 @@ p{
     font-size: 20px;
 }
 
-  .botaoFecharModalExcluir .botaoFecharModalEditar {
+  .botaoFecharModalExcluir, .botaoFecharModalEditar {
     background-color: #b80505;
     color: white;
     font-weight: bold;
@@ -206,24 +223,45 @@ p{
 
 }
 
+/* Midia Min-1200 Fim */
+
 
 @media (max-width: 1200px) {
-    .modal {
+    
+  .edit .modalInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .edit .modalFoto {
+    order: -1;
+  }
+  
+  .modal {
       width: 35%;
       padding: 25px;
     }
-  
+
     .modalInputs input,
-    .modalInputs p {
+    .modalInputs {
       font-size: 15px;
+      width: 100%;
+      max-width: 250px; 
+
     }
   
     .modalFoto img {
       width: 90px;
       height: 90px;
     }
+
+    .botoes-excluir {
+    margin-top: 25px; 
+  }
   
   }
+
   
   @media (max-width: 768px) {
     .modal {
@@ -328,9 +366,12 @@ p{
       margin-top: 20px;
     }
   
-    .botaoFecharModalExcluir, .botaoEditarImagem, .botaoFecharModalEditar, .botaoExcluirConfirmar, .botaoEditarConfirmar{
+    .botaoFecharModalExcluir, 
+    .botaoEditarImagem, 
+    .botaoFecharModalEditar, 
+    .botaoExcluirConfirmar, 
+    .botaoEditarConfirmar {
       border-radius: 14px;
-
     }
     
 }
