@@ -23,7 +23,7 @@
             <div class="modalDireita">
                 <div class="modalFoto" id="fotoPerfilC">
                     <img src="" id="imgPerfil" style="display: none;">
-                    <input type="file" accept="image/jpeg, image/png, image/jpg" id="imgInput">
+                    <input type="file" name="imagem" accept="image/jpeg, image/png, image/jpg" id="imgInput">
                     <div class="imgBtn" onclick="document.getElementById('imgInput').click()">
                         <p>Adicionar imagem</p>
                         <p>+</p>

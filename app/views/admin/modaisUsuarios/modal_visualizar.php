@@ -20,7 +20,7 @@
             </div>
         </div>
         <div class="modalFoto" id="fotoPerfilV">
-            <img src="../../../public/assets/frederiksen.jpg">
+            <img src="/<?=$usuario->imagem?>">
         </div>
     </div>
     <div class="botaoModalContainer">
