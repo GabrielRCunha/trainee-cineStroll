@@ -195,7 +195,7 @@
         </div>
         <div class="botoesModal">
             <button type="button" onclick="fecharModalExcluir()">Cancelar</button>
-            <button type="button" onclick="confirmarExclusao()">Excluir</button>
+            
         </div>
         </div>
     </div>
