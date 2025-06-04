@@ -195,8 +195,10 @@
         </div>
         <div class="botoesModal">
             <button type="button" onclick="fecharModalExcluir()">Cancelar</button>
-            
+            <button class="botaoExcluirConfirmar">Excluir</button>
+
         </div>
+        
         </div>
     </div>
     </div>
@@ -205,8 +207,8 @@
 
         <script src="../../../public/js/tabelaDePosts.js"></script>
         <script src="../../../public/js/modais.js"></script>
-        <script src="/public/js/modalEditar.js"></script>
-        <script src="/public/js/modalExcluirPosts.js"></script>
+        <script src="../../../public/js/modalEditar.js"></script>
+        <script src="../../../public/js/modalExcluirPosts.js"></script>
 </body>
 
 </html>

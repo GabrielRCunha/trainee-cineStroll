@@ -10,7 +10,7 @@ class TabelaDePostsController {
         $pdo = new PDO('mysql:host=localhost;dbname=cine_stroll_db', 'root', '');
 
         // Busca os posts
-        $stmt = $pdo->query("SELECT * FROM `tabela de posts`"); // ajuste o nome da tabela
+        $stmt = $pdo->query("SELECT * FROM `posts`"); // ajuste o nome da tabela
         $posts = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
         // Chama a view, que usará $posts
