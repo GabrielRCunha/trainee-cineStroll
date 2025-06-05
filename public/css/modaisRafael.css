@@ -94,8 +94,8 @@ p{
 
 .edit .modalSenha i {
     position: absolute;
-    right: 10px;
-    top: 55px;
+    right: 15px;
+    top: 50px;
     cursor: pointer;
     color: black;
 }
@@ -112,8 +112,8 @@ p{
 }
 
 .edit .modalFoto img {
-    width: 80px; 
-    height: 80px;
+    width: 120px; 
+    height: 120px;
     border-radius: 20%;
     object-fit: cover;
     margin: 0 auto; 
@@ -146,11 +146,13 @@ p{
 
  .modal {
     width: 600px;
+    margin:0 auto;
   }
 
  .edit {
-    height: 500px;
+    
     text-align: left;
+    align-items: flex-start;
   }
 
  .modalInfo{
@@ -160,27 +162,30 @@ p{
   }
 
    .edit .modalInputs {
+    display: flex;
     align-items: flex-start;
-    margin-left: 2px; /* ou 30px, ajuste conforme necessário */
+    margin-left: 0;
     }
 
   .edit .modalInputs input {
     width: 300px;         /* mais largura */
     font-size: 18px;      
-    height: 35px;         /* mais alto */
+    height: 48px;         /* mais alto */
     padding: 10px 14px;
     box-sizing: border-box;
   }
 
  .edit .botoes-excluir{
      margin-top: 12%;
-    margin-left: 16%;
+     margin-left: 31%;
   }
 
   .edit .modalFoto{
-    margin-top: 30%;
+    margin-top: 44%;
     gap: 20px;
     transform: translate(60px, 0px);
+    overflow: visible;
+    height: 0;
   }
 
   .botaoExcluirConfirmar, .botaoEditarConfirmar {
@@ -208,18 +213,21 @@ p{
     font-weight: bold;
     border-radius: 14px;
     cursor: pointer;
-    font-size: 20px;
+    font-size: 14px;
 }
 
   .edit .modalFoto img {
 
-    width: 100px; 
-    height: 100px;
+    width: 180px; 
+    height: 180px;
+    max-width: none;
+    max-height: none;
     border-radius: 20%;
     object-fit: cover;
     margin: 0 auto; 
     display: block; 
   }
+
 
 }
 
@@ -259,6 +267,13 @@ p{
     .botoes-excluir {
     margin-top: 25px; 
   }
+
+  .edit .modalSenha i {
+    position: absolute;
+    right: 25px;
+    top: 50px;
+    
+}
   
   }
 
@@ -277,6 +292,12 @@ p{
     .modalFoto img {
       width: 80px;
       height: 80px;
+    }
+
+    .edit .modalSenha i {
+    position: absolute;
+    right: 25px;
+    top: 45px;
     }
   
   }
