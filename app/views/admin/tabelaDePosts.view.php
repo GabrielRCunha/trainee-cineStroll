@@ -52,11 +52,10 @@
                             data-autor="<?= htmlspecialchars($post['author']) ?>"
                             data-data="<?= htmlspecialchars($post['created_at']) ?>"
                             data-nota="<?= htmlspecialchars($post['rating']) ?>"
-                            data-conteudo="<?= htmlspecialchars($post['content']) ?>">
+                            data-conteudo="<?= htmlspecialchars($post['content']) ?>"
+                            data-imagem="<?= htmlspecialchars($post['image']) ?>">
                             <i class="bi bi-eye"></i>
                         </button>
-
-
                         <button class="editar" onclick="modalEditar()"><i class="bi bi-pencil-square"></i></button>
                         <button class="apagar" onclick="modalExcluirP()"><i class="bi bi-trash3"></i></button>
                     </div>
@@ -87,40 +86,40 @@
     <div class="modal-container" id="criar-post">
         <div class="modal-conteudo">
             <h2>Criar Post</h2>
-            <form id="form-criar-post">
+            <form id="form-criar-post" action="/admin/criarPost" method="POST" enctype="multipart/form-data">
                 <div class="modal-input-grupo">
                     <label for="imagem" class="image-upload-label">Escolher imagem</label>
-                    <input type="file" id="imagem" class="post-image-container botao-post-imagem image-upload-input">
-                     <div class="imagem-preview-container" id="imagem-preview" style="display: none;">
+                    <input type="file" id="imagem" name="imagem" class="post-image-container botao-post-imagem image-upload-input">
+                     <div class="imagem-preview-container" id="imagem-preview" style="display: none;" required>
                     <img id="preview-imagem-selecionada" src="#" alt="Pré-visualização da imagem selecionada">
                 </div>
                 </div>
 
                 <div class="modal-input-grupo">
                     <label for="titulo">Título:</label>
-                    <input type="text" id="titulo" class="post-content" required>
+                    <input type="text" id="titulo" name="titulo" class="post-content" required>
                 </div>
 
                 <div class="div_autor_nota">
                     <div class="modal-input-grupo">
                         <label for="autor">Autor:</label>
-                        <input type="text" id="autor" class="post-content" required>
+                        <input type="text" id="autor" name="autor" class="post-content" required>
                     </div>
 
                     <div class="modal-input-grupo">
                         <label for="nota">Nota:</label>
-                        <input type="number" id="nota" class="post-content" min="0" max="10" required>
+                        <input type="number" id="nota" name="nota" class="post-content" min="0" max="10" required>
                     </div>
 
                     <div class="modal-input-grupo">
                         <label for="data">Publicado em:</label>
-                        <input type="date" id="data" class="post-content" required>
+                        <input type="date" id="data" name="data" class="post-content" required>
                     </div>
                 </div>
 
                 <div class="modal-input-grupo">
                     <label for="conteudo">Conteúdo:</label>
-                    <textarea id="conteudo" class="post-content" rows="4" required></textarea>
+                    <textarea id="conteudo" name="conteudo" class="post-content" rows="4" required></textarea>
                 </div>
 
                 <div class="modal-botoes">
@@ -138,8 +137,8 @@
             <h2>Visualizar Post</h2>
             <form id="form-criar-post">
                 <div class="modal-input-grupo">
-                     <div class="imagem-preview-container" id="imagem-preview" style="display: none;">
-                    <img id="preview-imagem-selecionada" src="#" alt="Pré-visualização da imagem selecionada">
+                    <div class="imagem-preview-container" id="imagem-preview">
+                    <img id="modal-imagem" src="" alt="Pré-visualização da imagem selecionada">
                     </div>
                 </div>
 

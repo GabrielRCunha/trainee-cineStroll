@@ -5,6 +5,14 @@ function abrirModalVisualizar(button) {
     document.getElementById('modal-data').value = button.dataset.data;
     document.getElementById('modal-conteudo').value = button.dataset.conteudo;
 
+    const imagem = document.getElementById('modal-imagem');
+    if (button.dataset.imagem) {
+        imagem.src = '/public/uploads/' + button.dataset.imagem; // Ajuste conforme onde salva a imagem
+        imagem.style.display = 'block';
+    } else {
+        imagem.style.display = 'none'; // esconde se não tiver imagem
+    }
+
     abrirModais('visualizar-post');
 }
 

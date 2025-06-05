@@ -9,3 +9,4 @@ $router->get('', 'ExampleController@index');
 
 $router->get('tabelaDePosts', 'TabelaDePostsController@index');
 
+$router->post('admin/criarPost', 'TabelaDePostsController@store');
