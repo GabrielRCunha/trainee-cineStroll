@@ -1,11 +1,13 @@
 function abrirModalVisualizar(button) {
-    document.getElementById('modal-titulo').innerText = button.dataset.titulo;
-    document.getElementById('modal-autor').innerText = button.dataset.autor;
-    document.getElementById('modal-data').innerText = button.dataset.data;
-    document.getElementById('modal-nota').innerText = button.dataset.nota;
-    document.getElementById('modal-conteudo').innerText = button.dataset.conteudo;
+    document.getElementById('modal-titulo').value = button.dataset.titulo;
+    document.getElementById('modal-autor').value = button.dataset.autor;
+    document.getElementById('modal-nota').value = button.dataset.nota;
+    document.getElementById('modal-data').value = button.dataset.data;
+    document.getElementById('modal-conteudo').value = button.dataset.conteudo;
+
     abrirModais('visualizar-post');
 }
+
 function abrirModais(idModal) {
     const modal = document.getElementById(idModal);
     const overlay = document.getElementById('overlay');
