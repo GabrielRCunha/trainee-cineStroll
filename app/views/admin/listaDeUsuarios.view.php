@@ -66,33 +66,8 @@
 
 <?php endforeach ?>
 
+<?php require('./app/views/admin/componentes.php/paginacao.php') ?>
 
-<!--Modais Rafael-->
-
-<!--Modal Excluir Inicio-->
-
-<!--Modal Excluir Fim-->
-
-<!--Modal Editar Inicio-->
-
-<!--Modal Editar Fim-->
-
-<!--Modais Rafael Fim-->
-
-    <ul class="paginacao">
-        <li><a href="#" class="voltar">&laquo;</a></li>
-        <li><a href="#" class="pagina ativa">1</a></li>
-        <li><a href="#" class="pagina">2</a></li>
-        <li><a href="#" class="pagina">3</a></li>
-        <li><a href="#" class="pagina">4</a></li>
-        <li><a href="#" class="pagina">5</a></li>
-        <li><a href="#" class="pagina">6</a></li>
-        <li><a href="#" class="pagina">7</a></li>
-        <li><a href="#" class="pagina">8</a></li>
-        <li><a href="#" class="pagina">9</a></li>
-        <li><a href="#" class="pagina">10</a></li>
-        <li><a href="#" class="passar">&raquo;</a></li>
-    </ul>
 </body>
 
 <script src="../../../public/js/listaDeUsuários.js"></script>

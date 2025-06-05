@@ -14,6 +14,10 @@ body {
     background-color: grey;
 }
 
+.desligado { 
+    display: none;
+}
+
 .barra-superior {
     width: 64%;
     height: 120px;

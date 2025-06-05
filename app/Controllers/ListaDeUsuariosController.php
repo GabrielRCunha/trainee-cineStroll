@@ -10,9 +10,35 @@ class ListaDeUsuariosController
 
     public function index()
     {
-        $usuarios = App::get('database')->selectAll('usuarios');
+        $page = 1;
 
-        return view('admin/listaDeUsuarios', compact('usuarios'));
+        $rows_count = App::get('database')->countAll('usuarios');
+
+        $itensPage = 5;
+
+        $total_pages = ceil($rows_count/$itensPage);
+
+        if(isset($_GET['paginacaoNumero']) && !empty($_GET['paginacaoNumero']))
+        {
+            $page = intval($_GET['paginacaoNumero']);
+
+            if($page <= 0 || $page > $total_pages)
+            {
+                return redirect('admin/listaDeUsuarios');
+            }
+        }    
+
+        $inicio = $itensPage * $page - $itensPage;
+
+        if($inicio > $rows_count)
+        {
+            return redirect('admin/listaDeUsuarios');
+        }
+
+
+        $usuarios = App::get('database')->selectAll('usuarios', $inicio, $itensPage);
+
+        return view('admin/listaDeUsuarios', compact('usuarios', 'page', 'total_pages'));
     }
 
     public function store()
