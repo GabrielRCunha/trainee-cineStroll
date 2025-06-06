@@ -102,17 +102,6 @@ body{
     margin-top: 50px;
 }
 
-.card{
-    display: flex;
-    flex-direction: column;
-    width: 350px;
-    height: 285px;
-    border-radius: 20px;
-    background-color: aliceblue;
-    opacity: 80%;  
-    bottom: 100px;
-}
-
 
 .botaoDireito {
     width: 10%;
@@ -131,6 +120,28 @@ body{
     cursor: pointer;
 }
 
+.swiper{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.swiper-wrapper{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.swiper-slide{
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    height: 285px;
+    border-radius: 20px;
+    background-color: aliceblue;
+    opacity: 80%;  
+    bottom: 100px;}
+
 .descricao{
     display: flex;
     width: 80%;
@@ -139,6 +150,9 @@ body{
     margin-left: 5%;
     z-index: -1;
 }
+
+
+
 
 .descricao h2{
     display: flex;
@@ -209,6 +223,8 @@ body{
     font-size: 20px;
     margin: 0;
 }
+
+
 
 
 @media only screen and (max-width:1892px){
@@ -447,7 +463,6 @@ body{
 
         .imagemCard img{
             width: 80px;
-            height: ;
         }
 
         .card{
