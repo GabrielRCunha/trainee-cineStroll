@@ -43,22 +43,14 @@ class ListaDeUsuariosController
 
     public function store()
     {
-        $temporario = $_FILES['imagem']['tmp_name'];
-
-        $nomeImagem = sha1(uniqid($_FILES['imagem']['name'], true)) . "." . pathinfo($_FILES['imagem']['name'], PATHINFO_EXTENSION);
-
-        $caminhoDaImagem = "../../public/assets/imagensUsuario/" . $nomeImagem;
-
-        move_uploaded_file($temporario, $caminhoDaImagem);
 
         $parameters = [
             'nome' => $_POST['nome'],
             'email' => $_POST['email'],
             'senha' => $_POST['senha'],
-            'imagem' => $caminhoDaImagem,
         ];
 
-        App::get('database') -> insert('usuarios', $parameters);
+        App::get('database') -> insert('usuarios', $parameters, $_FILES['imagem']);
 
         header('Location: /listaDeUsuarios');
     }

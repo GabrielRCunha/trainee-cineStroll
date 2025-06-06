@@ -1,6 +1,6 @@
 
 <div class="modal" id="criar">
-    <form id="formCriar" method="POST" action="/listaDeUsuarios/create">
+    <form id="formCriar" method="POST" action="/listaDeUsuarios/create" enctype="multipart/form-data">
         <div class="modalTopo">
             <div class="modalInputs" id="modalInputsC">
                 <div class="modalNome">

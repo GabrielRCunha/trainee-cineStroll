@@ -49,12 +49,24 @@ class QueryBuilder
         }
     }
 
-    public function insert($table, $parameters){
-        $sql = sprintf('INSERT INTO %s (%s) VALUES (:%s)',
+    public function insert($table, $parameters, $image){
+        
+        $pasta = 'uploads/';
+
+        $extensao = pathinfo($image['name'], PATHINFO_EXTENSION);
+        
+        $nome_img = uniqid() . '.' . $extensao;
+        
+        $caminho_img = $pasta.basename($nome_img);
+    
+        move_uploaded_file($image['tmp_name'], $caminho_img);
+
+        $parameters['imagem'] = $caminho_img;
+
+        $sql = sprintf('INSERT INTO %s (%s) VALUES (%s)',
         $table,
         implode(', ', array_keys($parameters)),
-        implode(', :', array_keys($parameters)),);
-    
+        ':' . implode(', :', array_keys($parameters))); 
 
     try {
         $stmt = $this->pdo->prepare($sql);
