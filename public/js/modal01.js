@@ -37,10 +37,10 @@ function mostrarSenha(idIcone, idInput){
     }
 }
 
-const imagem = document.getElementById('imgPerfil');
-const imgInput = document.getElementById('imgInput');
+const imagem = document.getElementById(`imgPerfil${usuarioId}`);
+const imgInput = document.getElementById(`imgInput${usuarioId}`);
 const imgBotao = document.querySelector('.imgBtn');
-const imgBotaoDesfazer = document.getElementById('botaoDesfazerFoto')
+const imgBotaoDesfazer = document.getElementById(`botaoDesfazerFoto${usuarioId}`)
 
 imgInput.onchange = function(){
     imagem.src = URL.createObjectURL(imgInput.files[0]);
@@ -72,24 +72,26 @@ function desfazerFoto(event){
     }
 }
 
-document.addEventListener('DOMContentLoaded', function () {
-        const inputImagem = document.getElementById('imgInputEditar');
-        const previewImagem = document.getElementById('imgPerfilEditar');
+document.addEventListener('DOMContentLoaded', function() {
+    const imgInputEditar = document.getElementById(`imgInputEditar${usuarioId}`);
+    const imgPerfilEditar = document.getElementById(`imgPerfilEditar${usuarioId}`);
 
-        inputImagem.addEventListener('change', function () {
-            const arquivo = this.files[0];
-
-            if (arquivo) {
-                const leitor = new FileReader();
-
-                leitor.onload = function (e) {
-                    previewImagem.src = e.target.result;
+    if (imgInputEditar && imgPerfilEditar) {
+        imgInputEditar.addEventListener('change', function(e) {
+            if (this.files && this.files[0]) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    imgPerfilEditar.src = e.target.result;
                 };
+                reader.readAsDataURL(this.files[0]);
 
-                leitor.readAsDataURL(arquivo); // Lê o arquivo e gera um base64
+                // Mostra aviso se necessário
+                document.getElementById(`avisoImgEditar${usuarioId}`).style.display = 'none';
             }
         });
-    });
+    }
+});
+
 
 function checarCampos(idForm, idAvisoNome, idAvisoEmail, idAvisoSenha, idAvisoImg,
                      idNomeInput, idEmailInput, idSenhaInput, idImgInput, classAvisos, idModal, event){

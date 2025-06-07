@@ -94,9 +94,9 @@ class QueryBuilder
     }
     }
 
-    public function update($table, $id, $parameters, $image, $fotoAtual){
-
-        if ($image && isset($image['tmp_name']) && $image['tmp_name']) {
+public function update($table, $id, $parameters, $image, $fotoAtual)
+{
+    if ($image && isset($image['tmp_name']) && $image['tmp_name']) {
         // Remove a imagem antiga se existir
         if (file_exists($fotoAtual)) {
             unlink($fotoAtual);
@@ -109,9 +109,9 @@ class QueryBuilder
         $caminhoimg = $pasta . basename($nomeimg);
         move_uploaded_file($image['tmp_name'], $caminhoimg);
 
-        $parameters['image'] = $caminhoimg;
+        $parameters['imagem'] = $caminhoimg;
     } else {
-        unset($parameters['image']); // Não altera a imagem se nenhuma for enviada
+        unset($parameters['imagem']); // Não altera a imagem se nenhuma for enviada
     }
 
     $sql = sprintf(
@@ -130,8 +130,7 @@ class QueryBuilder
     } catch (Exception $e) {
         die($e->getMessage());
     }
-    }
-
+}
     
     
     public function delete($table, $id)
