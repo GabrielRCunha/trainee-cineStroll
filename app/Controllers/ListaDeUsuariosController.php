@@ -57,7 +57,7 @@ class ListaDeUsuariosController
 
     public function edit()
     {
-         $parameters = [
+        $parameters = [
             'nome' => $_POST['nome'],
             'email' => $_POST['email'],
             'senha' => $_POST['senha'],
@@ -65,7 +65,10 @@ class ListaDeUsuariosController
 
         $id = $_POST['id'];
 
-        App::get('database') -> update('usuarios', $id, $parameters);
+        $image = isset($_FILES['imagem']) && $_FILES['imagem']['size'] > 0 ? $_FILES['imagem'] : null;
+        $fotoAtual = $_POST['fotoAtual'];
+
+        App::get('database')->update('usuarios', $id, $parameters, $image, $fotoAtual);
 
         header('Location: /listaDeUsuarios');
 

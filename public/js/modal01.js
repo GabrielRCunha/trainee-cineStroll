@@ -72,6 +72,25 @@ function desfazerFoto(event){
     }
 }
 
+document.addEventListener('DOMContentLoaded', function () {
+        const inputImagem = document.getElementById('imgInputEditar');
+        const previewImagem = document.getElementById('imgPerfilEditar');
+
+        inputImagem.addEventListener('change', function () {
+            const arquivo = this.files[0];
+
+            if (arquivo) {
+                const leitor = new FileReader();
+
+                leitor.onload = function (e) {
+                    previewImagem.src = e.target.result;
+                };
+
+                leitor.readAsDataURL(arquivo); // Lê o arquivo e gera um base64
+            }
+        });
+    });
+
 function checarCampos(idForm, idAvisoNome, idAvisoEmail, idAvisoSenha, idAvisoImg,
                      idNomeInput, idEmailInput, idSenhaInput, idImgInput, classAvisos, idModal, event){
     event.preventDefault();

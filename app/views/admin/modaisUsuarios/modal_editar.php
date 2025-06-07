@@ -1,5 +1,6 @@
 <div class="modal edit" id="editar<?=$usuario->id?>">
-    <form id="formEditar" method="POST" action="/listaDeUsuarios/edit">
+    <form id="formEditar" method="POST" action="/listaDeUsuarios/edit" enctype="multipart/form-data">
+        <input type="hidden" value="<?= $usuario->id?>" name="fotoAtual"/>
         <div class="modalInfo">
             <div class="modalInputs">
                 <div class="modalNome">
@@ -21,8 +22,9 @@
                 </div>
 
                 <div class="modalFoto" id="fotoPerfilEditar">
-                <img src="../../../public/assets/frederiksen.jpg" id="imgPerfilEditar">
-                <input type="file" accept="image/jpeg, image/png, image/jpg" id="imgInputEditar" style="display: none;" onchange="mostrarImagemSelecionada(event, 'imgPerfilEditar')">
+                <img src="/<?= $usuario->imagem ?>"  id="imgPerfilEditar">
+
+                <input type="file" accept="image/jpeg, image/png, image/jpg" id="imgInputEditar" style="display: none;" name="imagem">
                 <button class="botaoEditarImagem" type="button" onclick="document.getElementById('imgInputEditar').click()">Editar imagem</button>
                 <p class="aviso" id="avisoImgEditar"> </p>
             </div>
