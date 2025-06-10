@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const modalEdit = document.getElementById('modalEdit');
   const fecharBtn = document.getElementById('fecharEditar');
   const salvarBtn = document.getElementById('salvarEdicao');
+});
 
   inputImg.onchange = () => {
     imgPreview.src = URL.createObjectURL(inputImg.files[0]);
@@ -38,10 +39,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
   };
 
-  function fecharModalEditar() {
+  
+function fecharModalEditar() {
     document.getElementById("modalEdit").style.display = "none";
     document.getElementById("modalEditar").style.display = "none";
   }
-});
+
 
 

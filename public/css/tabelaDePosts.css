@@ -251,6 +251,12 @@ button:hover {
     color: white;
 }
 
+#modal-imagem {
+    max-width: 100%;
+    max-height: 200px;
+    background-color: white;
+}
+
 .modal-conteudo {
     display: flex;
     flex-direction: column;
@@ -271,12 +277,13 @@ button:hover {
 
 .modal-input-grupo label {
     font-weight: 600;
+    margin-bottom: 0px;
+    margin-top: 16px;
 }
 
 .modal-input-grupo input,
 .modal-input-grupo textarea {
     padding: 10px;
-    border-radius: 8px;
     border: 1px solid #ccc;
     font-size: 16px;
 }
@@ -326,11 +333,13 @@ button:hover {
 }
 
 .imagem-preview-container {
+    display: flex;
     border: 1px dashed #ccc;
     padding: 5px;
     margin-top: 5px;
     text-align: center;
     border-radius: 4px;
+    justify-content: center;
 }
 
 #preview-imagem-selecionada {
@@ -352,7 +361,7 @@ button:hover {
 .post-content {
     padding: 10px;
     border: 1px solid #ddd;
-    border-radius: 4px;
+    border-radius: 8px;
     background-color: #f9f9f9;
     min-height: 20px;
     margin-top: 5px;
@@ -365,39 +374,67 @@ button:hover {
     display: block;
     margin-bottom: 5px;
 }
+
 #visualizar-post-imagem {
     max-width: 100%;
     max-height: 200px;
 }
+
 #visualizar-post-data {
     width: 100px;
 }
+
 #visualizar-post-autor {
     width: 160px;
     display: block;
 }
+
 #visualizar-post-nota {
     width: 80px;
 }
+
 .div_autor_nota {
     margin-right: 10%;
     justify-content: space-between;
     display: flex;
+    gap: 16px;
 }
-.botao-post-imagem {
+
+input .botao-post-imagem {
     display: flex;
     padding: 0;
     height: 56px;
     width: 160px;
-    background-color: #391944;
+    background-color: #52235B;
+}
+
+.image-upload-label {
+    display: inline-flex;
     align-items: center;
     justify-content: center;
-    border-radius: 16px;
+    background-color: #391944;
+    color: white;
+    font-weight: 600;
+    border-radius: 12px;
+    width: 160px;
+    height: 64px;
     cursor: pointer;
-    border: 1px solid white;
+    transition: background-color 0.3s ease;
+    text-align: left;
+    padding: 4px 12px;
 }
-#post-imagem {
+
+.image-upload-label:hover {
+    background-color: #211225;
+}
+
+.image-upload-input {
     display: none;
+}
+
+.salvar {
+    background-color: #008000;
+    color: white;
 }
 
 @media(max-width: 1440px) {
@@ -521,16 +558,20 @@ button:hover {
         height: 36px;
         width: 36px;
     }
+
     .modal-container {
         max-width: 320px;
     }
+
     .div_autor_nota {
         justify-content: space-around;
         gap: 16px;
     }
+
     #visualizar-post-autor {
         width: 100px;
     }
+
     #visualizar-post-nota {
         width: 40px;
     }

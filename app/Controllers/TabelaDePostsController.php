@@ -7,9 +7,62 @@ use Exception;
 
 class TabelaDePostsController {
     public function index() {
+<<<<<<< HEAD
         $posts = App::get('database')->selectAll('posts');
         return view('admin/tabelaDePosts', compact('posts'));
     }
 
 }
 
+=======
+        $pdo = new PDO('mysql:host=localhost;dbname=cine_stroll_db', 'root', '');
+
+        $stmt = $pdo->query("SELECT * FROM `posts`");
+        $posts = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+        require __DIR__ . '/../views/admin/tabelaDePosts.view.php';
+    }
+
+    public function store() {
+        // Conexão com o banco
+        $pdo = new PDO('mysql:host=localhost;dbname=cine_stroll_db', 'root', '');
+
+        // Pegando dados do formulário
+        $titulo = $_POST['titulo'] ?? '';
+        $conteudo = $_POST['conteudo'] ?? '';
+        $nota = $_POST['nota'] ?? '';
+        $autor = $_POST['autor'] ?? '';
+        $data = $_POST['data'] ?? '';
+
+        // Processamento da imagem
+        $nomeImagem = null;
+        if (isset($_FILES['imagem']) && $_FILES['imagem']['error'] === UPLOAD_ERR_OK) {
+            $imagem = $_FILES['imagem'];
+            $nomeImagem = uniqid() . '-' . basename($imagem['name']);
+            $caminho = __DIR__ . '/../../public/uploads/' . $nomeImagem;
+
+            if (!move_uploaded_file($imagem['tmp_name'], $caminho)) {
+                die('Erro ao mover a imagem');
+            }
+        }
+
+        // Inserção no banco
+        $sql = "INSERT INTO posts (title, content, rating, author, created_at, image) 
+                VALUES (:titulo, :conteudo, :nota, :autor, :data, :image)";
+        
+        $stmt = $pdo->prepare($sql);
+        $stmt->execute([
+            ':titulo' => $titulo,
+            ':conteudo' => $conteudo,
+            ':nota' => $nota,
+            ':autor' => $autor,
+            ':data' => $data,
+            ':image' => $nomeImagem
+        ]);
+
+        // Redirecionar ou exibir mensagem
+        header('Location: /tabelaDePosts');
+        exit;
+        }
+}
+>>>>>>> afe9c684fc0eee82a29068c58fe0a59d49cce2c7

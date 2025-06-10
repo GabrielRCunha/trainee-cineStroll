@@ -110,3 +110,21 @@ passar.addEventListener('click', function (event) {
 })
 
 window.addEventListener('resize', atualizaLogo)
+
+// Pré-view da imagem selecionada
+const inputImagem = document.getElementById('imagem');
+const previewImagem = document.getElementById('preview-imagem-selecionada');
+const previewContainer = document.getElementById('imagem-preview');
+
+if (inputImagem) {
+    inputImagem.addEventListener('change', function (event) {
+        const file = event.target.files[0];
+        if (file && file.type.startsWith('image/')) {
+            previewImagem.src = URL.createObjectURL(file);
+            previewContainer.style.display = 'block';
+        } else {
+            previewContainer.style.display = 'none';
+            previewImagem.src = '';
+        }
+    });
+}
