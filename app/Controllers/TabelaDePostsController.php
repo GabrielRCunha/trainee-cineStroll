@@ -1,19 +1,15 @@
 <?php
 
 namespace App\Controllers;
+use App\Core\App;
 
-use PDO;
+use Exception;
 
 class TabelaDePostsController {
     public function index() {
-        // Conexão com o banco
-        $pdo = new PDO('mysql:host=localhost;dbname=cine_stroll_db', 'root', '');
-
-        // Busca os posts
-        $stmt = $pdo->query("SELECT * FROM `tabela de posts`"); // ajuste o nome da tabela
-        $posts = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
-        // Chama a view, que usará $posts
-        require __DIR__ . '/../views/admin/tabelaDePosts.view.php';
+        $posts = App::get('database')->selectAll('posts');
+        return view('admin/tabelaDePosts', compact('posts'));
     }
+
 }
+

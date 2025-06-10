@@ -2,6 +2,7 @@
 
 namespace App\Controllers;
 use App\Controllers\ExampleController;
+use App\Controllers\TabelaDePostsController;
 use App\Core\Router;
 
 

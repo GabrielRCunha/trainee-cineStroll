@@ -13,6 +13,8 @@
 </head>
 
 <body>
+
+    <?php var_dump($posts) ?>
     <div class="barra-superior">
         <img src="../../../public/assets/Logo_sem_fundo.png" alt="Logo do CINE STROLL" class="logo-barra-superior">
         <div class="div-titulo">
@@ -33,19 +35,15 @@
             </tr>
             <?php foreach($posts as $post): ?>
             <tr>
-                <td class="id"><?=htmlspecialchars($post['id'])?></td>
-                <td class="titulo fontes"><?=htmlspecialchars($post['title'])?></td>
-                <td class="autor fontes"><?=htmlspecialchars($post['author'])?></td>
-                <td class="data fontes"><?=htmlspecialchars($post['created_at'])?></td>
+                <td class="id"><?=$post->id?></td>
+                <td class="titulo fontes"><?=$post->title?></td>
+                <td class="autor fontes"><?=$post->author?></td>
+                <td class="data fontes"><?=$post->created_at?></td>
                 <td class="acoes">
                     <div class="divacoes">
                         <button class="ver"
                             onclick="abrirModalVisualizar(this)"
-                            data-titulo="<?= htmlspecialchars($post['title']) ?>"
-                            data-autor="<?= htmlspecialchars($post['author']) ?>"
-                            data-data="<?= htmlspecialchars($post['created_at']) ?>"
-                            data-nota="<?= htmlspecialchars($post['rating']) ?>"
-                            data-conteudo="<?= htmlspecialchars($post['content']) ?>">
+                         
                             <i class="bi bi-eye"></i>
                         </button>
 
@@ -139,7 +137,7 @@
             </div>
         </div>
     </div>
-    <?php endforeach; ?>
+    
     </div>
 
     <!-- EDITAR -->
@@ -195,12 +193,12 @@
         </div>
         <div class="botoesModal">
             <button type="button" onclick="fecharModalExcluir()">Cancelar</button>
-            
+            <butto
         </div>
         </div>
     </div>
     </div>
-
+        <?php endforeach; ?>
         </div>
 
         <script src="../../../public/js/tabelaDePosts.js"></script>
