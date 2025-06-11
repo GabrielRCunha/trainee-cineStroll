@@ -1,5 +1,5 @@
 <div class="modal edit" id="editar<?=$usuario->id?>">
-    <form id="formEditar" method="POST" action="/listaDeUsuarios/edit" enctype="multipart/form-data">
+    <form id="formEditar<?=$usuario->id?>" method="POST" action="/listaDeUsuarios/edit" enctype="multipart/form-data">
         <input type="hidden" value="<?= $usuario->imagem?>" name="fotoAtual"/>
         <div class="modalInfo">
             <div class="modalInputs">
@@ -34,7 +34,18 @@
 
         <div class="botoes-excluir">
             <button class="botaoFecharModalEditar" type="button" onclick="fecharModal('editar<?=$usuario->id?>', event )">Cancelar</button>
-            <button class="botaoEditarConfirmar" type="submit">Salvar</button>
+            <button class="botaoEditarConfirmar" type="button" onclick="checarCamposEditar(
+        'formEditar<?=$usuario->id?>',
+        'avisoNomeEditar<?=$usuario->id?>',
+        'avisoEmailEditar<?=$usuario->id?>',
+        'avisoSenhaEditar<?=$usuario->id?>',
+        'editarNome<?=$usuario->id?>',
+        'editarEmail<?=$usuario->id?>',
+        'editarSenha<?=$usuario->id?>',
+        '.aviso',
+        'editar<?=$usuario->id?>',
+        event
+    )">Salvar</button>
         </div>
     </form>
 </div>

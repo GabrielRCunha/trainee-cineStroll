@@ -153,3 +153,47 @@ function checarCampos(idForm, idAvisoNome, idAvisoEmail, idAvisoSenha, idAvisoIm
     fecharModal(idModal);
 
 }
+
+function checarCamposEditar(idForm, idAvisoNome, idAvisoEmail, idAvisoSenha,
+                             idNomeInput, idEmailInput, idSenhaInput,
+                             classAvisos, idModal, event) {
+    event.preventDefault();
+
+    const nome = document.getElementById(idNomeInput).value.trim();
+    const email = document.getElementById(idEmailInput).value.trim();
+    const senha = document.getElementById(idSenhaInput).value.trim();
+    const avisos = document.querySelectorAll(classAvisos);
+
+    let valid = true;
+
+    if (!nome) {
+        const erroNome = document.getElementById(idAvisoNome);
+        erroNome.style.display = 'block';
+        valid = false;
+    }
+
+    if (!email) {
+        const erroEmail = document.getElementById(idAvisoEmail);
+        erroEmail.style.display = 'block';
+        valid = false;
+    }
+
+    if (!senha) {
+        const erroSenha = document.getElementById(idAvisoSenha);
+        erroSenha.style.display = 'block';
+        valid = false;
+    }
+
+    if (!valid) {
+        setTimeout(() => {
+            avisos.forEach(aviso => {
+                aviso.style.display = 'none';
+            });
+        }, 2500);
+        return;
+    }
+
+    // Se está tudo certo, envia o formulário
+    const formulario = document.getElementById(idForm);
+    formulario.submit();
+}
