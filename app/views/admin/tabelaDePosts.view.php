@@ -178,6 +178,7 @@
 
 
     <!-- EDITAR -->
+     <?php foreach($posts as $post): ?>
     <div class="tudo" id="modalEdit">
         <div class="fundoEditar" onclick="fecharModalEditar()"></div>
         <div class="modalEditar">
@@ -190,22 +191,22 @@
 
                     <div class="tituloEditar">
                         <label>Título:</label>
-                        <input type="text" id="tituloEditar" required>
+                        <input  type="text" id="tituloEditar" value='<?= $post->title ?>' required >
                     </div>
 
                     <div class="tituloEditar">
                         <label>Descrição:</label>
-                        <textarea id="descricaoEditar" rows="3" required></textarea>
+                        <textarea id="descricaoEditar" rows="3" required><?= $post->content ?></textarea>
                     </div>
 
                     <div class="tituloEditar">
                         <label>Autor:</label>
-                        <input type="text" id="autorEditar" required>
+                        <input type="text" id="autorEditar" value='<?= $post->author ?>' required>
                     </div>
 
                     <div class="tituloEditar">
                         <label>Data de Criação:</label>
-                        <input value="12/12/2012" type="date" id="dataEditar" required>
+                        <input value="12/12/2012" type="date" id="dataEditar" value='<?= $post->created_at ?>' required>
                     </div>
 
                     <div class="botoesModal">
@@ -216,6 +217,7 @@
             </div>
         </div>
     </div>
+    <?php endforeach; ?>
 
     <!-- EXCLUIR -->
     <div class="tudo" id="modalExcluir">
