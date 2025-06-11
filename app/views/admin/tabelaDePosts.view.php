@@ -101,10 +101,6 @@
                         <input type="number" id="nota" name="rating" class="post-content" min="0" max="10" required>
                     </div>
 
-                    <div class="modal-input-grupo">
-                        <label for="data">Publicado em:</label>
-                        <input type="date" id="data" name="created_at" class="post-content" required>
-                    </div>
                 </div>
 
                 <div class="modal-input-grupo">
