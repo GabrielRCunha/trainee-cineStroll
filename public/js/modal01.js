@@ -37,10 +37,10 @@ function mostrarSenha(idIcone, idInput){
     }
 }
 
-const imagem = document.getElementById(`imgPerfil${usuarioId}`);
-const imgInput = document.getElementById(`imgInput${usuarioId}`);
+const imagem = document.getElementById(`imgPerfil`);
+const imgInput = document.getElementById(`imgInput`);
 const imgBotao = document.querySelector('.imgBtn');
-const imgBotaoDesfazer = document.getElementById(`botaoDesfazerFoto${usuarioId}`)
+const imgBotaoDesfazer = document.getElementById(`botaoDesfazerFoto`)
 
 imgInput.onchange = function(){
     imagem.src = URL.createObjectURL(imgInput.files[0]);
@@ -58,7 +58,8 @@ function desfazerFoto(event){
     imgBotao.style.display = 'block';
     imgBotaoDesfazer.style.display = 'none';
 }
- function mostrarImagemSelecionada(event, idImagem) {
+
+function mostrarImagemSelecionada(event, idImagem) {
     const input = event.target;
     const img = document.getElementById(idImagem);
 

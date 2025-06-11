@@ -15,8 +15,8 @@
             </div>
             <div class="modalSenha">
                 <p>Senha:</p>
-                <input type="password" id="inputSenhaV" value="<?=$usuario->senha?>" readonly>
-                <i class="bi bi-eye" id="iconeSenhaV" onclick="mostrarSenha('iconeSenhaV', 'inputSenhaV')"></i>
+                <input type="password" id="inputSenhaV<?=$usuario->id?>" value="<?=$usuario->senha?>" readonly>
+                <i class="bi bi-eye" id="iconeSenhaV<?=$usuario->id?>" onclick="mostrarSenha('iconeSenhaV<?=$usuario->id?>', 'inputSenhaV<?=$usuario->id?>')"></i>
             </div>
         </div>
         <div class="modalFoto" id="fotoPerfilV">
