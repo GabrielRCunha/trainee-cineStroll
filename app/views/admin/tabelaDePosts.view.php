@@ -47,7 +47,7 @@
                 </td>
                 <td class="acoes">
                     <div class="divacoes">
-                        <button class="ver" onclick="abrirModais('visualizar-post')">
+                        <button class="ver" onclick="abrirModais('visualizar-post <?=$post->id?>')">
                             <i class="bi bi-eye"></i>
                         </button>
                         <button class="editar" onclick="modalEditar()"><i class="bi bi-pencil-square"></i></button>
@@ -127,7 +127,7 @@
 
     <!-- VISUALIZAR -->
    <?php foreach($posts as $post): ?>   
-    <div class="modal-container" id="visualizar-post">
+    <div class="modal-container" id="visualizar-post <?=$post->id?>">
         <div class="modal-conteudo">
             <h2>Visualizar Post</h2>
             <form id="form-criar-post">
@@ -165,7 +165,7 @@
                 </div>
 
                 <div class="modal-botoes">
-                    <button type="button" class="cancelar" onclick="fecharModais('visualizar-post')">Fechar</button>
+                    <button type="button" class="cancelar" onclick="fecharModais('visualizar-post <?=$post->id?>')">Fechar</button>
                 </div>
             </form>
         </div>
