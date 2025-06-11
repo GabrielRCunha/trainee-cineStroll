@@ -3,7 +3,6 @@
 namespace App\Controllers;
 use App\Core\App;
 
-
 use PDO;
 
 class TabelaDePostsController {
