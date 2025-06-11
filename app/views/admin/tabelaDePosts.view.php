@@ -180,6 +180,7 @@
         <div class="modalEditar">
             <div class="containerEditar">
                 <form class="formModalEditar" action="/admin/editarPost" method="POST" onsubmit="salvarEdicao(event)">
+                    <input type="hidden" name="id" value=<?= $post->id ?>>
                     <div class="imagemEditar">
                         <img id="imgEditar" src="/public/assets/Logo_sem_fundo.png" alt="Imagem atual">
                         <input id="inputImgEditar" type="file" required>
@@ -216,8 +217,9 @@
     <?php endforeach; ?>
 
     <!-- EXCLUIR -->
-    <div class="tudo" id="modalExcluir">
+    <div class="tude" id="modalExcluir">
         <div class="fundoEditar" onclick="fecharModalExcluir()"></div>
+        <form action="/admin/deletePost" method="POST">
         <div class="modalEditar">
             <div class="containerEditar">
                 <div class="tituloEditar" style="padding: 30px;">
@@ -234,6 +236,7 @@
 
             </div>
         </div>
+        </form>
     </div>
 
     </div>

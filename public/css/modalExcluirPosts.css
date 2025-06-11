@@ -1,4 +1,4 @@
-#modalExcluir.tudo {
+.tude {
   position: fixed;
   width: 100vw;
   height: 100vh;
@@ -8,7 +8,7 @@
   z-index: 10;
 }
 
-#modalExcluir .fundoEditar {
+.tude .fundoEditar {
   width: 100%;
   height: 100%;
   background-color: black;
@@ -17,7 +17,7 @@
   z-index: 1;
 }
 
-#modalExcluir .modalEditar {
+.tude .modalEditar {
   width: 100vw;
   height: 100vh;
   position: absolute;
@@ -27,7 +27,7 @@
   align-items: center;
 }
 
-#modalExcluir .containerEditar {
+.tude .containerEditar {
   width: 400px;
   background: linear-gradient(to right, #333333 0%, #6a0dad 200%);
   border-radius: 16px;
@@ -36,13 +36,13 @@
   text-align: center;
 }
 
-#modalExcluir .botoesModal {
+.tude .botoesModal {
   display: flex;
   justify-content: space-around;
   margin-top: 20px;
 }
 
-#modalExcluir .botoesModal button {
+.tude .botoesModal button {
   padding: 10px 20px;
   border: none;
   border-radius: 8px;
@@ -50,13 +50,13 @@
   font-weight: bold;
 }
 
-#modalExcluir .botoesModal button:first-child {
+.tude .botoesModal button:first-child {
   background-color: gray;
   color: white;
   width: 80px;
 }
 
-#modalExcluir .botoesModal button:last-child {
+.tude .botoesModal button:last-child {
   background-color: red;
   color: white;
   width: 80px;
