@@ -3,12 +3,13 @@
 namespace App\Controllers;
 
 use PDO;
+use App\Core\App;
 
 class TabelaDePostsController {
    public function index()
     {
         //Seleciona todos os usuarios da database
-        $usuarios = App::get('database')->selectAll('posts');
+        $posts = App::get('database')->selectAll('posts');
 
         //Manda eles para a pagina do Crud Usuarios no Compact
         return view('admin/tabelaDePosts', compact('posts'));
