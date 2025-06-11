@@ -21,29 +21,13 @@ document.addEventListener('DOMContentLoaded', () => {
     imgPreview.src = URL.createObjectURL(inputImg.files[0]);
   };
 
-  window.abrirModalEditar = function (post) {
-    modalEdit.style.display = 'block';
-    document.getElementById('tituloEditar').value = post.titulo;
-    document.getElementById('descricaoEditar').value = post.descricao;
-    document.getElementById('autorEditar').value = post.autor;
-    document.getElementById('dataEditar').value = post.data;
-    imgPreview.src = post.imagem || '/public/assets/Logo_sem_fundo.png';
-  };
+function abrirModal(idModal){
+  document.getElementById(idModal).style.display = "block";
+}
 
-  fecharBtn.onclick = () => {
-    modalEdit.style.display = 'none';
-  };
-
-  salvarBtn.onclick = () => {  
-    const sucesso = true;
-
-  };
-
-  
-function fecharModalEditar() {
-    document.getElementById("modalEdit").style.display = "none";
-    document.getElementById("modalEditar").style.display = "none";
-  }
+function fecharModalEdit(idModal){
+  document.getElementById(idModal).style.display = "none";
+}
 
 
 

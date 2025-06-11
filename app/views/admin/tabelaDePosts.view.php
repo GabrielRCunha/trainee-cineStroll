@@ -18,7 +18,7 @@
         <div class="div-titulo">
             <h1 class="nome">Tabela de Publicações</h1>
         </div>
-        <button class="botao-criar" onclick="abrirModais('criar-post')"">
+        <button class="botao-criar" onclick="abrirModais('criar-post')">
             Criar <i class=" bi bi-plus"></i>
         </button>
     </div>
@@ -50,7 +50,7 @@
                         <button class="ver" onclick="abrirModais('visualizar-post <?=$post->id?>')">
                             <i class="bi bi-eye"></i>
                         </button>
-                        <button class="editar" onclick="modalEditar()"><i class="bi bi-pencil-square"></i></button>
+                        <button class="editar" onclick="abrirModal('modalEdit<?= $post->id ?>')"><i class="bi bi-pencil-square"></i></button>
                         <button class="apagar" onclick="modalExcluirP()"><i class="bi bi-trash3"></i></button>
                     </div>
                 </td>
@@ -91,29 +91,29 @@
 
                 <div class="modal-input-grupo">
                     <label for="titulo">Título:</label>
-                    <input type="text" id="titulo" name="titulo" class="post-content" required>
+                    <input type="text" id="titulo" name="title" class="post-content" required>
                 </div>
 
                 <div class="div_autor_nota">
                     <div class="modal-input-grupo">
                         <label for="autor">Autor:</label>
-                        <input type="text" id="autor" name="autor" class="post-content" required>
+                        <input type="text" id="autor" name="author" class="post-content" required>
                     </div>
 
                     <div class="modal-input-grupo">
                         <label for="nota">Nota:</label>
-                        <input type="number" id="nota" name="nota" class="post-content" min="0" max="10" required>
+                        <input type="number" id="nota" name="rating" class="post-content" min="0" max="10" required>
                     </div>
 
                     <div class="modal-input-grupo">
                         <label for="data">Publicado em:</label>
-                        <input type="date" id="data" name="data" class="post-content" required>
+                        <input type="date" id="data" name="created_at" class="post-content" required>
                     </div>
                 </div>
 
                 <div class="modal-input-grupo">
                     <label for="conteudo">Conteúdo:</label>
-                    <textarea id="conteudo" name="conteudo" class="post-content" rows="4" required></textarea>
+                    <textarea id="conteudo" name="content" class="post-content" rows="4" required></textarea>
                 </div>
 
                 <div class="modal-botoes">
@@ -175,11 +175,11 @@
 
     <!-- EDITAR -->
      <?php foreach($posts as $post): ?>
-    <div class="tudo" id="modalEdit">
-        <div class="fundoEditar" onclick="fecharModalEditar()"></div>
+    <div class="tudo" id="modalEdit<?= $post->id ?>">
+        <div class="fundoEditar" onclick="fecharModalEdit('modalEdit<?= $post->id ?>')"></div>
         <div class="modalEditar">
             <div class="containerEditar">
-                <form class="formModalEditar" onsubmit="salvarEdicao(event)">
+                <form class="formModalEditar" action="/admin/editarPost" method="POST" onsubmit="salvarEdicao(event)">
                     <div class="imagemEditar">
                         <img id="imgEditar" src="/public/assets/Logo_sem_fundo.png" alt="Imagem atual">
                         <input id="inputImgEditar" type="file" required>
@@ -187,26 +187,26 @@
 
                     <div class="tituloEditar">
                         <label>Título:</label>
-                        <input  type="text" id="tituloEditar" value='<?= $post->title ?>' required >
+                        <input  type="text" id="tituloEditar" name="title" value='<?= $post->title ?>' required >
                     </div>
 
                     <div class="tituloEditar">
                         <label>Descrição:</label>
-                        <textarea id="descricaoEditar" rows="3" required><?= $post->content ?></textarea>
+                        <textarea id="descricaoEditar" name="content" rows="3" required><?= $post->content ?></textarea>
                     </div>
 
                     <div class="tituloEditar">
                         <label>Autor:</label>
-                        <input type="text" id="autorEditar" value='<?= $post->author ?>' required>
+                        <input type="text" id="autorEditar" name="author" value='<?= $post->author ?>' required>
                     </div>
 
                     <div class="tituloEditar">
                         <label>Data de Criação:</label>
-                        <input value="12/12/2012" type="date" id="dataEditar" value='<?= $post->created_at ?>' required>
+                        <input value="12/12/2012" type="date" id="dataEditar" name="created_at" value='<?= $post->created_at ?>' required>
                     </div>
 
                     <div class="botoesModal">
-                        <button class="buttonEditP" type="button" onclick="fecharModalEditar()">Cancelar</button>
+                        <button class="buttonEditP" type="button" onclick="fecharModalEdit('modalEdit<?= $post->id ?>')">Cancelar</button>
                         <button type="submit">Salvar</button>
                     </div>
                 </form>

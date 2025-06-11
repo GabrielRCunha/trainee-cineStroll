@@ -4,7 +4,7 @@ namespace App\Controllers;
 use App\Core\App;
 
 use PDO;
-use App\Core\App;
+
 
 class TabelaDePostsController {
    public function index()
@@ -18,27 +18,26 @@ class TabelaDePostsController {
     public function store()
     {
         $parameters = [
-            ':titulo' => $titulo,
-            ':conteudo' => $conteudo,
-            ':nota' => $nota,
-            ':autor' => $autor,
-            ':data' => $data,
+            'title' => $_POST['title'],
+            'content' => $_POST['content'],
+            'rating' => $_POST['rating'],
+            'author' => $_POST['author'],
+            'created_at' => $_POST['created_at'],
         ];
 
         App::get('database')->insert('posts', $parameters);
 
-        header('Location: /crudPosts');
+        header('Location: /tabelaDePosts');
     }
 
         public function edit()
     {
 
         $parameters = [
-           ':titulo' => $titulo,
-            ':conteudo' => $conteudo,
-            ':nota' => $nota,
-            ':autor' => $autor,
-            ':data' => $data,
+            'title' => $_POST['title'],
+            'content' => $_POST['content'],
+            'author' => $_POST['author'],
+            'created_at' => $_POST['created_at'],
         ];
 
         $id = $_POST['id'];
