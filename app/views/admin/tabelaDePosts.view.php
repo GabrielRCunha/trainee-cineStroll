@@ -60,9 +60,12 @@
     </div>
     <ul class="paginacao">
         <li><a href="?paginacaoNumero=<?= $page - 1 ?>" class="voltar <?= $page <= 1 ? "disabled" : "" ?>">&laquo;</a></li>
+
         <?php for($page_number = 1; $page_number <= $total_pages; $page_number++): ?>
         <li><a href="?paginacaoNumero=<?= $page_number ?>" class="<?= $page_number == $page ? "pagina ativa" : "" ?>"><?= $page_number ?></a></li>
         <?php endfor ?>
+
+
         <li><a href="?paginacaoNumero=<?= $page + 1 ?>" class="passar <?= $page >= $total_pages ? "disabled" : "" ?>">&raquo;</a></li>
     </ul>
 
@@ -76,7 +79,7 @@
             <form id="form-criar-post" action="/admin/criarPost" method="POST" enctype="multipart/form-data">
                 <div class="modal-input-grupo">
                     <label for="imagem" class="image-upload-label">Escolher imagem</label>
-                    <input type="file" id="imagem" name="imagem" class="post-image-container botao-post-imagem image-upload-input">
+                    <input type="file" id="imagem" name="imagem" class="post-image-container botao-post-imagem image-upload-input" required>
                      <div class="imagem-preview-container" id="imagem-preview" style="display: none;" required>
                     <img id="preview-imagem-selecionada" src="#" alt="Pré-visualização da imagem selecionada">
                 </div>

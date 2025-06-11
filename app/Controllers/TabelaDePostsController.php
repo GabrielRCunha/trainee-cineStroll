@@ -16,6 +16,7 @@ class TabelaDePostsController {
             if($page <= 0){
                 return redirect('admin/tabelaDePosts');
             }
+
         }
 
         $itensPage = 5;
@@ -29,7 +30,9 @@ class TabelaDePostsController {
         //Seleciona todos os posts da database
         $posts = App::get('database')->selectAll('posts', $inicio, $itensPage);
 
-        $total_pages = ceil($rows_count)/$itensPage;
+      
+         $total_pages = ceil($rows_count/$itensPage);
+
 
         //Manda eles para a pagina do Crud Posts no Compact
         return view('admin/tabelaDePosts', compact('posts', 'page', 'total_pages'));
@@ -41,7 +44,6 @@ class TabelaDePostsController {
             'content' => $_POST['content'],
             'rating' => $_POST['rating'],
             'author' => $_POST['author'],
-            'created_at' => $_POST['created_at'],
         ];
 
         App::get('database')->insert('posts', $parameters, $_FILES['imagem']);
@@ -56,7 +58,6 @@ class TabelaDePostsController {
             'title' => $_POST['title'],
             'content' => $_POST['content'],
             'author' => $_POST['author'],
-            'created_at' => $_POST['created_at'],
         ];
 
         $id = $_POST['id'];
