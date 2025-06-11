@@ -73,24 +73,28 @@ function mostrarImagemSelecionada(event, idImagem) {
     }
 }
 
-document.addEventListener('DOMContentLoaded', function() {
-    const imgInputEditar = document.getElementById(`imgInputEditar${usuarioId}`);
-    const imgPerfilEditar = document.getElementById(`imgPerfilEditar${usuarioId}`);
+document.addEventListener('DOMContentLoaded', function () {
+    
+    const todosInputsEditar = document.querySelectorAll('input[id^="imgInputEditar"]');
 
-    if (imgInputEditar && imgPerfilEditar) {
-        imgInputEditar.addEventListener('change', function(e) {
+    todosInputsEditar.forEach(input => {
+        input.addEventListener('change', function (e) {
+            const usuarioId = this.id.replace('imgInputEditar', '');
+            const imgPerfilEditar = document.getElementById(`imgPerfilEditar${usuarioId}`);
+            const avisoImg = document.getElementById(`avisoImgEditar${usuarioId}`);
+
             if (this.files && this.files[0]) {
                 const reader = new FileReader();
-                reader.onload = function(e) {
+                reader.onload = function (e) {
                     imgPerfilEditar.src = e.target.result;
+                    imgPerfilEditar.style.display = 'block';
                 };
                 reader.readAsDataURL(this.files[0]);
 
-                // Mostra aviso se necessário
-                document.getElementById(`avisoImgEditar${usuarioId}`).style.display = 'none';
+                if (avisoImg) avisoImg.style.display = 'none';
             }
         });
-    }
+    });
 });
 
 
