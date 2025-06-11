@@ -34,26 +34,20 @@
             <?php foreach($posts as $post): ?>
             <tr>
                 <td class="id">
-                    <?=htmlspecialchars($post['id'])?>
+                    <?= $post->id ?>
                 </td>
                 <td class="titulo fontes">
-                    <?=htmlspecialchars($post['title'])?>
+                    <?= $post->title ?>
                 </td>
                 <td class="autor fontes">
-                    <?=htmlspecialchars($post['author'])?>
+                    <?= $post->author ?>
                 </td>
                 <td class="data fontes">
-                    <?=htmlspecialchars($post['created_at'])?>
+                    <?=$post->created_at?>
                 </td>
                 <td class="acoes">
                     <div class="divacoes">
-                        <button class="ver" onclick="abrirModalVisualizar(this)"
-                            data-titulo="<?= htmlspecialchars($post['title']) ?>"
-                            data-autor="<?= htmlspecialchars($post['author']) ?>"
-                            data-data="<?= htmlspecialchars($post['created_at']) ?>"
-                            data-nota="<?= htmlspecialchars($post['rating']) ?>"
-                            data-conteudo="<?= htmlspecialchars($post['content']) ?>"
-                            data-imagem="<?= htmlspecialchars($post['image']) ?>">
+                        <button class="ver" onclick="abrirModais('visualizar-post')">
                             <i class="bi bi-eye"></i>
                         </button>
                         <button class="editar" onclick="modalEditar()"><i class="bi bi-pencil-square"></i></button>
@@ -132,6 +126,7 @@
 
 
     <!-- VISUALIZAR -->
+   <?php foreach($posts as $post): ?>   
     <div class="modal-container" id="visualizar-post">
         <div class="modal-conteudo">
             <h2>Visualizar Post</h2>
@@ -144,29 +139,29 @@
 
                 <div class="modal-input-grupo">
                     <label for="titulo">Título:</label>
-                    <input type="text" id="modal-titulo" class="post-content" readonly>
+                    <input type="text" id="modal-titulo" class="post-content" value="<?=$post->title?>" readonly>
                 </div>
 
                 <div class="div_autor_nota">
                     <div class="modal-input-grupo">
                         <label for="autor">Autor:</label>
-                        <input type="text" id="modal-autor" class="post-content" readonly>
+                        <input type="text" id="modal-autor" class="post-content" value="<?=$post->author?>" readonly>
                     </div>
 
                     <div class="modal-input-grupo">
                         <label for="nota">Nota:</label>
-                        <input type="number" id="modal-nota" class="post-content" min="0" max="5" readonly>
+                        <input type="number" id="modal-nota" class="post-content" min="0" max="5" value="<?=$post->rating?>"readonly>
                     </div>
 
                     <div class="modal-input-grupo">
                         <label for="data">Publicado em:</label>
-                        <input type="date" id="modal-data" class="post-content" readonly>
+                        <input type="date" id="modal-data" class="post-content" value="<?=$post->created_at?>" readonly>
                     </div>
                 </div>
 
                 <div class="modal-input-grupo">
                     <label for="conteudo">Conteúdo:</label>
-                    <textarea id="modal-conteudo" class="post-content" rows="4" readonly></textarea>
+                    <textarea id="modal-conteudo" class="post-content" rows="4" readonly><?=$post->content?></textarea>
                 </div>
 
                 <div class="modal-botoes">
@@ -175,6 +170,7 @@
             </form>
         </div>
     </div>
+    <?php endforeach; ?>
 
 
     <!-- EDITAR -->
