@@ -172,11 +172,12 @@
         <div class="fundoEditar" onclick="fecharModalEdit('modalEdit<?= $post->id ?>')"></div>
         <div class="modalEditar">
             <div class="containerEditar">
-                <form class="formModalEditar" action="/admin/editarPost" method="POST" onsubmit="salvarEdicao(event)">
+                <form class="formModalEditar" action="/admin/editarPost" method="POST" onsubmit="salvarEdicao(event)"  enctype="multipart/form-data">
+                    <input type="hidden" value="<?= $post->image?>" name="fotoAtual"/>
                     <input type="hidden" name="id" value=<?= $post->id ?>>
                     <div class="imagemEditar">
                         <img id="imgEditar" src="/public/assets/Logo_sem_fundo.png" alt="Imagem atual">
-                        <input id="inputImgEditar" type="file" accept="image/*" required>
+                        <input id="inputImgEditar" type="file" name="imagem" accept="image/*" required>
                     </div>
 
                     <div class="tituloEditar">

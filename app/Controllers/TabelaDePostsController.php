@@ -49,7 +49,7 @@ class TabelaDePostsController {
         header('Location: /tabelaDePosts');
     }
 
-        public function edit()
+    public function edit()
     {
 
         $parameters = [
@@ -60,8 +60,10 @@ class TabelaDePostsController {
         ];
 
         $id = $_POST['id'];
+        $image = isset($_FILES['imagem']) && $_FILES['imagem']['size'] > 0 ? $_FILES['imagem'] :null;
+        $fotoAtual = $_POST['fotoAtual'];
 
-        App::get('database')->update('posts', $id, $parameters);
+        App::get('database')->update('posts', $id, $parameters, $image, $fotoAtual);
 
         header('Location: /tabelaDePosts');
     }
