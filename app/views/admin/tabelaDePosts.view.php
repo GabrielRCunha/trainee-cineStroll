@@ -179,7 +179,7 @@
                     <input type="hidden" value="<?= $post->image?>" name="fotoAtual"/>
                     <input type="hidden" name="id" value=<?= $post->id ?>>
                     <div class="imagemEditar">
-                        <img id="imgEditar" src="/public/assets/Logo_sem_fundo.png" alt="Imagem atual">
+                        <img id="imgEditar" src="/<?=$post->image?>" alt="Imagem atual">
                         <input id="inputImgEditar" type="file" name="imagem" accept="image/*" required>
                     </div>
 
