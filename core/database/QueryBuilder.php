@@ -49,13 +49,24 @@ public function selectAll($table)
     }
     }
     
-    public function insert($table, $parameters)
+    public function insert($table, $parameters, $image)
     {
-        $sql = sprintf('INSERT INTO %s (%s) VALUES (:%s)',
+        $pasta = 'uploads/';
+
+        $extensao = pathinfo($image['name'], PATHINFO_EXTENSION);
+        
+        $nome_img = uniqid() . '.' . $extensao;
+        
+        $caminho_img = $pasta.basename($nome_img);
+    
+        move_uploaded_file($image['tmp_name'], $caminho_img);
+
+        $parameters['image'] = $caminho_img;
+
+        $sql = sprintf('INSERT INTO %s (%s) VALUES (%s)',
         $table,
         implode(', ', array_keys($parameters)),
-        implode(', :', array_keys($parameters))
-    );
+        ':' . implode(', :', array_keys($parameters)));
 
     try {
         $stmt = $this->pdo->prepare($sql);

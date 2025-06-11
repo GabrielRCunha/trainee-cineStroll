@@ -25,7 +25,7 @@ class TabelaDePostsController {
             'created_at' => $_POST['created_at'],
         ];
 
-        App::get('database')->insert('posts', $parameters);
+        App::get('database')->insert('posts', $parameters, $_FILES['imagem']);
 
         header('Location: /tabelaDePosts');
     }

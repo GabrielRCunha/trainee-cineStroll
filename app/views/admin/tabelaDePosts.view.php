@@ -133,7 +133,7 @@
             <form id="form-criar-post">
                 <div class="modal-input-grupo">
                     <div class="imagem-preview-container" id="imagem-preview">
-                    <img id="modal-imagem" src="" alt="Pré-visualização da imagem selecionada">
+                    <img id="modal-imagem" src="/<?= $post->image?>" alt="Pré-visualização da imagem selecionada">
                     </div>
                 </div>
 
