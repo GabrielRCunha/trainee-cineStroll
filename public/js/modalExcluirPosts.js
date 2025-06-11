@@ -1,11 +1,11 @@
-// Controle do Modal de Exclusão
-function modalExcluirP(postId) {
-  document.getElementById("modalExcluir").style.display = "block";
-  document.getElementById("excluir").dataset.id = postId;
+
+
+function abrirModalExcluir(idModal){
+    document.getElementById(idModal).style.display= 'block';
 }
 
-function fecharModalExcluir() {
-  document.getElementById("modalExcluir").style.display = "none";
+function fecharModalExcluir(idModal) {
+  document.getElementById(idModal).style.display = "none";
 }
 
 function confirmarExclusao() {
@@ -23,3 +23,4 @@ document.querySelectorAll(".apagar").forEach(botao => {
     modalExcluirP(postId);
   });
 });
+

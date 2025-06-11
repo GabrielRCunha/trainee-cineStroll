@@ -51,7 +51,7 @@
                             <i class="bi bi-eye"></i>
                         </button>
                         <button class="editar" onclick="abrirModal('modalEdit<?= $post->id ?>')"><i class="bi bi-pencil-square"></i></button>
-                        <button class="apagar" onclick="modalExcluirP()"><i class="bi bi-trash3"></i></button>
+                        <button class="apagar" onclick="abrirModalExcluir('modalExcluir<?= $post->id?>')"><i class="bi bi-trash3"></i></button>
                     </div>
                 </td>
             </tr>
@@ -183,7 +183,7 @@
                     <input type="hidden" name="id" value=<?= $post->id ?>>
                     <div class="imagemEditar">
                         <img id="imgEditar" src="/public/assets/Logo_sem_fundo.png" alt="Imagem atual">
-                        <input id="inputImgEditar" type="file" required>
+                        <input id="inputImgEditar" type="file" accept="image/*" required>
                     </div>
 
                     <div class="tituloEditar">
@@ -217,11 +217,14 @@
     <?php endforeach; ?>
 
     <!-- EXCLUIR -->
-    <div class="tude" id="modalExcluir">
-        <div class="fundoEditar" onclick="fecharModalExcluir()"></div>
+     <?php foreach($posts as $post): ?>
+    <div class="tude" id="modalExcluir<?= $post->id?>">
+        <div class="fundoEditar" onclick="fecharModalExcluir('<?= $post->id?>')"></div>
         <form action="/admin/deletePost" method="POST">
+             <input type="hidden" name="id" value=<?= $post->id ?>>
         <div class="modalEditar">
             <div class="containerEditar">
+                <p><?= $post->title?></p>
                 <div class="tituloEditar" style="padding: 30px;">
                     <p style="color: white;">Tem certeza que deseja excluir este post?</p>
                     <div class="lixo">
@@ -229,7 +232,7 @@
                     </div>
                 </div>
                 <div class="botoesModal">
-                    <button type="button" onclick="fecharModalExcluir()">Cancelar</button>
+                    <button type="button" onclick="fecharModalExcluir('modalExcluir<?= $post->id?>')">Cancelar</button>
                     <button class="botaoExcluirConfirmar">Excluir</button>
 
                 </div>
@@ -238,6 +241,7 @@
         </div>
         </form>
     </div>
+    <?php endforeach; ?>
 
     </div>
 
