@@ -55,4 +55,31 @@ class TabelaDePostsController {
         header('Location: /tabelaDePosts');
         exit;
         }
+
+        public function edit()
+    {
+
+        $parameters = [
+           ':titulo' => $titulo,
+            ':conteudo' => $conteudo,
+            ':nota' => $nota,
+            ':autor' => $autor,
+            ':data' => $data,
+        ];
+
+        $id = $_POST['id'];
+
+        App::get('database')->update('posts', $id, $parameters);
+
+        header('Location: /tabelaDePosts');
+    }
+
+    public function delete()
+    {
+        $id = $_POST['id'];
+
+        App::get('database')->delete('posts', $id);
+
+        header('Location: /tabelaDePosts');
+    }
 }
