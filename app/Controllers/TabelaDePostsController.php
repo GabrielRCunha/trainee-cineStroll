@@ -5,15 +5,14 @@ namespace App\Controllers;
 use PDO;
 
 class TabelaDePostsController {
-    public function index() {
-        $pdo = new PDO('mysql:host=localhost;dbname=cine_stroll_db', 'root', '');
+   public function index()
+    {
+        //Seleciona todos os usuarios da database
+        $usuarios = App::get('database')->selectAll('posts');
 
-        $stmt = $pdo->query("SELECT * FROM `posts`");
-        $posts = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
-        require __DIR__ . '/../views/admin/tabelaDePosts.view.php';
+        //Manda eles para a pagina do Crud Usuarios no Compact
+        return view('admin/tabelaDePosts', compact('posts'));
     }
-
     public function store() {
         // Conexão com o banco
         $pdo = new PDO('mysql:host=localhost;dbname=cine_stroll_db', 'root', '');

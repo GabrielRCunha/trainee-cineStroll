@@ -14,7 +14,7 @@ class QueryBuilder
         $this->pdo = $pdo;
     }
 
-    public function selectAll($table)
+public function selectAll($table)
     {
         $sql = "select * from {$table}";
 
@@ -48,4 +48,5 @@ class QueryBuilder
         die($e->getMessage());
     }
     }
+
 }
