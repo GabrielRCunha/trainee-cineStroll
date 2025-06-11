@@ -59,18 +59,11 @@
         </table>
     </div>
     <ul class="paginacao">
-        <li><a href="#" class="voltar">&laquo;</a></li>
-        <li><a href="#" class="pagina ativa">1</a></li>
-        <li><a href="#" class="pagina">2</a></li>
-        <li><a href="#" class="pagina">3</a></li>
-        <li><a href="#" class="pagina">4</a></li>
-        <li><a href="#" class="pagina">5</a></li>
-        <li><a href="#" class="pagina">6</a></li>
-        <li><a href="#" class="pagina">7</a></li>
-        <li><a href="#" class="pagina">8</a></li>
-        <li><a href="#" class="pagina">9</a></li>
-        <li><a href="#" class="pagina">10</a></li>
-        <li><a href="#" class="passar">&raquo;</a></li>
+        <li><a href="?paginacaoNumero=<?= $page - 1 ?>" class="voltar <?= $page <= 1 ? "disabled" : "" ?>">&laquo;</a></li>
+        <?php for($page_number = 1; $page_number <= $total_pages; $page_number++): ?>
+        <li><a href="?paginacaoNumero=<?= $page_number ?>" class="<?= $page_number == $page ? "pagina ativa" : "" ?>"><?= $page_number ?></a></li>
+        <?php endfor ?>
+        <li><a href="?paginacaoNumero=<?= $page + 1 ?>" class="passar <?= $page >= $total_pages ? "disabled" : "" ?>">&raquo;</a></li>
     </ul>
 
     <!-- MODAIS -->

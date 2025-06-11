@@ -8,12 +8,31 @@ use PDO;
 
 class TabelaDePostsController {
    public function index()
-    {
-        //Seleciona todos os usuarios da database
-        $posts = App::get('database')->selectAll('posts');
+    {   
+        $page = 1;
+        if(isset($_GET['paginacaoNumero']) && !empty($_GET['paginacaoNumero'])){
+            $page = intval($_GET['paginacaoNumero']);
+
+            if($page <= 0){
+                return redirect('admin/tabelaDePosts');
+            }
+        }
+
+        $itensPage = 5;
+        $inicio = $itensPage * $page - $itensPage;
+        $rows_count = App::get('database')->countAll('posts');
+
+        if($inicio > $rows_count){
+            return redirect('admin/tabelaDePosts');
+        }
+ 
+        //Seleciona todos os posts da database
+        $posts = App::get('database')->selectAll('posts', $inicio, $itensPage);
+
+        $total_pages = ceil($rows_count)/$itensPage;
 
         //Manda eles para a pagina do Crud Posts no Compact
-        return view('admin/tabelaDePosts', compact('posts'));
+        return view('admin/tabelaDePosts', compact('posts', 'page', 'total_pages'));
     }
     public function store()
     {
