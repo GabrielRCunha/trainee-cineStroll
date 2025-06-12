@@ -93,3 +93,19 @@
   color: white;
   width: 80px;
 }
+
+.recebeId{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #391944;
+    color: white;
+    font-weight: 600;
+    border-radius: 12px;
+    width: 160px;
+    height: 64px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-align: left;
+    padding: 4px 12px;
+}

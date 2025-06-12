@@ -29,5 +29,30 @@ function fecharModalEdit(idModal){
   document.getElementById(idModal).style.display = "none";
 }
 
+/*function handleImageChange(event, postId, currentImage) {
+    const input = event.target;
+    const imgPreview = document.getElementById(`imgEditar${currentImage}`);
+    
+    if (input.files && input.files[0]) {
+        const reader = new FileReader();
+        
+        reader.onload = function(e) {
+            imgPreview.src = e.target.result;
+        };
+        
+        reader.readAsDataURL(input.files[0]);
+    }
+}
+
+// Adicionar event listeners para todos os inputs de imagem
+document.addEventListener('DOMContentLoaded', function() {
+        const inputImgEditar<?= $post->id ?> = document.getElementById('inputImgEditar<?= $post->id ?>');
+        if (inputImgEditar<?= $post->id ?>) {
+            inputImgEditar<?= $post->id ?>.addEventListener('change', function(event) {
+                handleImageChange(event, <?= $post->id ?>, '<?= $post->image ?>');
+            });
+        }
+});*/
+
 
 

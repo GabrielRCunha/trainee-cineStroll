@@ -180,7 +180,8 @@
                     <input type="hidden" name="id" value=<?= $post->id ?>>
                     <div class="imagemEditar">
                         <img id="imgEditar" src="/<?=$post->image?>" alt="Imagem atual">
-                        <input id="inputImgEditar" type="file" name="imagem" accept="image/*" required>
+                        <button class="recebeId" onclick="document.getElementById('inputImgEditar<?= $post->id?>').click()">Escolher Imagem</button>
+                        <input id="inputImgEditar<?= $post->id?>" type="file" name="imagem" style="display: none;" accept="image/*" required>
                     </div>
 
                     <div class="tituloEditar">
