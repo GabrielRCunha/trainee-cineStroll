@@ -50,7 +50,7 @@
                         <button class="ver" onclick="abrirModais('visualizar-post <?=$post->id?>')">
                             <i class="bi bi-eye"></i>
                         </button>
-                        <button class="editar" onclick="abrirModal('modalEdit<?= $post->id ?>')"><i class="bi bi-pencil-square"></i></button>
+                        <button class="editar" onclick="abrirModais('editar-post <?= $post->id ?>')"><i class="bi bi-pencil-square"></i></button>
                         <button class="apagar" onclick="abrirModalExcluir('modalExcluir<?= $post->id?>')"><i class="bi bi-trash3"></i></button>
                     </div>
                 </td>
@@ -166,46 +166,47 @@
 
 
     <!-- EDITAR -->
-     <?php foreach($posts as $post): ?>
-    <div class="tudo" id="modalEdit<?= $post->id ?>">
-        <div class="fundoEditar" onclick="fecharModalEdit('modalEdit<?= $post->id ?>')"></div>
-        <div class="modalEditar">
-            <div class="containerEditar">
-                <form class="formModalEditar" action="/admin/editarPost" method="POST" onsubmit="salvarEdicao(event)"  enctype="multipart/form-data">
-                    <input type="hidden" value="<?= $post->image?>" name="fotoAtual"/>
-                    <input type="hidden" name="id" value=<?= $post->id ?>>
-                    <div class="imagemEditar">
-                        <img id="imgEditar" src="/<?=$post->image?>" alt="Imagem atual">
-                        <button class="recebeId" onclick="document.getElementById('inputImgEditar<?= $post->id?>').click()">Escolher Imagem</button>
-                        <input id="inputImgEditar<?= $post->id?>" type="file" name="imagem" style="display: none;" accept="image/*" required>
+    <?php foreach($posts as $post): ?>   
+    <div class="modal-container" id="editar-post <?=$post->id?>">
+        <div class="modal-conteudo">
+            <h2>Editar Post</h2>
+            <form id="form-editar-post" action="/admin/editarPost" method="POST" enctype="multipart/form-data" onsubmit="salvarEdicao(event)">
+                <input type="hidden" name="id" value="<?= $post->id ?>">
+                <input type="hidden" name="fotoAtual" value="<?= $post->image ?>">
+                <div class="modal-input-grupo">
+                    <div class="imagem-preview-container" id="imagem-preview">
+                    <img id="modal-imagem" src="/<?= $post->image?>" alt="Pré-visualização da imagem selecionada">
+                    </div>
+                </div>
+
+                <div class="modal-input-grupo">
+                    <label for="titulo">Título:</label>
+                    <input type="text" id="modal-titulo" class="post-content" name="title" value="<?=$post->title?>">
+                </div>
+
+                <div class="div_autor_nota">
+                    <div class="modal-input-grupo">
+                        <label for="autor">Autor:</label>
+                        <input type="text" id="modal-autor" class="post-content" name="author" value="<?=$post->author?>">
                     </div>
 
-                    <div class="tituloEditar">
-                        <label>Título:</label>
-                        <input  type="text" id="tituloEditar" name="title" value='<?= $post->title ?>' required >
+                    <div class="modal-input-grupo">
+                        <label for="nota">Nota:</label>
+                        <input type="number" id="modal-nota" class="post-content" min="0" name="rating" max="5" value="<?=$post->rating?>">
                     </div>
 
-                    <div class="tituloEditar">
-                        <label>Descrição:</label>
-                        <textarea id="descricaoEditar" name="content" rows="3" required><?= $post->content ?></textarea>
-                    </div>
+                </div>
 
-                    <div class="tituloEditar">
-                        <label>Autor:</label>
-                        <input type="text" id="autorEditar" name="author" value='<?= $post->author ?>' required>
-                    </div>
+                <div class="modal-input-grupo">
+                    <label for="conteudo">Conteúdo:</label>
+                    <textarea id="modal-conteudo" class="post-content" name="content" rows="4"><?=$post->content?></textarea>
+                </div>
 
-                    <div class="tituloEditar">
-                        <label>Data de Criação:</label>
-                        <input value="12/12/2012" type="date" id="dataEditar" name="created_at" value='<?= $post->created_at ?>' required>
-                    </div>
-
-                    <div class="botoesModal">
-                        <button class="buttonEditP" type="button" onclick="fecharModalEdit('modalEdit<?= $post->id ?>')">Cancelar</button>
-                        <button type="submit">Salvar</button>
-                    </div>
-                </form>
-            </div>
+                <div class="modal-botoes">
+                    <button type="button" class="cancelar" onclick="fecharModais('editar-post <?=$post->id?>')">Fechar</button>
+                    <button type="submit" class="salvar">Salvar</button>
+                </div>
+            </form>
         </div>
     </div>
     <?php endforeach; ?>

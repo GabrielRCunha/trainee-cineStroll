@@ -53,10 +53,10 @@ class TabelaDePostsController {
 
     public function edit()
     {
-
         $parameters = [
             'title' => $_POST['title'],
             'content' => $_POST['content'],
+            'rating' => $_POST['rating'],
             'author' => $_POST['author'],
         ];
 

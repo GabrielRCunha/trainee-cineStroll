@@ -33,7 +33,7 @@ public function selectAll($table, $inicio = null, $rows_count = null)
         }
     }
 
-   public function update($table, $id, $parameters, $image, $fotoAtual)
+   public function update($table, $id, $parameters, $image=null, $fotoAtual=null)
 {
     if ($image && isset($image['tmp_name']) && $image['tmp_name']) {
         // Remove a imagem antiga se existir

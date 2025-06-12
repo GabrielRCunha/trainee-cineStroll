@@ -5,7 +5,7 @@ inputImg.onchange = function(){
 }
 
 function modalEditar(){
-    let modalEditar = document.getElementById('modalEdit');
+    let modalEditar = document.getElementsByClassName('containerEditar');
     modalEditar.style.display = 'block';     
 }
 
