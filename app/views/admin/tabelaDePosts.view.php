@@ -174,9 +174,11 @@
                 <input type="hidden" name="id" value="<?= $post->id ?>">
                 <input type="hidden" name="fotoAtual" value="<?= $post->image ?>">
                 <div class="modal-input-grupo">
-                    <div class="imagem-preview-container" id="imagem-preview">
-                    <img id="modal-imagem" src="/<?= $post->image?>" alt="Pré-visualização da imagem selecionada">
-                    </div>
+                        <div class="imagemEditar">
+                            <img 
+                                id="imgEditar<?= $post->id ?>" class="imagem-editar-post" src="/<?= $post->image ?>" alt="Imagem atual" onclick="document.getElementById('inputImgEditar<?= $post->id ?>').click()">
+                            <input id="inputImgEditar<?= $post->id ?>" type="file" name="imagem" style="display: none;" accept="image/*" onchange="mostrarPreviewImagem(this, 'imgEditar<?= $post->id ?>')">
+                        </div>
                 </div>
 
                 <div class="modal-input-grupo">

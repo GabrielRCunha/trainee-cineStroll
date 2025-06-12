@@ -61,7 +61,7 @@ class TabelaDePostsController {
         ];
 
         $id = $_POST['id'];
-        $image = isset($_FILES['imagem']) && $_FILES['imagem']['size'] > 0 ? $_FILES['imagem'] :null;
+        $image = isset($_FILES['imagem']) && $_FILES['imagem']['size'] > 0 ? $_FILES['imagem'] : null;
         $fotoAtual = $_POST['fotoAtual'];
 
         App::get('database')->update('posts', $id, $parameters, $image, $fotoAtual);
