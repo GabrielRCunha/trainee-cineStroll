@@ -386,6 +386,37 @@ p{
     }
   }
 
+  @media (max-width: 379px) {
+  .botoes-excluir {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 15px;
+  }
+
+  
+  .botaoFecharModalEditar,
+  .botaoEditarConfirmar {
+    font-size: 12px;
+    padding: 8px 14px;
+    border-radius: 12px;
+    min-width: auto;
+    max-width: 48%;
+    text-align: center;
+    white-space: nowrap;
+    flex: 1 1 45%;
+  }
+
+  .botaoEditarImagem{
+     font-size: 12px;
+    padding: 8px 14px;
+    border-radius: 12px;
+
+  }
+
+}
+
 
   @media (min-width: 300px) and (max-width:479px) {
     .modal {
