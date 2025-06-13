@@ -1,7 +1,7 @@
 
 
-function abrirModalExcluir(idModal){
-    document.getElementById(idModal).style.display= 'block';
+function abrirModalExcluir(idModal) {
+  document.getElementById(idModal).style.display = 'block';
 }
 
 function fecharModalExcluir(idModal) {
@@ -24,3 +24,8 @@ document.querySelectorAll(".apagar").forEach(botao => {
   });
 });
 
+document.querySelector('.overlay').addEventListener('click', function () {
+  const modais = document.querySelector('.tude');
+  modais.classList.remove('ativo');
+  this.classList.remove('ativo');
+});

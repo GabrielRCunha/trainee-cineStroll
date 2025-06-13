@@ -2,8 +2,8 @@ function abrirModais(idModal) {
     const modal = document.getElementById(idModal);
     const overlay = document.getElementById('overlay');
 
-    modal.classList.add('ativo');
     overlay.classList.add('ativo');
+    modal.classList.add('ativo');
     document.body.style.overflow = 'hidden';
 }
 

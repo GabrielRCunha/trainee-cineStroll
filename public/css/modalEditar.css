@@ -41,6 +41,7 @@
 
 .tudo .imagemEditar {
   display: flex;
+  justify-content: center;
   flex-direction: column;
   align-items: center;
   height: 100%;
@@ -54,6 +55,7 @@
   height: 100px;
   border-radius: 100px;
   margin-bottom: 10px;
+  align-self: center;
 }
 
 .tudo .tituloEditar {
@@ -96,23 +98,29 @@
   width: 80px;
 }
 
-.recebeId{
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #391944;
-    color: white;
-    font-weight: 600;
-    border-radius: 12px;
-    width: 160px;
-    height: 64px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    text-align: left;
-    padding: 4px 12px;
+.recebeId {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #391944;
+  color: white;
+  font-weight: 600;
+  border-radius: 12px;
+  width: 160px;
+  height: 64px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-align: left;
+  padding: 4px 12px;
 }
 
 .imagem-editar-post {
-    width: 100%;
-    height: 100%;
+
+  max-height: 200px;
+}
+
+.modal-input-imagem {
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }

@@ -25,6 +25,10 @@ body {
     justify-content: space-between;
 }
 
+.none {
+    display: none;
+}
+
 .logo-barra-superior {
     width: 88px;
     height: 104px;

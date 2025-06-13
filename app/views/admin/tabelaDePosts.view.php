@@ -5,11 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tabela de Posts - Admin</title>
-    <link rel="stylesheet" href="../../../public/css/tabelaDePosts.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="../../../public/css/modalEditar.css">
     <link rel="stylesheet" href="../../../public/css/modalExcluirPosts.css">
+    <link rel="stylesheet" href="../../../public/css/tabelaDePosts.css">
 </head>
 
 <body>
@@ -51,7 +51,7 @@
                             <i class="bi bi-eye"></i>
                         </button>
                         <button class="editar" onclick="abrirModais('editar-post <?= $post->id ?>')"><i class="bi bi-pencil-square"></i></button>
-                        <button class="apagar" onclick="abrirModalExcluir('modalExcluir<?= $post->id?>')"><i class="bi bi-trash3"></i></button>
+                        <button class="apagar" onclick="abrirModais('excluir-post <?= $post->id?>')"><i class="bi bi-trash3"></i></button>
                     </div>
                 </td>
             </tr>
@@ -59,18 +59,18 @@
         </table>
     </div>
     <ul class="paginacao">
-        <li><a href="?paginacaoNumero=<?= $page - 1 ?>" class="voltar <?= $page <= 1 ? "disabled" : "" ?>">&laquo;</a></li>
+        <li><a href="?paginacaoNumero=<?= $page - 1 ?>" class="voltar <?= $page <= 1 ? "none" : "" ?>">&laquo;</a></li>
 
         <?php for($page_number = 1; $page_number <= $total_pages; $page_number++): ?>
-        <li><a href="?paginacaoNumero=<?= $page_number ?>" class="<?= $page_number == $page ? "pagina ativa" : "" ?>"><?= $page_number ?></a></li>
+        <li><a href="?paginacaoNumero=<?= $page_number ?>" class="<?= $page_number == $page ? "pagina ativa" : "" ?> <?= $total_pages == 1 ? "none" : "" ?>"><?= $page_number ?></a></li>
         <?php endfor ?>
 
 
-        <li><a href="?paginacaoNumero=<?= $page + 1 ?>" class="passar <?= $page >= $total_pages ? "disabled" : "" ?>">&raquo;</a></li>
+        <li><a href="?paginacaoNumero=<?= $page + 1 ?>" class="passar <?= $page >= $total_pages ? "none" : "" ?>">&raquo;</a></li>
     </ul>
 
     <!-- MODAIS -->
-    <div class="overlay" id="overlay"></div>
+    <div class="overlay " id="overlay"></div>
 
     <!-- CRIAR -->
     <div class="modal-container" id="criar-post">
@@ -173,7 +173,7 @@
             <form id="form-editar-post" action="/admin/editarPost" method="POST" enctype="multipart/form-data" onsubmit="salvarEdicao(event)">
                 <input type="hidden" name="id" value="<?= $post->id ?>">
                 <input type="hidden" name="fotoAtual" value="<?= $post->image ?>">
-                <div class="modal-input-grupo">
+                <div class="modal-input-imagem">
                         <div class="imagemEditar">
                             <img 
                                 id="imgEditar<?= $post->id ?>" class="imagem-editar-post" src="/<?= $post->image ?>" alt="Imagem atual" onclick="document.getElementById('inputImgEditar<?= $post->id ?>').click()">
@@ -215,10 +215,9 @@
 
     <!-- EXCLUIR -->
      <?php foreach($posts as $post): ?>
-    <div class="tude" id="modalExcluir<?= $post->id?>">
-        <div class="fundoEditar" onclick="fecharModalExcluir('<?= $post->id?>')"></div>
+        <div class="tude" id="excluir-post <?= $post->id?>">
         <form action="/admin/deletePost" method="POST">
-             <input type="hidden" name="id" value=<?= $post->id ?>>
+             <input type="hidden" name="id" value="<?= $post->id ?>">
         <div class="modalEditar">
             <div class="containerEditar">
                 <p><?= $post->title?></p>
@@ -229,7 +228,7 @@
                     </div>
                 </div>
                 <div class="botoesModal">
-                    <button type="button" onclick="fecharModalExcluir('modalExcluir<?= $post->id?>')">Cancelar</button>
+                    <button type="button" onclick="fecharModais('excluir-post <?= $post->id?>')">Fechar</button>
                     <button class="botaoExcluirConfirmar">Excluir</button>
 
                 </div>
