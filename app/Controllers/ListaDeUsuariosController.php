@@ -16,22 +16,19 @@ class ListaDeUsuariosController
 
         $itensPage = 5;
 
-        $total_pages = ceil($rows_count/$itensPage);
+        $total_pages = ceil($rows_count / $itensPage);
 
-        if(isset($_GET['paginacaoNumero']) && !empty($_GET['paginacaoNumero']))
-        {
+        if (isset($_GET['paginacaoNumero']) && !empty($_GET['paginacaoNumero'])) {
             $page = intval($_GET['paginacaoNumero']);
 
-            if($page <= 0 || $page > $total_pages)
-            {
+            if ($page <= 0 || $page > $total_pages) {
                 return redirect('admin/listaDeUsuarios');
             }
-        }    
+        }
 
         $inicio = $itensPage * $page - $itensPage;
 
-        if($inicio > $rows_count)
-        {
+        if ($inicio > $rows_count) {
             return redirect('admin/listaDeUsuarios');
         }
 
@@ -50,7 +47,7 @@ class ListaDeUsuariosController
             'senha' => $_POST['senha'],
         ];
 
-        App::get('database') -> insert('usuarios', $parameters, $_FILES['imagem']);
+        App::get('database')->insertUsers('usuarios', $parameters, $_FILES['imagem']);
 
         header('Location: /listaDeUsuarios');
     }
@@ -68,7 +65,7 @@ class ListaDeUsuariosController
         $image = isset($_FILES['imagem']) && $_FILES['imagem']['size'] > 0 ? $_FILES['imagem'] : null;
         $fotoAtual = $_POST['fotoAtual'];
 
-        App::get('database')->update('usuarios', $id, $parameters, $image, $fotoAtual);
+        App::get('database')->updateUsers('usuarios', $id, $parameters, $image, $fotoAtual);
 
         header('Location: /listaDeUsuarios');
 
@@ -76,11 +73,11 @@ class ListaDeUsuariosController
 
     public function delete()
     {
-         $id = $_POST['id'];
+        $id = $_POST['id'];
 
-         App::get('database') -> delete ('usuarios', $id);
+        App::get('database')->delete('usuarios', $id);
 
-         header('Location: /listaDeUsuarios');
+        header('Location: /listaDeUsuarios');
 
     }
 
