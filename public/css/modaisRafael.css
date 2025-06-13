@@ -1,0 +1,480 @@
+p{
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    font-size: 20px;
+}
+
+/* Modal Excluir */
+
+.exc {
+    gap: 10px;
+    border-radius: 16px;
+    padding: 30px 30px 30px 30px;
+    text-align: center;
+    color: white;
+}
+
+.lixo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+.lixo i {
+    font-size: 80px; 
+    color: #ffffff;  
+  }
+
+.botoes-excluir {
+    display: flex;
+    gap: 20px;
+}
+
+.botaoExcluirConfirmar {
+     background-color: red;
+    color: white;
+    font-weight: bold;
+    border-radius: 14px;
+    padding: 10px 60px;
+} 
+
+.botaoEditarConfirmar{
+     background-color: green;
+    color: white;
+    font-weight: bold;
+    border-radius: 14px;
+    padding: 10px 60px;
+}
+
+.botaoFecharModalExcluir {
+    background-color: grey;
+    color: white;
+    font-weight: bold;
+    border-radius: 14px;
+    padding: 10px 60px;
+}
+
+.botaoFecharModalEditar {
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    border-radius: 14px;
+    padding: 10px 60px;
+}
+
+
+/* Modal Excluir Fim */
+
+
+/* Modal Editar */
+
+.edit {
+    display: none;
+    flex-direction: column;
+    align-items: center;     
+    justify-content: center;
+    text-align: center;
+    gap: 20px;
+    padding: 30px;
+    border-radius: 16px;
+    color: white;
+}
+
+.modalInfo  {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.edit .modalInputs {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 24px;
+}
+
+.edit .modalInputs input {
+    padding: 6px 10px;
+    font-size: 14px;
+    box-sizing: border-box;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+}
+
+.edit .modalSenha {
+    position: relative;
+}
+
+.edit .modalSenha i {
+    position: absolute;
+    right: 15px;
+    top: 50px;
+    cursor: pointer;
+    color: black;
+}
+
+
+.edit .modalFoto {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;
+    width: 100%;
+    gap: 8px;
+   
+}
+
+.edit .modalFoto img {
+    width: 120px; 
+    height: 120px;
+    border-radius: 20%;
+    object-fit: cover;
+    margin: 0 auto; 
+    display: block; 
+}
+
+.botaoEditarImagem {
+    padding: 10px 60px;
+    background-color: green;
+    color: white;
+    font-weight: bold;
+    border-radius: 14px;
+    cursor: pointer;
+}
+
+.botaoEditarImagem:hover {
+    background-color: green;
+}
+
+.edit .aviso {
+    margin-top: 13px;
+}
+
+/* Modal Editar Fim */
+
+
+/* Midia Min-1200 */
+
+ @media (min-width: 1200px) {
+
+ .modal {
+    width: 600px;
+    margin:0 auto;
+  }
+
+ .edit {
+    
+    text-align: left;
+    align-items: flex-start;
+  }
+
+ .modalInfo{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+  }
+
+   .edit .modalInputs {
+    display: flex;
+    align-items: flex-start;
+    margin-left: 0;
+    }
+
+  .edit .modalInputs input {
+    width: 300px;         /* mais largura */
+    font-size: 18px;      
+    height: 48px;         /* mais alto */
+    padding: 10px 14px;
+    box-sizing: border-box;
+  }
+
+ .edit .botoes-excluir{
+     margin-top: 12%;
+     margin-left: 31%;
+  }
+
+  .edit .modalFoto{
+    margin-top: 44%;
+    gap: 20px;
+    transform: translate(60px, 0px);
+    overflow: visible;
+    height: 0;
+  }
+
+  .botaoExcluirConfirmar {
+     background-color: red;
+    color: white;
+    font-weight: bold;
+    border-radius: 14px;
+    padding: 25px 60px;
+    font-size: 20px;
+}
+
+.botaoEditarConfirmar {
+     background-color: green;
+    color: white;
+    font-weight: bold;
+    border-radius: 14px;
+    padding: 25px 60px;
+    font-size: 20px;
+}
+
+  .botaoFecharModalExcluir{
+    background-color: grey;
+    color: white;
+    font-weight: bold;
+    border-radius: 14px;
+    padding: 25px 60px;
+    font-size: 20px;
+}
+
+.botaoFecharModalEditar {
+    background-color: #b80505;
+    color: white;
+    font-weight: bold;
+    border-radius: 14px;
+    padding: 25px 60px;
+    font-size: 20px;
+}
+
+  .botaoEditarImagem {
+    padding: 25px 60px;
+    background-color: green;
+    color: white;
+    font-weight: bold;
+    border-radius: 14px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+  .edit .modalFoto img {
+
+    width: 180px; 
+    height: 180px;
+    max-width: none;
+    max-height: none;
+    border-radius: 20%;
+    object-fit: cover;
+    margin: 0 auto; 
+    display: block; 
+  }
+
+
+}
+
+/* Midia Min-1200 Fim */
+
+
+@media (max-width: 1200px) {
+    
+  .edit .modalInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .edit .modalFoto {
+    order: -1;
+  }
+  
+  .modal {
+      width: 35%;
+      padding: 25px;
+    }
+
+    .modalInputs input,
+    .modalInputs {
+      font-size: 15px;
+      width: 100%;
+      max-width: 250px; 
+
+    }
+  
+    .modalFoto img {
+      width: 90px;
+      height: 90px;
+    }
+
+    .botoes-excluir {
+    margin-top: 25px; 
+  }
+
+  .edit .modalSenha i {
+    position: absolute;
+    right: 25px;
+    top: 50px;
+    
+}
+  
+  }
+
+  
+  @media (max-width: 768px) {
+    .modal {
+      width: 45%;
+      padding: 20px;
+    }
+  
+    .modalInputs input,
+    .modalInputs p {
+      font-size: 14px;
+    }
+  
+    .modalFoto img {
+      width: 80px;
+      height: 80px;
+    }
+
+    .edit .modalSenha i {
+    position: absolute;
+    right: 25px;
+    top: 45px;
+    }
+  
+  }
+
+  
+  @media (max-width: 480px) {
+    .modal {
+      width: 65%;
+      height: auto;
+      padding: 15px;
+    }
+  
+    .modalInputs {
+      gap: 10px;
+    }
+  
+    .modalInputs input,
+    .modalInputs p {
+      font-size: 13px;
+    }
+  
+    .modalFoto {
+      align-items: center;
+      text-align: center;
+    }
+  
+    .modalFoto img {
+      width: 70px;
+      height: 70px;
+    }
+  
+    .botoes-excluir {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 20px;
+    }
+  
+    .botaoFecharModalExcluir,
+    .botaoExcluirConfirmar,
+    .botaoFecharModalEditar,
+    .botaoEditarConfirmar,
+    .botaoEditarImagem {
+      font-size: 14px;
+      padding: 10px 18px;
+      border-radius: 0;
+      min-width: 120px;
+      max-width: 100%;
+      text-align: center;
+      white-space: nowrap;
+    }
+  }
+
+  @media (max-width: 379px) {
+  .botoes-excluir {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 15px;
+  }
+
+  
+  .botaoFecharModalEditar,
+  .botaoEditarConfirmar {
+    font-size: 12px;
+    padding: 8px 14px;
+    border-radius: 12px;
+    min-width: auto;
+    max-width: 48%;
+    text-align: center;
+    white-space: nowrap;
+    flex: 1 1 45%;
+  }
+
+  .botaoEditarImagem{
+     font-size: 12px;
+    padding: 8px 14px;
+    border-radius: 12px;
+
+  }
+
+   .botaoExcluirConfirmar, .botaoFecharModalExcluir {
+
+    font-size: 12px;
+    padding: 20px 40px;
+    border-radius: 12px;
+    min-width: auto;
+    max-width: 48%;
+    text-align: center;
+    white-space: nowrap;
+    flex: 1 1 45%;
+    
+    }
+
+
+}
+
+
+  @media (min-width: 300px) and (max-width:479px) {
+    .modal {
+      width: 65%;
+      height: auto;
+      padding: 15px;
+    }
+  
+    .modalInputs {
+      gap: 10px;
+    }
+  
+    .modalInputs input,
+    .modalInputs p {
+      font-size: 13px;
+    }
+  
+    .modalFoto {
+      align-items: center;
+      text-align: center;
+    }
+  
+    .modalFoto img {
+      width: 70px;
+      height: 70px;
+    }
+  
+    .botoes-excluir {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 20px;
+    }
+  
+    .botaoFecharModalExcluir, 
+    .botaoEditarImagem, 
+    .botaoFecharModalEditar, 
+    .botaoExcluirConfirmar, 
+    .botaoEditarConfirmar {
+      border-radius: 14px;
+    }
+    
+}
+    
+
