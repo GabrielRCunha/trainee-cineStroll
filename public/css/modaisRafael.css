@@ -31,16 +31,32 @@ p{
     gap: 20px;
 }
 
-.botaoExcluirConfirmar, .botaoEditarConfirmar {
-     background-color: green;
+.botaoExcluirConfirmar {
+     background-color: red;
     color: white;
     font-weight: bold;
     border-radius: 14px;
     padding: 10px 60px;
 } 
 
-.botaoFecharModalExcluir, .botaoFecharModalEditar {
-    background-color: #b80505;
+.botaoEditarConfirmar{
+     background-color: green;
+    color: white;
+    font-weight: bold;
+    border-radius: 14px;
+    padding: 10px 60px;
+}
+
+.botaoFecharModalExcluir {
+    background-color: grey;
+    color: white;
+    font-weight: bold;
+    border-radius: 14px;
+    padding: 10px 60px;
+}
+
+.botaoFecharModalEditar {
+    background-color: red;
     color: white;
     font-weight: bold;
     border-radius: 14px;
@@ -188,7 +204,16 @@ p{
     height: 0;
   }
 
-  .botaoExcluirConfirmar, .botaoEditarConfirmar {
+  .botaoExcluirConfirmar {
+     background-color: red;
+    color: white;
+    font-weight: bold;
+    border-radius: 14px;
+    padding: 25px 60px;
+    font-size: 20px;
+}
+
+.botaoEditarConfirmar {
      background-color: green;
     color: white;
     font-weight: bold;
@@ -197,7 +222,16 @@ p{
     font-size: 20px;
 }
 
-  .botaoFecharModalExcluir, .botaoFecharModalEditar {
+  .botaoFecharModalExcluir{
+    background-color: grey;
+    color: white;
+    font-weight: bold;
+    border-radius: 14px;
+    padding: 25px 60px;
+    font-size: 20px;
+}
+
+.botaoFecharModalEditar {
     background-color: #b80505;
     color: white;
     font-weight: bold;
