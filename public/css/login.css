@@ -71,6 +71,15 @@ body {
     align-items: center;
 }
 
+.mensagem-erro {
+    color: red;
+    text-align: center;
+    margin-bottom: 24px;
+    width: 100%;
+    font-weight: 600;
+    font-size: 18px;
+}
+
 #titulo-email,
 #titulo-senha {
     font-size: 24px;

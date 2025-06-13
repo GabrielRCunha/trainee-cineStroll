@@ -1,4 +1,13 @@
-git <!DOCTYPE html>
+<?php
+    session_start();
+
+    if(!isset($_SESSION['id'])){
+        header(header: 'Location: /login');
+    }
+?>
+
+
+<!DOCTYPE html>
 <html lang="pt">
 <head>
     <meta charset="UTF-8">
@@ -29,7 +38,15 @@ git <!DOCTYPE html>
         <div class="Botoes">
             <button id="botao-posts" ><span class="material-symbols-outlined">edit</span> Tabela de Posts</button>
             <button id="botao-usuarios"><span class="material-symbols-outlined">person</span> Tabela de Usuários</button>
-            <button id="botao-logout"><span class="material-symbols-outlined">logout</span> Logout</button>
+            
+            <div class="logout">
+                <form action = "/logout" method="POST">
+                    <button id="botao-logout"><span class="material-symbols-outlined">logout</span> Logout</button>
+                </form>
+            </div>
+
+                
+
         </div>
     </div>
 
