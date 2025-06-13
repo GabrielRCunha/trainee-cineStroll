@@ -93,6 +93,7 @@ p{
     gap: 40px;
     width: 100%;
     max-width: 100%;
+    margin-bottom: 24px;
 }
 
 .edit .modalInputs input {
@@ -414,6 +415,20 @@ p{
     border-radius: 12px;
 
   }
+
+   .botaoExcluirConfirmar, .botaoFecharModalExcluir {
+
+    font-size: 12px;
+    padding: 20px 40px;
+    border-radius: 12px;
+    min-width: auto;
+    max-width: 48%;
+    text-align: center;
+    white-space: nowrap;
+    flex: 1 1 45%;
+    
+    }
+
 
 }
 
