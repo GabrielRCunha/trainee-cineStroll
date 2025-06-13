@@ -338,7 +338,6 @@ button:hover {
 
 .imagem-preview-container {
     display: flex;
-    border: 1px dashed #ccc;
     padding: 5px;
     margin-top: 5px;
     text-align: center;
