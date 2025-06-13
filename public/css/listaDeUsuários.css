@@ -14,9 +14,12 @@ body {
     background-color: grey;
 }
 
+.desligado { 
+    display: none;
+}
+
 .barra-superior {
     width: 64%;
-    max-width: 1200px;
     height: 120px;
     background: linear-gradient(to right, #333333 0%, #6a0dad 200%);
     display: flex;
@@ -28,7 +31,7 @@ body {
 
 .logo-barra-superior {
     width: 88px;
-    height: 88px;
+    height: fit-content;
     margin-left: 1%;
 }
 
@@ -61,13 +64,12 @@ body {
 }
 
 .div-titulo{
-    width: 600px;
+    width: fit-content;
 }
 
 .nome {
     color: white;
-    margin-left: 10%;
-    margin-right: 20%;
+    width: fit-content;
 }
 
 .div-tabela {
@@ -260,6 +262,11 @@ button:hover {
 
 @media(max-width: 768px) {
 
+    .nome{
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
     .barra-superior{
         width: 85%;
         margin-top: 60px;
@@ -308,6 +315,7 @@ button:hover {
     }
     tr td p{
         font-size: 16px;
+        font-weight: normal;
     }
 }
 @media(max-width: 425px) {

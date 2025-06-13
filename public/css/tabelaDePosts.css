@@ -397,13 +397,11 @@ button:hover {
 }
 
 .div_autor_nota {
-    margin-right: 10%;
-    justify-content: space-between;
     display: flex;
-    gap: 16px;
+    gap: 50px;
 }
 
-input .botao-post-imagem {
+.botao-post-imagem {
     display: flex;
     padding: 0;
     height: 56px;
@@ -438,6 +436,17 @@ input .botao-post-imagem {
 .salvar {
     background-color: #008000;
     color: white;
+}
+
+#post-imagem {
+    display: none;
+}
+
+#visualizar-post-conteudo {
+    overflow: visible;
+    height: 120px;
+    font-size: 16px;
+    padding: 4px;
 }
 
 @media(max-width: 1440px) {
