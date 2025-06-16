@@ -28,6 +28,7 @@
     
     <div class="container">
     <?php foreach($posts as $post): ?>
+    <a href="" class="botao-movie-card">
       <div class="movie-card">
         <img class="imagem-filme" src="/<?= $post->image?>" alt="Imagem do filme avaliado">
         <div class="movie-info">
@@ -57,6 +58,7 @@
           </div>
         </div>
       </div>
+    </a>
       <?php endforeach; ?>
     </div>
 
