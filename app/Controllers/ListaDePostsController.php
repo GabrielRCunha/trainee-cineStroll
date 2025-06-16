@@ -25,7 +25,7 @@ class ListaDePostsController {
             return redirect('site/listaDePosts');
         }
 
-        $posts = App::get('database')->selectAll('posts', $inicio, $itensPage);
+        $posts = App::get('database')->selectPostsComAutores($inicio, $itensPage);
 
         $total_pages = ceil($rows_count/$itensPage);
 

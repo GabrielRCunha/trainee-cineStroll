@@ -166,6 +166,15 @@ body {
   cursor: default;
 }
 
+.movie-info{
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.informacoes-post{
+  width: 100%;
+}
+
 .conteudo-post {
   overflow: hidden;
   text-overflow: ellipsis;
@@ -176,6 +185,7 @@ body {
   /* aparentemente é o jeito de aparecer '...' no texto com mais de uma linha? *perguntar pro greis* */
   height: fit-content;
   max-height: 108px;
+  max-width: 100%;
   font-weight: 400;
 }
 

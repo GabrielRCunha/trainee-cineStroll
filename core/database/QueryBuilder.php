@@ -32,6 +32,29 @@ class QueryBuilder
         }
     }
 
+    public function selectPostsComAutores($inicio = 0, $rows_count = 5)
+{
+    $sql = "
+        SELECT posts.*, usuarios.nome AS nome_autor
+        FROM posts
+        JOIN usuarios ON posts.author = usuarios.id
+        ORDER BY posts.id DESC
+        LIMIT :inicio, :limite
+    ";
+
+    try {
+        $stmt = $this->pdo->prepare($sql);
+        $stmt->bindValue(':inicio', $inicio, PDO::PARAM_INT);
+        $stmt->bindValue(':limite', $rows_count, PDO::PARAM_INT);
+        $stmt->execute();
+
+        return $stmt->fetchAll(PDO::FETCH_CLASS); 
+
+    } catch (Exception $e) {
+        die($e->getMessage());
+    }
+}
+
     public function verificaLogin($email, $senha)
     {
         $sql = sprintf(format: 'SELECT * FROM usuarios WHERE email = :email AND senha = :senha');
