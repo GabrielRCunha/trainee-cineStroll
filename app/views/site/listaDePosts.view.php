@@ -40,10 +40,17 @@
             <span class="diretor">Autor do post : <strong><?= $post->author ?><strong></span>
             <div class="avaliacao">
               Avaliação:
-              <?php for($i = 0; $i < $post->rating; $i++): ?>
+              <?php $nota = (int) $post->rating;
+              $cheias = floor($nota / 2);
+              $meia = $nota % 2 === 1 ? 1 : 0;
+              $vazias = 5 - $cheias - $meia; ?>
+              <?php for ($i = 0; $i < $cheias; $i++): ?>
                 <span class="material-icons">star</span>
               <?php endfor; ?>
-              <?php for($i = 0; $i < 5 - $post->rating; $i++): ?>
+              <?php if ($meia): ?>
+                <span class="material-icons">star_half</span>
+              <?php endif; ?>
+              <?php for ($i = 0; $i < $vazias; $i++): ?>
                 <span class="material-icons">star_outline</span>
               <?php endfor; ?>
             </div>
