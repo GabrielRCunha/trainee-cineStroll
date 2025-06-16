@@ -54,6 +54,5 @@
     </div>
 
     <?php require('app\views\admin\componentes.php\paginacao.php') ?>
-    <script src="public\js\listaDePosts.js"></script>
   </body>
 </html>

@@ -187,7 +187,12 @@ body {
   display: none;
 }
 
-.ativa {
+.pagina {
+  background-color: #5F2469;
+  cursor: pointer;
+}
+
+.pagina.ativa {
   background-color: #190e1d;
   cursor: default;
 }

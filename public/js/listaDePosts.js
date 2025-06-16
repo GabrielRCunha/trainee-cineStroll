@@ -1,4 +1,4 @@
-const pagina = document.querySelectorAll('.paginacao')
+const pagina = document.querySelectorAll('.pagina')
 const voltar = document.querySelector('.voltar')
 const passar = document.querySelector('.passar')
 
