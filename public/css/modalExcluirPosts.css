@@ -1,0 +1,81 @@
+.tude {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  display: none;
+  top: 0;
+  left: 0;
+  z-index: 1002;
+}
+
+.tude .fundoEditar {
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.6;
+  position: absolute;
+  z-index: 1;
+}
+
+.tude .modalEditar {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tude .containerEditar {
+  width: 400px;
+  background: linear-gradient(to right, #333333 0%, #6a0dad 200%);
+  border-radius: 16px;
+  padding: 20px;
+  color: white;
+  text-align: center;
+}
+
+.tude .botoesModal {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.tude .botoesModal button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.tude .botoesModal button:first-child {
+  background-color: gray;
+  color: white;
+  width: 80px;
+}
+
+.tude .botoesModal button:last-child {
+  background-color: red;
+  color: white;
+  width: 80px;
+}
+
+.lixo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.lixo i {
+  font-size: 80px;
+  color: #ffffff;
+
+}
+
+.tituloEditar p {
+  font-size: 20px;
+  font-weight: bold;
+}
