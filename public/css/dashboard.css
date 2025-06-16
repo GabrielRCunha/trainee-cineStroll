@@ -70,6 +70,7 @@ body {
   }
   
   .Botoes button {
+     width: 280px;
     display: flex;
     align-items: center;
     font-family: "Montserrat";
