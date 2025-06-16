@@ -10,8 +10,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
-
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
 
 </head>
 <body>
@@ -21,7 +21,7 @@
         <h2>Encontre seu proximo filme favorito aqui!</h2> 
           <div class="pesquisa">
             <input type="text" class="lupa">
-            <span class="material-symbols-outlined">search</span>
+            <span class="material-icons">search</span>
           </div>
     </div>
 
@@ -41,7 +41,10 @@
             <div class="avaliacao">
               Avaliação:
               <?php for($i = 0; $i < $post->rating; $i++): ?>
-                <span class="material-icons-outlined">star</span>
+                <span class="material-icons">star</span>
+              <?php endfor; ?>
+              <?php for($i = 0; $i < 5 - $post->rating; $i++): ?>
+                <span class="material-icons">star_outline</span>
               <?php endfor; ?>
             </div>
           </div>
@@ -50,21 +53,7 @@
       <?php endforeach; ?>
     </div>
 
-    <ul class="paginacao">
-        <li><a href="#">&laquo;</a></li>
-        <li><a href="#">1</a></li>
-        <li><a href="#" class="ativo">2</a></li>
-        <li><a href="#">3</a></li>
-        <li><a href="#">4</a></li>
-        <li><a href="#">5</a></li>
-        <li><a href="#">6</a></li>
-        <li><a href="#">7</a></li>
-        <li><a href="#">8</a></li>
-        <li><a href="#">9</a></li>
-        <li><a href="#">10</a></li>
-        <li><a href="#">&raquo;</a></li>
-      </ul>
-
-    
-</body>
+    <?php require('app\views\admin\componentes.php\paginacao.php') ?>
+    <script src="public\js\listaDePosts.js"></script>
+  </body>
 </html>
