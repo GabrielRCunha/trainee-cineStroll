@@ -194,7 +194,7 @@
 
                     <div class="modal-input-grupo">
                         <label for="nota">Nota:</label>
-                        <input type="number" id="modal-nota" class="post-content" min="0" name="rating" max="5" value="<?=$post->rating?>">
+                        <input type="number" id="modal-nota" class="post-content" min="0" name="rating" max="10" value="<?=$post->rating?>">
                     </div>
 
                 </div>
