@@ -276,7 +276,7 @@ button:hover {
 .modal-input-grupo {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 6px;
 }
 
 .modal-input-grupo label {
@@ -295,6 +295,11 @@ button:hover {
 .modal-input-grupo textarea {
     min-height: 100px;
     resize: vertical;
+}
+
+#modal-data {
+    max-width: 110px;
+    overflow: auto;
 }
 
 .modal-botoes {
@@ -398,7 +403,7 @@ button:hover {
 
 .div_autor_nota {
     display: flex;
-    gap: 50px;
+    gap: 40px;
 }
 
 .botao-post-imagem {
@@ -576,8 +581,8 @@ button:hover {
     }
 
     .div_autor_nota {
-        justify-content: space-around;
-        gap: 16px;
+        flex-direction: column;
+        gap: 4px;
     }
 
     #visualizar-post-autor {
