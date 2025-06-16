@@ -1,34 +1,18 @@
 <?php
 
 namespace App\Controllers;
+
 use App\Core\App;
+use Exception;
 
 use PDO;
 
 class PostIndividualController {
-    public function index() 
+    public function index($id) 
     {
-        $page = 1;
-        if(isset($_GET['paginacaoNumero']) && !empty($_GET['paginacaoNumero'])){
-            $page = intval($_GET['paginacaoNumero']);
 
-            if($page <= 0) {
-                return redirect('site/postIndividual');
-            }
-        }
+        $posts = App::get('database')->selectOne('posts', $id);
 
-        $itensPage = 5;
-        $inicio = $itensPage * $page - $itensPage;
-        $rows_count = App::get('database')->countAll('posts');
-
-        if($inicio > $rows_count){
-            return redirect('site/postIndividual');
-        }
-
-        $posts = App::get('database')->selectPostsComAutores($inicio, $itensPage);
-
-        $total_pages = ceil($rows_count/$itensPage);
-
-        return view('site/postIndividual', compact('posts', 'page', 'total_pages'));
+        return view('site/postIndividual', compact('posts'));
     }
 }

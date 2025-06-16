@@ -20,4 +20,5 @@ $router->get('dashboard', 'loginController@exibirDashboard');
 $router->post('login', 'loginController@efetuaLogin');
 $router->post('logout', 'loginController@logout');
 $router->get('listaDePosts', 'ListaDePostsController@index');
-$router->get('postIndividual', 'PostIndividualController@index');
+
+$router->get('postIndividual/{id}', 'PostIndividualController@index');
