@@ -71,6 +71,10 @@ body {
     align-items: center;
 }
 
+.form-login {
+    width: 88%;
+}
+
 .mensagem-erro {
     color: red;
     text-align: center;

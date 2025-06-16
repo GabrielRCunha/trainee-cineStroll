@@ -23,7 +23,7 @@
     </div>
 
     <div id="caixa-login">
-     <form action="/login" method="POST">
+     <form action="/login" method="POST" class="form-login">
         <div class="mensagem-erro">
             <p>
                 <?php
