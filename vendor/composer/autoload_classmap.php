@@ -9,6 +9,7 @@ return array(
     'App\\Controllers\\ExampleController' => $baseDir . '/app/Controllers/ExampleController copy.php',
     'App\\Controllers\\ListaDePostsController' => $baseDir . '/app/Controllers/ListaDePostsController.php',
     'App\\Controllers\\ListaDeUsuariosController' => $baseDir . '/app/Controllers/ListaDeUsuariosController.php',
+    'App\\Controllers\\PostIndividualController' => $baseDir . '/app/Controllers/PostIndividualController.php',
     'App\\Controllers\\TabelaDePostsController' => $baseDir . '/app/Controllers/TabelaDePostsController.php',
     'App\\Controllers\\loginController' => $baseDir . '/app/Controllers/loginController.php',
     'App\\Core\\App' => $baseDir . '/core/App.php',
