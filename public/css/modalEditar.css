@@ -1,0 +1,126 @@
+.tudo {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  display: none;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+.tudo .fundoEditar {
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.6;
+  z-index: 1;
+}
+
+.tudo .modalEditar {
+  width: 100vw;
+  height: 100vh;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tudo .containerEditar {
+  width: 500px;
+  background: linear-gradient(to right, #333333 0%, #6a0dad 200%);
+  border-radius: 16px;
+  padding: 20px;
+  color: white;
+}
+
+.tudo .formModalEditar {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.tudo .imagemEditar {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  max-width: 250px;
+  max-height: 250px;
+}
+
+.tudo .imagemEditar img {
+  width: 100px;
+  height: 100px;
+  border-radius: 100px;
+  margin-bottom: 10px;
+  align-self: center;
+}
+
+.tudo .tituloEditar {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.tudo .tituloEditar input,
+.tudo .tituloEditar textarea {
+  border-radius: 8px;
+  border: none;
+  padding: 8px;
+  width: 90%;
+}
+
+.tudo .botoesModal {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.tudo .botoesModal button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.tudo .botoesModal button:first-child {
+  background-color: red;
+  color: white;
+  width: 80px;
+}
+
+.tudo .botoesModal button:last-child {
+  background-color: green;
+  color: white;
+  width: 80px;
+}
+
+.recebeId {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #391944;
+  color: white;
+  font-weight: 600;
+  border-radius: 12px;
+  width: 160px;
+  height: 64px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-align: left;
+  padding: 4px 12px;
+}
+
+.imagem-editar-post {
+
+  max-height: 200px;
+}
+
+.modal-input-imagem {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}

@@ -1,0 +1,370 @@
+html,
+body {
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+  background-image: linear-gradient(to bottom, #29212F, #36213D, #52235B, #5F2469, #872D98, #B239D0);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-content: center;
+  flex-direction: column;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.linhaInicial,
+.posts,
+.lupa {
+  background: transparent;
+}
+
+.linhaInicial {
+
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 3rem;
+  align-items: center;
+  gap: 1rem;
+  justify-content: center;
+  gap: 10%;
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-top: 3%;
+  color: rgb(255, 255, 255);
+}
+
+.pesquisa span {
+  color: black;
+  transform: translateY(-45px) translateX(+10px)
+}
+
+.lupa {
+
+  display: flex;
+  align-items: center;
+  border: 1px solid rgb(255, 251, 11);
+  background-color: rgb(255, 255, 255);
+  width: 100%;
+  max-width: 400px;
+  margin: 20px auto;
+  margin-top: 45px;
+  border-radius: 20px;
+  padding: 5px 10px;
+  gap: 2%;
+  padding-left: 35px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+.movie-card {
+  display: flex;
+  background: color #370061;
+  box-shadow: 0 4px 8px rgba(0.2, 0.2, 0.2, 1.2);
+  color: white;
+  max-width: 1000px;
+  width: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  padding: 1.5rem;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.movie-card img {
+  width: 180px;
+  height: auto;
+  object-fit: cover;
+}
+
+.movie-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+}
+
+.movie-info .titulo {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.movie-info .ano {
+  font-size: 0.9rem;
+  color: #ccc;
+  float: right;
+  font-weight: 400;
+}
+
+.movie-info p {
+  font-size: 0.9rem;
+  margin: 0.5rem 0 1rem;
+}
+
+.info-extra {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  gap: 30%;
+  margin-top: 10px;
+}
+
+.avaliacao {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+.avaliacao .material-icons {
+  color: gold;
+}
+
+
+.paginacao {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  gap: 10px;
+  margin: auto;
+  margin-bottom: 2%;
+
+}
+
+.paginacao li a {
+  padding: 10px 15px;
+  background-color: #52235B;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+  border: 2px solid black;
+  font-size: 14px;
+  padding: 6px 12px;
+}
+
+.paginacao li a:hover {
+  background-color: #872D98;
+}
+
+.paginacao li a.ativo {
+  background-color: #190e1d;
+  font-weight: bold;
+  cursor: default;
+}
+
+.conteudo-post {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-clamp: 3;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  /* aparentemente é o jeito de aparecer '...' no texto com mais de uma linha? *perguntar pro greis* */
+  height: fit-content;
+  max-height: 108px;
+  font-weight: 400;
+}
+
+.imagem-filme {
+  max-height: 240px;
+}
+
+.desligado {
+  display: none;
+}
+
+.pagina {
+  background-color: #5F2469;
+  cursor: pointer;
+}
+
+.pagina.ativa {
+  background-color: #190e1d;
+  cursor: default;
+}
+
+.material-symbols-rounded {
+  font-family: 'Material Symbols Rounded';
+  font-variation-settings:
+    'FILL' 1,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 48;
+  font-size: 32px;
+  color: #ffc107;
+  display: inline-flex;
+  align-items: center;
+  line-height: 1;
+  text-decoration: none;
+  text-transform: none;
+  white-space: nowrap;
+  vertical-align: middle;
+  overflow: hidden;
+}
+
+
+@media (max-width: 768px) {
+  .movie-card {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+
+  .movie-info>div:first-child {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .movie-info .ano {
+    float: none;
+    font-size: 0.9rem;
+    color: #ccc;
+  }
+
+  .info-extra {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .paginacao li a {
+    font-size: 12px;
+    padding: 4px 8px;
+  }
+
+  .linhaInicial {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .movie-info p,
+  .info-extra,
+  .movie-info .ano {
+    font-size: 0.8rem;
+  }
+
+  .linhaInicial {
+    font-size: 0.6rem;
+  }
+
+  .paginacao li a {
+    font-size: 10px;
+    padding: 3px 6px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1656px) and (orientation: portrait) {
+  .container {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    gap: 1.8rem;
+  }
+
+  .movie-card {
+    padding: 2rem;
+    gap: 2rem;
+    max-width: 1100px;
+  }
+
+  .movie-card img {
+    width: 220px;
+  }
+
+  .movie-info .titulo {
+    font-size: 1.6rem;
+  }
+
+  .movie-info .ano {
+    font-size: 1.2rem;
+  }
+
+  .movie-info p {
+    font-size: 1.1rem;
+  }
+
+  .info-extra {
+    gap: 40%;
+  }
+}
+
+@media (min-width: 1600px) {
+
+  .movie-card {
+    display: flex;
+    align-items: center;
+  }
+
+  .container {
+    max-width: 1800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .movie-card {
+    max-width: 1600px;
+    padding: 2rem;
+    /* Aumenta o espaçamento interno também */
+  }
+
+  .movie-card img {
+    width: 300px;
+  }
+
+  .movie-card .titulo {
+    font-size: 1.8rem;
+  }
+
+  .movie-info {
+    font-size: 1.6rem;
+  }
+
+  .movie-card p {
+    font-size: 1.8rem;
+  }
+
+  .movie-card .rating {
+    font-size: 1.8rem;
+  }
+
+  .movie-card button {
+    font-size: 1.6rem;
+    padding: 0.8rem 1.5rem;
+  }
+
+  .linhaInicial {
+    font-size: 1.5rem;
+  }
+
+  .paginacao li a {
+    font-size: 27px;
+  }
+
+  .lupa {
+    width: 100%;
+    padding: 12px 15px 12px 50px;
+    font-size: 1rem;
+  }
+
+
+  .pesquisa span {
+    transform: translateY(-53px) translateX(+10px);
+  }
+
+}

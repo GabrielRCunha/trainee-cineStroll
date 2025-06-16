@@ -1,0 +1,244 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+html {
+  height: 100%;
+  background-image: url(../assets/BackFinal.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 700px;
+    max-width: 1000px;
+    padding: 40px 20px;
+    background: linear-gradient(to right, #333333, #353138, #382F3F, #3C2C47, #3F2B4E, #422954, #45265C, #4A2366 ,#4C226B, #4E206F);
+    border: 1px solid white;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+    margin: 10%;
+  }
+  
+  .mensagem-boas-vindas {
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-weight:600;
+    font-size: 1.1rem;
+  }
+  
+  .conteudo-principal {
+    display: flex;
+    flex-direction: row;
+    gap: 20%;
+    align-items: center;
+    width: 100%;
+  }
+  .Logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 100px
+  }
+  
+  .Logo img {
+    width: 150px;
+    height: auto;
+  }
+  
+  .Botoes {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .Botoes button {
+    display: flex;
+    align-items: center;
+    font-family: "Montserrat";
+    gap: 8px;
+    padding: 10px 20px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    background-color: white;
+    border: none;
+    border-radius: 5px;
+    transition: 0.3s ease;
+  }
+  
+  .Botoes button:hover {
+    background-color: #B239D0;
+    color: white;
+  }
+  
+  .material-symbols-outlined {
+    font-size: 1.2rem;
+  }
+
+
+  #logoCine{
+    font-size: 18px;
+    font-family: "Montserrat";
+    font-weight: 700;
+    line-height: normal;
+    background: linear-gradient(90deg, #FFD700 0%, #8B0000 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    margin-top: 2px;
+  }
+  
+  #botao-posts {
+    background-color: #ffdd1dc5;
+    color: black;
+  }
+  
+  #botao-posts:hover {
+    background-color: #ffd300;
+  }
+  
+  #botao-usuarios {
+    background-color: #ffdd1dc7;
+    color: black;
+  }
+  
+  #botao-usuarios:hover {
+    background-color: #ffd300;
+  }
+  
+  #botao-logout {
+    background-color: #FF4D4D;
+    color: white;
+  }
+  
+  #botao-logout:hover {
+    background-color: #cc0000;
+  }
+
+
+  @media (max-width: 480px) {
+    .container {
+    flex-direction: column;
+    width: 95%;
+    height: auto;
+    padding: 20px;
+    margin: 20px;
+    text-align: center;
+  }
+  .conteudo-principal{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .mensagem-boas-vindas {
+    font-size: 1rem;
+    margin-bottom: 15px;
+  }
+
+  .Logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    margin-bottom: 10px;
+    margin-left: 0;
+  }
+
+  .Logo img {
+    width: 100px;
+    margin-left: 0;
+  }
+
+  .Botoes {
+    align-items: center;
+  }
+
+  .Botoes button {
+    width: 100%;
+    font-size: 0.8rem;
+    padding: 10px;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    width: 90%;
+    height: auto;
+    padding: 30px;
+    margin: 30px auto;
+    text-align: center;
+  }
+
+  .conteudo-principal{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;;
+  }
+
+  .mensagem-boas-vindas {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+  .Logo{
+    margin-left: 0;
+  }
+
+  .Logo img {
+    margin-left: 0;
+    width: 130px;
+  }
+
+  .Botoes button {
+    font-size: 0.9rem;
+    padding: 12px;
+  }
+}
+
+
+@media (min-width: 1600px) {
+  .container {
+    width: 1100px;
+    height: 500px;
+    padding: 40px;
+    margin: 40px auto;
+  }
+
+  .conteudo-principal {
+    flex: 1;
+    justify-content: center;
+  }
+
+  .mensagem-boas-vindas {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+
+  .Logo img {
+    width: 200px;
+  }
+
+  .Botoes button {
+    font-size: 1.2rem;
+    padding: 15px 30px;
+  }
+}
+    
