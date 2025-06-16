@@ -19,3 +19,4 @@ $router->get('login', 'loginController@exibirLogin');
 $router->get('dashboard', 'loginController@exibirDashboard');
 $router->post('login', 'loginController@efetuaLogin');
 $router->post('logout', 'loginController@logout');
+$router->get('listaDePosts', 'ListaDePostsController@index');
