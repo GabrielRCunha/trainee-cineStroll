@@ -8,6 +8,7 @@
 
 <link rel="stylesheet" href="../../../public/css/listaDePosts.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="../../../public/css/footer.css" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -63,6 +64,7 @@
       <?php endforeach; ?>
     </div>
 
+    <?php require 'footer.view.php'; ?>
     <?php require('app\views\admin\componentes.php\paginacao.php') ?>
   </body>
 </html>

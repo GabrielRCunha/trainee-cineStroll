@@ -7,6 +7,7 @@
     <title>Landing Page</title>
     <link rel="stylesheet" href="../../../public/css/landingPage.css">
     <link rel="stylesheet" href="../../../public/css/navbar.css" />
+    <link rel="stylesheet" href="../../../public/css/footer.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
@@ -182,6 +183,7 @@
         </p>
     </div>
 
+    <?php require 'footer.view.php'; ?>
 
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script src="../../../public/js/landingPage.js"></script>
