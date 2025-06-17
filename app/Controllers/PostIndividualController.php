@@ -13,6 +13,10 @@ class PostIndividualController {
 
         $posts = App::get('database')->selectOne('posts', $id);
 
-        return view('site/postIndividual', compact('posts'));
+        $autor_id = $posts->author;
+        $usuario = App::get('database')->selectOne('usuarios', $autor_id);
+
+
+        return view('site/postIndividual', compact('posts', 'usuario'));
     }
 }

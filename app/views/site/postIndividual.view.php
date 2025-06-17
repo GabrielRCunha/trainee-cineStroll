@@ -8,6 +8,7 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
     />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
       rel="stylesheet"
@@ -19,36 +20,39 @@
       <div class="infoContainer">
         <div class="usuario">
           <div class="perfil">
-            <img src="../../../public/assets/luke.jpg" alt="foto do perfil" />
-            <h1>Nome usuário</h1>
+            <img src="../../../../<?=$usuario->imagem?>" alt="foto do perfil" />
+            <h1><?=$usuario->nome?></h1>
           </div>
           <div class="avaliacao">
             <h1>Avaliação:</h1>
             <div class="estrelas">
-              <i class="bi bi-star-fill"></i>
-              <i class="bi bi-star-fill"></i>
-              <i class="bi bi-star-fill"></i>
-              <i class="bi bi-star-fill"></i>
-              <i class="bi bi-star-half"></i>
+              <?php $nota = (int) $posts->rating;
+              $cheias = floor($nota / 2);
+              $meia = $nota % 2 === 1 ? 1 : 0;
+              $vazias = 5 - $cheias - $meia; ?>
+              <?php for ($i = 0; $i < $cheias; $i++): ?>
+                <span class="material-icons">star</span>
+              <?php endfor; ?>
+              <?php if ($meia): ?>
+                <span class="material-icons">star_half</span>
+              <?php endif; ?>
+              <?php for ($i = 0; $i < $vazias; $i++): ?>
+                <span class="material-icons">star_outline</span>
+              <?php endfor; ?>
             </div>
           </div>
         </div>
         <div class="filme">
-          <img src="../../../public/assets/caes.jpeg" alt="Cães de Aluguel" />
-          <h1>Cães de Aluguel</h1>
+          <img src="../../../../<?=$posts->image?>" alt="Cães de Aluguel" />
+          <h1><?=$posts->title?></h1>
         </div>
       </div>
       <div class="comentario">
         <h1>Comentou:</h1>
         <p>
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non
-          proident, sunt in culpa qui officia deserunt mollit anim id est
-          laborum."
+          <?=$posts->content?>
         </p>
-        <p id="data">Postado em: 22/04/2025</p>
+        <p id="data">Postado em: <?=date("d/m/Y", strtotime($posts->created_at))?></p>
       </div>
       <div class="likes">
         <i class="bi bi-arrow-up-circle-fill" id="up"></i>
