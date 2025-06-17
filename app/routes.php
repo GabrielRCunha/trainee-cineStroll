@@ -23,3 +23,4 @@ $router->get('listaDePosts', 'ListaDePostsController@index');
 $router->get('sidebar', 'SidebarController@index');
 
 $router->get('postIndividual/{id}', 'PostIndividualController@index');
+$router->get('landingPage', 'LandingPageController@index');
