@@ -17,9 +17,9 @@ class QueryBuilder
     {
         $sql = "select * from {$table}";
 
-        if ($inicio >= 0 && $rows_count >= 0) {
-            $sql .= " LIMIT {$inicio}, {$rows_count}";
-        }
+        if ($inicio !== null && $rows_count !== null && is_numeric($inicio) && is_numeric($rows_count)) {
+        $sql .= " LIMIT {$inicio}, {$rows_count}";
+    }
 
         try {
             $stmt = $this->pdo->prepare($sql);
