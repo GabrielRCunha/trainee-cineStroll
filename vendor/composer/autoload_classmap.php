@@ -10,6 +10,7 @@ return array(
     'App\\Controllers\\ListaDePostsController' => $baseDir . '/app/Controllers/ListaDePostsController.php',
     'App\\Controllers\\ListaDeUsuariosController' => $baseDir . '/app/Controllers/ListaDeUsuariosController.php',
     'App\\Controllers\\PostIndividualController' => $baseDir . '/app/Controllers/PostIndividualController.php',
+    'App\\Controllers\\SidebarController' => $baseDir . '/app/Controllers/SidebarController.php',
     'App\\Controllers\\TabelaDePostsController' => $baseDir . '/app/Controllers/TabelaDePostsController.php',
     'App\\Controllers\\loginController' => $baseDir . '/app/Controllers/loginController.php',
     'App\\Core\\App' => $baseDir . '/core/App.php',
@@ -21,4 +22,9 @@ return array(
     'Composer\\Autoload\\ClassLoader' => $vendorDir . '/composer/ClassLoader.php',
     'Composer\\Autoload\\ComposerStaticInit90bbf95869b4e88bf0dc5022e708a458' => $vendorDir . '/composer/autoload_static.php',
     'Composer\\InstalledVersions' => $vendorDir . '/composer/InstalledVersions.php',
+    'PHPMailer\\PHPMailer\\Exception' => $vendorDir . '/phpmailer/phpmailer/src/Exception.php',
+    'PHPMailer\\PHPMailer\\OAuth' => $vendorDir . '/phpmailer/phpmailer/src/OAuth.php',
+    'PHPMailer\\PHPMailer\\PHPMailer' => $vendorDir . '/phpmailer/phpmailer/src/PHPMailer.php',
+    'PHPMailer\\PHPMailer\\POP3' => $vendorDir . '/phpmailer/phpmailer/src/POP3.php',
+    'PHPMailer\\PHPMailer\\SMTP' => $vendorDir . '/phpmailer/phpmailer/src/SMTP.php',
 );

@@ -25,22 +25,22 @@
                            <span class="itemDescription">Página inicial</span>
                         </a>
                     </li>
-                    <li class="itemSidebar active">
-                        <a href="#">
+                    <li class="itemSidebar"> 
+                        <a href="/dashboard">
                            <i class="fa-solid fa-chart-column">
                         </i>
                         <span class="itemDescription">Dashboard</span> 
                         </a>
                     </li>
-                    <li class="itemSidebar">
-                        <a href="#">
+                    <li class="itemSidebar"> 
+                        <a href="tabelaDePosts">
                            <i class="fa-solid fa-pen-to-square">
                         </i>
                         <span class="itemDescription">Publicações</span> 
                         </a>
                     </li>
-                    <li class="itemSidebar">
-                        <a href="#">
+                    <li class="itemSidebar"> 
+                        <a href="listaDeUsuarios">
                            <i class="fa-solid fa-user-pen">
                         </i>
                         <span class="itemDescription">Usuários</span> 
@@ -51,10 +51,12 @@
         </div>
 
         <div class="logoutSidebar">
-            <button type="button" id="buttonLogout">
-                <i class="fa-solid fa-right-from-bracket" id="iconLogout"></i>
-                <span class="itemDescription">Logout</span>
-            </button>
+            <form action="/logout" method="POST">
+                <button type="submit" id="buttonLogout">
+                    <i class="fa-solid fa-right-from-bracket" id="iconLogout"></i>
+                    <span class="itemDescription">Logout</span>
+                </button>
+            </form>
         </div>
     </aside>
     <main>
