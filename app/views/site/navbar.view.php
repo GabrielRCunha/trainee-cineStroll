@@ -13,7 +13,7 @@
 <body>
     <nav class="navbar">
         <div id="logo-navbar">
-            <a href="#">
+            <a href="/landingPage">
                 <img src="../../../public/assets/logo_cinestroll.png"
                     alt="Logo do CINESTROLL que volta para a tela inicial">
             </a>
@@ -24,11 +24,11 @@
                     <img src="../../../public/assets/lupa.png" alt="Ícone da barra de pesquisa em formato de lupa"
                         class="botoes-navbar" id="lupa">
                 </a>
-                <a href="#">
+                <a href="/listaDePosts">
                     <img src="../../../public/assets/página de posts.png"
                         alt="Ícone da página de posts em formato de cards" class="botoes-navbar">
                 </a>
-                <a href="#">
+                <a href="/login">
                     <img src="../../../public/assets/perfil.png" alt="Ícone do login em formato de perfil"
                         class="botoes-navbar">
                 </a>

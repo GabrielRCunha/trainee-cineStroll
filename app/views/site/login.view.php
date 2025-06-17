@@ -12,7 +12,7 @@
 
 <body>
     <div id="logo">
-        <a href="#">
+        <a href="/landingPage">
             <img src="../../../public/assets/logo_cinestroll.png" alt="Logo CINE STROLL">
         </a>
     </div>

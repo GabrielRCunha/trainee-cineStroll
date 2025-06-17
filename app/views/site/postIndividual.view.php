@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../../../public/css/postIndividual.css" />
+    <link rel="stylesheet" href="../../../public/css/navbar.css" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
@@ -16,6 +17,7 @@
     <title>Post Individual</title>
   </head>
   <body>
+    <?php require __DIR__  . '/navbar.view.php'; ?>
     <div class="postIndividual">
       <div class="infoContainer">
         <div class="usuario">

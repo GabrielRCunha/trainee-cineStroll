@@ -10,6 +10,7 @@ body {
 
 .navbar {
     height: 72px;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -35,6 +36,10 @@ body {
     height: 34px;
     margin: 15px;
     transition: all 0.3s ease;
+}
+
+a {
+    text-decoration: none;
 }
 
 .botoes-navbar:hover {

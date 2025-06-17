@@ -16,7 +16,8 @@
 </head>
 <body>
     
-    
+    <?php require __DIR__  . '/navbar.view.php'; ?>    
+
     <div class="linhaInicial">
         <h2>Encontre seu proximo filme favorito aqui!</h2> 
           <div class="pesquisa">
