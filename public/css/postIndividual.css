@@ -128,6 +128,8 @@ body {
 .comentario p {
   font-size: 1.6rem;
   text-align: justify;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 #data {

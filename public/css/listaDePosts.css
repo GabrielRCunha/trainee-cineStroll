@@ -80,6 +80,8 @@ body {
   width: 100%;
   text-decoration: none;
   transition: transform 0.3s ease;
+  width: 100%;
+  max-width: 1200px;
 }
 
 .movie-card:hover {
@@ -97,6 +99,7 @@ a .movie-card {
   padding: 1.5rem;
   gap: 1.5rem;
   margin-bottom: 1rem;
+  
 }
 
 .movie-card img {
@@ -180,11 +183,12 @@ a .movie-card {
 
 .movie-info{
   max-width: 100%;
-  overflow: hidden;
+  width: 100%;
 }
 
 .informacoes-post{
   width: 100%;
+  
 }
 
 .conteudo-post {
@@ -195,10 +199,13 @@ a .movie-card {
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   /* aparentemente é o jeito de aparecer '...' no texto com mais de uma linha? *perguntar pro greis* */
-  height: fit-content;
-  max-height: 108px;
+  
+  white-space: normal;
+
   max-width: 100%;
   font-weight: 400;
+   word-wrap: break-word;
+  word-break: break-word;
 }
 
 .imagem-filme {
