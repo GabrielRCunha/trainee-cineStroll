@@ -61,13 +61,10 @@ body {
     font-weight: bold;
 }
 
-.textoLogo h2 {
-    font-size: 48px;
-    transform: translateY(60px);
-    background: linear-gradient(90deg, #f7d700, #8b0000);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+.textoLogo img {
+  height: 300px;
+  border-radius: 100px;
+  margin-top: 50px;
 }
 
 .carrossel {

@@ -30,8 +30,8 @@
                         explore críticas detalhadas, tudo em um único lugar.</p>
                 </div>
                 <div class="textoLogo">
-                    <h2>CINE STROLL</h2>
-                    <img src="../../../public/assets/Logo_sem_fundo.png" alt="logoPrincipal">
+                   
+                    <img src="/uploads/logo com fundo (1).png"alt="logoPrincipal">
                 </div>
             </div>
 
