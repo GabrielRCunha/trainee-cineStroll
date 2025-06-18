@@ -10,3 +10,13 @@ function mostrarSenha(idIcone, idText){
         icone.classList.replace('bi-eye-slash', 'bi-eye')
     }
 }
+
+window.addEventListener("DOMContentLoaded", () => {
+        const mensagem = document.getElementById("msgErroLogin");
+
+        if (mensagem && mensagem.innerText !== "") {
+            setTimeout(() => {
+                    mensagem.style.display = "none";
+                }, 3000);
+        }
+    });
