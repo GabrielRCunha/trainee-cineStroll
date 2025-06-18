@@ -14,6 +14,11 @@ body {
     background-image: url('../assets/Background3dCopia.png');
 }
 
+.php{
+    align-self: flex-start;
+    position: absolute;
+}
+
 .barra-superior {
     width: 64%;
     height: 120px;
@@ -365,6 +370,8 @@ button:hover {
     margin: 10px 0;
     text-align: center;
 }
+
+
 
 .post-content {
     padding: 10px;

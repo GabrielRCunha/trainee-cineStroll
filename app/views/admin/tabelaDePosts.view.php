@@ -10,9 +10,13 @@
     <link rel="stylesheet" href="../../../public/css/modalEditar.css">
     <link rel="stylesheet" href="../../../public/css/modalExcluirPosts.css">
     <link rel="stylesheet" href="../../../public/css/tabelaDePosts.css">
+    <link rel="stylesheet" href="../../../public/css/sidebar.css">
 </head>
 
 <body>
+    <div class="php">
+     <?php require 'sidebar.view.php'; ?>
+     </div>
     <div class="barra-superior">
         <img src="../../../public/assets/Logo_sem_fundo.png" alt="Logo do CINE STROLL" class="logo-barra-superior">
         <div class="div-titulo">
@@ -238,8 +242,9 @@
         </form>
     </div>
     <?php endforeach; ?>
-
+        
     </div>
+    
 
     <script src="../../../public/js/tabelaDePosts.js"></script>
     <script src="../../../public/js/modais.js"></script>
