@@ -63,5 +63,6 @@
         <p class="count">12</p>
       </div>
     </div>
+    <?php require __DIR__  . '/footer.view.php'; ?>
   </body>
 </html>

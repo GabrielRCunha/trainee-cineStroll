@@ -64,7 +64,8 @@
       <?php endforeach; ?>
     </div>
 
-    <?php require 'footer.view.php'; ?>
+   
     <?php require('app\views\admin\componentes.php\paginacao.php') ?>
+     <?php require 'footer.view.php'; ?>
   </body>
 </html>

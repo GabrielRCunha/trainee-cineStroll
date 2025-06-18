@@ -157,6 +157,7 @@ a .movie-card {
   padding: 0;
   gap: 10px;
   margin: auto;
+  margin-bottom: 60px;
 }
 
 .paginacao li a {
