@@ -39,7 +39,8 @@
 
                 <div class="swiper-wrapper">
                     <?php foreach($posts as $post): ?>
-                    <div class="card swiper-slide">
+                    <div class="swiper-slide">
+                        <div class="card">
                         <div class="textoImagem">
                             <div class="textoCard">
                                 <h2><?= $post->title ?></h2>
@@ -69,6 +70,7 @@
                                 <p class="textoBotao">Ver mais</p>
                             </button>
                         </div>
+                    </div>
                     </div>
                     <?php endforeach; ?>
                 </div>

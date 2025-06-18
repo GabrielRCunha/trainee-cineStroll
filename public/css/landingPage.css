@@ -126,18 +126,24 @@ body {
 }
 
 .swiper-wrapper {
-    width: 80%;
+    width: 100%;
     display: flex;
     justify-content: space-between;
+    margin-left: 5%;
+    position: absolute;
 }
 
-.swiper-slide {
+.card {
     display: flex;
     flex-direction: column;
-    width: 200px;
+    width: 400px;
     height: 285px;
     border-radius: 20px;
     background: rgba(240, 248, 255, 0.8);
+}
+
+.swiper-slide{
+    display: flex;
 }
 
 .descricao {
@@ -221,13 +227,8 @@ body {
 
 .botaoCard {
     width: 100%;
-<<<<<<< HEAD
     margin-top: 35px;
     z-index: 2;
-=======
-    margin-bottom: 24px;
-    opacity: 100%;
->>>>>>> 69e488264ae665bcb6a162503b11e41f03457398
 }
 
 .botaoCard button {
