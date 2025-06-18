@@ -40,15 +40,19 @@
       </div>
       <div class="redes-sociais">
         <div class="instagram">
-          <img
-            src="../../../public/assets/instagram.png"
-            alt="Logo Instagram"
-          />
-          <p>Instagram</p>
+          <a class="instagram" href="https://www.instagram.com/codejr/" target="_blank">
+            <img
+              src="../../../public/assets/instagram.png"
+              alt="Logo Instagram"
+            />
+            <p>Instagram</p>
+          </a>
         </div>
         <div class="youtube">
-          <img src="../../../public/assets/youtube.png" alt="Logo Youtube" />
-          <p>Youtube</p>
+          <a class="youtube" href="https://www.youtube.com/channel/UClNXIMdtB1UxKd8XAjRBW3g" target="_blank">
+            <img src="../../../public/assets/youtube.png" alt="Logo Youtube" />
+            <p>Youtube</p>
+          </a>
         </div>
       </div>
       <div class="logos">

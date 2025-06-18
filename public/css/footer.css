@@ -37,6 +37,7 @@ p {
 
 .missão-visão-valores p {
   font-size: 1rem;
+  font-weight:normal;
 }
 
 .visão {
@@ -81,20 +82,32 @@ p {
   display: flex;
   align-items: center;
   gap: 8px;
+  transition: transform 0.3s ease;
 }
 
 .instagram img {
   width: 24px;
 }
 
+.instagram:hover{
+  text-decoration: underline;
+  transform: scale(1.01);
+}
+
 .youtube {
   display: flex;
   align-items: center;
   gap: 8px;
+  transition: transform 0.3s ease;
 }
 
 .youtube img {
   width: 24px;
+}
+
+.youtube:hover{
+  text-decoration: underline;
+  transform: scale(1.01);
 }
 
 .logos {
@@ -149,6 +162,7 @@ p {
   html {
     font-size: 10px;
   }
+
 }
 
 @media (max-width: 970px) {
@@ -194,6 +208,10 @@ p {
 @media (max-width: 632px) {
   html {
     font-size: 10px;
+  }
+
+  .missão-visão-valores{
+    padding-bottom: 40px;
   }
 }
 
