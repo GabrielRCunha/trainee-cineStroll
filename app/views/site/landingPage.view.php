@@ -14,6 +14,8 @@
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
 </head>
 
 <body>
@@ -36,22 +38,29 @@
             <div class="swiper">
 
                 <div class="swiper-wrapper">
+                    <?php foreach($posts as $post): ?>
                     <div class="card swiper-slide">
                         <div class="textoImagem">
                             <div class="textoCard">
-                                <h2>Lorem ipsum</h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis, ex
-                                    illum...
-                                </p>
+                                <h2><?= $post->title ?></h2>
+                                <p><?= $post->content ?></p>
                             </div>
                             <div class="imagemCard">
-                                <img src="../../../public/assets/Toy_Story_1995.jpg" alt="">
+                                <img src="/<?= $post->image ?>" alt="">
                                 <div class="estrelas">
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
+                                    <?php $nota = (int) $post->rating;
+              $cheias = floor($nota / 2);
+              $meia = $nota % 2 === 1 ? 1 : 0;
+              $vazias = 5 - $cheias - $meia; ?>
+              <?php for ($i = 0; $i < $cheias; $i++): ?>
+                <span class="material-icons">star</span>
+              <?php endfor; ?>
+              <?php if ($meia): ?>
+                <span class="material-icons">star_half</span>
+              <?php endif; ?>
+              <?php for ($i = 0; $i < $vazias; $i++): ?>
+                <span class="material-icons">star_outline</span>
+              <?php endfor; ?>
                                 </div>
                             </div>
                         </div>
@@ -61,106 +70,7 @@
                             </button>
                         </div>
                     </div>
-                    <div class="card swiper-slide">
-                        <div class="textoImagem">
-                            <div class="textoCard">
-                                <h2>Lorem ipsum</h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis, ex
-                                    illum...
-                                </p>
-                            </div>
-                            <div class="imagemCard">
-                                <img src="../../../public/assets/Toy_Story_1995.jpg" alt="">
-                                <div class="estrelas">
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="botaoCard">
-                            <button>
-                                <p class="textoBotao">Ver mais</p>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="card swiper-slide">
-                        <div class="textoImagem">
-                            <div class="textoCard">
-                                <h2>Lorem ipsum</h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis, ex
-                                    illum...
-                                </p>
-                            </div>
-                            <div class="imagemCard">
-                                <img src="../../../public/assets/Toy_Story_1995.jpg" alt="">
-                                <div class="estrelas">
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="botaoCard">
-                            <button>
-                                <p class="textoBotao">Ver mais</p>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="card dois swiper-slide">
-                        <div class="textoImagem">
-                            <div class="textoCard">
-                                <h2>Lorem ipsum</h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis, ex
-                                    illum...
-                                </p>
-                            </div>
-                            <div class="imagemCard">
-                                <img src="../../../public/assets/Toy_Story_1995.jpg" alt="">
-                                <div class="estrelas">
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="botaoCard">
-                            <button>
-                                <p class="textoBotao">Ver mais</p>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="card tres swiper-slide">
-                        <div class="textoImagem">
-                            <div class="textoCard">
-                                <h2>Lorem ipsum</h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis, ex
-                                    illum...
-                                </p>
-                            </div>
-                            <div class="imagemCard">
-                                <img src="../../../public/assets/Toy_Story_1995.jpg" alt="">
-                                <div class="estrelas">
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="botaoCard">
-                            <button>
-                                <p class="textoBotao">Ver mais</p>
-                            </button>
-                        </div>
-                    </div>
+                    <?php endforeach; ?>
                 </div>
                 <div class="swiper-button-prev">
 
