@@ -23,36 +23,48 @@
 
 </head>
 <body>
-    <div class="container"> 
+    <?php require __DIR__  . '/sidebar.view.php'; ?>
 
+<div class="container-dashboard">
+    <div class="container"> 
+        
         <div class="mensagem-boas-vindas">
             <p>Bem-vindos à Dashboard, selecione sua próxima cena.</p>
-          </div>
+        </div>
         
-          <div class="conteudo-principal">
+        <div class="conteudo-principal">
             <div class="Logo">
                 <img src="../../../public/assets/Logo sem fundo.png" alt="Logo CODE">
-              <div id="logoCine"> CINE STROLL</div>
+                <div id="logoCine">CINE STROLL</div>
             </div>
 
-        <div class="Botoes">
-            <form action = "/tabelaDePosts" method="GET">
-            <button id="botao-posts" ><span class="material-symbols-outlined">edit</span> Tabela de Posts</button>
-            </form>
-             <form action = "/listaDeUsuarios" method="GET">
-            <button id="botao-usuarios"><span class="material-symbols-outlined">person</span> Tabela de Usuários</button>
-            </form>
-            <div class="logout">
-                <form action = "/logout" method="POST">
-                    <button id="botao-logout"><span class="material-symbols-outlined">logout</span> Logout</button>
+            <div class="Botoes">
+                <form action="/tabelaDePosts" method="GET">
+                    <button id="botao-posts">
+                        <span class="material-symbols-outlined">edit</span> 
+                        Tabela de Posts
+                    </button>
                 </form>
+                <form action="/listaDeUsuarios" method="GET">
+                    <button id="botao-usuarios">
+                        <span class="material-symbols-outlined">person</span> 
+                        Tabela de Usuários
+                    </button>
+                </form>
+                <div class="logout">
+                    <form action="/logout" method="POST">
+                        <button id="botao-logout">
+                            <span class="material-symbols-outlined">logout</span> 
+                            Logout
+                        </button>
+                    </form>
+                </div>
             </div>
-
-                
-
         </div>
     </div>
+</div>
 
+<script src="../../../public/js/sidebar.js"></script>
     
 </body>
 </html>

@@ -1,26 +1,27 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 
 }
 
-html {
-  height: 100%;
-  background-image: url(../assets/BackFinal.jpeg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+body {
+    display: flex;
+    min-height: 100vh;
+    background-color: aliceblue;
+    background-image: url(../assets/BackFinal.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    font-family: "Montserrat", sans-serif;
 }
 
-body {
-  height: 100%;
-  margin: 0;
-  font-family: "Montserrat", sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+.container-dashboard {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
 }
 
 .container {
@@ -30,11 +31,11 @@ body {
     width: 700px;
     max-width: 1000px;
     padding: 40px 20px;
-    background: linear-gradient(to right, #333333, #353138, #382F3F, #3C2C47, #3F2B4E, #422954, #45265C, #4A2366 ,#4C226B, #4E206F);
+    background: linear-gradient(to right, #333333, #45265C, #4A2366, #4E206F);
     border: 1px solid white;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
-    margin: 10%;
-  }
+}
+
   
   .mensagem-boas-vindas {
     width: 100%;
