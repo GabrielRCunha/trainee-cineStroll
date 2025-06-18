@@ -8,13 +8,16 @@
     <link rel="stylesheet" href="../../../public/css/listaDeUsuários.css">
     <link rel="stylesheet" href="../../../public/css/modaisRyan.css">
     <link rel="stylesheet" href="../../../public/css/modaisRafael.css">
+    <link rel="stylesheet" href="../../../public/css/sidebar.css">
     
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 
 <body>
-
+    <div class="php">
+        <?php require 'sidebar.view.php'; ?>
+    </div>
     <div class="fundoModal" onclick="fecharModalAberto('.modal', event)">
 
     </div>

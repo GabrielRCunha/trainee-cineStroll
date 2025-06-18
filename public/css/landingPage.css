@@ -221,8 +221,13 @@ body {
 
 .botaoCard {
     width: 100%;
+<<<<<<< HEAD
     margin-top: 35px;
     z-index: 2;
+=======
+    margin-bottom: 24px;
+    opacity: 100%;
+>>>>>>> 69e488264ae665bcb6a162503b11e41f03457398
 }
 
 .botaoCard button {
