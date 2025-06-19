@@ -90,6 +90,7 @@ main{
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 100px;
     gap: 0.7rem;
     cursor: pointer; 
     transition: all 0.3s;
@@ -126,6 +127,10 @@ main{
 .closedSidebar .itemSidebar a{
     display: flex;
     justify-content: center;
+}
+
+.closedSidebar #buttonLogout{
+    width: 40px;
 }
 
 .closedSidebar #buttonLogout .itemDescription{
