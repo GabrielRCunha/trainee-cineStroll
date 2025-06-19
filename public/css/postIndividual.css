@@ -5,6 +5,10 @@ body,
   height: 100%;
 }
 
+body, html{
+  height: fit-content;
+}
+
 body {
   display: flex;
   flex-direction: column;
@@ -31,7 +35,9 @@ body {
   align-items: center;
   padding: 0;
   margin: 0;
-  margin-bottom: 70px;
+  margin-bottom: 100px;
+  margin-top: 70px;
+  gap: 30px;
 }
 
 .infoContainer {
@@ -61,9 +67,24 @@ body {
   border-radius: 16px;
 }
 
-.perfil img {
-  width: 25%;
+.perfilImg {
+  display: flex;
+  flex-shrink: 0;
+  flex-grow: 0;
+  flex-basis: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px; 
+  height: 80px; 
   border-radius: 12px;
+  overflow: hidden;
+}
+
+.perfilImg img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
 }
 
 .perfil h1 {
@@ -75,8 +96,10 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-left: 10%;
-  padding-right: 10%;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   gap: 6%;
   border-radius: 16px;
 }
@@ -92,13 +115,15 @@ body {
 
 .filme {
   display: flex;
-  width: 240px;
+  width: 300px;
   height: fit-content;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: rgba(0, 0, 0, 0.25);
   padding-top: 1vw;
+  gap: 10px;
+  padding-bottom: 10px;
   border-radius: 16px;
 }
 
@@ -118,7 +143,8 @@ body {
   flex-direction: column;
   align-items: left;
   width: 100%;
-  margin: 0px;
+
+  margin-top: 30px;
   gap: 1.6rem;
 }
 
@@ -139,7 +165,7 @@ body {
 }
 
 .likes {
-  display: flex;
+  display: none;
   width: 100%;
   align-items: center;
   justify-content: left;
@@ -211,7 +237,6 @@ body {
 
   .postIndividual {
     width: 84%;
-    padding-top: 16%;
   }
 
   .infoContainer {

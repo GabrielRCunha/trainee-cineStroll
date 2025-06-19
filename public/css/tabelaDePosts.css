@@ -304,7 +304,7 @@ button:hover {
 }
 
 #modal-data {
-    max-width: 110px;
+    width: 140px;
     overflow: auto;
 }
 
@@ -460,6 +460,10 @@ button:hover {
     height: 120px;
     font-size: 16px;
     padding: 4px;
+}
+
+#modal-autor {
+    width: 160px;
 }
 
 @media(max-width: 1440px) {

@@ -284,6 +284,10 @@ button:hover {
         margin-right: 0
     }
 
+    td.autor.fontes{
+        max-width: 280px;
+    }
+
     .botao-criar {
         margin-right: 8%;
     }
