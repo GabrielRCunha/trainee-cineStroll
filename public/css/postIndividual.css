@@ -5,6 +5,10 @@ body,
   height: 100%;
 }
 
+body, html{
+  height: fit-content;
+}
+
 body {
   display: flex;
   flex-direction: column;
@@ -33,6 +37,7 @@ body {
   margin: 0;
   margin-bottom: 100px;
   margin-top: 70px;
+  gap: 30px;
 }
 
 .infoContainer {
@@ -110,13 +115,15 @@ body {
 
 .filme {
   display: flex;
-  width: 240px;
+  width: 300px;
   height: fit-content;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: rgba(0, 0, 0, 0.25);
   padding-top: 1vw;
+  gap: 10px;
+  padding-bottom: 10px;
   border-radius: 16px;
 }
 

@@ -58,12 +58,12 @@
         </p>
         <p id="data">Postado em: <?=date("d/m/Y", strtotime($posts->created_at))?></p>
       </div>
-      <div class="likes">
+      <!--<div class="likes">
         <i class="bi bi-arrow-up-circle-fill" id="up"></i>
         <p class="count">32</p>
         <i class="bi bi-arrow-down-circle-fill" id="down"></i>
         <p class="count">12</p>
-      </div>
+      </div>-->
     </div>
     <?php require __DIR__  . '/footer.view.php'; ?>
   </body>

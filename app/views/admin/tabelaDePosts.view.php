@@ -192,8 +192,8 @@
 
                 <div class="div_autor_nota">
                     <div class="modal-input-grupo">
-                        <label for="autor">Autor:</label>
-                        <input type="text" id="modal-autor" class="post-content" name="author" value="<?=$post->nome_autor?>">
+                        <label for="autor">ID do Autor:</label>
+                        <input type="text" id="modal-autor" class="post-content" name="author" value="<?=$post->author?>">
                     </div>
 
                     <div class="modal-input-grupo">

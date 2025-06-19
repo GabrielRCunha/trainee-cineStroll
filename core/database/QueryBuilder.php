@@ -54,6 +54,29 @@ class QueryBuilder
         die($e->getMessage());
     }
 }
+    public function selectPostsComAutoresPesquisa($inicio = 0, $rows_count = 5, $pesquisa)
+    {
+        $sql = "
+            SELECT posts.*, usuarios.nome AS nome_autor
+            FROM posts 
+            JOIN usuarios ON posts.author = usuarios.id
+            WHERE `title` LIKE '%$pesquisa%' 
+            ORDER BY posts.id DESC
+            LIMIT :inicio, :limite
+        ";
+
+        try {
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->bindValue(':inicio', $inicio, PDO::PARAM_INT);
+            $stmt->bindValue(':limite', $rows_count, PDO::PARAM_INT);
+            $stmt->execute();
+
+            return $stmt->fetchAll(PDO::FETCH_CLASS); 
+
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+    }
 
     public function verificaLogin($email, $senha)
     {
@@ -77,6 +100,21 @@ class QueryBuilder
     public function countAll($table)
     {
         $sql = "select COUNT(*) from {$table}";
+
+        try {
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute();
+
+            return intval($stmt->fetch(PDO::FETCH_NUM)[0]);
+
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+    }
+
+    public function countAllPesquisa($table, $pesquisa)
+    {
+        $sql = "select COUNT(*) from {$table} WHERE `title` LIKE '%$pesquisa%'";
 
         try {
             $stmt = $this->pdo->prepare($sql);
