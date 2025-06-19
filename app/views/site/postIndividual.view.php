@@ -22,7 +22,9 @@
       <div class="infoContainer">
         <div class="usuario">
           <div class="perfil">
-            <img src="../../../../<?=$usuario->imagem?>" alt="foto do perfil" />
+            <div class="perfilImg">
+              <img src="../../../../<?=$usuario->imagem?>" alt="foto do perfil" />
+            </div>
             <h1><?=$usuario->nome?></h1>
           </div>
           <div class="avaliacao">
