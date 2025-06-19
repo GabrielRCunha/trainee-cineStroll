@@ -12,6 +12,7 @@ body {
     align-items: center;
     background-color: grey;
     background-image: url('../assets/Background3dCopia.png');
+    overflow: hidden;
 }
 
 .php{
