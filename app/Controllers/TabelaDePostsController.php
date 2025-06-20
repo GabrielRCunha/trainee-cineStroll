@@ -21,27 +21,19 @@ class TabelaDePostsController {
 
         $itensPage = 5;
         $inicio = $itensPage * $page - $itensPage;
-        $rows_count = App::get('database')->countAll('posts'); // Continua contando apenas os posts
+        $rows_count = App::get('database')->countAll('posts'); 
 
         if($inicio > $rows_count){
             return redirect('admin/tabelaDePosts');
         }
 
-        // --- Use sua nova função aqui! ---
-        // Agora, $posts conterá os dados do post E o nome do autor em $post->nome_autor
         $posts = App::get('database')->selectPostsComAutores($inicio, $itensPage);
 
-        // A variável $usuarios não é mais estritamente necessária para mostrar o nome do autor
-        // na tabela de posts, pois já vem com cada post.
-        // Se você a usa em outro lugar na view (por exemplo, um dropdown de seleção de autor),
-        // mantenha a linha abaixo; caso contrário, pode removê-la para limpar o código.
-        $usuarios = App::get('database')->selectAll('usuarios'); // Mantido para compatibilidade com o compact() e outros usos na view, se houver.
+        $usuarios = App::get('database')->selectAll('usuarios'); 
 
 
         $total_pages = ceil($rows_count/$itensPage);
 
-        // Manda os dados para a view
-        // $usuarios é incluído para evitar o aviso do compact(), mesmo que não seja usado para o nome do autor.
         return view('admin/tabelaDePosts', compact('posts', 'usuarios', 'page', 'total_pages'));
     }
     public function store()
@@ -51,6 +43,8 @@ class TabelaDePostsController {
             'content' => $_POST['content'],
             'rating' => $_POST['rating'],
             'author' => $_POST['author'],
+            'diretor' => $_POST['diretor'],
+            'ano' => $_POST['ano']
         ];
 
         App::get('database')->insert('posts', $parameters, $_FILES['imagem']);
@@ -65,6 +59,8 @@ class TabelaDePostsController {
             'content' => $_POST['content'],
             'rating' => $_POST['rating'],
             'author' => $_POST['author'],
+            'diretor' => $_POST['diretor'],
+            'ano' => $_POST['ano']
         ];
 
         $id = $_POST['id'];

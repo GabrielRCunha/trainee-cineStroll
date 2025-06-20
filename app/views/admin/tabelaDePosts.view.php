@@ -97,9 +97,15 @@
                 </div>
                 </div>
 
-                <div class="modal-input-grupo">
-                    <label for="titulo">Título:</label>
-                    <input type="text" id="titulo" name="title" class="post-content" required>
+                <div class="div-titulo-ano">
+                    <div class="modal-input-grupo titulo">
+                        <label for="titulo">Título:</label>
+                        <input type="text" id="titulo" name="title" class="post-content" required>
+                    </div>
+                    <div class="modal-input-grupo">
+                        <label for="titulo">Ano:</label>
+                        <input type="number" id="ano" name="ano" class="post-content" min='0' max='2025'  required>
+                    </div>
                 </div>
 
                 <div class="div_autor_nota">
@@ -107,11 +113,18 @@
                         <label for="autor">Autor:</label>
                         <input type="text" id="autor" name="author" class="post-content" required>
                     </div>
-
+                    
+                    <div class="modal-input-grupo">
+                        <label for="nota">Diretor:</label>
+                        <input type="text" id="diretor" name="diretor" class="post-content" required>
+                    </div>
+                    
                     <div class="modal-input-grupo">
                         <label for="nota">Nota:</label>
                         <input type="number" id="nota" name="rating" class="post-content" min="0" max="10" required>
                     </div>
+
+
 
                 </div>
 
@@ -141,9 +154,15 @@
                     </div>
                 </div>
 
-                <div class="modal-input-grupo">
-                    <label for="titulo">Título:</label>
-                    <input type="text" id="modal-titulo" class="post-content" value="<?=$post->title?>" readonly>
+                <div class="div-titulo-ano">
+                    <div class="modal-input-grupo titulo">
+                        <label for="titulo">Título:</label>
+                        <input type="text" id="modal-titulo" name="title" class="post-content" value="<?=$post->title?>" readonly>
+                    </div>
+                    <div class="modal-input-grupo">
+                        <label for="titulo">Ano:</label>
+                        <input type="text" id="modal-ano" name="ano" class="post-content" value="<?=$post->ano?>" readonly>
+                    </div>
                 </div>
 
                 <div class="div_autor_nota">
@@ -153,14 +172,15 @@
                     </div>
 
                     <div class="modal-input-grupo">
+                        <label for="data">Diretor:</label>
+                        <input type="text" id="modal-data" class="post-content" value="<?=$post->diretor?>" readonly>
+                    </div>
+
+                    <div class="modal-input-grupo">
                         <label for="nota">Nota:</label>
                         <input type="number" id="modal-nota" class="post-content" min="0" max="5" value="<?=$post->rating?>"readonly>
                     </div>
 
-                    <div class="modal-input-grupo">
-                        <label for="data">Publicado em:</label>
-                        <input type="date" id="modal-data" class="post-content" value="<?=$post->created_at?>" readonly>
-                    </div>
                 </div>
 
                 <div class="modal-input-grupo">
@@ -193,15 +213,26 @@
                         </div>
                 </div>
 
-                <div class="modal-input-grupo">
-                    <label for="titulo">Título:</label>
-                    <input type="text" id="modal-titulo" class="post-content" name="title" value="<?=$post->title?>">
+                <div class="div-titulo-ano">
+                    <div class="modal-input-grupo titulo">
+                        <label for="titulo">Título:</label>
+                        <input type="text" id="modal-titulo" name="title" class="post-content" value="<?=$post->title?>">
+                    </div>
+                    <div class="modal-input-grupo">
+                        <label for="titulo">Ano:</label>
+                        <input type="text" id="modal-ano-editar" name="ano" class="post-content" value="<?=$post->ano?>">
+                    </div>
                 </div>
 
                 <div class="div_autor_nota">
                     <div class="modal-input-grupo">
                         <label for="autor">ID do Autor:</label>
                         <input type="text" id="modal-autor" class="post-content" name="author" value="<?=$post->author?>">
+                    </div>
+
+                    <div class="modal-input-grupo">
+                        <label for="nota">Diretor:</label>
+                        <input type="text" id="modal-diretor" class="post-content" name="diretor" value="<?=$post->diretor?>">
                     </div>
 
                     <div class="modal-input-grupo">

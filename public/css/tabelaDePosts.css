@@ -285,10 +285,48 @@ button:hover {
     gap: 6px;
 }
 
+.modal-input-grupo.titulo{
+    width: fit-content;
+}
+
+#titulo.post-content{
+    width: 300px;
+}
+
+.div-titulo-ano{
+    display: flex;
+    gap: 25px;
+}
+
+#ano.post-content{
+    width: 110px;
+}
+
+#modal-ano.post-content{
+    width: 93px;
+}
+
+#modal-titulo.post-content{
+    width: 300px;
+}
+
+#modal-diretor{
+    width: 140px;
+}
+
+#modal-autor{
+    width: 140px;
+}
+
+#modal-ano-editar{
+    width: 93px;
+}
+
 .modal-input-grupo label {
     font-weight: 600;
     margin-bottom: 0px;
     margin-top: 16px;
+    width: fit-content;
 }
 
 .modal-input-grupo input,
@@ -411,7 +449,15 @@ button:hover {
 
 .div_autor_nota {
     display: flex;
-    gap: 40px;
+    gap: 25px;
+}
+
+#autor.post-content{
+    width: 155px;
+}
+
+#diretor.post-content{
+    width: 155px;
 }
 
 .botao-post-imagem {
