@@ -5,7 +5,7 @@ const passar = document.querySelector('.passar')
 const logo = document.querySelector('.logo-barra-superior')
 
 //Contante para a mediaQuery
-const mediaQuery = window.matchMedia('(max-width: 620px)');
+const mediaQuery = window.matchMedia('(max-width: 768px)');
 
 //Variáveis para a atualização da tabela
 let titulo_info = document.getElementById('titulo-main')
@@ -14,7 +14,7 @@ let indexPagAtiva = 0;
 
 //Parte de atualização do logo do cabeçalho da tabela
 function atualizaLogo() {
-    if (window.innerWidth <= 768) {
+    if (window.innerWidth <= 800) {
         logo.classList.add('inativo')
     }
     else {

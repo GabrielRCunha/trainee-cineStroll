@@ -15,13 +15,13 @@ body {
     overflow: hidden;
 }
 
-.php{
+.php {
     align-self: flex-start;
     position: absolute;
 }
 
 .barra-superior {
-    width: 64%;
+    width: 100%;
     height: 120px;
     background: linear-gradient(to right, #333333 0%, #6a0dad 200%);
     display: flex;
@@ -82,6 +82,11 @@ body {
 .div-tabela {
     width: 64%;
     height: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
 }
 
 .tabela {
@@ -285,40 +290,40 @@ button:hover {
     gap: 6px;
 }
 
-.modal-input-grupo.titulo{
+.modal-input-grupo.titulo {
     width: fit-content;
 }
 
-#titulo.post-content{
+#titulo.post-content {
     width: 300px;
 }
 
-.div-titulo-ano{
+.div-titulo-ano {
     display: flex;
     gap: 25px;
 }
 
-#ano.post-content{
+#ano.post-content {
     width: 110px;
 }
 
-#modal-ano.post-content{
+#modal-ano.post-content {
     width: 93px;
 }
 
-#modal-titulo.post-content{
+#modal-titulo.post-content {
     width: 300px;
 }
 
-#modal-diretor{
+#modal-diretor {
     width: 140px;
 }
 
-#modal-autor{
+#modal-autor {
     width: 140px;
 }
 
-#modal-ano-editar{
+#modal-ano-editar {
     width: 93px;
 }
 
@@ -452,11 +457,11 @@ button:hover {
     gap: 25px;
 }
 
-#autor.post-content{
+#autor.post-content {
     width: 155px;
 }
 
-#diretor.post-content{
+#diretor.post-content {
     width: 155px;
 }
 
@@ -513,10 +518,6 @@ button:hover {
 }
 
 @media(max-width: 1440px) {
-    .barra-superior {
-        width: 76%;
-    }
-
     .div-tabela {
         width: 76%;
     }
@@ -546,31 +547,24 @@ button:hover {
 }
 
 @media(max-width: 768px) {
-
-    .barra-superior {
-        width: 85%;
-        margin-top: 60px;
+    .div-tabela {
+        width: 68%;
     }
 
     .barra-superior .titulo {
-        font-size: 32px;
+        font-size: 15px;
         margin-left: 12%;
         margin-right: 0
     }
 
     .botao-criar {
         margin-right: 8%;
+        width: 200px;
     }
 
     td {
         padding-left: 10px;
         padding-right: 10px;
-    }
-
-    .div-tabela {
-        width: 85%;
-        overflow-x: auto;
-        white-space: nowrap;
     }
 
     .paginacao {
@@ -583,6 +577,41 @@ button:hover {
         margin-bottom: 15px;
     }
 
+    .autor {
+        display: none;
+    }
+
+    .data {
+        display: none;
+    }
+
+    .divacoes {
+        flex-direction: column;
+        height: fit-content;
+        padding: 12px 0px;
+    }
+
+    .divacoes button {
+        height: 36px;
+        width: 36px;
+    }
+
+}
+
+@media(max-width: 550px) {
+    .nome {
+        font-size: 24px;
+    }
+
+    .div-titulo-ano {
+        flex-direction: column;
+    }
+}
+
+@media(max-width: 500px) {
+    .div_autor_nota {
+        flex-direction: column;
+    }
 }
 
 @media(max-width: 425px) {
@@ -592,6 +621,14 @@ button:hover {
 
     .logo-barra-superior {
         display: none;
+    }
+
+    .tabela tr {
+        width: 50%;
+    }
+
+    .tabela td {
+        width: 25%;
     }
 
     .nome {
