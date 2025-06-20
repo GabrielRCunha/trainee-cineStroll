@@ -296,4 +296,24 @@ class QueryBuilder
         }
     }
 
+    /*public function selecionaCinco($table){
+        $sql = sprintf(
+            'SELECT %s.*, posts.title, posts.image 
+             FROM %s 
+             INNER JOIN posts ON %s.id = posts.id 
+             ORDER BY %s.id DESC LIMIT 5',
+            $table, $table, $table, $table
+        );
+
+        try {
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute();
+            $posts = $stmt->fetchAll(PDO::FETCH_OBJ);
+
+            return $posts;
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+    }*/
+
 }
