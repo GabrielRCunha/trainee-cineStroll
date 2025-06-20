@@ -23,7 +23,6 @@
 
 </head>
 <body>
-    <?php require __DIR__  . '/sidebar.view.php'; ?>
 
 <div class="container-dashboard">
     <div class="container"> 
