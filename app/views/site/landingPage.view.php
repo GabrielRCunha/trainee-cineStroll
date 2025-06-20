@@ -30,8 +30,7 @@
                         explore críticas detalhadas, tudo em um único lugar.</p>
                 </div>
                 <div class="textoLogo">
-                   
-                    <img src="/uploads/logo com fundo (1).png"alt="logoPrincipal">
+                    <img src="/uploads/logo sem fundo.png"alt="logoPrincipal">
                 </div>
             </div>
 
