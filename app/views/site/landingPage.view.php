@@ -30,7 +30,8 @@
                         explore críticas detalhadas, tudo em um único lugar.</p>
                 </div>
                 <div class="textoLogo">
-                    <img src="/uploads/logo sem fundo.png"alt="logoPrincipal">
+                   
+                    <img src="/public/assets/Logo_sem_fundo.png"alt="logoPrincipal">
                 </div>
             </div>
 
@@ -66,7 +67,9 @@
                         </div>
                         <div class="botaoCard">
                             <button>
-                                <p class="textoBotao">Ver mais</p>
+                                <a href="/postIndividual/<?=$post->id?>">
+                                    <p class="textoBotao">Ver mais</p>
+                                </a>
                             </button>
                         </div>
                     </div>

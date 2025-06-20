@@ -12,8 +12,13 @@ const swiper = new Swiper('.swiper', {
     prevEl: '.swiper-button-prev',
   },
 
+  breakpoints:{
+    1200:{slidesPerView: 3, },
+    780:{slidesPerView: 2, },
+  }
 
 });
 
-console.log("oi");
+
+
 

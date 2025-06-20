@@ -21,10 +21,10 @@
 
     <div class="linhaInicial">
         <h2>Encontre seu proximo filme favorito aqui!</h2> 
-          <div class="pesquisa">
-            <input type="text" class="lupa">
+          <form class="pesquisa" method="get" action="/listaDePosts">
+            <input type="text" class="lupa" name="pesquisa">
             <span class="material-icons">search</span>
-          </div>
+          </form>
     </div>
 
     

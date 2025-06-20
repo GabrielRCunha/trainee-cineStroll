@@ -1,3 +1,11 @@
+<?php
+    session_start();
+
+    if(!isset($_SESSION['id'])){
+        header(header: 'Location: /login');
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -44,7 +52,7 @@
                     <?= $post->title ?>
                 </td>
                 <td class="autor fontes">
-                    <?= $post->author ?>
+                    <?= $post->nome_autor ?>
                 </td>
                 <td class="data fontes">
                     <?=$post->created_at?>
@@ -141,7 +149,7 @@
                 <div class="div_autor_nota">
                     <div class="modal-input-grupo">
                         <label for="autor">Autor:</label>
-                        <input type="text" id="modal-autor" class="post-content" value="<?=$post->author?>" readonly>
+                        <input type="text" id="modal-autor" class="post-content" value="<?=$post->nome_autor?>" readonly>
                     </div>
 
                     <div class="modal-input-grupo">
@@ -192,7 +200,7 @@
 
                 <div class="div_autor_nota">
                     <div class="modal-input-grupo">
-                        <label for="autor">Autor:</label>
+                        <label for="autor">ID do Autor:</label>
                         <input type="text" id="modal-autor" class="post-content" name="author" value="<?=$post->author?>">
                     </div>
 
