@@ -67,7 +67,9 @@
                         </div>
                         <div class="botaoCard">
                             <button>
-                                <p class="textoBotao">Ver mais</p>
+                                <a href="/postIndividual/<?=$post->id?>">
+                                    <p class="textoBotao">Ver mais</p>
+                                </a>
                             </button>
                         </div>
                     </div>
