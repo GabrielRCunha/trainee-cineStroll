@@ -39,7 +39,7 @@
             <span class="ano"><?= $post->created_at ?></span>
             <p class="conteudo-post"><?= $post->content ?></p>
           </div>
-          <div class="info-extra">
+          <div class="info-extra<?= $post->id ?>">
             <span class="diretor">Autor do post : <strong><?= $post->nome_autor ?><strong></span>
             <div class="avaliacao">
               Avaliação:
