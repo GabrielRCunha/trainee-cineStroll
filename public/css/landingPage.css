@@ -15,7 +15,7 @@ body {
 }
 
 .heroSection {
-    background-image: url(/public/assets/fundo\ hero\ section.jpg);
+    background-image: url(/public/assets/Background3dCopia.png);
 
 }
 
@@ -34,6 +34,9 @@ body {
     justify-content: space-between;
     align-items: center;
     width: 80%;
+    padding-top: 50px;
+    padding-bottom: 100px;
+    align-items: center;
 }
 
 
@@ -47,12 +50,18 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    background: linear-gradient(to top, #2d0136a8, #190c1b9f);
+    border-radius: 40px;
+    /*border: 2px solid rgb(70, 11, 70);*/
 }
 
 .textoApresent {
     font-size: 36px;
-    margin-top: 70px;
     width: 60%;
+    background: linear-gradient(to top, #2d0136a8, #190c1b9f);
+    padding: 15px;
+    border-radius: 10px;
+    /*border: 2px solid rgb(70, 11, 70);*/
 }
 
 
@@ -62,9 +71,9 @@ body {
 }
 
 .textoLogo img {
+    width: 250px;
   height: 300px;
   border-radius: 100px;
-  margin-top: 50px;
 }
 
 .carrossel {

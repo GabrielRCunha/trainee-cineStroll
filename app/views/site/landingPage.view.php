@@ -31,7 +31,7 @@
                 </div>
                 <div class="textoLogo">
                    
-                    <img src="/uploads/logo com fundo (1).png"alt="logoPrincipal">
+                    <img src="/public/assets/Logo_sem_fundo.png"alt="logoPrincipal">
                 </div>
             </div>
 
