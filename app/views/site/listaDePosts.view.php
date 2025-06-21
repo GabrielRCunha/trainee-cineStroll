@@ -34,13 +34,17 @@
       <div class="movie-card">
         <img class="imagem-filme" src="/<?= $post->image?>" alt="Imagem do filme avaliado">
         <div class="movie-info">
-          <div class="informacoes-post">
+         
+        <div class="informacoes-post">
+          <div class="cabecalho-post">
             <span class="titulo"><?= $post->title ?></span>
-            <span class="ano"><?= $post->created_at ?></span>
-            <p class="conteudo-post"><?= $post->content ?></p>
+             <span class="ano"><?= $post->ano ?></span>
           </div>
+            <p class="conteudo-post"><?= $post->content ?></p>
+        </div>
+          
           <div class="info-extra">
-            <span class="diretor">Autor do post : <strong><?= $post->nome_autor ?><strong></span>
+            <span class="diretor">Diretor : <strong><?= $post->diretor ?><strong></span>
             <div class="avaliacao">
               Avaliação:
               <?php $nota = (int) $post->rating;
