@@ -300,10 +300,13 @@ a .movie-card {
   }
 
   .info-extra .diretor {
-    overflow: hidden;
+    
     text-overflow: ellipsis;
     white-space: nowrap;
     margin-left: 2px;
+    min-width: 0;
+    flex-shrink: 1;
+    margin-left: 5px;
   }
 
   .avaliacao {
@@ -393,6 +396,14 @@ a .movie-card {
 
 
 @media (min-width: 769px) and (max-width: 1599px) {
+  
+  .movie-card img {
+    width: 230px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
   .container {
     margin-top: 2rem;
     margin-bottom: 2rem;

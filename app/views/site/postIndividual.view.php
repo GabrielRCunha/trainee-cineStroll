@@ -45,6 +45,13 @@
               <?php endfor; ?>
             </div>
           </div>
+          <div class="diretor">
+            <h1>Diretor:</h1>
+            <h2><?=$posts->diretor?></h2>
+          </div>
+          <div class="anoLancamento">
+            <h2>Ano de Lançamento: <?=$posts->ano?></h2>
+          </div>
         </div>
         <div class="filme">
           <img src="../../../../<?=$posts->image?>" alt="Cães de Aluguel" />
@@ -54,7 +61,7 @@
       <div class="comentario">
         <h1>Comentou:</h1>
         <p>
-          <?=$posts->content?>
+           <?=nl2br($posts->content)?>
         </p>
         <p id="data">Postado em: <?=date("d/m/Y", strtotime($posts->created_at))?></p>
       </div>
