@@ -276,6 +276,7 @@ button:hover {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    overflow: scroll;
 }
 
 .modal-conteudo h2 {

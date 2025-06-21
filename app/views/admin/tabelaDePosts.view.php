@@ -117,11 +117,6 @@ if (!isset($_SESSION['id'])) {
 
                 <div class="div_autor_nota">
                     <div class="modal-input-grupo">
-                        <label for="autor">Autor:</label>
-                        <input type="text" id="autor" name="author" class="post-content" required>
-                    </div>
-
-                    <div class="modal-input-grupo">
                         <label for="nota">Diretor:</label>
                         <input type="text" id="diretor" name="diretor" class="post-content" required>
                     </div>

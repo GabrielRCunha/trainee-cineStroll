@@ -6,14 +6,15 @@ use App\Core\App;
 use PDO;
 
 
-class TabelaDePostsController {
-   public function index()
+class TabelaDePostsController
+{
+    public function index()
     {
         $page = 1;
-        if(isset($_GET['paginacaoNumero']) && !empty($_GET['paginacaoNumero'])){
+        if (isset($_GET['paginacaoNumero']) && !empty($_GET['paginacaoNumero'])) {
             $page = intval($_GET['paginacaoNumero']);
 
-            if($page <= 0){
+            if ($page <= 0) {
                 return redirect('admin/tabelaDePosts');
             }
 
@@ -21,28 +22,39 @@ class TabelaDePostsController {
 
         $itensPage = 5;
         $inicio = $itensPage * $page - $itensPage;
-        $rows_count = App::get('database')->countAll('posts'); 
+        $rows_count = App::get('database')->countAll('posts');
 
-        if($inicio > $rows_count){
+        if ($inicio > $rows_count) {
             return redirect('admin/tabelaDePosts');
         }
 
         $posts = App::get('database')->selectPostsComAutores($inicio, $itensPage);
 
-        $usuarios = App::get('database')->selectAll('usuarios'); 
+        $usuarios = App::get('database')->selectAll('usuarios');
 
 
-        $total_pages = ceil($rows_count/$itensPage);
+        $total_pages = ceil($rows_count / $itensPage);
 
         return view('admin/tabelaDePosts', compact('posts', 'usuarios', 'page', 'total_pages'));
     }
     public function store()
     {
+        if (session_status() == PHP_SESSION_NONE) {
+            session_start();
+        }
+
+        $loggedInUserId = $_SESSION['id'] ?? null;
+
+        if (!$loggedInUserId) {
+            header('Location: /login');
+            exit();
+        }
+
         $parameters = [
             'title' => $_POST['title'],
             'content' => $_POST['content'],
             'rating' => $_POST['rating'],
-            'author' => $_POST['author'],
+            'author' => $loggedInUserId,
             'diretor' => $_POST['diretor'],
             'ano' => $_POST['ano']
         ];
@@ -50,24 +62,49 @@ class TabelaDePostsController {
         App::get('database')->insert('posts', $parameters, $_FILES['imagem']);
 
         header('Location: /tabelaDePosts');
+        exit();
     }
 
     public function edit()
     {
+
+        if (session_status() == PHP_SESSION_NONE) {
+            session_start();
+        }
+
+        $loggedInUserId = $_SESSION['id'] ?? null;
+        if (!$loggedInUserId) {
+            header('Location: /login');
+            exit();
+        }
+
+        $postId = $_POST['id'];
+
+        $post = App::get('database')->selectOne('posts', $postId);
+
+        if (!$post) {
+            header('Location tabelaDePosts');
+            exit();
+        }
+
+        if ($post['user_id'] != $loggedInUserId) {
+            $_SESSION['mensagem-erro'] = "Você não tem permissão para editar este post.";
+            header('Location: /tabelaDePosts');
+            exit();
+        }
+
         $parameters = [
             'title' => $_POST['title'],
             'content' => $_POST['content'],
             'rating' => $_POST['rating'],
-            'author' => $_POST['author'],
             'diretor' => $_POST['diretor'],
-            'ano' => $_POST['ano']
+            'ano' => $_POST['ano'],
         ];
 
-        $id = $_POST['id'];
         $image = isset($_FILES['imagem']) && $_FILES['imagem']['size'] > 0 ? $_FILES['imagem'] : null;
         $fotoAtual = $_POST['fotoAtual'];
 
-        App::get('database')->update('posts', $id, $parameters, $image, $fotoAtual);
+        App::get('database')->update('posts', $postId, $parameters, $image, $fotoAtual);
 
         header('Location: /tabelaDePosts');
     }
@@ -81,9 +118,8 @@ class TabelaDePostsController {
         header('Location: /tabelaDePosts');
     }
 
-    // public function nomeAutor()
-    // {
-    //     $autor_id = $posts->author;
-    //     $usuario = App::get('database')->selectOne('usuarios', $autor_id);
-    // }
+    public function nomeAutor()
+    {
+
+    }
 }
