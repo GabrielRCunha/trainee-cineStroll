@@ -637,6 +637,7 @@ button:hover {
 
     .botao-criar {
         padding: 8px;
+        width: 32%;
     }
 
     .div-tabela .tabela {
@@ -686,5 +687,11 @@ button:hover {
 
     #visualizar-post-nota {
         width: 40px;
+    }
+}
+
+@media(max-width: 375px) {
+    .id {
+        display: none;
     }
 }
