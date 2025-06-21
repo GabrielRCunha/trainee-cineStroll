@@ -134,6 +134,10 @@ a .movie-card {
 }
 
 .info-extra .diretor{
+  display: flex;
+  white-space: nowrap;
+  flex-wrap: nowrap;
+  gap: 5px;
   margin-left: 10%;
 }
 
@@ -278,20 +282,41 @@ a .movie-card {
 
 }
 
-@media (max-width: 1000px){
+@media (max-width: 970px){
 
   .conteudo-post{
     width: 500px;
   }
 
+
+ .info-extra {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    flex-wrap: nowrap;
+
+  }
+
+  .info-extra .diretor {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-left: 2px;
+  }
+
   .avaliacao {
-    font-size: 0.8rem; 
-    gap: 3px;
+    font-size: 0.9rem;
+    gap: 5px;
+    display: flex;
+    align-items: center;
   }
 
   .avaliacao .material-icons {
-    font-size: 18px; /* Diminui o tamanho das estrelas */
+    font-size: 18px; 
   }
+
 
 }
 
@@ -309,10 +334,22 @@ a .movie-card {
     gap: 5px;
   }
 
-  .movie-info .ano {
+  .cabecalho-post {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .titulo {
+    text-align: center;
+    margin: 0;
+  }
+
+  .ano {
     float: none;
-    font-size: 0.9rem;
-    color: #ccc;
+    margin: 0;
+    text-align: center;
   }
 
   .info-extra {
@@ -345,6 +382,12 @@ a .movie-card {
   .paginacao li a {
     font-size: 10px;
     padding: 3px 6px;
+  }
+}
+
+@media (min-width: 970px) and (max-width: 1600px) {
+  .container a:first-child {
+    margin-top: 30px;
   }
 }
 
