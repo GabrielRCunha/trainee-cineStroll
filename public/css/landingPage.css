@@ -53,6 +53,7 @@ body {
     background: linear-gradient(to top, #2d0136a8, #190c1b9f);
     border-radius: 40px;
     padding: 20px;
+    margin-left: 20px;
     /*border: 2px solid rgb(70, 11, 70);*/
 }
 
@@ -72,6 +73,7 @@ body {
     background: linear-gradient(to top, #2d0136a8, #190c1b9f);
     padding: 15px;
     border-radius: 10px;
+    margin-right: 20px;
     /*border: 2px solid rgb(70, 11, 70);*/
 }
 
@@ -91,7 +93,7 @@ body {
     display: flex;
     width: 100%;
     justify-content: center;
-    flex-direction: row;
+   align-items: center;
 }
 
 .botaoEsquerdo {
@@ -140,15 +142,16 @@ body {
     width: 100%;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .swiper-wrapper {
-    width: 100%;
+    width: 80%;
     display: flex;
-    justify-content: space-between;
-    margin-left: 5%;
+    justify-items: center;
     position: absolute;
     margin-bottom: 5%;
+    
 }
 
 .card {
@@ -158,10 +161,13 @@ body {
     height: 285px;
     border-radius: 20px;
     background: rgba(240, 248, 255, 0.8);
+    align-self: center;
 }
 
 .swiper-slide{
     display: flex;
+    position: absolute;
+    justify-items: center;
 }
 
 .descricao {
@@ -433,11 +439,23 @@ body {
     .apresentacao {
         flex-direction: column-reverse;
         justify-content: center;
+        padding-bottom: 0;
     }
 
-    .apresentacao p {
+    .textoApresent{
+        margin-right: 0;
+    }
+
+
+
+    .apresentacao p{
         margin-top: 0;
-        ;
+    }
+
+
+    .textoLogo{
+        margin-left: 0;
+        margin-bottom: 15px;
     }
 
     .textoApresent {
@@ -542,3 +560,4 @@ body {
         height: 890px;
     }
 }
+
