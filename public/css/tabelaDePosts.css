@@ -546,9 +546,7 @@ button:hover {
         padding-left: 15px;
     }
 
-    .acoes {
-        padding-right: 15px;
-    }
+
 }
 
 @media(max-width: 768px) {
@@ -700,10 +698,18 @@ button:hover {
     #visualizar-post-nota {
         width: 40px;
     }
+
+    .nome {
+        font-size: 18px;
+    }
 }
 
 @media(max-width: 375px) {
     .id {
         display: none;
+    }
+
+    .div-tabela {
+        transform: translateX(8px);
     }
 }
