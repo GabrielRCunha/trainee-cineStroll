@@ -4,7 +4,7 @@ const voltar = document.querySelector('.voltar')
 const passar = document.querySelector('.passar')
 const logo = document.querySelector('.logo-barra-superior')
 
-//Contante para a mediaQuery
+//Constante para a mediaQuery
 const mediaQuery = window.matchMedia('(max-width: 768px)');
 
 //Variáveis para a atualização da tabela
@@ -127,4 +127,71 @@ if (inputImagem) {
             previewImagem.src = '';
         }
     });
+}
+
+function erroInputVazio(imagem, erroImagem, titulo, erroTitulo, ano, erroAno, diretor, erroDiretor, nota, erroNota, conteudo, erroConteudo, idForm, event) {
+    event.preventDefault();
+    let valid = true;
+    const imagemId = document.getElementById(imagem).files[0];
+    const titleId = document.getElementById(titulo).value;
+    const anoId = document.getElementById(ano).value;
+    const diretorId = document.getElementById(diretor).value;
+    const notaId = document.getElementById(nota).value;
+    const conteudoId = document.getElementById(conteudo).value;
+
+    if (!checaImagem(imagemId.name)) {
+        document.getElementById(erroImagem).innerText = 'Arquivo deve ser uma imagem.';
+        document.getElementById(erroImagem).style.display = 'block';
+        valid = false;
+    }
+
+    if (!imagemId) {
+        document.getElementById(erroImagem).innerText = 'Imagem é obrigatória.';
+        document.getElementById(erroImagem).style.display = 'block';
+        valid = false;
+    }
+    if (!titleId) {
+        document.getElementById(erroTitulo).innerText = 'Título é obrigatório.';
+        document.getElementById(erroTitulo).style.display = 'block';
+        valid = false;
+    }
+    if (!anoId) {
+        document.getElementById(erroAno).innerText = 'Ano é obrigatório.';
+        document.getElementById(erroAno).style.display = 'block';
+        valid = false;
+    }
+    if (!diretorId) {
+        document.getElementById(erroDiretor).innerText = 'Diretor é obrigatório.';
+        document.getElementById(erroDiretor).style.display = 'block';
+        valid = false;
+    }
+    if (!notaId) {
+        document.getElementById(erroNota).innerText = 'Nota é obrigatória.';
+        document.getElementById(erroNota).style.display = 'block';
+        valid = false;
+    }
+    if (!conteudoId) {
+        document.getElementById(erroConteudo).innerText = 'Conteúdo é obrigatório.';
+        document.getElementById(erroConteudo).style.display = 'block';
+        valid = false;
+    }
+    if (!valid) {
+        return;
+    }
+    document.getElementById(idForm).submit();
+}
+
+function checaImagem(nomeArquivo) {
+    const partes = nomeArquivo.split('.');
+    if (partes.length > 1) {
+        const extensao = partes[partes.length - 1].toLowerCase();
+        switch (extensao) {
+            case 'jpg':
+            case 'jpeg':
+            case 'png':
+                return true;
+            default:
+                return false;
+        }
+    }
 }

@@ -97,8 +97,9 @@ if (!isset($_SESSION['id'])) {
             <form id="form-criar-post" action="/admin/criarPost" method="POST" enctype="multipart/form-data">
                 <div class="modal-input-grupo">
                     <label for="imagem" class="image-upload-label">Escolher imagem</label>
-                    <input type="file" id="imagem" name="imagem"
-                        class="post-image-container botao-post-imagem image-upload-input" required>
+                    <input type="file" accept="image/jpeg, image/png, image/jpg" id="imagem" name="imagem"
+                    class="post-image-container botao-post-imagem image-upload-input" required>
+                    <span id="erroImagem" style="display: none;"></span>
                     <div class="imagem-preview-container" id="imagem-preview" style="display: none;" required>
                         <img id="preview-imagem-selecionada" src="#" alt="Pré-visualização da imagem selecionada">
                     </div>
@@ -107,37 +108,39 @@ if (!isset($_SESSION['id'])) {
                 <div class="div-titulo-ano">
                     <div class="modal-input-grupo titulo">
                         <label for="titulo">Título:</label>
-                        <input type="text" id="titulo" name="title" class="post-content" required>
+                        <input type="text" id="titulo" name="title" class="post-content" >
+                        <span id="erroTitulo"  style="display: none;"></span>
                     </div>
                     <div class="modal-input-grupo">
                         <label for="titulo">Ano:</label>
-                        <input type="number" id="ano" name="ano" class="post-content" min='0' max='2025' required>
+                        <input type="number" id="ano" name="ano" class="post-content" min='0' max='2025' >
+                        <span id="erroAno"  style="display: none;"></span>
                     </div>
                 </div>
 
                 <div class="div_autor_nota">
                     <div class="modal-input-grupo">
                         <label for="nota">Diretor:</label>
-                        <input type="text" id="diretor" name="diretor" class="post-content" required>
+                        <input type="text" id="diretor" name="diretor" class="post-content" >
+                        <span id="erroDiretor"  style="display: none;"></span>
                     </div>
-
                     <div class="modal-input-grupo">
                         <label for="nota">Nota:</label>
-                        <input type="number" id="nota" name="rating" class="post-content" min="0" max="10" required>
+                        <input type="number" id="nota" name="rating" class="post-content" min="0" max="10" >
+                        <span id="erroNota"  style="display: none;"></span>
                     </div>
-
-
-
                 </div>
+
 
                 <div class="modal-input-grupo">
                     <label for="conteudo">Conteúdo:</label>
-                    <textarea id="conteudo" name="content" class="post-content" rows="4" required></textarea>
+                    <textarea id="conteudo" name="content" class="post-content" rows="4" /></textarea>
+                    <span id="erroConteudo"  style="display: none;"></span>
                 </div>
 
                 <div class="modal-botoes">
-                    <button type="button" class="cancelar" onclick="fecharModais('criar-post')">Fechar</button>
-                    <button type="submit" class="salvar">Salvar</button>
+                    <button type="button" class="cancelar" onclick="fecharModais('criar-post', 'form-criar-post')">Fechar</button>
+                    <button type="submit" class="salvar" onclick="erroInputVazio('imagem', 'erroImagem', 'titulo', 'erroTitulo', 'ano', 'erroAno', 'diretor', 'erroDiretor', 'nota', 'erroNota', 'conteudo', 'erroConteudo', 'form-criar-post', event)">Salvar</button>
                 </div>
             </form>
         </div>
@@ -209,7 +212,7 @@ if (!isset($_SESSION['id'])) {
         <div class="modal-container" id="editar-post <?= $post->id ?>">
             <div class="modal-conteudo">
                 <h2>Editar Post</h2>
-                <form id="form-editar-post" action="/admin/editarPost" method="POST" enctype="multipart/form-data"
+                <form id="form-editar-post<?= $post->id ?>" action="/admin/editarPost" method="POST" enctype="multipart/form-data"
                     onsubmit="salvarEdicao(event)">
                     <input type="hidden" name="id" value="<?= $post->id ?>">
                     <input type="hidden" name="fotoAtual" value="<?= $post->image ?>">
@@ -265,7 +268,7 @@ if (!isset($_SESSION['id'])) {
 
                     <div class="modal-botoes">
                         <button type="button" class="cancelar"
-                            onclick="fecharModais('editar-post <?= $post->id ?>')">Fechar</button>
+                            onclick="fecharModais('editar-post <?= $post->id ?>', 'form-editar-post<?= $post->id ?>')">Fechar</button>
                         <button type="submit" class="salvar">Salvar</button>
                     </div>
                 </form>
