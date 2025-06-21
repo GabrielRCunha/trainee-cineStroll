@@ -79,6 +79,7 @@ body {
   text-decoration: none;
   transition: transform 0.3s ease;
   width: 100%;
+  
 }
 
 .movie-card:hover {
@@ -88,14 +89,13 @@ body {
 a .movie-card {
   display: flex;
   background: color #370061;
-  box-shadow: 0 4px 8px rgba(0.2, 0.2, 0.2, 1.2);
+  box-shadow: 0 4px 12px rgba(0.1, 0.1, 0.1, 0.6);
   color: white;
   max-width: 1440px;
   width: 100%;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   padding: 1.5rem;
   gap: 1.5rem;
-  margin-bottom: 1rem;
+  margin-bottom: 3.0rem;
   
 }
 
@@ -117,13 +117,6 @@ a .movie-card {
   font-weight: 700;
 }
 
-.movie-info .ano {
-  font-size: 0.9rem;
-  color: #ccc;
-  float: right;
-  font-weight: 600;
-}
-
 .movie-info p {
   font-size: 0.9rem;
   margin: 0.5rem 0 1rem;
@@ -133,11 +126,15 @@ a .movie-card {
   display: flex;
   align-items: center;
   font-weight: 600;
-  gap: 30%;
+  gap: 20%;
   margin-top: 10px;
-  background-color: #36213D;
+  background-color: #2a1a318c;
   padding: 8px;
   border-radius: 24px;
+}
+
+.info-extra .diretor{
+  margin-left: 10%;
 }
 
 .avaliacao {
@@ -192,6 +189,28 @@ a .movie-card {
   
 }
 
+.cabecalho-post {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.titulo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0 auto; 
+  text-align: center;
+}
+
+.ano {
+  font-size: 1.4rem;
+  color: #ffffff;
+  font-weight: 700;
+  margin-right: 5%;
+}
+
+
 .conteudo-post {
   overflow: hidden;
   width: 1085px;
@@ -200,8 +219,6 @@ a .movie-card {
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
-  /* aparentemente é o jeito de aparecer '...' no texto com mais de uma linha? *perguntar pro greis* */
-  
   white-space: normal;
   font-weight: 400;
   word-wrap: break-word;
@@ -245,7 +262,7 @@ a .movie-card {
   overflow: hidden;
 }
 
-@media (max-width: 1340px){
+@media (max-width: 1420px){
 
   .conteudo-post{
     width: 900px;
@@ -253,7 +270,7 @@ a .movie-card {
 
 }
 
-@media (max-width: 1150px){
+@media (max-width: 1230px){
 
   .conteudo-post{
     width: 700px;
@@ -261,10 +278,19 @@ a .movie-card {
 
 }
 
-@media (max-width: 970px){
+@media (max-width: 1000px){
 
   .conteudo-post{
     width: 500px;
+  }
+
+  .avaliacao {
+    font-size: 0.8rem; 
+    gap: 3px;
+  }
+
+  .avaliacao .material-icons {
+    font-size: 18px; /* Diminui o tamanho das estrelas */
   }
 
 }
@@ -322,7 +348,8 @@ a .movie-card {
   }
 }
 
-@media (min-width: 769px) and (max-width: 1656px) and (orientation: portrait) {
+
+@media (min-width: 769px) and (max-width: 1599px) {
   .container {
     margin-top: 2rem;
     margin-bottom: 2rem;
@@ -355,6 +382,9 @@ a .movie-card {
     gap: 40%;
   }
 }
+
+
+
 
 @media (min-width: 1600px) {
 
@@ -417,6 +447,10 @@ a .movie-card {
 
   .pesquisa span {
     transform: translateY(-53px) translateX(+10px);
+  }
+
+  .conteudo-post {
+    min-height: 110px;  /* para o diretor e a avaliação ficarem na parte de baixo do card* */
   }
 
 }
