@@ -1,20 +1,3 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    display: flex;
-    background-color: aliceblue;
-    font-family: "Montserrat", sans-serif;
-    background-image: url(/public/assets/fundo\ hero\ section.jpg);
-}
-
-main {
-    padding: 3rem;
-}
-
 .perfilSidebar img {
     height: 3.5rem;
     width: 3.5rem;
@@ -30,14 +13,16 @@ main {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    padding: 1.5rem;
     border-radius: 0 8px 8px 0;
+    height: 100%;
+
 }
 
 .topSidebar {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
+    margin: 16px;
 }
 
 .perfilSidebar {
@@ -99,6 +84,7 @@ main {
     padding: 0.8rem;
     background-color: #b9a533;
     font-weight: 600;
+    margin-bottom: 16px;
 }
 
 .closedSidebar {
@@ -142,9 +128,22 @@ main {
     transform: rotate(180deg);
 }
 
+@media(max-width: 768px) {
+    .sidebar {
+        padding: 0px;
+        height: 1226.5px;
+    }
+
+    .closedSidebar .buttonLogout {
+        width: 32px;
+        height: 32px;
+    }
+}
+
 @media(max-width: 500px) {
-    .closedSidebar {
-        width: 48px;
+    .sidebar {
+        padding: 0px;
+        height: 1226.5px;
     }
 
     .closedSidebar .buttonLogout {
