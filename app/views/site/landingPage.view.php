@@ -20,7 +20,7 @@
 
 <body>
 
-    <?php require __DIR__  . '/navbar.view.php'; ?>
+    <?php require __DIR__ . '/navbar.view.php'; ?>
 
     <div class="heroSection">
         <div class="conteudo">
@@ -30,50 +30,50 @@
                         explore críticas detalhadas, tudo em um único lugar.</p>
                 </div>
                 <div class="textoLogo">
-                   <h2>CINE STROLL</h2>
-                    <img src="/public/assets/Logo_sem_fundo.png"alt="logoPrincipal">
+                    <h2>CINE STROLL</h2>
+                    <img src="/public/assets/Logo_sem_fundo.png" alt="logoPrincipal">
                 </div>
             </div>
 
             <div class="swiper">
 
                 <div class="swiper-wrapper">
-                    <?php foreach($posts as $post): ?>
-                    <div class="swiper-slide">
-                        <div class="card">
-                        <div class="textoImagem">
-                            <div class="textoCard">
-                                <h2><?= $post->title ?></h2>
-                                <p><?= $post->content ?></p>
-                            </div>
-                            <div class="imagemCard">
-                                <img src="/<?= $post->image ?>" alt="">
-                                <div class="estrelas">
-                                    <?php $nota = (int) $post->rating;
-              $cheias = floor($nota / 2);
-              $meia = $nota % 2 === 1 ? 1 : 0;
-              $vazias = 5 - $cheias - $meia; ?>
-              <?php for ($i = 0; $i < $cheias; $i++): ?>
-                <span class="material-icons">star</span>
-              <?php endfor; ?>
-              <?php if ($meia): ?>
-                <span class="material-icons">star_half</span>
-              <?php endif; ?>
-              <?php for ($i = 0; $i < $vazias; $i++): ?>
-                <span class="material-icons">star_outline</span>
-              <?php endfor; ?>
+                    <?php foreach ($posts as $post): ?>
+                        <div class="swiper-slide">
+                            <div class="card">
+                                <div class="textoImagem">
+                                    <div class="textoCard">
+                                        <h2><?= $post->title ?></h2>
+                                        <p><?= $post->content ?></p>
+                                    </div>
+                                    <div class="imagemCard">
+                                        <img src="/<?= $post->image ?>" alt="">
+                                        <div class="estrelas">
+                                            <?php $nota = (int) $post->rating;
+                                            $cheias = floor($nota / 2);
+                                            $meia = $nota % 2 === 1 ? 1 : 0;
+                                            $vazias = 5 - $cheias - $meia; ?>
+                                            <?php for ($i = 0; $i < $cheias; $i++): ?>
+                                                <span class="material-icons">star</span>
+                                            <?php endfor; ?>
+                                            <?php if ($meia): ?>
+                                                <span class="material-icons">star_half</span>
+                                            <?php endif; ?>
+                                            <?php for ($i = 0; $i < $vazias; $i++): ?>
+                                                <span class="material-icons">star_outline</span>
+                                            <?php endfor; ?>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="botaoCard">
+                                    <button>
+                                        <a href="/postIndividual/<?= $post->id ?>">
+                                            <p class="textoBotao">Ver mais</p>
+                                        </a>
+                                    </button>
                                 </div>
                             </div>
                         </div>
-                        <div class="botaoCard">
-                            <button>
-                                <a href="/postIndividual/<?=$post->id?>">
-                                    <p class="textoBotao">Ver mais</p>
-                                </a>
-                            </button>
-                        </div>
-                    </div>
-                    </div>
                     <?php endforeach; ?>
                 </div>
                 <div class="swiper-button-prev">
@@ -86,19 +86,23 @@
 
     </div>
     <div class="descricao">
-        <h2>O que somos?</h2>
-        <p>
-            <i>Somos uma comunidade apaixonada por cinema, dedicada a oferecer análises sinceras e profundas. Aqui, você
-                encontra críticas, avaliações e recomendações feitas por amantes da sétima arte, com a liberdade para
-                compartilhar suas próprias opiniões e descobrir novas produções.
-            </i>
-        </p>
+        <div class="texto-descricao">
+            <h2>O que somos?</h2>
+            <p>
+                <i>Somos uma comunidade apaixonada por cinema, dedicada a oferecer análises sinceras e profundas. Aqui,
+                    você
+                    encontra críticas, avaliações e recomendações feitas por amantes da sétima arte, com a liberdade
+                    para
+                    compartilhar suas próprias opiniões e descobrir novas produções.
+                </i>
+            </p>
+        </div>
     </div>
 
     <?php require 'footer.view.php'; ?>
 
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<script src="../../../public/js/landingPage.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="../../../public/js/landingPage.js"></script>
 
 
 </body>

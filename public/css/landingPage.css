@@ -58,18 +58,17 @@ body {
 }
 
 .textoLogo h2 {
-  font-size: 35px;
-  font-weight: bold;
-  width: fit-content;
-  text-align: center;
-  background: linear-gradient(to right, #ffd700, #8b0000);
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+    font-size: 35px;
+    font-weight: bold;
+    width: fit-content;
+    text-align: center;
+    background: linear-gradient(to right, #ffd700, #8b0000);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .textoApresent {
     font-size: 36px;
-    width: 60%;
     background: linear-gradient(to top, #2d0136a8, #190c1b9f);
     padding: 15px;
     border-radius: 10px;
@@ -85,15 +84,15 @@ body {
 
 .textoLogo img {
     width: 250px;
-  height: 300px;
-  border-radius: 100px;
+    height: 300px;
+    border-radius: 100px;
 }
 
 .carrossel {
     display: flex;
     width: 100%;
     justify-content: center;
-   align-items: center;
+    align-items: center;
 }
 
 .botaoEsquerdo {
@@ -151,7 +150,7 @@ body {
     justify-items: center;
     position: absolute;
     margin-bottom: 5%;
-    
+
 }
 
 .card {
@@ -164,26 +163,30 @@ body {
     align-self: center;
 }
 
-.swiper-slide{
+.swiper-slide {
     display: flex;
     position: absolute;
     justify-items: center;
 }
 
 .descricao {
-    display: flex;
+    display: block;
     width: 80%;
-    align-items: flex-start;
-    flex-direction: column;
     margin-left: 5%;
-    z-index: -1;
     height: 500px;
     justify-content: center;
-    
+    height: fit-content;
+
 }
 
-
-
+.texto-descricao {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    align-items: flex-start;
+    overflow: hidden;
+    margin: 40px 0 40px 0;
+}
 
 .descricao h2 {
     display: flex;
@@ -191,7 +194,6 @@ body {
     color: aliceblue;
     font-size: 48px;
     margin: 0;
-    margin-top: 60px;
 }
 
 .descricao p {
@@ -199,8 +201,6 @@ body {
     color: aliceblue;
     font-size: 32px;
     font-weight: bold;
-    margin-top: 20px;
-    margin-bottom: 50px;
 }
 
 .textoImagem {
@@ -379,10 +379,6 @@ body {
         width: 60%;
     }
 
-    .descricao {
-        margin-top: 40px;
-    }
-
     .textoApresent {
         font-size: 24px;
     }
@@ -396,10 +392,6 @@ body {
 
     .textoLogo img {
         height: 300px;
-    }
-
-    .descricao {
-        margin-top: 0;
     }
 
     .descricao p {
@@ -426,10 +418,6 @@ body {
         font-size: 20px;
     }
 
-    .descricao {
-        margin-top: 20px;
-    }
-
     .imagemFundo {
         height: 680px;
     }
@@ -442,18 +430,18 @@ body {
         padding-bottom: 0;
     }
 
-    .textoApresent{
+    .textoApresent {
         margin-right: 0;
     }
 
 
 
-    .apresentacao p{
+    .apresentacao p {
         margin-top: 0;
     }
 
 
-    .textoLogo{
+    .textoLogo {
         margin-left: 0;
         margin-bottom: 15px;
     }
@@ -560,4 +548,3 @@ body {
         height: 890px;
     }
 }
-
