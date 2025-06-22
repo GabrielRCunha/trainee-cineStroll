@@ -15,12 +15,12 @@ body {
     overflow: hidden;
 }
 
-.php{
+.php {
     align-self: flex-start;
     position: absolute;
 }
 
-.desligado { 
+.desligado {
     display: none;
 }
 
@@ -69,7 +69,7 @@ body {
     cursor: pointer;
 }
 
-.div-titulo{
+.div-titulo {
     width: fit-content;
 }
 
@@ -113,7 +113,7 @@ body {
 
 .tabela td {
     text-align: center;
-    
+
 }
 
 .tabela td p {
@@ -128,15 +128,15 @@ body {
     width: 15%;
 }
 
-.titulo{
+.titulo {
     width: 20%;
 }
 
-.autor{
+.autor {
     width: 20%;
 }
 
-.data{
+.data {
     width: 20%;
 }
 
@@ -229,8 +229,104 @@ button:hover {
     cursor: default;
 }
 
-.passar{
+.passar {
     white-space: nowrap;
+}
+
+.popup-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 10000;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.popup-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(to right, #333333 0%, #6a0dad 200%);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    max-width: 400px;
+    width: 90%;
+    animation: slideDown 0.3s ease-in-out;
+    color: white;
+}
+
+.popup-icon {
+    font-size: 48px;
+    color: #ff6b6b;
+    margin-bottom: 15px;
+}
+
+.popup-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.popup-message {
+    font-size: 14px;
+    color: #fff;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.popup-button {
+    background: #6a0dad;
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    transition: ease 0.3s;
+    width: 25%;
+}
+
+.popup-button:hover {
+    background: #190e1d;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -60%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.btn-disabled {
+    opacity: 0.5;
+    cursor: not-allowed !important;
+}
+
+.btn-disabled:hover {
+    opacity: 0.5;
 }
 
 @media(max-width: 1440px) {
@@ -257,23 +353,23 @@ button:hover {
         margin-right: 10%;
     }
 
-    .id{
+    .id {
         padding-left: 15px;
     }
 
-    .acoes{
+    .acoes {
         padding-right: 15px;
     }
 }
 
 @media(max-width: 768px) {
 
-    .nome{
+    .nome {
         margin-left: 20px;
         margin-right: 20px;
     }
 
-    .barra-superior{
+    .barra-superior {
         width: 85%;
         margin-top: 60px;
     }
@@ -284,7 +380,7 @@ button:hover {
         margin-right: 0
     }
 
-    td.autor.fontes{
+    td.autor.fontes {
         max-width: 280px;
     }
 
@@ -292,86 +388,99 @@ button:hover {
         margin-right: 8%;
     }
 
-    td{
+    td {
         padding-left: 10px;
         padding-right: 10px;
     }
 
-    .div-tabela{
+    .div-tabela {
         width: 85%;
         overflow-x: auto;
         white-space: nowrap;
     }
 
-    .id{
+    .id {
         padding-left: 15px;
     }
 
-    .paginacao{
+    .paginacao {
         flex-wrap: wrap;
         width: 80%;
         justify-content: center;
     }
 
-    .paginacao li{
+    .paginacao li {
         margin-bottom: 15px;
     }
 
 }
 
-@media(max-width: 620px){
-    .autor{
+@media(max-width: 620px) {
+    .autor {
         display: none;
     }
-    tr td p{
+
+    tr td p {
         font-size: 16px;
         font-weight: normal;
     }
 }
+
 @media(max-width: 425px) {
     body {
         height: fit-content;
     }
+
     .logo-barra-superior {
         display: none;
     }
+
     .nome {
         font-size: 24px;
     }
+
     .botao-criar {
         padding: 8px;
     }
-    .div-tabela .tabela{
+
+    .div-tabela .tabela {
         height: fit-content;
     }
+
     .div-tabela tr:not(.tabela tr:first-child) {
         height: fit-content;
         width: 100%;
     }
 
-    .id{
+    .id {
         padding-left: 10px;
         padding-right: 10px;
     }
-    .acoes{
+
+    .acoes {
         width: fit-content;
         padding-left: 10px;
         padding-right: 10px;
     }
+
     .autor {
         display: none;
     }
+
     .data {
         display: none;
     }
+
     td {
         padding: 0;
     }
+
     .divacoes {
         flex-direction: column;
         height: fit-content;
         padding: 12px 0px;
     }
+
     .divacoes button {
         height: 36px;
         width: 36px;

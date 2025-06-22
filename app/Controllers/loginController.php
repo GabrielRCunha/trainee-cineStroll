@@ -17,27 +17,21 @@ class loginController
         return view('admin/dashboard');
     }
 
-    public function efetuaLogin(): void 
+    public function efetuaLogin(): void
     {
         $email = $_POST['email'];
         $senha = $_POST['senha'];
-
-        $usuarios = App::get('database')->verificaLogin($email,$senha);
-
-        if($usuarios != false){
+        $usuarios = App::get('database')->verificaLogin($email, $senha);
+        if ($usuarios != false) {
             session_start();
             $_SESSION['id'] = $usuarios->id;
             header(header: 'Location: /dashboard');
             exit;
-        }
-
-        else{
+        } else {
             session_start();
             $_SESSION['mensagem-erro'] = "Usuário e/ou senha incorretos";
-            header(header:'Location:/login');
-
+            header(header: 'Location:/login');
         }
-
     }
 
     public function logout()
@@ -46,8 +40,5 @@ class loginController
         session_unset();
         session_destroy();
         header(header: 'Location: /login');
-
     }
-
-
 }
