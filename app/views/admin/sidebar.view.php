@@ -22,7 +22,7 @@
         <nav class="contentSidebar">
             <ul>
                 <li class="itemSidebar">
-                    <a href="landingPage">
+                    <a href="/">
                         <i class="fa-solid fa-house"></i>
                         <span class="itemDescription">Página inicial</span>
                     </a>
