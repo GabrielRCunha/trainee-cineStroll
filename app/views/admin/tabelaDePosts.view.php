@@ -288,8 +288,8 @@ $idUsuarioLogado = $_SESSION['id'];
 
                 <div class="modal-botoes">
                     <button type="button" class="cancelar"
-                        onclick="fecharModais('editar-post <?= $post->id ?>', 'form-editar-post<?= $post->id ?>')">Fechar</button>
-                    <button type="submit" class="salvar">Salvar</button>
+                        onclick="fecharModais('editar-post<?= $post->id ?>', 'form-editar-post<?= $post->id ?>')">Fechar</button>
+                    <button type="submit"  type="submit" class="salvar" >Salvar</button>
                 </div>
             </form>
         </div>
