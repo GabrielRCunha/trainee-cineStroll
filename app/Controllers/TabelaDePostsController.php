@@ -87,11 +87,11 @@ class TabelaDePostsController
             exit();
         }
 
-        if ($post['user_id'] != $loggedInUserId) {
+        /*if ($post['user_id'] != $loggedInUserId) {
             $_SESSION['mensagem-erro'] = "Você não tem permissão para editar este post.";
             header('Location: /tabelaDePosts');
             exit();
-        }
+        }*/
 
         $parameters = [
             'title' => $_POST['title'],
