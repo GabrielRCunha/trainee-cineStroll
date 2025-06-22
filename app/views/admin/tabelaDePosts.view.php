@@ -69,15 +69,15 @@ $idUsuarioLogado = $_SESSION['id'];
             <td class="data fontes"><?= $post->created_at ?></td>
             <td class="acoes">
                 <div class="divacoes">
-                    <button class="ver <?= $post->author != $idUsuarioLogado ? 'btn-disabled' : '' ?>"
+                    <button class="ver <?= $post->author != $idUsuarioLogado && $idUsuarioLogado != 1 ? 'btn-disabled' : ''?>"
                         onclick="verificarPermissao(<?= $post->author ?>, 'visualizar-post<?= $post->id ?>', <?= $idUsuarioLogado ?>)">
                         <i class="bi bi-eye"></i>
                     </button>
-                    <button class="editar <?= $post->author != $idUsuarioLogado ? 'btn-disabled' : '' ?>"
+                    <button class="editar <?= $post->author != $idUsuarioLogado && $idUsuarioLogado != 1 ? 'btn-disabled' : '' ?>"
                        onclick="verificarPermissao(<?= $post->author ?>, 'editar-post<?= $post->id ?>', <?= $idUsuarioLogado ?>)">
                         <i class="bi bi-pencil-square"></i>
                     </button>
-                    <button class="apagar <?= $post->author != $idUsuarioLogado ? 'btn-disabled' : '' ?>"
+                    <button class="apagar <?= $post->author != $idUsuarioLogado && $idUsuarioLogado != 1 ? 'btn-disabled' : '' ?>"
                         onclick="verificarPermissao(<?= $post->author ?>, 'excluir-post<?= $post->id ?>', <?= $idUsuarioLogado ?>)">
                         <i class="bi bi-trash3"></i>
                     </button>
@@ -307,7 +307,6 @@ $idUsuarioLogado = $_SESSION['id'];
                         <div class="botoesModal">
                             <button type="button" onclick="fecharModais('excluir-post<?= $post->id ?>')">Fechar</button>
                             <button class="botaoExcluirConfirmar">Excluir</button>
-
                         </div>
 
                     </div>

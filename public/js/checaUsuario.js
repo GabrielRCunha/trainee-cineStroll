@@ -1,5 +1,5 @@
 function verificarPermissao(idUsuario, modalId, idUsuarioLogado) {
-    if (idUsuario != idUsuarioLogado) {
+    if (idUsuario != idUsuarioLogado && idUsuarioLogado != 1) {
         mostrarPopupPermissao();
         return false;
     }
