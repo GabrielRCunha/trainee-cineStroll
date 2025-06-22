@@ -26,8 +26,8 @@
         <div class="conteudo">
             <div class="apresentacao">
                 <div class="textoApresent">
-                    <p>Descubra avaliações honestas e recomendações sobre filmes e séries. Compartilhe suas opiniões e
-                        explore críticas detalhadas, tudo em um único lugar.</p>
+                    <p >Descubra avaliações honestas e recomendações sobre filmes e séries. Compartilhe suas opiniões e
+                        explore críticas detalhadas, tudo em um único lugar. </p>
                 </div>
                 <div class="textoLogo">
                     <h2>CINE STROLL</h2>
