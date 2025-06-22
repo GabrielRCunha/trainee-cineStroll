@@ -129,6 +129,10 @@
     transform: rotate(180deg);
 }
 
+#buttonLogout span.itemDescription{
+    color: black;
+}
+
 @media(max-width: 768px) {
 
     .closedSidebar .buttonLogout {

@@ -6,6 +6,10 @@
     margin-right: 18px;
 }
 
+#buttonLogout span.itemDescription{
+    color: black;
+}
+
 .sidebar {
     background-color: #333333;
     min-height: 100vh;
