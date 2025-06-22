@@ -31,6 +31,11 @@ body {
     width: 60px;
 }
 
+#box-botoes {
+    display: flex;
+    flex-direction: row;
+}
+
 .botoes-navbar {
     width: 34px;
     height: 34px;
@@ -65,13 +70,16 @@ a {
 
 .nav-mobile {
     display: none;
+    /* O menu mobile começa oculto */
     position: absolute;
     top: 72px;
     left: 0;
     width: 100%;
     background-color: #333;
     flex-direction: column;
+    /* Para organizar os itens verticalmente */
     align-items: center;
+    /* Centraliza os itens do menu mobile */
     padding: 20px 0;
     z-index: 99;
 }
@@ -111,6 +119,81 @@ a {
     transform: translateY(-9px) rotate(-45deg);
 }
 
+.nav-desktop {
+    display: flex;
+    align-items: center;
+}
+
+/* Estilos para o FORMULÁRIO DE PESQUISA DESKTOP */
+#search-form-desktop {
+    /* ID ATUALIZADO */
+    transform: scaleX(0);
+    opacity: 0;
+    transform-origin: right;
+    transition: transform 0.4s ease-in-out, opacity 0.3s ease;
+}
+
+#search-form-desktop.active {
+    /* ID ATUALIZADO */
+    transform: scaleX(1);
+    opacity: 1;
+}
+
+#search-input-desktop {
+    /* ID ATUALIZADO */
+    border: none;
+    outline: none;
+    padding: 8px 15px;
+    height: 36px;
+    width: 320px;
+    border-radius: 20px;
+    background-color: #555;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+}
+
+#search-input-desktop::placeholder {
+    /* ID ATUALIZADO */
+    color: #ccc;
+}
+
+/* NOVO: Estilos para o FORMULÁRIO DE PESQUISA MOBILE */
+#search-form-mobile {
+    display: none;
+    /* Começa oculto no mobile */
+    width: 90%;
+    /* Ajuste a largura conforme o layout mobile */
+    margin-bottom: 15px;
+    /* Espaço entre o formulário e os links */
+    flex-direction: column;
+    /* Para alinhar o input verticalmente */
+    align-items: center;
+}
+
+#search-form-mobile.active {
+    display: flex;
+    /* Aparece quando a classe 'active' é adicionada */
+}
+
+#search-input-mobile {
+    border: none;
+    outline: none;
+    padding: 10px 15px;
+    width: 100%;
+    /* Ocupa a largura do pai (#search-form-mobile) */
+    border-radius: 20px;
+    background-color: #555;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+}
+
+#search-input-mobile::placeholder {
+    color: #ccc;
+}
+
+
 @media(max-width: 768px) {
     .hamburguer {
         display: block;
@@ -118,9 +201,11 @@ a {
 
     #box-botoes {
         display: none;
+        /* Esconde os botões desktop, incluindo o form desktop */
     }
 
     .nav-mobile.active {
         display: flex;
+        /* Mostra o menu mobile */
     }
 }

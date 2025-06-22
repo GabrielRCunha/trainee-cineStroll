@@ -20,9 +20,12 @@
         </div>
         <div id="box-botoes">
             <nav class="nav-desktop">
-                <a href="#">
+                <form class="pesquisa" method="get" action="/listaDePosts" id="search-form-desktop">
+                    <input type="text" id="search-input-desktop" name="pesquisa" placeholder="O que você procura?">
+                </form>
+                <a href="#" id="lupa-trigger-desktop">
                     <img src="../../../public/assets/lupa.png" alt="Ícone da barra de pesquisa em formato de lupa"
-                        class="botoes-navbar" id="lupa">
+                        class="botoes-navbar">
                 </a>
                 <a href="/listaDePosts">
                     <img src="../../../public/assets/página de posts.png"
@@ -42,12 +45,22 @@
         </div>
 
         <div class="nav-mobile">
-            <a href="#"><img src="../../../public/assets/lupa.png" alt="Ícone da página de posts em formato de cards"
-                    class="botoes-navbar-mobile"> Pesquisar</a>
-            <a href="#"><img src="../../../public/assets/página de posts.png"
-                    alt="Ícone da página de posts em formato de cards" class="botoes-navbar-mobile"> Página de posts</a>
-            <a href="#"><img src="../../../public/assets/perfil.png" alt="Ícone da página de posts em formato de cards"
-                    class="botoes-navbar-mobile"> Perfil</a>
+            <a href="#" id="lupa-trigger-mobile">
+                <img src="../../../public/assets/lupa.png" alt="Ícone da barra de pesquisa em formato de lupa"
+                    class="botoes-navbar-mobile"> Pesquisar
+            </a>
+            <form class="pesquisa-mobile" method="get" action="/listaDePosts" id="search-form-mobile">
+                <input type="text" id="search-input-mobile" name="pesquisa" placeholder="O que você procura?">
+            </form>
+
+            <a href="/listaDePosts">
+                <img src="../../../public/assets/página de posts.png" alt="Ícone da página de posts em formato de cards"
+                    class="botoes-navbar-mobile"> Página de posts
+            </a>
+            <a href="/login">
+                <img src="../../../public/assets/perfil.png" alt="Ícone da página de posts em formato de cards"
+                    class="botoes-navbar-mobile"> Perfil
+            </a>
         </div>
     </nav>
 
