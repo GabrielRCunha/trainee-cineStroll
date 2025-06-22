@@ -88,8 +88,8 @@
     <div class="descricao">
         <div class="texto-descricao">
             <h2>O que somos?</h2>
-            <p>
-                <i>Somos uma comunidade apaixonada por cinema, dedicada a oferecer análises sinceras e profundas. Aqui,
+            <p class="text">
+                <i class="italico">Somos uma comunidade apaixonada por cinema, dedicada a oferecer análises sinceras e profundas. Aqui,
                     você
                     encontra críticas, avaliações e recomendações feitas por amantes da sétima arte, com a liberdade
                     para

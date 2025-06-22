@@ -142,6 +142,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 20px;
 }
 
 .swiper-wrapper {
@@ -149,7 +150,6 @@ body {
     display: flex;
     justify-items: center;
     position: absolute;
-    margin-bottom: 5%;
 
 }
 
@@ -188,6 +188,11 @@ body {
     margin: 40px 0 40px 0;
 }
 
+.italico {
+    display: block;
+    text-align: justify;
+}
+
 .descricao h2 {
     display: flex;
     justify-content: center;
@@ -195,6 +200,7 @@ body {
     font-size: 48px;
     margin: 0;
 }
+
 
 .descricao p {
     text-align: left;
@@ -276,6 +282,10 @@ body {
 }
 
 
+.swiper-button-prev::after,
+.swiper-button-next::after{
+    color: #f0f8ffcc;
+}
 
 
 @media only screen and (max-width:1892px) {
@@ -546,5 +556,18 @@ body {
 @media only screen and (max-width:450px) {
     .imagemFundo {
         height: 890px;
+    }
+}
+
+@media only screen and (max-width:600px) {
+    .italico {
+        font-size: 20px;
+    }
+}
+
+@media only screen and (max-width:400px) {
+
+    .italico{
+        font-size: 15px;
     }
 }
