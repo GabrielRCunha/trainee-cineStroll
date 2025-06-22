@@ -64,15 +64,15 @@
                     <td class="acoes">
                         <div class="divacoes">
                             <button class="ver <?= $usuario->id != $idUsuarioLogado ? 'btn-disabled' : '' ?>"
-                                onclick="verificarPermissao(<?= $usuario->id ?>, 'visualizar<?= $usuario->id ?>')">
+                                onclick="verificarPermissao(<?= $usuario->id ?>, 'visualizar<?= $usuario->id ?>', <?= $idUsuarioLogado ?>)">
                                 <i class="bi bi-eye"></i>
                             </button>
                             <button class="editar <?= $usuario->id != $idUsuarioLogado ? 'btn-disabled' : '' ?>"
-                                onclick="verificarPermissao(<?= $usuario->id ?>, 'editar<?= $usuario->id ?>')">
+                                onclick="verificarPermissao(<?= $usuario->id ?>, 'editar<?= $usuario->id ?>', <?= $idUsuarioLogado ?>)">
                                 <i class="bi bi-pencil-square"></i>
                             </button>
                             <button class="apagar <?= $usuario->id != $idUsuarioLogado ? 'btn-disabled' : '' ?>"
-                                onclick="verificarPermissao(<?= $usuario->id ?>, 'excluir<?= $usuario->id ?>')">
+                                onclick="verificarPermissao(<?= $usuario->id ?>, 'excluir<?= $usuario->id ?>', <?= $idUsuarioLogado ?>)">
                                 <i class="bi bi-trash3"></i>
                             </button>
                         </div>
