@@ -29,6 +29,70 @@ function fecharModalEdit(idModal){
   document.getElementById(idModal).style.display = "none";
 }
 
+function erroInputVazioEditar(
+    event,
+    imgId, imgErro,
+    tituloId, tituloErro,
+    anoId, anoErro,
+    diretorId, diretorErro,
+    notaId, notaErro,
+    conteudoId, conteudoErro,
+    formId
+) {
+    event.preventDefault();
+
+    let erro = false;
+
+    // A validação da imagem na edição é um pouco diferente.
+    // Se o usuário não selecionar uma nova imagem, a imagem atual será mantida,
+    // então a validação aqui é mais sobre o input de file em si.
+    const imagemInput = document.getElementById(imgId);
+    if (imagemInput && imagemInput.files.length === 0 && !document.getElementById(formId).querySelector('input[name="fotoAtual"]').value) {
+        mostrarErro(imgErro, "Selecione uma imagem.");
+        erro = true;
+    }
+
+    const titulo = document.getElementById(tituloId).value.trim();
+    if (titulo === "") {
+        mostrarErro(tituloErro, "Preencha o título.");
+        erro = true;
+    }
+
+    const ano = document.getElementById(anoId).value.trim();
+    if (ano === "") {
+        mostrarErro(anoErro, "Preencha o ano.");
+        erro = true;
+    } else if (parseInt(ano) < 1800 || parseInt(ano) > 2025) {
+        mostrarErro(anoErro, "Ano deve ser entre 1800 e 2025.");
+        erro = true;
+    }
+
+    const diretor = document.getElementById(diretorId).value.trim();
+    if (diretor === "") {
+        mostrarErro(diretorErro, "Preencha o diretor.");
+        erro = true;
+    }
+
+    const nota = document.getElementById(notaId).value.trim();
+    if (nota === "") {
+        mostrarErro(notaErro, "Preencha a nota.");
+        erro = true;
+    } else if (parseFloat(nota) < 0 || parseFloat(nota) > 10) {
+        mostrarErro(notaErro, "Nota deve ser entre 0 e 10.");
+        erro = true;
+    }
+
+    const conteudo = document.getElementById(conteudoId).value.trim();
+    if (conteudo === "") {
+        mostrarErro(conteudoErro, "Preencha o conteúdo.");
+        erro = true;
+    }
+
+    if (!erro) {
+        document.getElementById(formId).submit();
+    }
+}
+
 /*function handleImageChange(event, postId, currentImage) {
     const input = event.target;
     const imgPreview = document.getElementById(`imgEditar${currentImage}`);
