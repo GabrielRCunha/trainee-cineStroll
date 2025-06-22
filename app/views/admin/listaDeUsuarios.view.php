@@ -6,17 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista de Usuários - Admin</title>
     <link rel="stylesheet" href="../../../public/css/listaDeUsuários.css">
+    <link rel="icon" href="../../../public/assets/logo sem fundo.png" type="image/png">
     <link rel="stylesheet" href="../../../public/css/modaisRyan.css">
     <link rel="stylesheet" href="../../../public/css/modaisRafael.css">
     <link rel="stylesheet" href="../../../public/css/sidebar.css">
 
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <script src="https://kit.fontawesome.com/ee0f4b07be.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <div class="php">
-        <?php require 'sidebar.view.php'; ?>
+        <?php require 'sidebar2.view.php'; ?>
     </div>
 
     <div id="permissionPopup" class="popup-overlay">

@@ -69,3 +69,73 @@ function mostrarPreviewImagem(input, imgId) {
         reader.readAsDataURL(input.files[0]);
     }
 }
+
+function mostrarErro(idErro, mensagem) {
+    const erroElemento = document.getElementById(idErro);
+    erroElemento.innerText = mensagem;
+    erroElemento.style.display = "block";
+
+    setTimeout(() => {
+        erroElemento.style.display = "none";
+    }, 5000);
+}
+
+function erroInputVazio(
+    imgId, imgErro,
+    tituloId, tituloErro,
+    anoId, anoErro,
+    diretorId, diretorErro,
+    notaId, notaErro,
+    conteudoId, conteudoErro,
+    formId, event
+) {
+    event.preventDefault();
+
+    let erro = false;
+
+    const imagem = document.getElementById(imgId);
+    if (!imagem.value) {
+        mostrarErro(imgErro, "Adicione uma imagem.");
+        erro = true;
+    }
+
+    const titulo = document.getElementById(tituloId).value.trim();
+    if (titulo === "") {
+        mostrarErro(tituloErro, "Preencha o título.");
+        erro = true;
+    }
+
+    const ano = document.getElementById(anoId).value.trim();
+    if (ano === "") {
+        mostrarErro(anoErro, "Preencha o ano.");
+        erro = true;
+    } else if (ano < 1800 || ano > 2025) {
+        mostrarErro(anoErro, "Ano deve ser entre 1800 e 2025.");
+        erro = true;
+    }
+
+    const diretor = document.getElementById(diretorId).value.trim();
+    if (diretor === "") {
+        mostrarErro(diretorErro, "Preencha o diretor.");
+        erro = true;
+    }
+
+    const nota = document.getElementById(notaId).value.trim();
+    if (nota === "") {
+        mostrarErro(notaErro, "Preencha a nota.");
+        erro = true;
+    } else if (nota < 0 || nota > 10) {
+        mostrarErro(notaErro, "Nota deve ser entre 0 e 10.");
+        erro = true;
+    }
+
+    const conteudo = document.getElementById(conteudoId).value.trim();
+    if (conteudo === "") {
+        mostrarErro(conteudoErro, "Preencha o conteúdo.");
+        erro = true;
+    }
+
+    if (!erro) {
+        document.getElementById(formId).submit();
+    }
+}

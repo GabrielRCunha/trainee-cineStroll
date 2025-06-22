@@ -20,6 +20,7 @@ $idUsuarioLogado = $_SESSION['id'];
     <link rel="stylesheet" href="../../../public/css/modalExcluirPosts.css">
     <link rel="stylesheet" href="../../../public/css/tabelaDePosts.css">
     <link rel="stylesheet" href="../../../public/css/sidebar.css">
+    <link rel="icon" href="../../../public/assets/logo sem fundo.png" type="image/png">
 </head>
 
 <body>
@@ -239,55 +240,61 @@ $idUsuarioLogado = $_SESSION['id'];
                                 accept="image/*" onchange="mostrarPreviewImagem(this, 'imgEditar<?= $post->id ?>')">
                         </div>
                     </div>
+                
 
-                    <div class="div-titulo-ano">
-                        <div class="modal-input-grupo titulo">
-                            <label for="titulo">Título:</label>
-                            <input type="text" id="modal-titulo" name="title" class="post-content"
-                                value="<?= $post->title ?>">
-                        </div>
-                        <div class="modal-input-grupo">
-                            <label for="titulo">Ano:</label>
-                            <input type="text" id="modal-ano-editar" name="ano" class="post-content"
-                                value="<?= $post->ano ?>">
-                        </div>
+                <div class="div-titulo-ano">
+                    <div class="modal-input-grupo titulo">
+                        <label for="titulo">Título:</label>
+                        <input type="text" id="modal-titulo-editar<?= $post->id ?>" name="title" class="post-content"
+                            value="<?= $post->title ?>">
+                        <span id="erroTituloEditar<?= $post->id ?>" style="display: none;"></span>
                     </div>
+                    <div class="modal-input-grupo">
+                        <label for="titulo">Ano:</label>
+                        <input type="number" id="modal-ano-editar<?= $post->id ?>" name="ano" class="post-content"
+                             value="<?= $post->ano ?>">
+                        <span id="erroAnoEditar<?= $post->id ?>" style="display: none;"></span>
+                    </div>
+                </div>
 
-                    <div class="div_autor_nota">
-                        <div class="modal-input-grupo">
-                            <label for="autor">ID do Autor:</label>
-                            <input type="text" id="modal-autor" class="post-content" name="author"
-                                value="<?= $post->author ?>">
-                        </div>
-
-                        <div class="modal-input-grupo">
-                            <label for="nota">Diretor:</label>
-                            <input type="text" id="modal-diretor" class="post-content" name="diretor"
-                                value="<?= $post->diretor ?>">
-                        </div>
-
-                        <div class="modal-input-grupo">
-                            <label for="nota">Nota:</label>
-                            <input type="number" id="modal-nota" class="post-content" min="0" name="rating" max="10"
-                                value="<?= $post->rating ?>">
-                        </div>
-
+                <div class="div_autor_nota">
+                    <div class="modal-input-grupo">
+                        <label for="autor">ID do Autor:</label>
+                        <input type="text" id="modal-autor-editar<?= $post->id ?>" class="post-content" name="author"
+                            value="<?= $post->author ?>">
                     </div>
 
                     <div class="modal-input-grupo">
-                        <label for="conteudo">Conteúdo:</label>
-                        <textarea id="modal-conteudo" class="post-content" name="content"
-                            rows="4"><?= $post->content ?></textarea>
+                        <label for="nota">Diretor:</label>
+                        <input type="text" id="modal-diretor-editar<?= $post->id ?>" class="post-content" name="diretor"
+                            value="<?= $post->diretor ?>">
+                        <span id="erroDiretorEditar<?= $post->id ?>" style="display: none;"></span>
                     </div>
 
-                    <div class="modal-botoes">
-                        <button type="button" class="cancelar"
-                            onclick="fecharModais('editar-post<?= $post->id ?>', 'form-editar-post<?= $post->id ?>')">Fechar</button>
-                        <button type="submit" class="salvar">Salvar</button>
+                    <div class="modal-input-grupo">
+                        <label for="nota">Nota:</label>
+                        <input type="number" id="modal-nota-editar<?= $post->id ?>" class="post-content" name="rating" 
+                            value="<?= $post->rating ?>">
+                        <span id="erroNotaEditar<?= $post->id ?>" style="display: none;"></span>
                     </div>
-                </form>
-            </div>
+                    
+                </div>
+
+                <div class="modal-input-grupo">
+                    <label for="conteudo">Conteúdo:</label>
+                    <textarea id="modal-conteudo-editar<?= $post->id ?>" class="post-content" name="content"
+                        rows="4"><?= $post->content ?></textarea>
+                    <span id="erroConteudoEditar<?= $post->id ?>" style="display: none;"></span>
+                </div>
+
+                <div class="modal-botoes">
+                    <button type="button" class="cancelar"
+                        onclick="fecharModais('editar-post<?= $post->id ?>', 'form-editar-post<?= $post->id ?>')">Fechar</button>
+                    <button type="submit"  type="submit" class="salvar" >Salvar</button>
+                </div>
+            </form>
         </div>
+    </div>
     <?php endforeach; ?>
 
     <!-- EXCLUIR -->

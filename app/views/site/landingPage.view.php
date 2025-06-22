@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../../../public/css/landingPage.css">
     <link rel="stylesheet" href="../../../public/css/navbar.css" />
     <link rel="stylesheet" href="../../../public/css/footer.css" />
+    <link rel="icon" href="../../../public/assets/logo sem fundo.png" type="image/png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
@@ -43,7 +44,7 @@
                             <div class="card">
                                 <div class="textoImagem">
                                     <div class="textoCard">
-                                        <h2><?= $post->title ?></h2>
+                                        <h2><?= mb_strimwidth($post->title, 0, 10, '...') ?></h2>
                                         <p><?= $post->content ?></p>
                                     </div>
                                     <div class="imagemCard">
