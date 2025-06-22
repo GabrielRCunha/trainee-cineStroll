@@ -240,7 +240,6 @@ $idUsuarioLogado = $_SESSION['id'];
                                 accept="image/*" onchange="mostrarPreviewImagem(this, 'imgEditar<?= $post->id ?>')">
                         </div>
                     </div>
-                <div>
 
                 <div class="div-titulo-ano">
                     <div class="modal-input-grupo titulo">
