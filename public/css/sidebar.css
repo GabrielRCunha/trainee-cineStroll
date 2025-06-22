@@ -15,7 +15,8 @@
     align-items: center;
     border-radius: 0 8px 8px 0;
     height: 100%;
-
+    z-index: 1000;
+    position: absolute;
 }
 
 .topSidebar {
@@ -149,5 +150,11 @@
     .closedSidebar .buttonLogout {
         width: 32px;
         height: 32px;
+    }
+}
+
+@media(max-width: 375px) {
+    .closedSidebar {
+        width: 56px;
     }
 }

@@ -7,13 +7,15 @@ function abrirModais(idModal) {
     document.body.style.overflow = 'hidden';
 }
 
-function fecharModais(idModal) {
+function fecharModais(idModal, idForm) {
     const modal = document.getElementById(idModal);
     const overlay = document.getElementById('overlay');
 
     modal.classList.remove('ativo');
     overlay.classList.remove('ativo');
     document.body.style.overflow = '';
+
+    document.getElementById(idForm).reset();
 }
 
 document.getElementById('overlay').addEventListener('click', function () {
