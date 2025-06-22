@@ -240,7 +240,7 @@ $idUsuarioLogado = $_SESSION['id'];
                                 accept="image/*" onchange="mostrarPreviewImagem(this, 'imgEditar<?= $post->id ?>')">
                         </div>
                     </div>
-                
+                <div>
 
                 <div class="div-titulo-ano">
                     <div class="modal-input-grupo titulo">
@@ -290,7 +290,17 @@ $idUsuarioLogado = $_SESSION['id'];
                 <div class="modal-botoes">
                     <button type="button" class="cancelar"
                         onclick="fecharModais('editar-post<?= $post->id ?>', 'form-editar-post<?= $post->id ?>')">Fechar</button>
-                    <button type="submit"  type="submit" class="salvar" >Salvar</button>
+                    <button type="submit" class="salvar"
+    onclick="erroInputVazioEditar(
+        event,
+        'inputImgEditar<?= $post->id ?>', 'erroImagemEditar<?= $post->id ?>',
+        'modal-titulo-editar<?= $post->id ?>', 'erroTituloEditar<?= $post->id ?>',
+        'modal-ano-editar<?= $post->id ?>', 'erroAnoEditar<?= $post->id ?>',
+        'modal-diretor-editar<?= $post->id ?>', 'erroDiretorEditar<?= $post->id ?>',
+        'modal-nota-editar<?= $post->id ?>', 'erroNotaEditar<?= $post->id ?>',
+        'modal-conteudo-editar<?= $post->id ?>', 'erroConteudoEditar<?= $post->id ?>',
+        'form-editar-post<?= $post->id ?>'
+    )">Salvar</button>
                 </div>
             </form>
         </div>
