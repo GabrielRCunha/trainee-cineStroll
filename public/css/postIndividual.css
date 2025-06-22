@@ -156,11 +156,13 @@ body {
   text-align: center;
 }
 
-.container-filme{
+.container-filme {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: 10px;
+  padding-top: 15px;
   background: rgba(0, 0, 0, 0.25);
   border-radius: 16px;
   height: fit-content;
@@ -168,30 +170,38 @@ body {
 
 .filme {
   display: flex;
+  align-items: center;
+  justify-content: center;
   width: fit-content;
   max-width: 450px;
-  flex-shrink: 0;
-  flex-grow: 0;
-  flex-basis: fit-content;
   overflow: hidden;
   height: 350px;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  box-sizing: border-box;
   border-radius: 8px;
+}
+
+.div-titulo {
+  max-width: 230px;
+  margin-top: 10px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 22px;
+  line-height: 1.2;
+  text-align: center;
 }
 
 .filme img {
   justify-content: center;
-  height: 88%;
+  height: 100%;
   border-radius: 8px;
 }
 
 .filme h1 {
-  font-size: 30px;
+  font-size: 22px;
   text-align: center;
+  height: 50px;
 }
 
 .comentario {
