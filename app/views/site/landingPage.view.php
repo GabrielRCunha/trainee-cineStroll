@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Landing Page</title>
+    <title>Cine Stroll</title>
     <link rel="stylesheet" href="../../../public/css/landingPage.css">
     <link rel="stylesheet" href="../../../public/css/navbar.css" />
     <link rel="stylesheet" href="../../../public/css/footer.css" />

@@ -265,10 +265,17 @@ body {
   font-size: 1.6rem;
 }
 
-@media (min-width: 751px) and (max-width: 1200px) {
-  html {
-    font-size: 80%;
+@media (max-width: 1530px){
+  p{
+    font-size: 24px;
   }
+
+  h1{
+    font-size: 30px;
+  }
+}
+
+@media (min-width: 975px) and (max-width: 1370px) {
 
   .postIndividual {
     width: 76%;
@@ -283,34 +290,54 @@ body {
     text-align: center;
   }
 
-  .estrelas i {
-    font-size: 1.6vw;
+  .diretor h1{
+    font-size: 20px;
+  }
+
+  .estrelas span {
+    font-size: 20px;
   }
 
   .filme {
-    width: 20vw;
+    max-width: 300px;
+    height: 270px;
   }
 
   .filme h1 {
-    font-size: 1.8vw;
+    font-size: 20px;
+  }
+
+  .div-titulo{
+    width: 200px;
+    font-size: 20px;
+  }
+  .comentario p{
+    font-size: 20px;
   }
 }
 
-@media (max-width: 750px) {
-  html {
-    font-size: 60%;
+@media(max-width: 1150px){
+  .comentario p{
+    font-size: 20px;
   }
+}
 
-  .postIndividual {
-    width: 84%;
-  }
 
-  .infoContainer {
-    gap: 10%;
-  }
+@media (max-width: 975px) {
+html {
+  font-size: 60%;
+}
 
-  .perfil {
-  width: 230px;
+.postIndividual {
+  width: 84%;
+}
+
+.infoContainer {
+  gap: 10px;
+}
+
+.perfil {
+  width: 250px;
 }
 
 .diretor h2{
@@ -321,28 +348,123 @@ body {
   font-size: 16px;
 }
 
-  .usuario {
+.usuario {
+  width: fit-content;
+}
+
+.usuario h1 {
+   font-size: 16px;
+}
+
+.div-diretor-ano{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  width: 250px;
+}
+
+.diretor{
+  padding: 0px;
+  width: fit-content;
+}
+
+.diretor h1{
+  width: fit-content;
+}
+
+.anoLancamento{
+  padding: 0px;
+  width: fit-content;
+}
+
+.avaliacao {
+  flex-direction: column;
+  width: 250px;
+}
+
+.estrelas i {
+  font-size: 14px;
+}
+
+.filme {
+  max-width: 300px;
+  height: 240px;
+}
+
+.div-titulo{
+  width: 180px;
+}
+
+.container-filme h1{
+  font-size: 18px;
+}
+}
+
+@media (max-width: 750px){
+  .perfil{
     width: 200px;
   }
 
-  .usuario h1 {
-    font-size: 16px;
+  .avaliacao{
+    width: 200px;
   }
 
-  .avaliacao {
-    flex-direction: column;
-    padding-bottom: 8%;
+  .div-diretor-ano{
+    width: 200px;
+    gap: 5px;
+    font-size: 10px;
   }
 
-  .estrelas i {
+  .diretor h1{
     font-size: 14px;
   }
 
-  .filme {
-    width: 120px;
+  .diretor h2{
+    font-size: 12px;
   }
 
-  .filme h1 {
+  .anoLancamento h2{
     font-size: 12px;
+  }
+
+  .filme{
+    max-width: 230px;
+    height: 200px;
+  }
+
+  .div-titulo{
+    width: 150px;
+  }
+
+  h1.div-titulo{
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 580px){
+  .div-diretor-ano{
+    flex-direction: row;
+    width: 340px;
+    gap: 30px;
+  }
+
+  .infoContainer{
+    flex-direction: column-reverse;
+    gap: 30px;
+  }
+
+  .perfil{
+    width: 340px;
+  }
+  .avaliacao{
+    flex-direction: row;
+    width: 340px;
+  }
+
+  .filme{
+    height: 250px;
+    max-width: 320px;
   }
 }

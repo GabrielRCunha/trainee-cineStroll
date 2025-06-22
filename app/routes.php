@@ -6,8 +6,7 @@ use App\Controllers\ExampleController;
 use App\Controllers\loginController;
 use App\Core\Router;
 
-$router->get('', 'ExampleController@index');
-$router->get('landingPage', 'LandingPageController@index');
+$router->get('', 'LandingPageController@index');
 $router->get('navbar', 'NavbarController@index');
 $router->get('postIndividual/{id}', 'PostIndividualController@index');
 $router->get('listaDePosts', 'ListaDePostsController@index');

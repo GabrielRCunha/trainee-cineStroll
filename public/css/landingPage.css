@@ -15,7 +15,7 @@ body {
 }
 
 .heroSection {
-    background-image: url(/public/assets/Background3dCopia.png);
+    background-image: url(/public/assets/FundoWide2.png);
 
 }
 
@@ -614,6 +614,15 @@ body {
 
     .card{
         width: 300px;
+    }
+
+    .texto-descricao h2{
+        text-align: center;
+        font-size: 36px;
+    }
+
+    .estrelas span{
+        font-size: 20px;
     }
 
 }
