@@ -9,14 +9,15 @@ body {
     background-image: url("../../public/assets/Background3dCopia.png");
     gap: 48px;
     flex-direction: column;
-    height: 100vh;
+
     align-items: center;
     background-color: grey;
-    overflow: hidden;
+
 }
 
 .php {
     align-self: flex-start;
+    height: 100%;
     position: absolute;
 }
 
@@ -413,7 +414,25 @@ button:hover {
         margin-bottom: 15px;
     }
 
+    .barra-superior, .tabela{
+        margin-left: 5%;
+    }
+
 }
+
+
+@media(max-width: 679px) {
+    .barra-superior, .tabela{
+        margin-left: 8%;
+    }
+}
+
+@media(max-width: 555px) {
+    .barra-superior {
+        margin-left: 15%;
+    }
+}
+
 
 @media(max-width: 620px) {
     .autor {
@@ -424,7 +443,45 @@ button:hover {
         font-size: 16px;
         font-weight: normal;
     }
+
+    .paginacao{
+        margin-bottom: 0;
+    }
 }
+
+@media(max-width: 490px) {
+
+    .barra-superior, .tabela{
+        margin-left: 20%;
+    }
+}
+
+@media(max-width: 450px) {
+     .tabela{
+        margin-left: 15%;
+    }
+    .barra-superior{
+        margin-left: 20%;
+    }
+}
+
+@media(max-width: 430px) {
+     .tabela{
+        margin-left: 10%;
+    }
+    
+}
+
+@media(max-width: 450px) {
+     .tabela{
+        margin-left: 20%;
+    }
+
+     .barra-superior{
+        margin-left: 25%;
+     }
+
+    }
 
 @media(max-width: 425px) {
     body {

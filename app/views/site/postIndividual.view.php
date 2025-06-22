@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="../../../public/css/postIndividual.css" />
   <link rel="stylesheet" href="../../../public/css/navbar.css" />
+  <link rel="icon" href="../../../public/assets/logo sem fundo.png" type="image/png">
   <link
     rel="stylesheet"
     href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" />

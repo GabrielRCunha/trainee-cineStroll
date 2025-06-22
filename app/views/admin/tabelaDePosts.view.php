@@ -20,6 +20,7 @@ $idUsuarioLogado = $_SESSION['id'];
     <link rel="stylesheet" href="../../../public/css/modalExcluirPosts.css">
     <link rel="stylesheet" href="../../../public/css/tabelaDePosts.css">
     <link rel="stylesheet" href="../../../public/css/sidebar.css">
+    <link rel="icon" href="../../../public/assets/logo sem fundo.png" type="image/png">
 </head>
 
 <body>
