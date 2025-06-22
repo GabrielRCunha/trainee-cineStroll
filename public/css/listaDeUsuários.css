@@ -9,7 +9,7 @@ body {
     background-image: url("../../public/assets/Background3dCopia.png");
     gap: 48px;
     flex-direction: column;
-
+    
     align-items: center;
     background-color: grey;
 
@@ -454,6 +454,7 @@ button:hover {
     .barra-superior, .tabela{
         margin-left: 20%;
     }
+
 }
 
 @media(max-width: 450px) {
