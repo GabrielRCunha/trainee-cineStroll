@@ -13,7 +13,7 @@
 <body>
     <nav class="navbar">
         <div id="logo-navbar">
-            <a href="/landingPage">
+            <a href="/">
                 <img src="../../../public/assets/logo_cinestroll.png"
                     alt="Logo do CINESTROLL que volta para a tela inicial">
             </a>
