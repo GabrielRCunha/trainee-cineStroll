@@ -1,9 +1,9 @@
-function verificarPermissao(idUsuario, modalId, idUsuarioLogado) {
-    if (idUsuario != idUsuarioLogado && idUsuarioLogado != 1) {
+function verificarPermissao(idAutor, modalId, idUsuarioLogado) {
+    if (idAutor != idUsuarioLogado && idUsuarioLogado != 1) {
         mostrarPopupPermissao();
         return false;
     }
-    abrirModal(modalId);
+    abrirModais(modalId);
 }
 
 function mostrarPopupPermissao() {

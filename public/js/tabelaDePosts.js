@@ -195,3 +195,82 @@ function checaImagem(nomeArquivo) {
         }
     }
 }
+// Função principal de verificação
+function verificarPermissaoPost(idAutorPost, modalId) {
+    try {
+        // Obtenção segura dos IDs
+        const usuarioLogadoId = getUserId();
+        idAutorPost = parseInt(idAutorPost);
+
+        // Debug (remova depois de testar)
+        console.debug('Verificando permissão:', {
+            usuarioLogadoId,
+            idAutorPost,
+            modalId
+        });
+
+        if (isNaN(idAutorPost)) {
+            console.error('ID do autor inválido:', idAutorPost);
+            return false;
+        }
+
+        // Comparação estrita
+        if (idAutorPost === usuarioLogadoId) {
+            return abrirModalSeguro(modalId);
+        } else {
+            return mostrarPopupPermissao();
+        }
+    } catch (error) {
+        console.error('Erro na verificação de permissão:', error);
+        return false;
+    }
+}
+
+// Funções auxiliares
+function getUserId() {
+    const userId = document.body.dataset.userId;
+    const id = parseInt(userId);
+    if (isNaN(id)) {
+        console.error('ID do usuário logado inválido:', userId);
+        return null;
+    }
+    return id;
+}
+
+function abrirModalSeguro(modalId) {
+    if (typeof window.abrirModal === 'function') {
+        window.abrirModal(modalId);
+        return true;
+    }
+    console.error('Função abrirModal não encontrada');
+    return false;
+}
+
+function mostrarPopupPermissao() {
+    const popup = document.getElementById('permissionPopup');
+    if (popup) {
+        popup.style.display = 'block';
+        return true;
+    }
+    console.error('Elemento permissionPopup não encontrado');
+    return false;
+}
+
+function fecharPopupPermissao() {
+    const popup = document.getElementById('permissionPopup');
+    if (popup) popup.style.display = 'none';
+}
+
+// Event listeners
+document.addEventListener('DOMContentLoaded', function () {
+    // Fechar popup ao clicar fora
+    document.getElementById('permissionPopup')?.addEventListener('click', function (e) {
+        if (e.target === this) fecharPopupPermissao();
+    });
+
+    // Fechar com ESC
+    document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') fecharPopupPermissao();
+    });
+});
+

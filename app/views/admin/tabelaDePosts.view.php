@@ -1,11 +1,12 @@
 <?php
 session_start();
-
 if (!isset($_SESSION['id'])) {
-    header(header: 'Location: /login');
+    header('Location: /login');
+    exit();
 }
-?>
 
+$idUsuarioLogado = $_SESSION['id'];
+?>
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -26,6 +27,22 @@ if (!isset($_SESSION['id'])) {
         <?php require 'sidebar.view.php'; ?>
     </div>
 
+    <div id="permissionPopup" class="popup-overlay">
+        <div class="popup-content">
+            <div class="popup-icon">
+                <i class="bi bi-shield-exclamation"></i>
+            </div>
+            <div class="popup-title">Acesso Negado</div>
+            <div class="popup-message">
+                Você não tem permissão para interagir com posts de outros usuários.
+                Você só pode visualizar, editar ou excluir seus próprios posts.
+            </div>
+            <button class="popup-button" onclick="fecharPopupPermissao()">
+                Entendi
+            </button>
+        </div>
+    </div>
+
     <div class="div-tabela">
         <div class="barra-superior">
             <img src="../../../public/assets/Logo_sem_fundo.png" alt="Logo do CINE STROLL" class="logo-barra-superior">
@@ -37,41 +54,38 @@ if (!isset($_SESSION['id'])) {
             </button>
         </div>
         <table class="tabela">
-            <tr>
-                <th class="id">ID</th>
-                <th class="titulo" id="titulo-main">Título</th>
-                <th class="autor">Autor</th>
-                <th class="data">Data</th>
-                <th class="acoes">Ações</th>
-            </tr>
-            <?php foreach ($posts as $post): ?>
-                <tr>
-                    <td class="id">
-                        <?= $post->id ?>
-                    </td>
-                    <td class="titulo fontes">
-                        <?= $post->title ?>
-                    </td>
-                    <td class="autor fontes">
-                        <?= $post->nome_autor ?>
-                    </td>
-                    <td class="data fontes">
-                        <?= $post->created_at ?>
-                    </td>
-                    <td class="acoes">
-                        <div class="divacoes">
-                            <button class="ver" onclick="abrirModais('visualizar-post <?= $post->id ?>')">
-                                <i class="bi bi-eye"></i>
-                            </button>
-                            <button class="editar" onclick="abrirModais('editar-post <?= $post->id ?>')"><i
-                                    class="bi bi-pencil-square"></i></button>
-                            <button class="apagar" onclick="abrirModais('excluir-post <?= $post->id ?>')"><i
-                                    class="bi bi-trash3"></i></button>
-                        </div>
-                    </td>
-                </tr>
-            <?php endforeach; ?>
-        </table>
+    <tr>
+        <th class="id">ID</th>
+        <th class="titulo" id="titulo-main">Título</th>
+        <th class="autor">Autor</th>
+        <th class="data">Data</th>
+        <th class="acoes">Ações</th>
+    </tr>
+    <?php foreach ($posts as $post): ?>
+        <tr>
+            <td class="id"><?= $post->id ?></td>
+            <td class="titulo fontes"><?= $post->title ?></td>
+            <td class="autor fontes"><?= $post->nome_autor ?></td>
+            <td class="data fontes"><?= $post->created_at ?></td>
+            <td class="acoes">
+                <div class="divacoes">
+                    <button class="ver <?= $post->author != $idUsuarioLogado && $idUsuarioLogado != 1 ? 'btn-disabled' : ''?>"
+                        onclick="verificarPermissao(<?= $post->author ?>, 'visualizar-post<?= $post->id ?>', <?= $idUsuarioLogado ?>)">
+                        <i class="bi bi-eye"></i>
+                    </button>
+                    <button class="editar <?= $post->author != $idUsuarioLogado && $idUsuarioLogado != 1 ? 'btn-disabled' : '' ?>"
+                       onclick="verificarPermissao(<?= $post->author ?>, 'editar-post<?= $post->id ?>', <?= $idUsuarioLogado ?>)">
+                        <i class="bi bi-pencil-square"></i>
+                    </button>
+                    <button class="apagar <?= $post->author != $idUsuarioLogado && $idUsuarioLogado != 1 ? 'btn-disabled' : '' ?>"
+                        onclick="verificarPermissao(<?= $post->author ?>, 'excluir-post<?= $post->id ?>', <?= $idUsuarioLogado ?>)">
+                        <i class="bi bi-trash3"></i>
+                    </button>
+                </div>
+            </td>
+        </tr>
+    <?php endforeach; ?>
+</table>
     </div>
     <ul class="paginacao">
         <li><a href="?paginacaoNumero=<?= $page - 1 ?>" class="voltar <?= $page <= 1 ? "none" : "" ?>">&laquo;</a></li>
@@ -149,7 +163,7 @@ if (!isset($_SESSION['id'])) {
 
     <!-- VISUALIZAR -->
     <?php foreach ($posts as $post): ?>
-        <div class="modal-container" id="visualizar-post <?= $post->id ?>">
+        <div class="modal-container" id="visualizar-post<?= $post->id ?>">
             <div class="modal-conteudo">
                 <h2>Visualizar Post</h2>
                 <form id="form-criar-post">
@@ -199,7 +213,7 @@ if (!isset($_SESSION['id'])) {
 
                     <div class="modal-botoes">
                         <button type="button" class="cancelar"
-                            onclick="fecharModais('visualizar-post <?= $post->id ?>')">Fechar</button>
+                            onclick="fecharModais('visualizar-post<?= $post->id ?>')">Fechar</button>
                     </div>
                 </form>
             </div>
@@ -209,22 +223,23 @@ if (!isset($_SESSION['id'])) {
 
     <!-- EDITAR -->
     <?php foreach ($posts as $post): ?>
-         <div class="modal-container" id="editar-post <?= $post->id ?>">
-        <div class="modal-conteudo">
-            <h2>Editar Post</h2>
-            <form id="form-editar-post<?= $post->id ?>" action="/admin/editarPost" method="POST" enctype="multipart/form-data" onsubmit="erroInputVazioEditar(event, 'inputImgEditar<?= $post->id ?>', 'erroImagemEditar<?= $post->id ?>', 'modal-titulo-editar<?= $post->id ?>', 'erroTituloEditar<?= $post->id ?>', 'modal-ano-editar<?= $post->id ?>', 'erroAnoEditar<?= $post->id ?>', 'modal-diretor-editar<?= $post->id ?>', 'erroDiretorEditar<?= $post->id ?>', 'modal-nota-editar<?= $post->id ?>', 'erroNotaEditar<?= $post->id ?>', 'modal-conteudo-editar<?= $post->id ?>', 'erroConteudoEditar<?= $post->id ?>', 'form-editar-post<?= $post->id ?>')">
-                <input type="hidden" name="id" value="<?= $post->id ?>">
-                <input type="hidden" name="fotoAtual" value="<?= $post->image ?>">
-                <div class="modal-input-imagem">
-                    <div class="imagemEditar">
-                        <img id="imgEditar<?= $post->id ?>" class="imagem-editar-post" src="/<?= $post->image ?>"
-                            alt="Imagem atual"
-                            onclick="document.getElementById('inputImgEditar<?= $post->id ?>').click()">
-                        <input id="inputImgEditar<?= $post->id ?>" type="file" name="imagem" style="display: none;"
-                            accept="image/*" onchange="mostrarPreviewImagem(this, 'imgEditar<?= $post->id ?>')">
-                        <span id="erroImagemEditar<?= $post->id ?>" style="display: none;"></span>
+        <div class="modal-container" id="editar-post<?= $post->id ?>">
+            <div class="modal-conteudo">
+                <h2>Editar Post</h2>
+                <form id="form-editar-post<?= $post->id ?>" action="/admin/editarPost" method="POST" enctype="multipart/form-data"
+                    onsubmit="salvarEdicao(event)">
+                    <input type="hidden" name="id" value="<?= $post->id ?>">
+                    <input type="hidden" name="fotoAtual" value="<?= $post->image ?>">
+                    <div class="modal-input-imagem">
+                        <div class="imagemEditar">
+                            <img id="imgEditar<?= $post->id ?>" class="imagem-editar-post" src="/<?= $post->image ?>"
+                                alt="Imagem atual"
+                                onclick="document.getElementById('inputImgEditar<?= $post->id ?>').click()">
+                            <input id="inputImgEditar<?= $post->id ?>" type="file" name="imagem" style="display: none;"
+                                accept="image/*" onchange="mostrarPreviewImagem(this, 'imgEditar<?= $post->id ?>')">
+                        </div>
                     </div>
-                </div>
+                
 
                 <div class="div-titulo-ano">
                     <div class="modal-input-grupo titulo">
@@ -261,6 +276,7 @@ if (!isset($_SESSION['id'])) {
                             value="<?= $post->rating ?>">
                         <span id="erroNotaEditar<?= $post->id ?>" style="display: none;"></span>
                     </div>
+                    
                 </div>
 
                 <div class="modal-input-grupo">
@@ -282,7 +298,7 @@ if (!isset($_SESSION['id'])) {
 
     <!-- EXCLUIR -->
     <?php foreach ($posts as $post): ?>
-        <div class="tude" id="excluir-post <?= $post->id ?>">
+        <div class="tude" id="excluir-post<?= $post->id ?>">
             <form action="/admin/deletePost" method="POST">
                 <input type="hidden" name="id" value="<?= $post->id ?>">
                 <div class="modalEditar">
@@ -295,9 +311,8 @@ if (!isset($_SESSION['id'])) {
                             </div>
                         </div>
                         <div class="botoesModal">
-                            <button type="button" onclick="fecharModais('excluir-post <?= $post->id ?>')">Fechar</button>
+                            <button type="button" onclick="fecharModais('excluir-post<?= $post->id ?>')">Fechar</button>
                             <button class="botaoExcluirConfirmar">Excluir</button>
-
                         </div>
 
                     </div>
@@ -313,6 +328,8 @@ if (!isset($_SESSION['id'])) {
     <script src="../../../public/js/modais.js"></script>
     <script src="../../../public/js/modalEditar.js"></script>
     <script src="../../../public/js/modalExcluirPosts.js"></script>
+    <script src="../../../public/js/checaPost.js"></script>
+    <script src="../../../public/js/modal01.js"></script>
 </body>
 
 </html>

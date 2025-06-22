@@ -21,7 +21,7 @@ class ListaDeUsuariosController
     {
         $idUsuarioLogado = $this->verificaAutenticacao();
 
-        if ($idUsuarioLogado != $idUsuarioParaEditar) {
+        if ($idUsuarioLogado != $idUsuarioParaEditar && $idUsuarioLogado != 1) {
             session_start();
             $_SESSION['mensagem-erro'] = "Você só pode modificar suas próprias informações";
             header('Location: /listaDeUsuarios');
