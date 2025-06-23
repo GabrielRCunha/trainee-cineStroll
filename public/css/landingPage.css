@@ -253,6 +253,7 @@ body {
     width: 120px;
     border-radius: 10px;
     margin-bottom: 5px;
+    height: 150px;
 }
 
 .estrelas {
@@ -552,6 +553,7 @@ body {
 
     .imagemCard img {
         width: 80px;
+
     }
 
     .card {
