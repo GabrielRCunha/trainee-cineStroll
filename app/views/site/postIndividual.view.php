@@ -26,7 +26,7 @@
           <div class="perfilImg">
             <img src="../../../../<?= $usuario->imagem ?>" alt="foto do perfil" />
           </div>
-          <h1><?= $usuario->nome ?></h1>
+          <h1><?= mb_strimwidth($usuario->nome, 0, 11, '...') ?></h1>
         </div>
         <div class="avaliacao">
           <h1>Avaliação:</h1>
@@ -49,7 +49,7 @@
         <div class="div-diretor-ano">
           <div class="diretor">
             <h1>Diretor:</h1>
-            <h2><?= $posts->diretor ?></h2>
+            <h2><?= mb_strimwidth($posts->diretor, 0, 16, '...') ?></h2>
           </div>
           <div class="anoLancamento">
             <h2>Ano de Lançamento: <?= $posts->ano ?></h2>

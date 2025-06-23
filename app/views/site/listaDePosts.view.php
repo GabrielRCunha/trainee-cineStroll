@@ -38,14 +38,14 @@
          
         <div class="informacoes-post">
           <div class="cabecalho-post">
-            <span class="titulo"><?= $post->title ?></span>
+            <span class="titulo"><?= mb_strimwidth($post->title, 0, 50, '...') ?></span>
              <span class="ano"><?= $post->ano ?></span>
           </div>
             <p class="conteudo-post"><?= $post->content ?></p>
         </div>
           
           <div class="info-extra">
-            <span class="diretor">Diretor : <strong><?= $post->diretor ?><strong></span>
+            <span class="diretor">Diretor : <strong><?= mb_strimwidth($post->diretor, 0, 20, '...') ?><strong></span>
             <div class="avaliacao">
               Avaliação:
               <?php $nota = (int) $post->rating;
