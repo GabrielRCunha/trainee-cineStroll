@@ -48,7 +48,7 @@
                 <form action="/listaDeUsuarios" method="GET">
                     <button id="botao-usuarios">
                         <span class="material-symbols-outlined">person</span> 
-                        Tabela de Usuários
+                        Lista de Usuários
                     </button>
                 </form>
                 <div class="logout">

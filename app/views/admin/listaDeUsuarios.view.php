@@ -45,7 +45,7 @@
         <div class="div-titulo">
             <h1 class="nome">Lista de Usuários</h1>
         </div>
-        <button class="botao-criar" onclick="verificarPermissaoCriar()">
+        <button class="botao-criar <?= $idUsuarioLogado != 1 ? 'btn-disabled' : '' ?>" onclick="verificarPermissaoCriar(<?=$idUsuarioLogado?>, 'criar')">
             Criar <i class="bi bi-plus"></i>
         </button>
     </div>

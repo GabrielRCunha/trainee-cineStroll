@@ -128,7 +128,7 @@ function checarCampos(idForm, idAvisoNome, idAvisoEmail, idAvisoSenha, idAvisoIm
         valid = false;
     }
 
-    if(!img){
+    if(!img || !checaImagem(img.name)){
         const erroImg = document.getElementById(idAvisoImg);
         erroImg.style.display = 'block';
         valid = false;
@@ -196,4 +196,19 @@ function checarCamposEditar(idForm, idAvisoNome, idAvisoEmail, idAvisoSenha,
     // Se está tudo certo, envia o formulário
     const formulario = document.getElementById(idForm);
     formulario.submit();
+}
+
+function checaImagem(nomeArquivo) {
+    const partes = nomeArquivo.split('.');
+    if (partes.length > 1) {
+        const extensao = partes[partes.length - 1].toLowerCase();
+        switch (extensao) {
+            case 'jpg':
+            case 'jpeg':
+            case 'png':
+                return true;
+            default:
+                return false;
+        }
+    }
 }

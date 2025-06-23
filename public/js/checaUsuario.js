@@ -27,3 +27,13 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 });
+
+function verificarPermissaoCriar(idUsuario, idModal){
+    if(idUsuario != 1){
+        mostrarPopupPermissao();
+        return;
+    }
+    else{
+        abrirModal(idModal);
+    }
+}
