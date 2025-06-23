@@ -13,7 +13,7 @@ class ListaDePostsController {
             $page = intval($_GET['paginacaoNumero']);
 
             if($page <= 0) {
-                return redirect('site/listaDePosts');
+                return redirect('listaDePosts');
             }
         }
 
@@ -22,7 +22,7 @@ class ListaDePostsController {
         $rows_count = App::get('database')->countAll('posts');
 
         if($inicio > $rows_count){
-            return redirect('site/listaDePosts');
+            return redirect('listaDePosts');
         }
 
         if(isset($_GET['pesquisa']) && !empty($_GET['pesquisa'])){
