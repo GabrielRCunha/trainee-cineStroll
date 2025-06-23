@@ -370,12 +370,13 @@ a .movie-card {
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 550px) {
 
   .movie-info p,
   .info-extra,
   .movie-info .ano {
     font-size: 0.8rem;
+    max-width: 370px;
   }
 
   .linhaInicial {
@@ -388,7 +389,26 @@ a .movie-card {
   }
 }
 
-@media (min-width: 970px) and (max-width: 1600px) {
+@media (max-width: 380px) {
+
+  .movie-info p,
+  .info-extra,
+  .movie-info .ano {
+    font-size: 0.8rem;
+    max-width: 290px;
+  }
+
+  .linhaInicial {
+    font-size: 0.6rem;
+  }
+
+  .paginacao li a {
+    font-size: 10px;
+    padding: 3px 6px;
+  }
+}
+
+@media (min-width: 330px) and (max-width: 1600px) {
   .container a:first-child {
     margin-top: 30px;
   }
@@ -508,3 +528,4 @@ a .movie-card {
   }
 
 }
+

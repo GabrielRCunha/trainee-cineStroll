@@ -14,6 +14,11 @@ p{
     color: white;
 }
 
+.modal.exc{
+  width: 400px;
+  z-index: 1000;
+}
+
 .lixo {
     display: flex;
     justify-content: center;
@@ -142,7 +147,7 @@ p{
     background-color: green;
     color: white;
     font-weight: bold;
-    border-radius: 14px;
+    border-radius: 8px;
     cursor: pointer;
 }
 
@@ -218,7 +223,7 @@ p{
      background-color: green;
     color: white;
     font-weight: bold;
-    border-radius: 14px;
+    border-radius: 8px;
     padding: 25px 60px;
     font-size: 20px;
 }
@@ -233,10 +238,10 @@ p{
 }
 
 .botaoFecharModalEditar {
-    background-color: #b80505;
+    background-color: #f44336;
     color: white;
     font-weight: bold;
-    border-radius: 14px;
+    border-radius: 8px;
     padding: 25px 60px;
     font-size: 20px;
 }

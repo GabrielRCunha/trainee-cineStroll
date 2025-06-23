@@ -366,7 +366,7 @@ button:hover {
 .modal-botoes button {
     padding: 10px 20px;
     border-radius: 8px;
-    border: none;
+    border: 1px solid white;
     cursor: pointer;
     font-weight: 600;
     transition: all 0.3s;
