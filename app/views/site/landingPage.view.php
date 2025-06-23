@@ -44,7 +44,7 @@
                             <div class="card">
                                 <div class="textoImagem">
                                     <div class="textoCard">
-                                        <h2><?= mb_strimwidth($post->title, 0, 10, '...') ?></h2>
+                                        <h2><?= mb_strimwidth($post->title, 0, 14, '...') ?></h2>
                                         <p><?= $post->content ?></p>
                                     </div>
                                     <div class="imagemCard">

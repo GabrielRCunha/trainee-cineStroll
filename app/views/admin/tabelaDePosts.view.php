@@ -65,8 +65,8 @@ $idUsuarioLogado = $_SESSION['id'];
     <?php foreach ($posts as $post): ?>
         <tr>
             <td class="id"><?= $post->id ?></td>
-            <td class="titulo fontes"><?= $post->title ?></td>
-            <td class="autor fontes"><?= $post->nome_autor ?></td>
+            <td class="titulo fontes"><?= mb_strimwidth($post->title, 0, 20, '...') ?></td>
+            <td class="autor fontes"><?= mb_strimwidth($post->nome_autor, 0, 10, '...') ?></td>
             <td class="data fontes"><?= $post->created_at ?></td>
             <td class="acoes">
                 <div class="divacoes">

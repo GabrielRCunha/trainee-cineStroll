@@ -61,8 +61,8 @@
             <?php foreach ($usuarios as $usuario): ?>
                 <tr>
                     <td class="id"><?= $usuario->id ?></td>
-                    <td class="titulo fontes"><?= $usuario->nome ?></td>
-                    <td class="autor fontes"><?= $usuario->email ?></td>
+                    <td class="titulo fontes"><?= mb_strimwidth($usuario->nome, 0, 16, '...') ?></td>
+                    <td class="autor fontes"><?= mb_strimwidth($usuario->email, 0, 30, '...') ?></td>
                     <td class="acoes">
                         <div class="divacoes">
                             <button
