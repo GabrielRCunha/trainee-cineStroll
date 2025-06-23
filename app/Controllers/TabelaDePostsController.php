@@ -15,7 +15,7 @@ class TabelaDePostsController
             $page = intval($_GET['paginacaoNumero']);
 
             if ($page <= 0) {
-                return redirect('admin/tabelaDePosts');
+                return redirect('tabelaDePosts');
             }
 
         }
@@ -25,7 +25,7 @@ class TabelaDePostsController
         $rows_count = App::get('database')->countAll('posts');
 
         if ($inicio > $rows_count) {
-            return redirect('admin/tabelaDePosts');
+            return redirect('tabelaDePosts');
         }
 
         $posts = App::get('database')->selectPostsComAutores($inicio, $itensPage);

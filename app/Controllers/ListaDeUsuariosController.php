@@ -44,14 +44,14 @@ class ListaDeUsuariosController
             $page = intval($_GET['paginacaoNumero']);
 
             if ($page <= 0 || $page > $total_pages) {
-                return redirect('admin/listaDeUsuarios');
+                return redirect('listaDeUsuarios');
             }
         }
 
         $inicio = $itensPage * $page - $itensPage;
 
         if ($inicio > $rows_count) {
-            return redirect('admin/listaDeUsuarios');
+            return redirect('listaDeUsuarios');
         }
 
         $usuarios = App::get('database')->selectAll('usuarios', $inicio, $itensPage);
